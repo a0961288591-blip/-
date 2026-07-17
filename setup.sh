@@ -45,7 +45,10 @@ if need uv; then
 fi
 
 for c in git ffmpeg ffprobe node npm python3 uv; do
-  printf '  %-8s ' "$c"; "$c" --version 2>&1 | head -1
+  # head -1 會提早關閉管線,多行輸出的指令(如 ffmpeg)可能吃到 SIGPIPE,
+  # 在 pipefail 下會讓整個腳本靜默中止 — 先取完整輸出再截第一行
+  v="$("$c" --version 2>&1)"
+  printf '  %-8s %s\n' "$c" "${v%%$'\n'*}"
 done
 
 # ---------------------------------------------------------------
