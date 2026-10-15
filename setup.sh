@@ -75,19 +75,36 @@ npx -y skills add remotion-dev/skills
 
 # ---------------------------------------------------------------
 step "6. 檢查 ElevenLabs Scribe 設定(轉錄字幕用)"
-if [ -f "$VIDEO_USE_DIR/.env" ] && grep -q '^ELEVENLABS_API_KEY=' "$VIDEO_USE_DIR/.env"; then
+# 雲端環境把 Key 存成環境變數(環境設定 → Network secrets);video-use 讀的是 .env,
+# 所以這裡把環境變數轉寫成 .env。Key 全程不經過對話,也不會進 git(.gitignore 已含 .env)。
+if [ -n "${ELEVENLABS_API_KEY:-}" ]; then
+  umask 077
+  printf 'ELEVENLABS_API_KEY=%s\n' "$ELEVENLABS_API_KEY" > "$VIDEO_USE_DIR/.env"
+  echo "✓ 已從環境變數寫入 ELEVENLABS_API_KEY($VIDEO_USE_DIR/.env)"
+elif [ -f "$VIDEO_USE_DIR/.env" ] && grep -q '^ELEVENLABS_API_KEY=' "$VIDEO_USE_DIR/.env"; then
   echo "✓ 已設定 ELEVENLABS_API_KEY($VIDEO_USE_DIR/.env)"
 else
   cat <<'EOF'
 ✗ 尚未設定 ElevenLabs API Key(轉錄功能需要)。
-  設定方式(請自行執行,不要把 Key 貼進對話或提交到 git):
+  雲端 session(推薦,一次設定永久有效、不必每次重貼):
+    標題列的雲端環境選單 → Edit → Network secrets
+    新增變數名稱 ELEVENLABS_API_KEY,下次開 session 自動生效。
+  本機使用:
     printf 'ELEVENLABS_API_KEY=%s\n' "你的KEY" > ~/Developer/video-use/.env
     chmod 600 ~/Developer/video-use/.env
+  (兩種方式都不要把 Key 貼進對話或提交到 git)
 EOF
 fi
 
 # ---------------------------------------------------------------
 step "7. 驗證(不接觸、不轉錄任何素材)"
+# 當環境開機腳本用時設 SKIP_VERIFY=1 可略過,省下 Remotion CLI 試裝的時間
+if [ -n "${SKIP_VERIFY:-}" ]; then
+  echo "已設 SKIP_VERIFY,略過驗證。"
+  step "完成!請閱讀 README.md 的「第一支影片」章節開始剪輯。"
+  exit 0
+fi
+
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
