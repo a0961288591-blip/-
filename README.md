@@ -4,11 +4,51 @@
 
 ## 一鍵安裝
 
+**Linux / macOS**
+
 ```bash
 bash setup.sh
 ```
 
-支援 Ubuntu/Debian 與 macOS。腳本會:偵測作業系統 → 安裝 Git/FFmpeg/Node.js/Python/uv → clone video-use 到 `~/Developer/video-use` → `uv sync` 安裝相依 → symlink 註冊到 `~/.claude/skills/video-use` → 安裝 Remotion 官方 Skills → 用合成訊號驗證整條管線(不接觸任何素材)。
+**Windows**(PowerShell,需 Windows 10 1809+ 或 Windows 11)
+
+```powershell
+.\setup.ps1
+# 若被執行原則擋下:
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+```
+
+兩個腳本步驟一致,差別在平台細節:Windows 用 winget 裝工具鏈、用 junction 取代
+symlink(免管理員權限)、用 ACL 取代 `chmod 600` 保護金鑰檔。
+**WSL2 內請用 `setup.sh`**——那是 Ubuntu 環境,不是原生 Windows。
+
+### 在 Claude Code 雲端 session 使用(重要)
+
+雲端 session 的容器是**用完即回收**的:每次開新 session,系統層裝的東西(FFmpeg、
+video-use、skills)都會消失,只有 git 倉庫會重新 clone 回來。與其每次手動重裝,
+在環境設定裡掛一次就好——**標題列的雲端環境選單 → Edit**:
+
+| 設定項 | 填什麼 | 解決什麼 |
+|---|---|---|
+| **Setup script** | `bash setup.sh`(可加 `SKIP_VERIFY=1` 加速) | 新 session 自動裝好整套,不必每次重跑 |
+| **Network secrets** | 變數名 `ELEVENLABS_API_KEY` | 轉錄金鑰永久帶入,不必每次重設、全程不經過對話 |
+
+設好之後,下一個 session 開起來就是可以直接剪片的狀態。`setup.sh` 會自動把
+`ELEVENLABS_API_KEY` 環境變數轉寫成 video-use 需要的 `.env`。
+
+腳本會:偵測作業系統 → 安裝 Git/FFmpeg/Node.js/Python/uv → clone video-use 到
+`~/Developer/video-use`(Windows 為 `%USERPROFILE%\Developer\video-use`)→ `uv sync`
+安裝相依 → 連結註冊到 `~/.claude/skills/video-use` → 安裝 Remotion 官方 Skills →
+用合成訊號驗證整條管線(不接觸任何素材)。
+
+| 平台 | 腳本 | 套件管理 | skill 註冊 |
+|---|---|---|---|
+| Ubuntu/Debian | `setup.sh` | apt | symlink |
+| macOS | `setup.sh` | Homebrew | symlink |
+| Windows 10/11 | `setup.ps1` | winget | junction |
+
+Windows 常見狀況:winget 裝完工具後 PATH 不會套用到目前的 PowerShell 視窗,
+腳本會自動從登錄檔重讀;若仍提示找不到指令,關掉視窗重開一個再跑一次即可。
 
 ## 已安裝項目
 
@@ -21,12 +61,18 @@ bash setup.sh
 
 ## 付費項目
 
-- **ElevenLabs Scribe**(轉錄 API)— 唯一必要的付費服務,依轉錄分鐘數計費,有免費額度。API Key 設定方式(自行在終端機執行,**不要**貼進對話、**不要**提交到 git):
+- **ElevenLabs Scribe**(轉錄 API)— 唯一必要的付費服務,依轉錄分鐘數計費,有免費額度。
+  註冊帳號後還要到後台產生 API Key,兩者缺一不可。**Key 不要貼進對話、不要提交到 git**。
 
-  ```bash
-  printf 'ELEVENLABS_API_KEY=%s\n' "你的KEY" > ~/Developer/video-use/.env
-  chmod 600 ~/Developer/video-use/.env
-  ```
+  - 雲端 session:環境設定 → Edit → **Network secrets**,變數名 `ELEVENLABS_API_KEY`(見上方表格)
+  - 本機:
+    ```bash
+    printf 'ELEVENLABS_API_KEY=%s\n' "你的KEY" > ~/Developer/video-use/.env
+    chmod 600 ~/Developer/video-use/.env
+    ```
+
+  本地免費替代方案(whisper.cpp / faster-whisper)在雲端環境**無法使用**——模型來源
+  huggingface.co 與 openaipublic.azureedge.net 都被網路政策擋下(403),本機則不受此限。
 
 - FFmpeg、Remotion Skills、video-use 本身皆免費開源(Remotion 授權:個人/小團隊免費,公司規模達門檻需公司授權)。
 
