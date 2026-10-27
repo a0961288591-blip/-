@@ -4,9 +4,23 @@
 
 ## 一鍵安裝
 
+**Linux / macOS**
+
 ```bash
 bash setup.sh
 ```
+
+**Windows**(PowerShell,需 Windows 10 1809+ 或 Windows 11)
+
+```powershell
+.\setup.ps1
+# 若被執行原則擋下:
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+```
+
+兩個腳本步驟一致,差別在平台細節:Windows 用 winget 裝工具鏈、用 junction 取代
+symlink(免管理員權限)、用 ACL 取代 `chmod 600` 保護金鑰檔。
+**WSL2 內請用 `setup.sh`**——那是 Ubuntu 環境,不是原生 Windows。
 
 ### 在 Claude Code 雲端 session 使用(重要)
 
@@ -22,7 +36,19 @@ video-use、skills)都會消失,只有 git 倉庫會重新 clone 回來。與其
 設好之後,下一個 session 開起來就是可以直接剪片的狀態。`setup.sh` 會自動把
 `ELEVENLABS_API_KEY` 環境變數轉寫成 video-use 需要的 `.env`。
 
-支援 Ubuntu/Debian 與 macOS。腳本會:偵測作業系統 → 安裝 Git/FFmpeg/Node.js/Python/uv → clone video-use 到 `~/Developer/video-use` → `uv sync` 安裝相依 → symlink 註冊到 `~/.claude/skills/video-use` → 安裝 Remotion 官方 Skills → 用合成訊號驗證整條管線(不接觸任何素材)。
+腳本會:偵測作業系統 → 安裝 Git/FFmpeg/Node.js/Python/uv → clone video-use 到
+`~/Developer/video-use`(Windows 為 `%USERPROFILE%\Developer\video-use`)→ `uv sync`
+安裝相依 → 連結註冊到 `~/.claude/skills/video-use` → 安裝 Remotion 官方 Skills →
+用合成訊號驗證整條管線(不接觸任何素材)。
+
+| 平台 | 腳本 | 套件管理 | skill 註冊 |
+|---|---|---|---|
+| Ubuntu/Debian | `setup.sh` | apt | symlink |
+| macOS | `setup.sh` | Homebrew | symlink |
+| Windows 10/11 | `setup.ps1` | winget | junction |
+
+Windows 常見狀況:winget 裝完工具後 PATH 不會套用到目前的 PowerShell 視窗,
+腳本會自動從登錄檔重讀;若仍提示找不到指令,關掉視窗重開一個再跑一次即可。
 
 ## 已安裝項目
 
