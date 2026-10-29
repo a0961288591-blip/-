@@ -34,22 +34,20 @@
   .gold { color: var(--gold); }
   .credit { position: absolute; left: 36px; bottom: 26px; font-size: 22px; opacity: .75; letter-spacing: 1px; text-shadow: 0 1px 4px #000; }
 
-  /* hook: satellite */
-  #satw { position: absolute; left: -559px; top: -218px; width: 1977px; height: 1920px; transform-origin: 1181px 1035px; }
-  #satw img, #satw svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .s1shade { position: absolute; inset: 0; background:
-      linear-gradient(180deg, #0b1a2ef2 0%, #0b1a2ecc 22%, #0b1a2e00 40%, #0b1a2e00 58%, #0b1a2ef2 86%); }
+  /* hook: the lot as a clean plan */
+  #s1 { background: radial-gradient(1100px 1000px at 50% 55%, #17324f, var(--navy) 72%); }
+  #s1 .gridbg { opacity: .1; }
+  #s1svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
   .tag { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 900; font-size: 44px; padding: 8px 26px; border-radius: 8px; letter-spacing: 4px; }
-  #s1 .kick { left: 70px; top: 120px; }
-  #s1 .title { left: 64px; top: 200px; margin: 0; font-size: 136px; font-weight: 900; letter-spacing: 4px; line-height: 1.1; text-shadow: 0 6px 30px #0008; }
+  #s1 .kick { left: 64px; top: 64px; }
+  #s1 .title { left: 58px; top: 136px; margin: 0; font-size: 140px; font-weight: 900; letter-spacing: 4px; line-height: 1.1; }
   #s1 .title .ch { display: inline-block; }
-  #s1 .place { left: 70px; top: 368px; font-size: 46px; letter-spacing: 6px; }
-  .areaBig { left: 0; right: 0; bottom: 150px; text-align: center; }
-  .areaBig .n { font-size: 230px; font-weight: 900; line-height: 1; color: var(--gold); letter-spacing: -4px; text-shadow: 0 8px 40px #000a; }
-  .areaBig .u { font-size: 90px; font-weight: 900; margin-left: 10px; }
-  .areaBig .cap { font-size: 40px; letter-spacing: 10px; margin-bottom: 6px; }
-  .pin { display: flex; align-items: center; gap: 12px; background: #fff8ec; color: var(--navy); font-weight: 900; font-size: 36px; padding: 10px 22px; border-radius: 40px; box-shadow: 0 8px 24px #0006; }
-  .pin i { width: 18px; height: 18px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px #e8b64c55; }
+  #s1 .place { left: 64px; top: 312px; font-size: 46px; letter-spacing: 6px; opacity: .85; }
+  .areaBig { left: 0; right: 0; top: 1490px; text-align: center; line-height: 1; }
+  .areaBig .n { font-size: 230px; font-weight: 900; color: var(--gold); letter-spacing: -4px; }
+  .areaBig .u { font-size: 96px; font-weight: 900; margin-left: 12px; }
+  .road text { font-size: 38px; font-weight: 900; letter-spacing: 6px; fill: #fff8ec; }
+  .dimpill text { font-size: 40px; font-weight: 900; fill: #0b1a2e; }
 
   /* specs */
   #s2 { background: radial-gradient(1200px 900px at 50% 30%, #17324f, var(--navy) 70%); }
@@ -137,25 +135,52 @@
 <div id="film" data-composition-id="film" data-width="1080" data-height="1920">
   <audio id="om-sound" src="assets/sound.wav" data-start="0" data-duration="20" data-track-index="8" data-volume="1"></audio>
 
-  <!-- 1 · hook: the lot on the satellite -->
+  <!-- 1 · hook: the lot as a clean plan (traced from the cadastral map, levelled) -->
   <section class="scene" id="s1" style="visibility:visible">
-    <div id="satw" data-om-id="satellite">
-      <img src="assets/img/sat.jpg" alt="">
-      <svg viewBox="0 0 1206 1171" data-om-id="lot-outline">
-        <polygon id="lotFill" points="555,590 863,544 921,948 845,957 812,750 584,782" fill="#e8b64c" fill-opacity="0"/>
-        <polygon id="lotLine" points="555,590 863,544 921,948 845,957 812,750 584,782" fill="none" stroke="#e8b64c" stroke-width="7" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
-      </svg>
-    </div>
-    <div class="s1shade"></div>
+    <div class="gridbg"></div>
+    <svg id="s1svg" viewBox="0 0 1080 1920">
+      <defs>
+        <clipPath id="lotClip"><polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8"/></clipPath>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+      </defs>
+      <g class="road" id="roadN" data-om-id="road-north">
+        <rect x="0" y="404" width="1080" height="66" fill="#22384f"/>
+        <line x1="0" y1="437" x2="1080" y2="437" stroke="#fff8ec55" stroke-width="4" stroke-dasharray="26 22" class="lane"/>
+        <rect x="24" y="410" width="210" height="54" rx="8" fill="#0b1a2e"/><text x="129" y="450" text-anchor="middle">鎮北北巷</text>
+      </g>
+      <g class="road" id="roadS" data-om-id="road-south">
+        <rect x="0" y="1386" width="1080" height="66" fill="#22384f"/>
+        <line x1="0" y1="1419" x2="1080" y2="1419" stroke="#fff8ec55" stroke-width="4" stroke-dasharray="26 22" class="lane"/>
+        <rect x="24" y="1392" width="210" height="54" rx="8" fill="#0b1a2e"/><text x="129" y="1432" text-anchor="middle">文龍東路</text>
+      </g>
+      <g id="lot" transform="translate(207 500) scale(1.25)" data-om-id="lot">
+        <g clip-path="url(#lotClip)">
+          <rect x="-20" y="-20" width="600" height="760" fill="#e8b64c" fill-opacity=".16"/>
+          <g id="lotSat" opacity="0"><g transform="translate(-232.66 -360.95) rotate(8.419)">
+            <image href="assets/img/sat.jpg" x="-663.0" y="-682.7" width="2057.2" height="1997.5"/>
+          </g></g>
+        </g>
+        <polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="none" stroke="#e8b64c" stroke-width="7" stroke-linejoin="round"/>
+        <polygon id="runner" points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="none" stroke="#fff8ec" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" pathLength="1" stroke-dasharray="0.12 0.88" stroke-dashoffset="0" filter="url(#glow)"/>
+      </g>
+      <g transform="translate(560 437)"><g class="dimpill" id="pillTop" data-om-id="dim-front">
+        <rect x="-150" y="-34" width="300" height="68" rx="34" fill="#e8b64c"/><text y="14" text-anchor="middle">面寬 34.7m</text>
+      </g></g>
+      <g transform="translate(786 1419)"><g class="dimpill" id="pillBot" data-om-id="dim-wenlong">
+        <rect x="-96" y="-34" width="192" height="68" rx="34" fill="#e8b64c"/><text y="14" text-anchor="middle">8.7m</text>
+      </g></g>
+      <g transform="translate(420 1140) rotate(-12)"><g id="stamp" data-om-id="stamp">
+        <circle r="136" fill="#0b1a2e" stroke="#e8b64c" stroke-width="8"/>
+        <circle r="116" fill="none" stroke="#e8b64c" stroke-width="3" stroke-dasharray="8 8"/>
+        <text y="-10" text-anchor="middle" font-size="76" font-weight="900" fill="#e8b64c">雙面</text>
+        <text y="72" text-anchor="middle" font-size="76" font-weight="900" fill="#e8b64c">臨路</text>
+      </g></g>
+    </svg>
     <div class="abs kick" data-om-id="kicker"><span class="tag" data-var-text="kicker">不可錯過！</span></div>
     <h1 class="abs title" data-om-id="title" data-om-var="title"></h1>
     <div class="abs place" data-om-id="place" data-var-text="place">高雄市鳳山區・鳳青段</div>
-    <div class="abs pin" id="pinN" style="left:500px; top:840px" data-om-id="pin-lot"><i></i>本案基地</div>
-    <div class="abs areaBig" data-om-id="area">
-      <div class="cap">基地面積</div>
-      <span class="n num" id="areaN">0</span><span class="u">坪</span>
-    </div>
-    <div class="credit">圖資 © Google ・ 地界依地籍圖套繪</div>
+    <div class="abs areaBig" data-om-id="area"><span class="n num" id="areaN">0</span><span class="u">坪</span></div>
+    <div class="credit">衛星圖 © Google ・ 地界依地籍圖套繪</div>
   </section>
 
   <!-- 2 · specs: the L-shaped plan, then floors stacking -->
@@ -248,7 +273,7 @@
   <section class="scene" id="s6">
     <div class="gridbg"></div>
     <div class="abs endbox">
-      <svg class="logo" viewBox="0 0 460 480" data-om-id="end-logo"><polygon points="45,77 357,37 410,437 327,447 301,243 70,275" fill="#e8b64c33" stroke="#e8b64c" stroke-width="16" stroke-linejoin="round"/></svg>
+      <svg class="logo" viewBox="-20 -20 573 737" data-om-id="end-logo"><polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="#e8b64c33" stroke="#e8b64c" stroke-width="16" stroke-linejoin="round"/></svg>
       <div class="t" data-om-id="end-title" data-var-text="title">華鳳特區美建地</div>
       <div class="p" data-om-id="end-place" data-var-text="place">高雄市鳳山區・鳳青段</div>
       <div class="specs" data-om-id="end-specs"><span id="eArea"></span><span data-var-text="zone">住三之一</span><span id="eRatio"></span><span id="eUnit"></span><span id="eTotal"></span></div>
@@ -278,15 +303,15 @@
   $('#s1 .title').innerHTML = [...V.title].map((c) => `<span class="ch">${c}</span>`).join('');
 
   // The L-shaped plan, as stacked plates (traced from the owner's drawing).
-  const L = '45,77 357,37 410,437 327,447 301,243 70,275';
+  const L = '0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8';
   const FLOORS = 7;
   const plates = $('#plates');
   for (let i = 0; i < FLOORS; i++) {
     const top = i === 0;
-    plates.insertAdjacentHTML('beforeend', `<div class="plate" id="pl${i}"><svg viewBox="0 0 460 480">
+    plates.insertAdjacentHTML('beforeend', `<div class="plate" id="pl${i}"><svg viewBox="-60 -60 653 817">
       <polygon points="${L}" fill="${top ? '#e8b64c2e' : '#e8b64c'}" fill-opacity="${top ? 1 : .22 + i * .05}"
         stroke="#e8b64c" stroke-width="${top ? 5 : 3}" stroke-linejoin="round" ${top ? 'pathLength="1" stroke-dasharray="1" class="pl0line"' : ''}/>
-      ${top ? `<text x="200" y="22" class="dim" fill="#e8b64c" font-size="26" font-weight="900" text-anchor="middle" transform="rotate(-7 200 22)">方正主基地</text>` : ''}
+      ${top ? `<text x="266" y="-18" class="dim" fill="#e8b64c" font-size="40" font-weight="900" text-anchor="middle">方正主基地</text>` : ''}
     </svg></div>`);
   }
 
@@ -300,23 +325,30 @@
   buildAll();
 
   function buildAll() {
-    // 1 · hook
+    // 1 · hook 0–3 s: frame 0 is the poster (title, lot, area); then it comes alive
     tl.addLabel('scene:hook', 0);
     show('#s1', 0, B(6));
-    tl.fromTo('#satw', { scale: 1 }, { scale: 1.15, duration: B(6), ease: 'power1.inOut' }, 0);
-    tl.fromTo('#lotLine', { attr: { 'stroke-dashoffset': 1 } }, { attr: { 'stroke-dashoffset': 0 }, duration: .9, ease: 'power2.inOut' }, .15);
-    OM.sfx('draw', .15, { dur: .9, gain: .5 });
-    tl.fromTo('#lotFill', { attr: { 'fill-opacity': 0 } }, { attr: { 'fill-opacity': .5 }, duration: .2, ease: 'power2.out' }, B(2));
-    tl.to('#lotFill', { attr: { 'fill-opacity': .22 }, duration: .6, ease: 'power1.out' }, B(2) + .2);
+    tl.fromTo('#s1svg', { scale: 1.1 }, { scale: 1, duration: .6, ease: 'expo.out', transformOrigin: '50% 50%' }, 0);
+    tl.to('#s1svg', { scale: 1.04, duration: B(5) - .6, ease: 'none' }, .6);
+    tl.fromTo('#s1 .title .ch', { y: 0 }, { keyframes: [{ y: -18, duration: .12 }, { y: 0, duration: .25 }], stagger: .05, ease: 'power2.out' }, .05);
+    OM.sfx('whoosh', 0, { gain: .4 });
+    tl.fromTo('#runner', { attr: { 'stroke-dashoffset': 0 } }, { attr: { 'stroke-dashoffset': -2 }, duration: B(5), ease: 'power1.inOut' }, 0);
+    OM.sfx('draw', 0, { dur: .8, gain: .45 });
+    tl.fromTo('.lane', { attr: { 'stroke-dashoffset': 0 } }, { attr: { 'stroke-dashoffset': -240 }, duration: B(6), ease: 'none' }, 0);
+    // the real ground appears inside the line
+    tl.fromTo('#lotSat', { opacity: 0 }, { opacity: .9, duration: .35, ease: 'power2.out' }, B(2));
+    tl.fromTo('#areaN', { scale: 1 }, { keyframes: [{ scale: 1.14, duration: .08 }, { scale: 1, duration: .35 }] }, B(2));
     OM.sfx('impact', B(2), { gain: .55 });
+    tl.fromTo('#pillTop', { scale: 0 }, { scale: 1, duration: .4, ease: 'back.out(2.2)', svgOrigin: '0 0' }, B(3) + .1);
+    OM.sfx('pop', B(3) + .15, { note: 3 });
+    tl.fromTo('#pillBot', { scale: 0 }, { scale: 1, duration: .4, ease: 'back.out(2.2)', svgOrigin: '0 0' }, B(4));
+    OM.sfx('pop', B(4) + .05, { note: 5 });
+    tl.fromTo('#stamp', { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: .22, ease: 'power4.in', svgOrigin: '0 0' }, B(4.5) - .22);
+    OM.sfx('stamp', B(4.5), { gain: .7 });
     $('#areaN').textContent = fmt2(V.area);
-    tl.fromTo('.areaBig', { scale: 1 }, { keyframes: [{ scale: .9, duration: B(1) - .05, ease: 'power2.in' }, { scale: 1, duration: .3 }] }, B(2));
-    tl.fromTo('.areaBig .n', { scale: 1 }, { keyframes: [{ scale: 1.12, duration: .08 }, { scale: 1, duration: .35 }] }, B(3));
-    OM.sfx('thud', B(3), { gain: .7 });
-    tl.fromTo('#pinN', { scale: 0, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: .4, ease: 'back.out(2.2)' }, B(4));
-    OM.sfx('pop', B(4) + .1, { note: 3 });
-    tl.to('#s1 .title, #s1 .kick, #s1 .place', { x: -80, duration: B(1), ease: 'power2.in' }, B(5));
-    tl.to('#satw', { scale: 1.8, duration: B(1), ease: 'power3.in' }, B(5));
+    // out: dive into the lot
+    tl.to('#s1svg, #s1 .areaBig', { scale: 1.5, opacity: 0, duration: B(1), ease: 'power3.in', transformOrigin: '50% 50%' }, B(5));
+    tl.to('#s1 .title, #s1 .kick, #s1 .place', { y: -60, opacity: 0, duration: B(1), ease: 'power3.in' }, B(5));
 
     // 2 · specs 3–7 s
     const t2 = B(6);
@@ -324,7 +356,7 @@
     show('#s2', t2, B(14));
     OM.sfx('whoosh', t2, { gain: .6 });
     tl.fromTo('#s2 .head', { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: .5 }, t2);
-    tl.fromTo('#stage3d', { scale: 1.6, rotation: 8 }, { scale: 1, rotation: 0, duration: .7 }, t2);
+    tl.fromTo('#stage3d', { scale: .6, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: .5 }, t2);
     tl.fromTo('.pl0line', { attr: { 'stroke-dashoffset': 1 } }, { attr: { 'stroke-dashoffset': 0 }, duration: .6, ease: 'power2.inOut' }, t2);
     tl.set('.plate:not(#pl0)', { autoAlpha: 0 }, 0);
     const chips = ['#s2 [data-om-id=chip-zone]', '#s2 [data-om-id=chip-bcr]', '#s2 [data-om-id=chip-far]'];
@@ -337,7 +369,7 @@
     tl.fromTo(bc, { v: 0 }, { v: V.bcr, duration: .6, ease: 'power3.out', onUpdate: () => { $('#bcrN').textContent = Math.round(bc.v); } }, t2 + B(2));
     tl.fromTo(fc, { v: 0 }, { v: V.far, duration: .6, ease: 'power3.out', onUpdate: () => { $('#farN').textContent = Math.round(fc.v); } }, t2 + B(3));
     // tilt into 3D, floors rise one per eighth
-    const tilt = t2 + B(4);
+    const tilt = t2 + .15;
     tl.fromTo('#plates', { rotationX: 0, rotationZ: 0, y: 0 }, { rotationX: 58, rotationZ: -24, y: 150, duration: .7, ease: 'power3.inOut' }, tilt);
     for (let i = 0; i < FLOORS; i++) {
       tl.fromTo(`#pl${i}`, { z: 0 }, { z: i * 44, duration: .35, ease: 'back.out(1.8)' }, tilt + .5 + i * B(.5));
@@ -346,10 +378,13 @@
         OM.sfx('pop', tilt + .55 + i * B(.5), { note: i, gain: .35 });
       }
     }
-    tl.fromTo('.floorcap', { y: 80, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, tilt + .6);
+    tl.fromTo('.floorcap', { y: 80, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, t2 + B(4));
     const g = { v: 0 };
-    tl.fromTo(g, { v: 0 }, { v: gfa, duration: 1.4, ease: 'power3.out', onUpdate: () => { $('#gfaN').textContent = Math.round(g.v).toLocaleString('en-US'); } }, tilt + .6);
-    tl.to('#plates', { rotationZ: -34, duration: 2, ease: 'none' }, tilt + .7);
+    tl.fromTo(g, { v: 0 }, { v: gfa, duration: 1.2, ease: 'power3.out', onUpdate: () => { $('#gfaN').textContent = Math.round(g.v).toLocaleString('en-US'); } }, t2 + B(4));
+    tl.to('#plates', { rotationZ: -40, duration: 3.2, ease: 'none' }, tilt + .7);
+    tl.fromTo('.floorcap .b', { scale: 1 }, { keyframes: [{ scale: 1.12, duration: .08 }, { scale: 1, duration: .3 }] }, t2 + B(6));
+    OM.sfx('thud', t2 + B(6), { gain: .5 });
+    tl.fromTo('.chip', { y: 0 }, { keyframes: [{ y: -14, duration: .1 }, { y: 0, duration: .25 }], stagger: .06 }, t2 + B(7));
 
     // 3 · burst 7–11 s, cuts accelerate on the beat
     const t3 = B(14);
