@@ -1,10 +1,12 @@
 請幫我做一支土地物件的直式短影音（9:16、1080×1920、20 秒、繁體中文、有配樂和音效、不配旁白）。
 
 【工具】
-1. 先執行 `npx skills add alchaincyf/huashu-motion -y` 安裝影片技能，再用 huashu-motion 技能製作（om new / om check / om still / om render / om qa）。
-2. 範本：GitHub repo `a0961288591-blip/-` 的 `films/huafeng-land/`。能存取的話，直接複製這個資料夾當起點，只換資料、照片和地界；不能存取就照下面的結構從頭做。
-3. 環境沒有 Chrome 的話，把 OM_CHROME 設成 Chromium 的路徑（雲端環境是 /opt/pw-browsers/chromium）。
-4. 字體用 Noto Sans TC（繁中）。內建的 Noto Sans SC 是簡體字集，繁體字會缺。從 Google Fonts 用 text= 參數下載「只含片中文字」的子集；片中文字有改，就要重新下載一次。
+1. 影片用 HyperFrames 格式寫：一個 index.html，根元素加 data-composition-id、data-width="1080"、data-height="1920"。所有動畫用 GSAP 寫成一條 paused timeline，掛在 window.__timelines[<composition-id>]。可以改的文字和數字（標題、坪數、單價、電話）放進 data-composition-variables。
+2. 配樂和音效：先執行 `npx skills add alchaincyf/huashu-motion -y`，用它的 OM.music / OM.sfx 標好音效位置，再用 `om sound` 產生 assets/sound.wav，放進 <audio id="om-sound">。想用自己的音樂，就直接放 mp3 當 <audio>。
+3. 輸出影片用 HyperFrames：`npx hyperframes check .` 檢查，`npx hyperframes render . -o out/成品.mp4` 輸出。
+4. 範本：GitHub repo `a0961288591-blip/-` 的 `films/huafeng-land/`（已確認可以用 HyperFrames 直接輸出）。能存取的話，直接複製這個資料夾當起點，只換資料、照片和地界；不能存取就照下面的結構從頭做。
+5. 環境沒有 Chrome 的話，指定 Chromium 的路徑（雲端環境是 /opt/pw-browsers/chromium）。
+6. 字體用 Noto Sans TC（繁中）。從 Google Fonts 用 text= 參數下載「只含片中文字」的子集；片中文字有改，就要重新下載一次。
 
 【物件資料】←改這裡
 - 標題：
@@ -39,7 +41,7 @@
 - 地圖、街景截圖要保留 Google 浮水印，並加上「© Google」出處小字。
 
 【檢查與交付】
-- om check 要 0 errors。
-- 用 om still 看開場、價格、片尾等關鍵畫面。
-- om render 輸出 MP4 後跑 om qa，確認沒有單格閃畫面、沒有超過 1 秒的停頓。
+- `npx hyperframes check .` 不能有 error。
+- 用 `npx hyperframes snapshot` 看開場、價格、片尾等關鍵畫面。
+- `npx hyperframes render` 輸出 MP4，確認有聲音、長度 20 秒、沒有單格閃畫面、沒有超過 1 秒的停頓。
 - 把成品 MP4 傳給我，並 commit 和 push。
