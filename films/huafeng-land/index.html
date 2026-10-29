@@ -8,8 +8,9 @@
   {"id":"bcr","type":"number","label":"建蔽率 %","default":60,"min":0,"max":100,"step":1},
   {"id":"far","type":"number","label":"容積率 %","default":240,"min":0,"max":1000,"step":1},
   {"id":"unit","type":"number","label":"單價（萬/坪）","default":50,"min":0,"max":9999,"step":0.1},
-  {"id":"contactName","type":"string","label":"洽詢人","default":"歡迎來電洽詢","group":"片尾"},
-  {"id":"contactPhone","type":"string","label":"電話","default":"0900-000-000","group":"片尾"},
+  {"id":"company","type":"string","label":"公司","default":"永慶不動產・大順鴻麗店","group":"片尾"},
+  {"id":"contactName","type":"string","label":"洽詢人","default":"陳庭妍","group":"片尾"},
+  {"id":"contactPhone","type":"string","label":"電話","default":"0961-288-591","group":"片尾"},
   {"id":"gold","type":"color","label":"金色","default":"#e8b64c"},
   {"id":"navy","type":"color","label":"底色","default":"#0b1a2e"},
   {"id":"endHold","type":"number","label":"結尾停留（秒）","default":1.0,"min":0,"max":10,"step":0.1,"group":"節奏"}
@@ -126,7 +127,9 @@
   .endbox .specs { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 50px; }
   .endbox .specs span { border: 3px solid var(--gold); color: var(--gold); font-size: 46px; font-weight: 900; padding: 10px 24px; border-radius: 12px; }
   .contact { left: 70px; right: 70px; top: 1180px; background: var(--gold); color: var(--navy); border-radius: 28px; padding: 44px 50px; }
-  .contact .a { font-size: 54px; font-weight: 900; letter-spacing: 4px; }
+  .contact .co { font-size: 40px; font-weight: 900; letter-spacing: 3px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 3px solid #0b1a2e33; }
+  .contact .a { font-size: 64px; font-weight: 900; letter-spacing: 6px; display: flex; align-items: baseline; gap: 24px; }
+  .contact .a .tel { font-size: 34px; letter-spacing: 3px; font-weight: 500; opacity: .75; }
   .contact .b { font-size: 110px; font-weight: 900; letter-spacing: 2px; line-height: 1.15; }
 </style>
 </head>
@@ -251,8 +254,9 @@
       <div class="specs" data-om-id="end-specs"><span id="eArea"></span><span data-var-text="zone">住三之一</span><span id="eRatio"></span><span id="eUnit"></span><span id="eTotal"></span></div>
     </div>
     <div class="abs contact" data-om-id="contact">
-      <div class="a" data-var-text="contactName">歡迎來電洽詢</div>
-      <div class="b num" data-var-text="contactPhone">0900-000-000</div>
+      <div class="co" data-var-text="company">永慶不動產・大順鴻麗店</div>
+      <div class="a"><span data-var-text="contactName">陳庭妍</span><span class="tel">歡迎來電洽詢</span></div>
+      <div class="b num" data-var-text="contactPhone">0961-288-591</div>
     </div>
   </section>
 </div>
