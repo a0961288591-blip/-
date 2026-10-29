@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="zh-TW" data-composition-variables='[
+  {"id":"kicker","type":"string","label":"眉題","default":"不可錯過！"},
+  {"id":"title","type":"string","label":"標題","default":"華鳳特區美建地"},
+  {"id":"place","type":"string","label":"地段","default":"高雄市鳳山區・鳳青段"},
+  {"id":"area","type":"number","label":"地坪（坪）","default":295.27,"min":0,"max":99999,"step":0.01},
+  {"id":"zone","type":"string","label":"使用分區","default":"住三之一"},
+  {"id":"bcr","type":"number","label":"建蔽率 %","default":60,"min":0,"max":100,"step":1},
+  {"id":"far","type":"number","label":"容積率 %","default":240,"min":0,"max":1000,"step":1},
+  {"id":"unit","type":"number","label":"單價（萬/坪）","default":50,"min":0,"max":9999,"step":0.1},
+  {"id":"company","type":"string","label":"公司","default":"永慶不動產・大順鴻麗店","group":"片尾"},
+  {"id":"contactName","type":"string","label":"洽詢人","default":"陳庭妍","group":"片尾"},
+  {"id":"contactPhone","type":"string","label":"電話","default":"0961-288-591","group":"片尾"},
+  {"id":"gold","type":"color","label":"金色","default":"#e8b64c"},
+  {"id":"navy","type":"color","label":"底色","default":"#0b1a2e"},
+  {"id":"endHold","type":"number","label":"結尾停留（秒）","default":1.0,"min":0,"max":10,"step":0.1,"group":"節奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<title>華鳳特區美建地</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style id="om-fonts">
+@font-face { font-family: "Noto Sans TC"; src: url("assets/fonts/NotoSansTC-500.woff2") format("truetype"); font-weight: 500; }
+@font-face { font-family: "Noto Sans TC"; src: url("assets/fonts/NotoSansTC-900.woff2") format("truetype"); font-weight: 900; }
+</style>
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #0b1a2e; }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--navy); color: #fff8ec;
+    font-family: "Noto Sans TC", sans-serif; font-weight: 500; }
+  .scene { position: absolute; inset: 0; overflow: hidden; visibility: hidden; }
+  .abs { position: absolute; }
+  .num { font-variant-numeric: tabular-nums; }
+  .gold { color: var(--gold); }
+  .credit { position: absolute; left: 36px; bottom: 26px; font-size: 22px; opacity: .75; letter-spacing: 1px; text-shadow: 0 1px 4px #000; }
+
+  /* hook: the lot as a clean plan */
+  #s1 { background: radial-gradient(1100px 1000px at 50% 55%, #17324f, var(--navy) 72%); }
+  #s1 .gridbg { opacity: .1; }
+  #s1svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .tag { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 900; font-size: 44px; padding: 8px 26px; border-radius: 8px; letter-spacing: 4px; }
+  #s1 .kick { left: 64px; top: 64px; }
+  #s1 .title { left: 58px; top: 136px; margin: 0; font-size: 140px; font-weight: 900; letter-spacing: 4px; line-height: 1.1; }
+  #s1 .title .ch { display: inline-block; }
+  #s1 .place { left: 64px; top: 312px; font-size: 46px; letter-spacing: 6px; opacity: .85; }
+  .areaBig { left: 0; right: 0; top: 1490px; text-align: center; line-height: 1; }
+  .areaBig .n { font-size: 230px; font-weight: 900; color: var(--gold); letter-spacing: -4px; }
+  .areaBig .u { font-size: 96px; font-weight: 900; margin-left: 12px; }
+  .road text { font-size: 38px; font-weight: 900; letter-spacing: 6px; fill: #fff8ec; }
+  .dimpill text { font-size: 40px; font-weight: 900; fill: #0b1a2e; }
+
+  /* specs */
+  #s2 { background: radial-gradient(1200px 900px at 50% 30%, #17324f, var(--navy) 70%); }
+  .gridbg { position: absolute; inset: -200px; opacity: .14; background-image:
+      linear-gradient(#e8b64c 2px, transparent 2px), linear-gradient(90deg, #e8b64c 2px, transparent 2px);
+      background-size: 90px 90px; }
+  #s2 .head { left: 70px; top: 110px; font-size: 54px; font-weight: 900; letter-spacing: 6px; }
+  #s2 .head small { display: block; font-size: 32px; font-weight: 500; opacity: .7; letter-spacing: 4px; margin-top: 8px; }
+  #stage3d { position: absolute; left: 90px; top: 300px; width: 900px; height: 880px; perspective: 2200px; }
+  #plates { position: absolute; inset: 0; transform-style: preserve-3d; transform-origin: 50% 50%; }
+  .plate { position: absolute; inset: 0; transform-style: preserve-3d; }
+  .plate svg { width: 100%; height: 100%; overflow: visible; }
+  .dim { font-size: 34px; font-weight: 900; color: var(--gold); }
+  .chips { left: 60px; right: 60px; top: 1240px; display: flex; gap: 24px; }
+  .chip { flex: 1; background: #fff8ec; color: var(--navy); border-radius: 22px; padding: 26px 0 22px; text-align: center; box-shadow: 0 16px 40px #0007; }
+  .chip .k { font-size: 32px; letter-spacing: 4px; opacity: .7; }
+  .chip .v { font-size: 74px; font-weight: 900; line-height: 1.15; }
+  .chip .v small { font-size: 44px; }
+  .chip.hl { background: var(--gold); }
+  .floorcap { left: 60px; right: 60px; top: 1500px; text-align: center; }
+  .floorcap .a { font-size: 44px; letter-spacing: 4px; }
+  .floorcap .b { font-size: 120px; font-weight: 900; color: var(--gold); line-height: 1.1; }
+  .floorcap .b small { font-size: 60px; color: #fff8ec; }
+  .floorcap .c { margin-top: 18px; }
+  .note { font-size: 22px; opacity: .55; }
+
+  /* burst */
+  .shot { position: absolute; inset: 0; visibility: hidden; overflow: hidden; background: #000; }
+  .shot .blur { position: absolute; inset: -80px; background-size: cover; background-position: center; filter: blur(36px) brightness(.45) saturate(1.2); }
+  .shot .card { position: absolute; left: 50%; top: 46%; width: 960px; transform: translate(-50%, -50%); }
+  .shot .card img { display: block; width: 100%; border: 10px solid #fff8ec; border-radius: 8px; box-shadow: 0 30px 80px #000c; }
+  .lab { position: absolute; left: 60px; right: 60px; bottom: 170px; }
+  .lab .t1 { display: inline-block; background: var(--gold); color: var(--navy); font-size: 84px; font-weight: 900; padding: 4px 28px; letter-spacing: 4px; }
+  .lab .t2 { display: inline-block; margin-top: 16px; background: var(--navy); color: #fff8ec; font-size: 50px; font-weight: 900; padding: 8px 24px; letter-spacing: 3px; }
+  .flash { position: absolute; inset: 0; background: #fff8ec; opacity: 0; pointer-events: none; }
+
+  /* area */
+  #mapw { position: absolute; left: -867px; top: -175px; width: 2050px; height: 2125px; transform-origin: 1567px 935px; }
+  #mapw img { width: 100%; height: 100%; display: block; }
+  .mshade { position: absolute; inset: 0; background: linear-gradient(180deg, #0b1a2ecc 0%, #0b1a2e00 18%, #0b1a2e00 42%, #0b1a2ef0 64%, var(--navy) 100%); }
+  .ring { position: absolute; left: 700px; top: 760px; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; border: 6px solid var(--gold); }
+  .mpin { position: absolute; left: 700px; top: 760px; transform: translate(-50%, -100%); }
+  .mpin .lbl { background: var(--gold); color: var(--navy); font-weight: 900; font-size: 40px; padding: 10px 22px; border-radius: 12px; white-space: nowrap; box-shadow: 0 10px 30px #0008; }
+  .mpin .stem { width: 6px; height: 50px; background: var(--gold); margin: 0 auto; }
+  #s4 .head { left: 70px; top: 110px; font-size: 64px; font-weight: 900; letter-spacing: 6px; text-shadow: 0 4px 20px #000; }
+  .lcards { left: 60px; right: 60px; top: 1120px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .lcard { background: #fff8ec; color: var(--navy); border-radius: 22px; padding: 26px 26px 24px; box-shadow: 0 16px 40px #0008; }
+  .lcard svg { width: 64px; height: 64px; display: block; margin-bottom: 10px; }
+  .lcard .a { font-size: 50px; font-weight: 900; line-height: 1.2; }
+  .lcard .b { font-size: 32px; margin-top: 6px; opacity: .75; }
+  .lcard.hl { background: var(--gold); }
+
+  /* price */
+  #s5 { background: radial-gradient(900px 900px at 50% 45%, #1d3a5c, var(--navy) 70%); }
+  .rays { position: absolute; left: 50%; top: 45%; width: 2600px; height: 2600px; margin: -1300px 0 0 -1300px; opacity: .18;
+    background: repeating-conic-gradient(var(--gold) 0deg 4deg, transparent 4deg 15deg); border-radius: 50%;
+    -webkit-mask: radial-gradient(closest-side, #000 20%, transparent 100%); mask: radial-gradient(closest-side, #000 20%, transparent 100%); }
+  .pcap { left: 0; right: 0; top: 470px; text-align: center; font-size: 60px; letter-spacing: 16px; }
+  .pbig { left: 0; right: 0; top: 540px; text-align: center; line-height: 1; white-space: nowrap; }
+  .pbig .n { font-size: 440px; font-weight: 900; color: var(--gold); letter-spacing: -10px; }
+  .pbig .u { font-size: 110px; font-weight: 900; }
+  .ptotal { left: 80px; right: 80px; top: 1130px; text-align: center; border-top: 4px solid var(--gold); padding-top: 40px; }
+  .ptotal .a { font-size: 50px; letter-spacing: 8px; }
+  .ptotal .b { font-size: 170px; font-weight: 900; line-height: 1.1; }
+  .ptotal .b small { font-size: 90px; }
+  .ptotal .c { font-size: 34px; opacity: .65; margin-top: 10px; }
+
+  /* end */
+  #s6 { background: var(--navy); }
+  #s6 .gridbg { opacity: .08; }
+  .endbox { left: 70px; right: 70px; top: 230px; }
+  .endbox .logo { width: 170px; height: 170px; }
+  .endbox .t { font-size: 124px; font-weight: 900; letter-spacing: 4px; margin-top: 30px; line-height: 1.1; }
+  .endbox .p { font-size: 52px; letter-spacing: 6px; margin-top: 18px; }
+  .endbox .specs { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 50px; }
+  .endbox .specs span { border: 3px solid var(--gold); color: var(--gold); font-size: 46px; font-weight: 900; padding: 10px 24px; border-radius: 12px; }
+  .contact { left: 70px; right: 70px; top: 1180px; background: var(--gold); color: var(--navy); border-radius: 28px; padding: 44px 50px; }
+  .contact .co { font-size: 40px; font-weight: 900; letter-spacing: 3px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 3px solid #0b1a2e33; }
+  .contact .a { font-size: 64px; font-weight: 900; letter-spacing: 6px; display: flex; align-items: baseline; gap: 24px; }
+  .contact .a .tel { font-size: 34px; letter-spacing: 3px; font-weight: 500; opacity: .75; }
+  .contact .b { font-size: 110px; font-weight: 900; letter-spacing: 2px; line-height: 1.15; }
+</style>
+<script type="application/json" id="om-cues">{"source":"recording:narration.wav","precision":"silence","offset":0,"duration":38.501,"words":[
+{"word":"鳳山","start":0.25,"end":0.735},
+{"word":"華","start":0.735,"end":0.978},
+{"word":"鳳","start":0.978,"end":1.221},
+{"word":"特區","start":1.221,"end":1.706},
+{"word":"難得","start":2.015,"end":2.469},
+{"word":"釋出","start":2.469,"end":2.922},
+{"word":"的","start":2.922,"end":3.149},
+{"word":"美","start":3.149,"end":3.376},
+{"word":"建","start":3.376,"end":3.602},
+{"word":"地","start":3.602,"end":3.829},
+{"word":"基地","start":4.133,"end":4.597},
+{"word":"兩百","start":4.597,"end":5.061},
+{"word":"九十","start":5.061,"end":5.525},
+{"word":"五坪","start":5.525,"end":5.989},
+{"word":"北","start":6.28,"end":6.522},
+{"word":"臨","start":6.522,"end":6.764},
+{"word":"鎮","start":6.764,"end":7.006},
+{"word":"北","start":7.006,"end":7.247},
+{"word":"北","start":7.247,"end":7.489},
+{"word":"巷","start":7.489,"end":7.731},
+{"word":"面","start":8.009,"end":8.246},
+{"word":"寬","start":8.246,"end":8.484},
+{"word":"三十","start":8.484,"end":8.959},
+{"word":"四點","start":8.959,"end":9.433},
+{"word":"七","start":9.433,"end":9.671},
+{"word":"米","start":9.671,"end":9.908},
+{"word":"南","start":10.233,"end":10.466},
+{"word":"接","start":10.466,"end":10.699},
+{"word":"文","start":10.699,"end":10.932},
+{"word":"龍","start":10.932,"end":11.165},
+{"word":"東路","start":11.165,"end":11.631},
+{"word":"雙","start":11.814,"end":12.08},
+{"word":"面臨","start":12.08,"end":12.612},
+{"word":"路","start":12.612,"end":12.878},
+{"word":"住","start":13.178,"end":13.412},
+{"word":"三","start":13.412,"end":13.646},
+{"word":"之一","start":13.646,"end":14.113},
+{"word":"建","start":14.454,"end":14.723},
+{"word":"蔽","start":14.723,"end":14.991},
+{"word":"六成","start":14.991,"end":15.528},
+{"word":"容積","start":15.816,"end":16.28},
+{"word":"百分","start":16.28,"end":16.744},
+{"word":"之","start":16.744,"end":16.975},
+{"word":"兩百","start":16.975,"end":17.439},
+{"word":"四十","start":17.439,"end":17.903},
+{"word":"好","start":18.245,"end":18.496},
+{"word":"排","start":18.496,"end":18.747},
+{"word":"電梯","start":18.747,"end":19.248},
+{"word":"店","start":19.248,"end":19.499},
+{"word":"住","start":19.499,"end":19.75},
+{"word":"文","start":20.052,"end":20.283},
+{"word":"龍","start":20.283,"end":20.514},
+{"word":"東路","start":20.514,"end":20.976},
+{"word":"餐飲","start":20.976,"end":21.438},
+{"word":"咖啡","start":21.438,"end":21.9},
+{"word":"林立","start":21.9,"end":22.362},
+{"word":"生活","start":22.607,"end":23.149},
+{"word":"機能","start":23.149,"end":23.69},
+{"word":"成熟","start":23.69,"end":24.232},
+{"word":"文山","start":24.534,"end":24.997},
+{"word":"華","start":24.997,"end":25.228},
+{"word":"鳳","start":25.228,"end":25.46},
+{"word":"雙","start":25.46,"end":25.691},
+{"word":"特區","start":25.691,"end":26.154},
+{"word":"交界","start":26.154,"end":26.617},
+{"word":"還有","start":26.907,"end":27.413},
+{"word":"捷運","start":27.413,"end":27.918},
+{"word":"黃","start":27.918,"end":28.171},
+{"word":"線","start":28.171,"end":28.424},
+{"word":"延伸","start":28.424,"end":28.929},
+{"word":"題材","start":28.929,"end":29.435},
+{"word":"單價","start":29.763,"end":30.187},
+{"word":"每坪","start":30.187,"end":30.61},
+{"word":"五十","start":30.61,"end":31.034},
+{"word":"萬","start":31.034,"end":31.246},
+{"word":"總","start":31.538,"end":31.781},
+{"word":"價","start":31.781,"end":32.023},
+{"word":"約","start":32.023,"end":32.266},
+{"word":"一點","start":32.266,"end":32.751},
+{"word":"四","start":32.751,"end":32.994},
+{"word":"八","start":32.994,"end":33.236},
+{"word":"億","start":33.236,"end":33.479},
+{"word":"永","start":33.785,"end":34.028},
+{"word":"慶","start":34.028,"end":34.271},
+{"word":"不動產","start":34.271,"end":35},
+{"word":"大","start":35,"end":35.242},
+{"word":"順","start":35.242,"end":35.485},
+{"word":"鴻","start":35.485,"end":35.728},
+{"word":"麗","start":35.728,"end":35.971},
+{"word":"店","start":35.971,"end":36.214},
+{"word":"陳","start":36.524,"end":36.797},
+{"word":"庭","start":36.797,"end":37.07},
+{"word":"妍","start":37.07,"end":37.343},
+{"word":"歡迎","start":37.591,"end":38.046},
+{"word":"來電","start":38.046,"end":38.501}
+]}</script>
+</head>
+<body>
+<div id="film" data-composition-id="film" data-width="1080" data-height="1920">
+  <audio id="om-voice" src="assets/voice.wav" data-start="0" data-duration="38.501" data-track-index="9" data-volume="1"></audio>
+  <audio id="om-sound" src="assets/sound.wav" data-start="0" data-duration="20" data-track-index="8" data-volume="1"></audio>
+
+  <!-- 1 · hook: the lot as a clean plan (traced from the cadastral map, levelled) -->
+  <section class="scene" id="s1" style="visibility:visible">
+    <div class="gridbg"></div>
+    <svg id="s1svg" viewBox="0 0 1080 1920">
+      <defs>
+        <clipPath id="lotClip"><polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8"/></clipPath>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+      </defs>
+      <g class="road" id="roadN" data-om-id="road-north">
+        <rect x="0" y="404" width="1080" height="66" fill="#22384f"/>
+        <line x1="0" y1="437" x2="1080" y2="437" stroke="#fff8ec55" stroke-width="4" stroke-dasharray="26 22" class="lane"/>
+        <rect x="24" y="410" width="210" height="54" rx="8" fill="#0b1a2e"/><text x="129" y="450" text-anchor="middle">鎮北北巷</text>
+      </g>
+      <g class="road" id="roadS" data-om-id="road-south">
+        <rect x="0" y="1386" width="1080" height="66" fill="#22384f"/>
+        <line x1="0" y1="1419" x2="1080" y2="1419" stroke="#fff8ec55" stroke-width="4" stroke-dasharray="26 22" class="lane"/>
+        <rect x="24" y="1392" width="210" height="54" rx="8" fill="#0b1a2e"/><text x="129" y="1432" text-anchor="middle">文龍東路</text>
+      </g>
+      <g id="lot" transform="translate(207 500) scale(1.25)" data-om-id="lot">
+        <g clip-path="url(#lotClip)">
+          <rect x="-20" y="-20" width="600" height="760" fill="#e8b64c" fill-opacity=".16"/>
+          <g id="lotSat" opacity="0"><g transform="translate(-232.66 -360.95) rotate(8.419)">
+            <image href="assets/img/sat.jpg" x="-663.0" y="-682.7" width="2057.2" height="1997.5"/>
+          </g></g>
+        </g>
+        <polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="none" stroke="#e8b64c" stroke-width="7" stroke-linejoin="round"/>
+        <polygon id="runner" points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="none" stroke="#fff8ec" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" pathLength="1" stroke-dasharray="0.12 0.88" stroke-dashoffset="0" filter="url(#glow)"/>
+      </g>
+      <g transform="translate(560 437)"><g class="dimpill" id="pillTop" data-om-id="dim-front">
+        <rect x="-150" y="-34" width="300" height="68" rx="34" fill="#e8b64c"/><text y="14" text-anchor="middle">面寬 34.7m</text>
+      </g></g>
+      <g transform="translate(786 1419)"><g class="dimpill" id="pillBot" data-om-id="dim-wenlong">
+        <rect x="-96" y="-34" width="192" height="68" rx="34" fill="#e8b64c"/><text y="14" text-anchor="middle">8.7m</text>
+      </g></g>
+      <g transform="translate(420 1140) rotate(-12)"><g id="stamp" data-om-id="stamp">
+        <circle r="136" fill="#0b1a2e" stroke="#e8b64c" stroke-width="8"/>
+        <circle r="116" fill="none" stroke="#e8b64c" stroke-width="3" stroke-dasharray="8 8"/>
+        <text y="-10" text-anchor="middle" font-size="76" font-weight="900" fill="#e8b64c">雙面</text>
+        <text y="72" text-anchor="middle" font-size="76" font-weight="900" fill="#e8b64c">臨路</text>
+      </g></g>
+    </svg>
+    <div class="abs kick" data-om-id="kicker"><span class="tag" data-var-text="kicker">不可錯過！</span></div>
+    <h1 class="abs title" data-om-id="title" data-om-var="title"></h1>
+    <div class="abs place" data-om-id="place" data-var-text="place">高雄市鳳山區・鳳青段</div>
+    <div class="abs areaBig" data-om-id="area"><span class="n num" id="areaN">0</span><span class="u">坪</span></div>
+    <div class="credit">衛星圖 © Google ・ 地界依地籍圖套繪</div>
+  </section>
+
+  <!-- 2 · specs: the L-shaped plan, then floors stacking -->
+  <section class="scene" id="s2">
+    <div class="gridbg"></div>
+    <div class="abs head" data-om-id="spec-head">地形方正 好規劃<small>住商型建地・街廓整齊</small></div>
+    <div id="stage3d" data-om-id="plan">
+      <div id="plates"></div>
+    </div>
+    <div class="abs chips">
+      <div class="chip hl" data-om-id="chip-zone"><div class="k">使用分區</div><div class="v" data-var-text="zone">住三之一</div></div>
+      <div class="chip" data-om-id="chip-bcr"><div class="k">建蔽率</div><div class="v"><span class="num" id="bcrN">0</span><small>%</small></div></div>
+      <div class="chip" data-om-id="chip-far"><div class="k">容積率</div><div class="v"><span class="num" id="farN">0</span><small>%</small></div></div>
+    </div>
+    <div class="abs floorcap" data-om-id="floor-area">
+      <div class="a">基準容積樓地板 約</div>
+      <div class="b"><span class="num" id="gfaN">0</span><small> 坪</small></div>
+      <div class="a gold" style="font-weight:900">好排電梯店住</div>
+      <div class="note c">＊依地坪 × 容積率估算，實際依建管規定</div>
+    </div>
+  </section>
+
+  <!-- 3 · burst: the real street -->
+  <section class="scene" id="s3">
+    <div class="shot" data-om-id="shot-wenlong">
+      <div class="blur" style="background-image:url(assets/img/sv-wenlong.jpg)"></div>
+      <div class="card"><img src="assets/img/sv-wenlong.jpg" alt=""></div>
+      <div class="lab"><div class="t1">文龍東路</div><br><div class="t2">餐飲・咖啡・零售 生活軸線</div></div>
+    </div>
+    <div class="shot" data-om-id="shot-entry">
+      <div class="blur" style="background-image:url(assets/img/sv-entry.jpg)"></div>
+      <div class="card" style="width:820px; top:42%"><img src="assets/img/sv-entry.jpg" alt=""></div>
+      <div class="lab" style="bottom:120px"><div class="t1">基地現況</div><br><div class="t2">大面積 規劃彈性高</div></div>
+    </div>
+    <div class="shot" data-om-id="shot-lane1">
+      <div class="blur" style="background-image:url(assets/img/sv-lane1.jpg)"></div>
+      <div class="card"><img src="assets/img/sv-lane1.jpg" alt=""></div>
+      <div class="lab"><div class="t1">街廓整齊</div><br><div class="t2">住宅區 優質環境</div></div>
+    </div>
+    <div class="shot" data-om-id="shot-lane2">
+      <div class="blur" style="background-image:url(assets/img/sv-lane2.jpg)"></div>
+      <div class="card"><img src="assets/img/sv-lane2.jpg" alt=""></div>
+      <div class="lab"><div class="t1">新建住宅林立</div><br><div class="t2">成熟住宅區</div></div>
+    </div>
+    <div class="credit">街景 © Google</div>
+    <div class="flash"></div>
+  </section>
+
+  <!-- 4 · area: the neighbourhood map -->
+  <section class="scene" id="s4">
+    <div id="mapw" data-om-id="map"><img src="assets/img/map.jpg" alt=""></div>
+    <div class="mshade"></div>
+    <div class="ring" id="ring1"></div><div class="ring" id="ring2"></div>
+    <div class="mpin" data-om-id="map-pin"><div class="lbl">本案</div><div class="stem"></div></div>
+    <div class="abs head" data-om-id="area-head">文山 × 華鳳 生活圈</div>
+    <div class="abs lcards">
+      <div class="lcard hl" data-om-id="card-mrt">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#0b1a2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="6" width="36" height="40" rx="9"/><path d="M14 28h36M24 38h.1M40 38h.1M22 46l-8 12M42 46l8 12"/></svg>
+        <div class="a">捷運黃線</div><div class="b">延伸題材加分</div>
+      </div>
+      <div class="lcard" data-om-id="card-zones">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#0b1a2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 58V30l14-8v36M20 58V14l18-8v52M38 58V26l20 6v26M2 58h60"/></svg>
+        <div class="a">雙特區交界</div><div class="b">文山特區 × 華鳳特區</div>
+      </div>
+      <div class="lcard" data-om-id="card-lake">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#0b1a2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6l14 22H18zM32 20l18 24H14zM32 44v12M4 58c6-4 10 4 16 0s10 4 16 0 10 4 16 0 8 2 8 2"/></svg>
+        <div class="a">澄清湖</div><div class="b">風景區 休閒綠意</div>
+      </div>
+      <div class="lcard" data-om-id="card-shops">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#0b1a2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 24h36v14a14 14 0 0 1-14 14h-8a14 14 0 0 1-14-14zM46 28h4a7 7 0 0 1 0 14h-6M20 6c-3 4 3 6 0 10M30 6c-3 4 3 6 0 10M40 6c-3 4 3 6 0 10M6 58h48"/></svg>
+        <div class="a">成熟商圈</div><div class="b">文龍東路 生活機能</div>
+      </div>
+    </div>
+    <div class="credit">地圖 © Google</div>
+  </section>
+
+  <!-- 5 · price -->
+  <section class="scene" id="s5">
+    <div class="rays"></div>
+    <div class="abs pcap" data-om-id="price-cap">單 價</div>
+    <div class="abs pbig" data-om-id="price"><span class="n num" id="unitN">0</span><span class="u">萬/坪</span></div>
+    <div class="abs ptotal" data-om-id="total">
+      <div class="a">總價約</div>
+      <div class="b"><span class="num" id="totalN">0</span><small>億</small></div>
+      <div class="c" id="totalCalc"></div>
+    </div>
+  </section>
+
+  <!-- 6 · end card -->
+  <section class="scene" id="s6">
+    <div class="gridbg"></div>
+    <div class="abs endbox">
+      <svg class="logo" viewBox="-20 -20 573 737" data-om-id="end-logo"><polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="#e8b64c33" stroke="#e8b64c" stroke-width="16" stroke-linejoin="round"/></svg>
+      <div class="t" data-om-id="end-title" data-var-text="title">華鳳特區美建地</div>
+      <div class="p" data-om-id="end-place" data-var-text="place">高雄市鳳山區・鳳青段</div>
+      <div class="specs" data-om-id="end-specs"><span id="eArea"></span><span data-var-text="zone">住三之一</span><span id="eRatio"></span><span id="eUnit"></span><span id="eTotal"></span></div>
+    </div>
+    <div class="abs contact" data-om-id="contact">
+      <div class="co" data-var-text="company">永慶不動產・大順鴻麗店</div>
+      <div class="a"><span data-var-text="contactName">陳庭妍</span><span class="tel">歡迎來電洽詢</span></div>
+      <div class="b num" data-var-text="contactPhone">0961-288-591</div>
+    </div>
+  </section>
+</div>
+
+<script>
+  const V = OM.vars();
+  const B = (n) => OM.beat(n);
+  OM.music({ product: 'consumer', style: 'funk', bpm: 120, drop: 'price', ending: 'button', floor: .6, energy: { hook: .6, specs: .7, street: .95, area: .75, price: 1, end: .8 } });
+
+  const $ = (s) => document.querySelector(s);
+  const fmt2 = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const gfa = V.area * V.far / 100;
+  const total = V.area * V.unit / 10000;            // 億
+  $('#totalCalc').textContent = `${fmt2(V.area)} 坪 × ${V.unit} 萬`;
+  $('#eArea').textContent = `${fmt2(V.area)} 坪`;
+  $('#eRatio').textContent = `建蔽${V.bcr}%・容積${V.far}%`;
+  $('#eUnit').textContent = `單價 ${V.unit} 萬/坪`;
+  $('#eTotal').textContent = `總價約 ${total.toFixed(2)} 億`;
+  $('#s1 .title').innerHTML = [...V.title].map((c) => `<span class="ch">${c}</span>`).join('');
+
+  // The L-shaped plan, as stacked plates (traced from the owner's drawing).
+  const L = '0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8';
+  const FLOORS = 7;
+  const plates = $('#plates');
+  for (let i = 0; i < FLOORS; i++) {
+    const top = i === 0;
+    plates.insertAdjacentHTML('beforeend', `<div class="plate" id="pl${i}"><svg viewBox="-60 -60 653 817">
+      <polygon points="${L}" fill="${top ? '#e8b64c2e' : '#e8b64c'}" fill-opacity="${top ? 1 : .22 + i * .05}"
+        stroke="#e8b64c" stroke-width="${top ? 5 : 3}" stroke-linejoin="round" ${top ? 'pathLength="1" stroke-dasharray="1" class="pl0line"' : ''}/>
+      ${top ? `<text x="266" y="-18" class="dim" fill="#e8b64c" font-size="40" font-weight="900" text-anchor="middle">方正主基地</text>` : ''}
+    </svg></div>`);
+  }
+
+  const show = (id, at, until) => {
+    tl.set(id, { visibility: 'visible' }, at);
+    if (until != null) tl.set(id, { visibility: 'hidden' }, until);
+  };
+
+  const tl = gsap.timeline({ paused: true, defaults: { ease: 'expo.out' } });
+
+  buildAll();
+
+  function buildAll() {
+    // 1 · hook 0–3 s: frame 0 is the poster (title, lot, area); then it comes alive
+    tl.addLabel('scene:hook', 0);
+    show('#s1', 0, B(6));
+    tl.fromTo('#s1svg', { scale: 1.1 }, { scale: 1, duration: .6, ease: 'expo.out', transformOrigin: '50% 50%' }, 0);
+    tl.to('#s1svg', { scale: 1.04, duration: B(5) - .6, ease: 'none' }, .6);
+    tl.fromTo('#s1 .title .ch', { y: 0 }, { keyframes: [{ y: -18, duration: .12 }, { y: 0, duration: .25 }], stagger: .05, ease: 'power2.out' }, .05);
+    OM.sfx('whoosh', 0, { gain: .4 });
+    tl.fromTo('#runner', { attr: { 'stroke-dashoffset': 0 } }, { attr: { 'stroke-dashoffset': -2 }, duration: B(5), ease: 'power1.inOut' }, 0);
+    OM.sfx('draw', 0, { dur: .8, gain: .45 });
+    tl.fromTo('.lane', { attr: { 'stroke-dashoffset': 0 } }, { attr: { 'stroke-dashoffset': -240 }, duration: B(6), ease: 'none' }, 0);
+    // the real ground appears inside the line
+    tl.fromTo('#lotSat', { opacity: 0 }, { opacity: .9, duration: .35, ease: 'power2.out' }, B(2));
+    tl.fromTo('#areaN', { scale: 1 }, { keyframes: [{ scale: 1.14, duration: .08 }, { scale: 1, duration: .35 }] }, B(2));
+    OM.sfx('impact', B(2), { gain: .55 });
+    tl.fromTo('#pillTop', { scale: 0 }, { scale: 1, duration: .4, ease: 'back.out(2.2)', svgOrigin: '0 0' }, B(3) + .1);
+    OM.sfx('pop', B(3) + .15, { note: 3 });
+    tl.fromTo('#pillBot', { scale: 0 }, { scale: 1, duration: .4, ease: 'back.out(2.2)', svgOrigin: '0 0' }, B(4));
+    OM.sfx('pop', B(4) + .05, { note: 5 });
+    tl.fromTo('#stamp', { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: .22, ease: 'power4.in', svgOrigin: '0 0' }, B(4.5) - .22);
+    OM.sfx('stamp', B(4.5), { gain: .7 });
+    $('#areaN').textContent = fmt2(V.area);
+    // out: dive into the lot
+    tl.to('#s1svg, #s1 .areaBig', { scale: 1.5, opacity: 0, duration: B(1), ease: 'power3.in', transformOrigin: '50% 50%' }, B(5));
+    tl.to('#s1 .title, #s1 .kick, #s1 .place', { y: -60, opacity: 0, duration: B(1), ease: 'power3.in' }, B(5));
+
+    // 2 · specs 3–7 s
+    const t2 = B(6);
+    tl.addLabel('scene:specs', t2);
+    show('#s2', t2, B(14));
+    OM.sfx('whoosh', t2, { gain: .6 });
+    tl.fromTo('#s2 .head', { x: -120, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: .5 }, t2);
+    tl.fromTo('#stage3d', { scale: .6, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: .5 }, t2);
+    tl.fromTo('.pl0line', { attr: { 'stroke-dashoffset': 1 } }, { attr: { 'stroke-dashoffset': 0 }, duration: .6, ease: 'power2.inOut' }, t2);
+    tl.set('.plate:not(#pl0)', { autoAlpha: 0 }, 0);
+    const chips = ['#s2 [data-om-id=chip-zone]', '#s2 [data-om-id=chip-bcr]', '#s2 [data-om-id=chip-far]'];
+    chips.forEach((c, i) => {
+      const at = t2 + B(1 + i);
+      tl.fromTo(c, { y: 260, rotation: i % 2 ? 6 : -6, autoAlpha: 0 }, { y: 0, rotation: 0, autoAlpha: 1, duration: .45, ease: 'back.out(1.6)' }, at);
+      OM.sfx('thud', at + .18, { pan: -.5 + i * .5, gain: .6 });
+    });
+    const bc = { v: 0 }, fc = { v: 0 };
+    tl.fromTo(bc, { v: 0 }, { v: V.bcr, duration: .6, ease: 'power3.out', onUpdate: () => { $('#bcrN').textContent = Math.round(bc.v); } }, t2 + B(2));
+    tl.fromTo(fc, { v: 0 }, { v: V.far, duration: .6, ease: 'power3.out', onUpdate: () => { $('#farN').textContent = Math.round(fc.v); } }, t2 + B(3));
+    // tilt into 3D, floors rise one per eighth
+    const tilt = t2 + .15;
+    tl.fromTo('#plates', { rotationX: 0, rotationZ: 0, y: 0 }, { rotationX: 58, rotationZ: -24, y: 150, duration: .7, ease: 'power3.inOut' }, tilt);
+    for (let i = 0; i < FLOORS; i++) {
+      tl.fromTo(`#pl${i}`, { z: 0 }, { z: i * 44, duration: .35, ease: 'back.out(1.8)' }, tilt + .5 + i * B(.5));
+      if (i) {
+        tl.set(`#pl${i}`, { autoAlpha: 1 }, tilt + .5 + i * B(.5));
+        OM.sfx('pop', tilt + .55 + i * B(.5), { note: i, gain: .35 });
+      }
+    }
+    tl.fromTo('.floorcap', { y: 80, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, t2 + B(4));
+    const g = { v: 0 };
+    tl.fromTo(g, { v: 0 }, { v: gfa, duration: 1.2, ease: 'power3.out', onUpdate: () => { $('#gfaN').textContent = Math.round(g.v).toLocaleString('en-US'); } }, t2 + B(4));
+    tl.to('#plates', { rotationZ: -40, duration: 3.2, ease: 'none' }, tilt + .7);
+    tl.fromTo('.floorcap .b', { scale: 1 }, { keyframes: [{ scale: 1.12, duration: .08 }, { scale: 1, duration: .3 }] }, t2 + B(6));
+    OM.sfx('thud', t2 + B(6), { gain: .5 });
+    tl.fromTo('.chip', { y: 0 }, { keyframes: [{ y: -14, duration: .1 }, { y: 0, duration: .25 }], stagger: .06 }, t2 + B(7));
+
+    // 3 · burst 7–11 s, cuts accelerate on the beat
+    const t3 = B(14);
+    tl.addLabel('scene:street', t3);
+    show('#s3', t3, B(22));
+    const shots = gsap.utils.toArray('#s3 .shot');
+    const lens = [2, 2, 2, 2];
+    let t = t3;
+    shots.forEach((el, i) => {
+      tl.set(el, { visibility: 'visible' }, t);
+      if (i) tl.set(shots[i - 1], { visibility: 'hidden' }, t);
+      tl.fromTo(el.querySelector('.card'), { scale: 1.25, rotation: i % 2 ? 4 : -4 }, { scale: 1, rotation: i % 2 ? -1.5 : 1.5, duration: .5 }, t);
+      tl.fromTo(el.querySelector('.card'), { y: 0 }, { y: -30, duration: B(lens[i]), ease: 'none' }, t);
+      tl.fromTo(el.querySelector('.blur'), { scale: 1.3 }, { scale: 1.1, duration: B(lens[i]), ease: 'none' }, t);
+      tl.fromTo(el.querySelector('.t1'), { xPercent: -120 }, { xPercent: 0, duration: .35 }, t + .12);
+      tl.fromTo(el.querySelector('.t2'), { xPercent: -130 }, { xPercent: 0, duration: .35 }, t + .22);
+      tl.fromTo('#s3 .flash', { opacity: .7 }, { opacity: 0, duration: .25, ease: 'power2.out', immediateRender: false }, t);
+      OM.sfx('hit', t, { gain: .5, pitch: 1 + i * .05 });
+      t += B(lens[i]);
+    });
+
+    // 4 · area 11–14.5 s
+    const t4 = B(22);
+    tl.addLabel('scene:area', t4);
+    show('#s4', t4, B(30));
+    OM.sfx('whoosh', t4, { gain: .5 });
+    tl.fromTo('#mapw', { scale: 1.5 }, { scale: 1, duration: .8, ease: 'expo.out' }, t4);
+    tl.to('#mapw', { scale: 1.08, duration: B(7), ease: 'none' }, t4 + .8);
+    tl.fromTo('.mpin', { y: -300, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5, ease: 'bounce.out' }, t4 + .3);
+    OM.sfx('thud', t4 + .55, { gain: .6 });
+    ['#ring1', '#ring2'].forEach((r, i) => {
+      tl.fromTo(r, { scale: 1, opacity: 1 }, { scale: 9, opacity: 0, duration: 1.2, ease: 'power2.out', repeat: 2 }, t4 + .6 + i * .6);
+    });
+    tl.fromTo('#s4 .head', { y: -60, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, t4 + .2);
+    gsap.utils.toArray('.lcard').forEach((c, i) => {
+      const at = t4 + B(2 + i);
+      tl.fromTo(c, { x: i % 2 ? 600 : -600, autoAlpha: 0, rotation: i % 2 ? 8 : -8 }, { x: 0, autoAlpha: 1, rotation: 0, duration: .45, ease: 'back.out(1.4)' }, at);
+      OM.sfx('pop', at + .15, { note: 2 + i * 2, pan: i % 2 ? .5 : -.5 });
+    });
+    // the stop: everything dims, one beat of breath
+    tl.to('#s4', { filter: 'brightness(.25)', duration: B(1), ease: 'power2.in' }, B(29));
+    OM.sfx('reverse', B(30), { dur: B(1.5) });
+
+    // 5 · price 15–17.5 s (the drop)
+    const t5 = B(30);
+    tl.addLabel('scene:price', t5);
+    show('#s5', t5, B(35));
+    OM.sfx('impact', t5, { gain: .8 });
+    OM.sfx('subdrop', t5);
+    tl.fromTo('.rays', { rotation: 0, scale: .6 }, { rotation: 40, scale: 1, duration: B(5), ease: 'power2.out' }, t5);
+    tl.fromTo('.pcap', { y: -60, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .4 }, t5);
+    tl.fromTo('.pbig', { scale: 2.6, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: .35, ease: 'power4.out' }, t5);
+    const u = { v: 0 };
+    tl.fromTo(u, { v: 0 }, { v: V.unit, duration: .4, ease: 'power3.out', onUpdate: () => { $('#unitN').textContent = Math.round(u.v * 10) / 10; } }, t5);
+    tl.fromTo('.ptotal', { y: 120, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, t5 + B(2));
+    const tt = { v: 0 };
+    tl.fromTo(tt, { v: 0 }, { v: total, duration: .9, ease: 'power3.out', onUpdate: () => { $('#totalN').textContent = tt.v.toFixed(2); } }, t5 + B(2));
+    OM.sfx('count', t5 + B(2), { dur: .9, gain: .4 });
+    tl.fromTo('.ptotal .b', { scale: 1 }, { keyframes: [{ scale: 1.1, duration: .08 }, { scale: 1, duration: .3 }] }, t5 + B(2) + .9);
+    OM.sfx('stamp', t5 + B(2) + .9, { gain: .6 });
+
+    // 6 · end 17.5–20 s
+    const t6 = B(35);
+    tl.addLabel('scene:end', t6);
+    show('#s6', t6);
+    OM.sfx('whoosh', t6, { gain: .4 });
+    tl.fromTo('.endbox .logo', { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: .6, ease: 'back.out(1.8)' }, t6);
+    tl.fromTo('.endbox .t, .endbox .p', { y: 60, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5, stagger: .1 }, t6 + .1);
+    tl.fromTo('.endbox .specs span', { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .4, stagger: B(.5) }, t6 + .35);
+    tl.fromTo('.contact', { y: 200, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .55, ease: 'back.out(1.4)' }, t6 + B(2));
+    OM.sfx('chime', t6 + B(2) + .2, { gain: .6 });
+    tl.to({}, { duration: V.endHold }, t6 + B(3));
+  }
+
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>

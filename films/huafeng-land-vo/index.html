@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="zh-TW" data-composition-variables='[
+  {"id":"kicker","type":"string","label":"眉題","default":"不可錯過！"},
+  {"id":"title","type":"string","label":"標題","default":"華鳳特區美建地"},
+  {"id":"place","type":"string","label":"地段","default":"高雄市鳳山區・鳳青段"},
+  {"id":"area","type":"number","label":"地坪（坪）","default":295.27,"min":0,"max":99999,"step":0.01},
+  {"id":"zone","type":"string","label":"使用分區","default":"住三之一"},
+  {"id":"bcr","type":"number","label":"建蔽率 %","default":60,"min":0,"max":100,"step":1},
+  {"id":"far","type":"number","label":"容積率 %","default":240,"min":0,"max":1000,"step":1},
+  {"id":"unit","type":"number","label":"單價（萬/坪）","default":50,"min":0,"max":9999,"step":0.1},
+  {"id":"company","type":"string","label":"公司","default":"永慶不動產・大順鴻麗店","group":"片尾"},
+  {"id":"contactName","type":"string","label":"洽詢人","default":"陳庭妍","group":"片尾"},
+  {"id":"contactPhone","type":"string","label":"電話","default":"0961-288-591","group":"片尾"},
+  {"id":"keywords","type":"string","label":"字幕關鍵字（逗號分隔）","default":"雙面臨路,容積百分之兩百四十,電梯店住,生活機能成熟,捷運黃線,五十萬,一點四八億","group":"字幕"},
+  {"id":"endHold","type":"number","label":"結尾停留（秒）","default":1.5,"min":0,"max":10,"step":0.1,"group":"節奏"}
+]'>
+<head>
+<meta charset="utf-8">
+<title>華鳳特區美建地・旁白版</title>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/om.js"></script>
+<style id="om-fonts">
+@font-face { font-family: "Noto Sans TC"; src: url("assets/fonts/NotoSansTC-500.woff2") format("truetype"); font-weight: 500; }
+@font-face { font-family: "Noto Sans TC"; src: url("assets/fonts/NotoSansTC-900.woff2") format("truetype"); font-weight: 900; }
+@font-face { font-family: "WenKai TC"; src: url("assets/fonts/WenKaiTC-700.ttf") format("truetype"); font-weight: 700; }
+</style>
+<style>
+  :root { --navy: #0b1a2e; --gold: #e8b64c; --cream: #fff8ec; --ink: #e9473b; }
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: var(--navy); }
+  #film { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--navy); color: var(--cream);
+    font-family: "Noto Sans TC", sans-serif; font-weight: 500; }
+  .scene { position: absolute; inset: 0; overflow: hidden; visibility: hidden; }
+  .abs { position: absolute; }
+  .num { font-variant-numeric: tabular-nums; }
+  .gold { color: var(--gold); }
+  .gridbg { position: absolute; inset: -200px; opacity: .12; background-image:
+      linear-gradient(#e8b64c 2px, transparent 2px), linear-gradient(90deg, #e8b64c 2px, transparent 2px); background-size: 90px 90px; }
+  .credit { position: absolute; left: 36px; bottom: 26px; font-size: 22px; opacity: .7; letter-spacing: 1px; text-shadow: 0 1px 4px #000; }
+  .hand { font-family: "WenKai TC", "Noto Sans TC", sans-serif; font-weight: 700; fill: var(--gold); stroke: var(--navy); stroke-width: 10px; paint-order: stroke; }
+  .ink { fill: none; stroke: var(--gold); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 2px 3px #0009); }
+
+  /* A · lot plan (hook + details) */
+  #s1 { background: radial-gradient(1100px 1000px at 50% 50%, #17324f, var(--navy) 72%); }
+  #s1svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .tag { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 900; font-size: 44px; padding: 8px 26px; border-radius: 8px; letter-spacing: 4px; }
+  #s1 .kick { left: 64px; top: 64px; }
+  #s1 .title { left: 58px; top: 136px; margin: 0; font-size: 140px; font-weight: 900; letter-spacing: 4px; line-height: 1.1; }
+  #s1 .title .ch { display: inline-block; }
+  #s1 .place { left: 64px; top: 312px; font-size: 46px; letter-spacing: 6px; opacity: .85; }
+  .road text { font-size: 38px; font-weight: 900; letter-spacing: 6px; fill: var(--cream); }
+  .dimpill text { font-size: 40px; font-weight: 900; fill: var(--navy); }
+  .areaSide { left: 215px; top: 990px; width: 470px; text-align: center; line-height: 1; }
+  .areaSide .cap { font-size: 36px; letter-spacing: 10px; margin-bottom: 14px; }
+  .areaSide .n { font-size: 120px; font-weight: 900; color: var(--gold); letter-spacing: -2px; }
+  .areaSide .u { font-size: 56px; font-weight: 900; margin-left: 6px; }
+  .pip { position: absolute; border: 8px solid var(--cream); border-radius: 10px; overflow: hidden; box-shadow: 0 24px 60px #000c; visibility: hidden; }
+  .pip .ph { position: relative; transform-origin: 50% 60%; }
+  .pip img { display: block; width: 100%; }
+  .pip svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .pip .ptag { position: absolute; left: 0; top: 0; background: var(--gold); color: var(--navy); font-size: 34px; font-weight: 900; padding: 6px 18px; letter-spacing: 2px; }
+
+  /* B · specs */
+  #s2 { background: radial-gradient(1200px 900px at 50% 30%, #17324f, var(--navy) 70%); }
+  #s2 .head { left: 70px; top: 110px; font-size: 54px; font-weight: 900; letter-spacing: 6px; }
+  #s2 .head small { display: block; font-size: 32px; font-weight: 500; opacity: .7; letter-spacing: 4px; margin-top: 8px; }
+  #stage3d { position: absolute; left: 140px; top: 270px; width: 800px; height: 760px; perspective: 2200px; }
+  #plates { position: absolute; inset: 0; transform-style: preserve-3d; }
+  .plate { position: absolute; inset: 0; transform-style: preserve-3d; }
+  .plate svg { width: 100%; height: 100%; overflow: visible; }
+  .chips { left: 60px; right: 60px; top: 1060px; display: flex; gap: 24px; }
+  .chip { flex: 1; background: var(--cream); color: var(--navy); border-radius: 22px; padding: 22px 0 18px; text-align: center; box-shadow: 0 16px 40px #0007; }
+  .chip .k { font-size: 32px; letter-spacing: 4px; opacity: .7; }
+  .chip .v { font-size: 70px; font-weight: 900; line-height: 1.15; }
+  .chip .v small { font-size: 42px; }
+  .chip.hl { background: var(--gold); }
+  .floorcap { left: 60px; right: 60px; top: 1290px; text-align: center; }
+  .floorcap .a { font-size: 40px; letter-spacing: 4px; }
+  .floorcap .b { font-size: 110px; font-weight: 900; color: var(--gold); line-height: 1.1; }
+  .floorcap .b small { font-size: 56px; color: var(--cream); }
+  .note { font-size: 22px; opacity: .55; margin-top: 6px; }
+
+  /* C · street */
+  .shot { position: absolute; inset: 0; visibility: hidden; overflow: hidden; background: #000; }
+  .shot .blur { position: absolute; inset: -80px; background-size: cover; background-position: center; filter: blur(36px) brightness(.4) saturate(1.2); }
+  .shot .card { position: absolute; left: 60px; top: 380px; width: 960px; border: 10px solid var(--cream); border-radius: 8px; overflow: hidden; box-shadow: 0 30px 80px #000c; }
+  .shot .ph { position: relative; }
+  .shot .ph img { display: block; width: 100%; }
+  .shot .ph svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .lab { position: absolute; left: 60px; right: 60px; top: 130px; }
+  .lab .t1 { display: inline-block; background: var(--gold); color: var(--navy); font-size: 84px; font-weight: 900; padding: 4px 28px; letter-spacing: 4px; }
+  .lab .t2 { display: inline-block; margin-top: 14px; background: var(--navy); color: var(--cream); font-size: 46px; font-weight: 900; padding: 8px 24px; letter-spacing: 3px; }
+
+  /* D · area */
+  #mapw { position: absolute; left: -867px; top: -175px; width: 2050px; height: 2125px; transform-origin: 1567px 935px; }
+  #mapw img { width: 100%; height: 100%; display: block; }
+  #mapw svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .mshade { position: absolute; inset: 0; background: linear-gradient(180deg, #0b1a2ecc 0%, #0b1a2e00 18%, #0b1a2e00 46%, #0b1a2ef0 64%, var(--navy) 100%); }
+  .ring { position: absolute; left: 700px; top: 760px; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 50%; border: 6px solid var(--gold); opacity: 0; }
+  .mpin { position: absolute; left: 700px; top: 760px; transform: translate(-50%, -100%); }
+  .mpin .lbl { background: var(--gold); color: var(--navy); font-weight: 900; font-size: 40px; padding: 10px 22px; border-radius: 12px; white-space: nowrap; box-shadow: 0 10px 30px #0008; }
+  .mpin .stem { width: 6px; height: 50px; background: var(--gold); margin: 0 auto; }
+  #s4 .head { left: 70px; top: 110px; font-size: 64px; font-weight: 900; letter-spacing: 6px; text-shadow: 0 4px 20px #000; }
+  .lcards { left: 60px; right: 60px; top: 1150px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .lcard { background: var(--cream); color: var(--navy); border-radius: 22px; padding: 24px 22px 22px; box-shadow: 0 16px 40px #0008; }
+  .lcard svg { width: 60px; height: 60px; display: block; margin-bottom: 8px; }
+  .lcard .a { font-size: 44px; font-weight: 900; line-height: 1.2; }
+  .lcard .b { font-size: 28px; margin-top: 6px; opacity: .75; }
+  .lcard.hl { background: var(--gold); }
+
+  /* E · price */
+  #s5 { background: radial-gradient(900px 900px at 50% 40%, #1d3a5c, var(--navy) 70%); }
+  .rays { position: absolute; left: 50%; top: 40%; width: 2600px; height: 2600px; margin: -1300px 0 0 -1300px; opacity: .18;
+    background: repeating-conic-gradient(var(--gold) 0deg 4deg, transparent 4deg 15deg); border-radius: 50%;
+    -webkit-mask: radial-gradient(closest-side, #000 20%, transparent 100%); mask: radial-gradient(closest-side, #000 20%, transparent 100%); }
+  .pcap { left: 0; right: 0; top: 380px; text-align: center; font-size: 60px; letter-spacing: 16px; }
+  .pbig { left: 0; right: 0; top: 450px; text-align: center; line-height: 1; white-space: nowrap; }
+  .pbig .n { font-size: 440px; font-weight: 900; color: var(--gold); letter-spacing: -10px; }
+  .pbig .u { font-size: 110px; font-weight: 900; }
+  .ptotal { left: 80px; right: 80px; top: 1040px; text-align: center; border-top: 4px solid var(--gold); padding-top: 36px; }
+  .ptotal .a { font-size: 50px; letter-spacing: 8px; }
+  .ptotal .b { font-size: 170px; font-weight: 900; line-height: 1.1; }
+  .ptotal .b small { font-size: 90px; }
+  .ptotal .c { font-size: 34px; opacity: .65; margin-top: 10px; }
+  .flash { position: absolute; inset: 0; background: var(--cream); opacity: 0; pointer-events: none; }
+
+  /* F · end */
+  #s6 { background: var(--navy); }
+  #s6 .gridbg { opacity: .08; }
+  .endbox { left: 70px; right: 70px; top: 170px; }
+  .endbox .logo { width: 150px; height: 150px; }
+  .endbox .t { font-size: 120px; font-weight: 900; letter-spacing: 4px; margin-top: 24px; line-height: 1.1; }
+  .endbox .p { font-size: 50px; letter-spacing: 6px; margin-top: 16px; }
+  .endbox .specs { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+  .endbox .specs span { border: 3px solid var(--gold); color: var(--gold); font-size: 44px; font-weight: 900; padding: 8px 22px; border-radius: 12px; }
+  .contact { left: 70px; right: 70px; top: 1060px; background: var(--gold); color: var(--navy); border-radius: 28px; padding: 40px 50px; }
+  .contact .co { position: relative; display: inline-block; font-size: 42px; font-weight: 900; letter-spacing: 3px; }
+  .contact .co i { position: absolute; left: 0; right: 0; bottom: -10px; height: 7px; background: var(--navy); border-radius: 4px; transform-origin: 0 50%; }
+  .contact .a { margin-top: 26px; font-size: 70px; font-weight: 900; letter-spacing: 6px; display: flex; align-items: baseline; gap: 24px; }
+  .contact .a .tel { font-size: 34px; letter-spacing: 3px; font-weight: 500; opacity: .75; }
+  .contact .b { font-size: 112px; font-weight: 900; letter-spacing: 2px; line-height: 1.15; }
+
+  /* transitions */
+  .bars { position: absolute; inset: 0; display: flex; pointer-events: none; }
+  .bars i { flex: 1; background: var(--gold); transform: scaleY(0); transform-origin: 50% 0; }
+
+  /* subtitles: one clause at a time, each character lights up as it is spoken */
+  #subs { position: absolute; left: 40px; right: 40px; top: 1610px; height: 190px; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+  .clause { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center; visibility: hidden; }
+  .clause .box { display: inline-block; background: #0b1a2ee6; border-radius: 18px; padding: 16px 30px 22px; box-shadow: 0 10px 30px #0008; }
+  .clause .c { font-size: 66px; font-weight: 900; letter-spacing: 3px; color: var(--cream); }
+  .clause .kw { position: relative; display: inline-block; }
+  .clause .kw i { position: absolute; left: -4px; right: -4px; bottom: -6px; height: 9px; border-radius: 5px; background: var(--gold); transform: scaleX(0); transform-origin: 0 50%; }
+</style>
+<script type="application/json" id="om-cues">{"source":"recording:narration.wav","precision":"silence","offset":0,"duration":38.501,"words":[
+{"word":"鳳山","start":0.25,"end":0.735},
+{"word":"華","start":0.735,"end":0.978},
+{"word":"鳳","start":0.978,"end":1.221},
+{"word":"特區","start":1.221,"end":1.706},
+{"word":"難得","start":2.015,"end":2.469},
+{"word":"釋出","start":2.469,"end":2.922},
+{"word":"的","start":2.922,"end":3.149},
+{"word":"美","start":3.149,"end":3.376},
+{"word":"建","start":3.376,"end":3.602},
+{"word":"地","start":3.602,"end":3.829},
+{"word":"基地","start":4.133,"end":4.597},
+{"word":"兩百","start":4.597,"end":5.061},
+{"word":"九十","start":5.061,"end":5.525},
+{"word":"五坪","start":5.525,"end":5.989},
+{"word":"北","start":6.28,"end":6.522},
+{"word":"臨","start":6.522,"end":6.764},
+{"word":"鎮","start":6.764,"end":7.006},
+{"word":"北","start":7.006,"end":7.247},
+{"word":"北","start":7.247,"end":7.489},
+{"word":"巷","start":7.489,"end":7.731},
+{"word":"面","start":8.009,"end":8.246},
+{"word":"寬","start":8.246,"end":8.484},
+{"word":"三十","start":8.484,"end":8.959},
+{"word":"四點","start":8.959,"end":9.433},
+{"word":"七","start":9.433,"end":9.671},
+{"word":"米","start":9.671,"end":9.908},
+{"word":"南","start":10.233,"end":10.466},
+{"word":"接","start":10.466,"end":10.699},
+{"word":"文","start":10.699,"end":10.932},
+{"word":"龍","start":10.932,"end":11.165},
+{"word":"東路","start":11.165,"end":11.631},
+{"word":"雙","start":11.814,"end":12.08},
+{"word":"面臨","start":12.08,"end":12.612},
+{"word":"路","start":12.612,"end":12.878},
+{"word":"住","start":13.178,"end":13.412},
+{"word":"三","start":13.412,"end":13.646},
+{"word":"之一","start":13.646,"end":14.113},
+{"word":"建","start":14.454,"end":14.723},
+{"word":"蔽","start":14.723,"end":14.991},
+{"word":"六成","start":14.991,"end":15.528},
+{"word":"容積","start":15.816,"end":16.28},
+{"word":"百分","start":16.28,"end":16.744},
+{"word":"之","start":16.744,"end":16.975},
+{"word":"兩百","start":16.975,"end":17.439},
+{"word":"四十","start":17.439,"end":17.903},
+{"word":"好","start":18.245,"end":18.496},
+{"word":"排","start":18.496,"end":18.747},
+{"word":"電梯","start":18.747,"end":19.248},
+{"word":"店","start":19.248,"end":19.499},
+{"word":"住","start":19.499,"end":19.75},
+{"word":"文","start":20.052,"end":20.283},
+{"word":"龍","start":20.283,"end":20.514},
+{"word":"東路","start":20.514,"end":20.976},
+{"word":"餐飲","start":20.976,"end":21.438},
+{"word":"咖啡","start":21.438,"end":21.9},
+{"word":"林立","start":21.9,"end":22.362},
+{"word":"生活","start":22.607,"end":23.149},
+{"word":"機能","start":23.149,"end":23.69},
+{"word":"成熟","start":23.69,"end":24.232},
+{"word":"文山","start":24.534,"end":24.997},
+{"word":"華","start":24.997,"end":25.228},
+{"word":"鳳","start":25.228,"end":25.46},
+{"word":"雙","start":25.46,"end":25.691},
+{"word":"特區","start":25.691,"end":26.154},
+{"word":"交界","start":26.154,"end":26.617},
+{"word":"還有","start":26.907,"end":27.413},
+{"word":"捷運","start":27.413,"end":27.918},
+{"word":"黃","start":27.918,"end":28.171},
+{"word":"線","start":28.171,"end":28.424},
+{"word":"延伸","start":28.424,"end":28.929},
+{"word":"題材","start":28.929,"end":29.435},
+{"word":"單價","start":29.763,"end":30.187},
+{"word":"每坪","start":30.187,"end":30.61},
+{"word":"五十","start":30.61,"end":31.034},
+{"word":"萬","start":31.034,"end":31.246},
+{"word":"總","start":31.538,"end":31.781},
+{"word":"價","start":31.781,"end":32.023},
+{"word":"約","start":32.023,"end":32.266},
+{"word":"一點","start":32.266,"end":32.751},
+{"word":"四","start":32.751,"end":32.994},
+{"word":"八","start":32.994,"end":33.236},
+{"word":"億","start":33.236,"end":33.479},
+{"word":"永","start":33.785,"end":34.028},
+{"word":"慶","start":34.028,"end":34.271},
+{"word":"不動產","start":34.271,"end":35},
+{"word":"大","start":35,"end":35.242},
+{"word":"順","start":35.242,"end":35.485},
+{"word":"鴻","start":35.485,"end":35.728},
+{"word":"麗","start":35.728,"end":35.971},
+{"word":"店","start":35.971,"end":36.214},
+{"word":"陳","start":36.524,"end":36.797},
+{"word":"庭","start":36.797,"end":37.07},
+{"word":"妍","start":37.07,"end":37.343},
+{"word":"歡迎","start":37.591,"end":38.046},
+{"word":"來電","start":38.046,"end":38.501}
+]}</script>
+<script type="text/plain" id="om-script">
+鳳山華鳳特區，難得釋出的美建地！
+基地兩百九十五坪，北臨鎮北北巷，面寬三十四點七米，南接文龍東路，雙面臨路。
+住三之一，建蔽六成，容積百分之兩百四十，好排電梯店住。
+文龍東路餐飲咖啡林立，生活機能成熟。
+文山華鳳雙特區交界，還有捷運黃線延伸題材。
+單價每坪五十萬，總價約一點四八億。
+永慶不動產大順鴻麗店，陳庭妍，歡迎來電。
+</script>
+</head>
+<body>
+<div id="film" data-composition-id="film" data-width="1080" data-height="1920">
+  <audio id="om-sound" src="assets/sound.wav" data-start="0" data-duration="40.001" data-track-index="8" data-volume="1"></audio>
+  <audio id="om-voice" src="assets/voice.wav" data-start="0" data-duration="38.501" data-track-index="9" data-volume="1"></audio>
+
+  <!-- A · the lot as a clean plan (traced from the cadastral map, levelled) -->
+  <section class="scene" id="s1" style="visibility:visible">
+    <div class="gridbg"></div>
+    <svg id="s1svg" viewBox="0 0 1080 1920">
+      <defs>
+        <clipPath id="lotClip"><polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8"/></clipPath>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+      </defs>
+      <g class="road" id="roadN" data-om-id="road-north">
+        <rect id="roadNbg" x="0" y="404" width="1080" height="66" fill="#22384f"/>
+        <line x1="0" y1="437" x2="1080" y2="437" stroke="#fff8ec55" stroke-width="4" stroke-dasharray="26 22" class="lane"/>
+        <rect x="24" y="410" width="210" height="54" rx="8" fill="#0b1a2e"/><text x="129" y="450" text-anchor="middle">鎮北北巷</text>
+      </g>
+      <g class="road" id="roadS" data-om-id="road-south">
+        <rect id="roadSbg" x="0" y="1386" width="1080" height="66" fill="#22384f"/>
+        <line x1="0" y1="1419" x2="1080" y2="1419" stroke="#fff8ec55" stroke-width="4" stroke-dasharray="26 22" class="lane"/>
+        <rect x="24" y="1392" width="210" height="54" rx="8" fill="#0b1a2e"/><text x="129" y="1432" text-anchor="middle">文龍東路</text>
+      </g>
+      <g id="lot" transform="translate(207 500) scale(1.25)" data-om-id="lot">
+        <g clip-path="url(#lotClip)">
+          <rect x="-20" y="-20" width="600" height="760" fill="#e8b64c" fill-opacity=".16"/>
+          <g id="lotSat" opacity="0"><g transform="translate(-232.66 -360.95) rotate(8.419)">
+            <image href="assets/img/sat.jpg" x="-663.0" y="-682.7" width="2057.2" height="1997.5"/>
+          </g></g>
+        </g>
+        <polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="none" stroke="#e8b64c" stroke-width="7" stroke-linejoin="round"/>
+        <polygon id="runner" points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="none" stroke="#fff8ec" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" pathLength="1" stroke-dasharray="0.12 0.88" filter="url(#glow)"/>
+      </g>
+      <g transform="translate(560 437)"><g class="dimpill" id="pillTop" data-om-id="dim-front">
+        <rect x="-150" y="-34" width="300" height="68" rx="34" fill="#e8b64c"/><text y="14" text-anchor="middle">面寬 34.7m</text>
+      </g></g>
+      <g transform="translate(786 1419)"><g class="dimpill" id="pillBot" data-om-id="dim-wenlong">
+        <rect x="-96" y="-34" width="192" height="68" rx="34" fill="#e8b64c"/><text y="14" text-anchor="middle">8.7m</text>
+      </g></g>
+      <g transform="translate(690 700) rotate(-12)"><g id="stamp" data-om-id="stamp">
+        <circle r="136" fill="#0b1a2e" stroke="#e8b64c" stroke-width="8"/>
+        <circle r="116" fill="none" stroke="#e8b64c" stroke-width="3" stroke-dasharray="8 8"/>
+        <text y="-10" text-anchor="middle" font-size="76" font-weight="900" fill="#e8b64c">雙面</text>
+        <text y="72" text-anchor="middle" font-size="76" font-weight="900" fill="#e8b64c">臨路</text>
+      </g></g>
+    </svg>
+    <div class="abs kick" data-om-id="kicker"><span class="tag" data-var-text="kicker">不可錯過！</span></div>
+    <h1 class="abs title" data-om-id="title" data-om-var="title"></h1>
+    <div class="abs place" data-om-id="place" data-var-text="place">高雄市鳳山區・鳳青段</div>
+    <div class="abs areaSide" data-om-id="area"><div class="cap">基地面積</div><span class="n num" id="areaN">0</span><span class="u">坪</span></div>
+    <div class="pip" id="pip1" style="left:60px; top:520px; width:540px" data-om-id="pip-lane">
+      <div class="ph"><img src="assets/img/sv-lane1.jpg" alt=""><svg viewBox="0 0 800 641"><path class="ink" id="inkLane"/></svg></div>
+      <div class="ptag">鎮北北巷 現況</div>
+    </div>
+    <div class="pip" id="pip2" style="left:300px; top:880px; width:360px" data-om-id="pip-entry">
+      <div class="ph"><img src="assets/img/sv-entry.jpg" alt=""><svg viewBox="0 0 1206 1499"><path class="ink" id="inkEntry" style="stroke-width:16"/></svg></div>
+      <div class="ptag">文龍東路 出入口</div>
+    </div>
+    <div class="credit">衛星圖・街景 © Google ・ 地界依地籍圖套繪</div>
+  </section>
+
+  <!-- B · specs: floors stack while the ratio is spoken -->
+  <section class="scene" id="s2">
+    <div class="gridbg"></div>
+    <div class="abs head" data-om-id="spec-head">地形方正 好規劃<small>住商型建地・街廓整齊</small></div>
+    <div id="stage3d" data-om-id="plan"><div id="plates"></div></div>
+    <div class="abs chips">
+      <div class="chip hl" data-om-id="chip-zone"><div class="k">使用分區</div><div class="v" data-var-text="zone">住三之一</div></div>
+      <div class="chip" data-om-id="chip-bcr"><div class="k">建蔽率</div><div class="v"><span class="num" id="bcrN">0</span><small>%</small></div></div>
+      <div class="chip" data-om-id="chip-far"><div class="k">容積率</div><div class="v"><span class="num" id="farN">0</span><small>%</small></div></div>
+    </div>
+    <div class="abs floorcap" data-om-id="floor-area">
+      <div class="a">基準容積樓地板 約</div>
+      <div class="b"><span class="num" id="gfaN">0</span><small> 坪</small></div>
+      <div class="a gold" style="font-weight:900">好排電梯店住</div>
+      <div class="note">＊依地坪 × 容積率估算，實際依建管規定</div>
+    </div>
+  </section>
+
+  <!-- C · the street, pushed in and marked up by hand -->
+  <section class="scene" id="s3">
+    <div class="shot" id="shotA" data-om-id="shot-wenlong">
+      <div class="blur" style="background-image:url(assets/img/sv-wenlong.jpg)"></div>
+      <div class="card"><div class="ph" id="phA"><img src="assets/img/sv-wenlong.jpg" alt="">
+        <svg viewBox="0 0 800 588"><path class="ink" id="inkShops"/><path class="ink" id="arrShops"/><text class="hand" id="txtShops" x="330" y="72" font-size="64">店面林立</text></svg>
+      </div></div>
+      <div class="lab"><div class="t1">文龍東路</div><br><div class="t2">餐飲・咖啡・零售 生活軸線</div></div>
+    </div>
+    <div class="shot" id="shotB" data-om-id="shot-homes">
+      <div class="blur" style="background-image:url(assets/img/sv-lane2.jpg)"></div>
+      <div class="card"><div class="ph" id="phB"><img src="assets/img/sv-lane2.jpg" alt="">
+        <svg viewBox="0 0 800 617"><path class="ink" id="inkHomes"/><path class="ink" id="arrHomes"/><text class="hand" id="txtHomes" x="150" y="105" font-size="64">新建住宅</text></svg>
+      </div></div>
+      <div class="lab"><div class="t1">生活機能成熟</div><br><div class="t2">周邊新建住宅林立</div></div>
+    </div>
+    <div class="credit">街景 © Google</div>
+  </section>
+
+  <!-- D · the neighbourhood map -->
+  <section class="scene" id="s4">
+    <div id="mapw" data-om-id="map"><img src="assets/img/map.jpg" alt="">
+      <svg viewBox="0 0 1206 1250"><path class="ink" id="inkPin" style="stroke-width:6"/><text class="hand" id="txtPin" x="560" y="440" font-size="48" style="stroke-width:7px">雙特區交界</text></svg>
+    </div>
+    <div class="mshade"></div>
+    <div class="ring" id="ring1"></div><div class="ring" id="ring2"></div>
+    <div class="mpin" data-om-id="map-pin"><div class="lbl">本案</div><div class="stem"></div></div>
+    <div class="abs head" data-om-id="area-head">文山 × 華鳳 生活圈</div>
+    <div class="abs lcards">
+      <div class="lcard" data-om-id="card-zones">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#0b1a2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 58V30l14-8v36M20 58V14l18-8v52M38 58V26l20 6v26M2 58h60"/></svg>
+        <div class="a">雙特區</div><div class="b">文山 × 華鳳 交界</div>
+      </div>
+      <div class="lcard hl" data-om-id="card-mrt">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#0b1a2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="6" width="36" height="40" rx="9"/><path d="M14 28h36M24 38h.1M40 38h.1M22 46l-8 12M42 46l8 12"/></svg>
+        <div class="a">捷運黃線</div><div class="b">延伸題材</div>
+      </div>
+      <div class="lcard" data-om-id="card-lake">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#0b1a2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6l14 22H18zM32 20l18 24H14zM32 44v12M4 58c6-4 10 4 16 0s10 4 16 0 10 4 16 0 8 2 8 2"/></svg>
+        <div class="a">澄清湖</div><div class="b">風景區</div>
+      </div>
+    </div>
+    <div class="credit">地圖 © Google</div>
+  </section>
+
+  <!-- E · price -->
+  <section class="scene" id="s5">
+    <div class="rays"></div>
+    <div class="abs pcap" data-om-id="price-cap">單 價</div>
+    <div class="abs pbig" data-om-id="price"><span class="n num" id="unitN">0</span><span class="u">萬/坪</span></div>
+    <div class="abs ptotal" data-om-id="total">
+      <div class="a">總價約</div>
+      <div class="b"><span class="num" id="totalN">0</span><small>億</small></div>
+      <div class="c" id="totalCalc"></div>
+    </div>
+    <div class="flash" id="flash5"></div>
+  </section>
+
+  <!-- F · end card -->
+  <section class="scene" id="s6">
+    <div class="gridbg"></div>
+    <div class="abs endbox">
+      <svg class="logo" viewBox="-20 -20 573 737" data-om-id="end-logo"><polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="#e8b64c33" stroke="#e8b64c" stroke-width="16" stroke-linejoin="round"/></svg>
+      <div class="t" data-om-id="end-title" data-var-text="title">華鳳特區美建地</div>
+      <div class="p" data-om-id="end-place" data-var-text="place">高雄市鳳山區・鳳青段</div>
+      <div class="specs" data-om-id="end-specs"><span id="eArea"></span><span data-var-text="zone">住三之一</span><span id="eRatio"></span><span id="eUnit"></span><span id="eTotal"></span></div>
+    </div>
+    <div class="abs contact" data-om-id="contact">
+      <div class="co"><span data-var-text="company">永慶不動產・大順鴻麗店</span><i id="coLine"></i></div>
+      <div class="a"><span id="cName" data-var-text="contactName">陳庭妍</span><span class="tel">歡迎來電洽詢</span></div>
+      <div class="b num" id="cPhone" data-var-text="contactPhone">0961-288-591</div>
+    </div>
+  </section>
+
+  <div class="bars" id="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div id="subs" data-om-id="subtitles"></div>
+</div>
+
+<script>
+  const V = OM.vars();
+  const $ = (s) => document.querySelector(s);
+  const fmt2 = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const gfa = V.area * V.far / 100;
+  const total = V.area * V.unit / 10000;            // 億
+  $('#totalCalc').textContent = `${fmt2(V.area)} 坪 × ${V.unit} 萬`;
+  $('#eArea').textContent = `${fmt2(V.area)} 坪`;
+  $('#eRatio').textContent = `建蔽${V.bcr}%・容積${V.far}%`;
+  $('#eUnit').textContent = `單價 ${V.unit} 萬/坪`;
+  $('#eTotal').textContent = `總價約 ${total.toFixed(2)} 億`;
+  $('#areaN').textContent = fmt2(V.area);
+  $('#s1 .title').innerHTML = [...V.title].map((c) => `<span class="ch">${c}</span>`).join('');
+
+  // ---------- the narration clock: every character's start/end, from om voice ----------
+  const CH = [];
+  OM.words().forEach((w) => {
+    const cs = [...w.word], d = (w.end - w.start) / cs.length;
+    cs.forEach((ch, i) => CH.push({ ch, start: w.start + i * d, end: w.start + (i + 1) * d }));
+  });
+  const SPOKEN = CH.map((c) => c.ch).join('');
+  // T('雙面臨路') = when it has been said; T('雙面臨路', 'start') = when it begins
+  const T = (s, edge = 'end', nth = 1) => {
+    let i = -1;
+    for (let k = 0; k < nth; k++) i = SPOKEN.indexOf(s, i + 1);
+    if (i < 0) throw new Error('not in narration: ' + s);
+    return edge === 'start' ? CH[i].start : CH[i + [...s].length - 1].end;
+  };
+  const between = (a, b) => (T(a) + T(b, 'start')) / 2;
+
+  // ---------- hand-drawn marks: wobbly loops and arrows, seeded so every frame agrees ----------
+  const rnd = OM.random(7);
+  function loop(cx, cy, rx, ry, turns = 1.15) {
+    const n = 64, pts = [];
+    for (let i = 0; i <= n * turns; i++) {
+      const a = -2.2 + (i / n) * Math.PI * 2, w = 1 + (rnd() - .5) * .06 + i / n * .05;
+      pts.push([cx + Math.cos(a) * rx * w, cy + Math.sin(a) * ry * w]);
+    }
+    return 'M' + pts.map((p) => p.map((v) => v.toFixed(1)).join(' ')).join(' L');
+  }
+  function arrow(x1, y1, x2, y2, head = 28) {
+    const mx = (x1 + x2) / 2 + (y2 - y1) * .18, my = (y1 + y2) / 2 - (x2 - x1) * .18;
+    const a = Math.atan2(y2 - my, x2 - mx);
+    const h1 = [x2 - head * Math.cos(a - .5), y2 - head * Math.sin(a - .5)], h2 = [x2 - head * Math.cos(a + .5), y2 - head * Math.sin(a + .5)];
+    return `M${x1} ${y1} Q${mx.toFixed(1)} ${my.toFixed(1)} ${x2} ${y2} M${h1[0].toFixed(1)} ${h1[1].toFixed(1)} L${x2} ${y2} L${h2[0].toFixed(1)} ${h2[1].toFixed(1)}`;
+  }
+  const setD = (id, d) => { const p = $(id); p.setAttribute('d', d); p.setAttribute('pathLength', 1); p.setAttribute('stroke-dasharray', 1); p.setAttribute('stroke-dashoffset', 1); };
+  setD('#inkLane', loop(250, 330, 245, 100));
+  setD('#inkEntry', loop(600, 1270, 340, 175));
+  setD('#inkShops', loop(210, 235, 215, 120));
+  setD('#arrShops', arrow(470, 92, 385, 150));
+  setD('#inkHomes', loop(465, 205, 175, 150));
+  setD('#arrHomes', arrow(300, 125, 360, 190));
+  setD('#inkPin', loop(922, 520, 120, 95));
+
+  // ---------- the L-shaped plan as stacked plates ----------
+  const L = '0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8';
+  const FLOORS = 7;
+  for (let i = 0; i < FLOORS; i++) {
+    $('#plates').insertAdjacentHTML('beforeend', `<div class="plate" id="pl${i}"><svg viewBox="-60 -60 653 817">
+      <polygon points="${L}" fill="#e8b64c" fill-opacity="${i ? .22 + i * .05 : .18}" stroke="#e8b64c" stroke-width="${i ? 3 : 5}" stroke-linejoin="round"/>
+    </svg></div>`);
+  }
+
+  // ---------- subtitles: the script, clause by clause, mapped onto the spoken characters ----------
+  const SCRIPT = [...document.getElementById('om-script').textContent.trim()];
+  const KW = V.keywords.split(/[,，]/).map((s) => s.trim()).filter(Boolean);
+  const clauses = []; let cur = null, ci = 0;
+  SCRIPT.forEach((ch) => {
+    if (/[，。！？、\s]/.test(ch)) { cur = null; return; }
+    if (!cur) clauses.push(cur = { idx: [] });
+    cur.idx.push(ci++);
+  });
+  const subs = $('#subs');
+  clauses.forEach((c, n) => {
+    const text = c.idx.map((i) => CH[i].ch).join('');
+    // wrap keywords so their underline can draw once the last character is said
+    let html = '', i = 0;
+    while (i < text.length) {
+      const k = KW.find((w) => text.startsWith(w, i));
+      if (k) { html += `<span class="kw" id="kw${n}_${i}">` + [...k].map((ch, j) => `<span class="c" data-i="${c.idx[i + j]}">${ch}</span>`).join('') + '<i></i></span>'; c.kws = (c.kws || []).concat([[`#kw${n}_${i}`, c.idx[i + k.length - 1]]]); i += k.length; }
+      else { html += `<span class="c" data-i="${c.idx[i]}">${text[i]}</span>`; i++; }
+    }
+    subs.insertAdjacentHTML('beforeend', `<div class="clause" id="cl${n}"><span class="box">${html}</span></div>`);
+  });
+
+  const show = (id, at, until) => { tl.set(id, { visibility: 'visible' }, at); if (until != null) tl.set(id, { visibility: 'hidden' }, until); };
+  const draw = (id, at, dur = .6) => { tl.fromTo(id, { attr: { 'stroke-dashoffset': 1 } }, { attr: { 'stroke-dashoffset': 0 }, duration: dur, ease: 'power2.inOut' }, at); OM.sfx('draw', at, { dur, gain: .5 }); };
+  const write = (id, at) => tl.fromTo(id, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .35, ease: 'back.out(2)' }, at);
+  const punch = (sel, at, s = 1.12) => tl.fromTo(sel, { scale: 1 }, { keyframes: [{ scale: s, duration: .08 }, { scale: 1, duration: .3 }] }, at);
+
+  const tl = gsap.timeline({ paused: true, defaults: { ease: 'expo.out' } });
+  OM.music({ product: 'consumer', style: 'funk', bpm: 120, drop: 'price', ending: 'ring', floor: .55,
+    energy: { hook: .6, lot: .6, specs: .7, street: .8, area: .75, price: 1, end: .7 } });
+
+  // scene edges sit in the pauses between sentences
+  const tB = between('雙面臨路', '住三之一');
+  const tC = between('電梯店住', '文龍東路餐');
+  const tC2 = between('咖啡林立', '生活機能');
+  const tD = between('機能成熟', '文山');
+  const tE = between('延伸題材', '單價');
+  const tF = between('四八億', '永慶');
+  const END = OM.words().at(-1).end + V.endHold;
+
+  // ---------- A · hook + lot details (0 → tB) ----------
+  tl.addLabel('scene:hook', 0);
+  show('#s1', 0, tB + .35);
+  tl.fromTo('#s1svg', { scale: 1.1 }, { scale: 1, duration: .6, transformOrigin: '50% 50%' }, 0);
+  // a slow camera drift under the whole plan so the long narration never sits still
+  tl.to('#s1svg', { scale: 1.07, y: -30, duration: tB - .7, ease: 'none' }, .6);
+  tl.fromTo('#s1 .gridbg', { x: 0, y: 0 }, { x: -90, y: -90, duration: tB, ease: 'none' }, 0);
+  tl.fromTo('.areaSide', { y: 0 }, { y: -38, duration: tB - .7, ease: 'none' }, .6);
+  tl.fromTo('#s1 .title .ch', { y: 0 }, { keyframes: [{ y: -18, duration: .12 }, { y: 0, duration: .25 }], stagger: .05, ease: 'power2.out' }, .05);
+  OM.sfx('whoosh', 0, { gain: .4 });
+  tl.fromTo('#runner', { attr: { 'stroke-dashoffset': 0 } }, { attr: { 'stroke-dashoffset': -3 }, duration: tB, ease: 'none' }, 0);
+  tl.fromTo('.lane', { attr: { 'stroke-dashoffset': 0 } }, { attr: { 'stroke-dashoffset': -600 }, duration: tB, ease: 'none' }, 0);
+  tl.fromTo('#lotSat', { opacity: 0 }, { opacity: .9, duration: .5, ease: 'power2.out' }, T('美建地', 'start'));
+  OM.sfx('impact', T('美建地', 'start'), { gain: .5 });
+  tl.addLabel('scene:lot', T('基地', 'start'));
+  punch('.areaSide', T('九十五坪'), 1.18);
+  OM.sfx('thud', T('九十五坪'), { gain: .7 });
+  // 北臨鎮北北巷: the road lights up, then the street photo pops in, pushed in and circled
+  tl.fromTo('#roadNbg', { attr: { fill: '#22384f' } }, { attr: { fill: '#3c5a7d' }, duration: .3, yoyo: true, repeat: 1 }, T('北臨', 'start'));
+  show('#pip1', T('北臨', 'start'), T('三十四點七米') + .1);
+  tl.fromTo('#pip1', { scale: 0, rotation: -8 }, { scale: 1, rotation: -2, duration: .45, ease: 'back.out(1.6)', transformOrigin: '0% 0%' }, T('北臨', 'start'));
+  OM.sfx('shutter', T('北臨', 'start') + .1, { gain: .6 });
+  tl.fromTo('#pip1 .ph', { scale: 1 }, { scale: 1.2, duration: T('三十四點七米') - T('北臨', 'start'), ease: 'none' }, T('北臨', 'start'));
+  draw('#inkLane', T('鎮北北巷'), .55);
+  tl.to('#pip1', { scale: 0, duration: .25, ease: 'power2.in' }, T('三十四點七米') - .15);
+  tl.fromTo('#pillTop', { scale: 0 }, { scale: 1, duration: .4, ease: 'back.out(2.2)', svgOrigin: '0 0' }, T('三十四點七米') - .3);
+  OM.sfx('pop', T('三十四點七米') - .2, { note: 3 });
+  // 南接文龍東路
+  tl.fromTo('#roadSbg', { attr: { fill: '#22384f' } }, { attr: { fill: '#3c5a7d' }, duration: .3, yoyo: true, repeat: 1 }, T('南接', 'start'));
+  show('#pip2', T('南接', 'start'), T('雙面臨路', 'start') + .2);
+  tl.fromTo('#pip2', { scale: 0, rotation: 8 }, { scale: 1, rotation: 2, duration: .45, ease: 'back.out(1.6)', transformOrigin: '50% 100%' }, T('南接', 'start'));
+  OM.sfx('shutter', T('南接', 'start') + .1, { gain: .6 });
+  tl.fromTo('#pip2 .ph', { scale: 1 }, { scale: 1.2, duration: 1.6, ease: 'none' }, T('南接', 'start'));
+  draw('#inkEntry', T('文龍東路') - .3, .5);
+  tl.to('#pip2', { scale: 0, duration: .25, ease: 'power2.in' }, T('雙面臨路', 'start'));
+  tl.fromTo('#pillBot', { scale: 0 }, { scale: 1, duration: .4, ease: 'back.out(2.2)', svgOrigin: '0 0' }, T('文龍東路') - .1);
+  OM.sfx('pop', T('文龍東路'), { note: 5 });
+  tl.fromTo('#stamp', { scale: 2.4, opacity: 0 }, { scale: 1, opacity: 1, duration: .22, ease: 'power4.in', svgOrigin: '0 0' }, T('雙面臨路') - .22);
+  OM.sfx('stamp', T('雙面臨路'), { gain: .75 });
+  // transition 1 · zoom-through: dive into the lot
+  tl.to('#s1svg, #s1 .areaSide', { scale: 2.6, opacity: 0, duration: .45, ease: 'power3.in', transformOrigin: '60% 45%' }, tB - .1);
+  tl.to('#s1 .title, #s1 .kick, #s1 .place', { y: -80, opacity: 0, duration: .4, ease: 'power3.in' }, tB - .1);
+  OM.sfx('whoosh', tB + .2, { gain: .6 });
+
+  // ---------- B · specs (tB → tC) ----------
+  tl.addLabel('scene:specs', tB + .3);
+  show('#s2', tB + .3, tC + .5);
+  tl.fromTo('#s2', { scale: .6, opacity: 0 }, { scale: 1, opacity: 1, duration: .5 }, tB + .3);
+  tl.fromTo('#plates', { rotationX: 0, rotationZ: 0, y: 0 }, { rotationX: 58, rotationZ: -24, y: 120, duration: .8, ease: 'power3.inOut' }, tB + .3);
+  tl.to('#plates', { rotationZ: -42, duration: tC - tB - 1, ease: 'none' }, tB + 1.1);
+  tl.set('.plate:not(#pl0)', { autoAlpha: 0 }, 0);
+  [['#s2 [data-om-id=chip-zone]', T('住三之一')], ['#s2 [data-om-id=chip-bcr]', T('建蔽六成')], ['#s2 [data-om-id=chip-far]', T('兩百四十')]].forEach(([c, at], i) => {
+    tl.fromTo(c, { y: 260, rotation: i % 2 ? 6 : -6, autoAlpha: 0 }, { y: 0, rotation: 0, autoAlpha: 1, duration: .45, ease: 'back.out(1.6)' }, at - .3);
+    OM.sfx('thud', at - .12, { pan: -.5 + i * .5, gain: .6 });
+  });
+  const bc = { v: 0 }, fc = { v: 0 }, g = { v: 0 };
+  tl.fromTo(bc, { v: 0 }, { v: V.bcr, duration: .5, ease: 'power3.out', onUpdate: () => { $('#bcrN').textContent = Math.round(bc.v); } }, T('建蔽六成') - .3);
+  tl.fromTo(fc, { v: 0 }, { v: V.far, duration: T('兩百四十') - T('容積', 'start'), ease: 'power2.out', onUpdate: () => { $('#farN').textContent = Math.round(fc.v); } }, T('容積', 'start'));
+  OM.sfx('count', T('容積', 'start'), { dur: T('兩百四十') - T('容積', 'start'), gain: .35 });
+  // one floor per beat of "容積百分之兩百四十"
+  const f0 = T('容積', 'start'), fstep = (T('兩百四十') - f0) / FLOORS;
+  for (let i = 0; i < FLOORS; i++) {
+    tl.fromTo(`#pl${i}`, { z: 0 }, { z: i * 42, duration: .3, ease: 'back.out(1.8)' }, f0 + i * fstep);
+    if (i) { tl.set(`#pl${i}`, { autoAlpha: 1 }, f0 + i * fstep); OM.sfx('pop', f0 + i * fstep + .05, { note: i, gain: .3 }); }
+  }
+  tl.fromTo('.floorcap', { y: 80, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .45 }, T('好排', 'start') - .2);
+  tl.fromTo(g, { v: 0 }, { v: gfa, duration: .9, ease: 'power3.out', onUpdate: () => { $('#gfaN').textContent = Math.round(g.v).toLocaleString('en-US'); } }, T('好排', 'start') - .2);
+  punch('.floorcap .b', T('電梯店住'));
+  OM.sfx('thud', T('電梯店住'), { gain: .5 });
+  // transition 2 · diagonal wipe into the street
+  tl.fromTo('#s3', { clipPath: 'polygon(0% 0%, 0% 0%, -40% 100%, -40% 100%)' }, { clipPath: 'polygon(0% 0%, 140% 0%, 100% 100%, -40% 100%)', duration: .5, ease: 'power3.inOut' }, tC - .15);
+  OM.sfx('whoosh', tC + .1, { gain: .55 });
+
+  // ---------- C · street (tC → tD): push in, circle, write ----------
+  tl.addLabel('scene:street', tC - .15);
+  show('#s3', tC - .15, tD + .5);
+  show('#shotA', tC - .15, tC2);
+  tl.fromTo('#phA', { scale: 1 }, { scale: 1.35, duration: tC2 - tC + .2, ease: 'power1.inOut', transformOrigin: '26% 40%' }, tC - .15);
+  tl.fromTo('#shotA .t1', { xPercent: -120 }, { xPercent: 0, duration: .35 }, tC);
+  tl.fromTo('#shotA .t2', { xPercent: -130 }, { xPercent: 0, duration: .35 }, tC + .1);
+  draw('#inkShops', T('餐飲', 'start'), .7);
+  draw('#arrShops', T('咖啡', 'start'), .35);
+  write('#txtShops', T('咖啡'));
+  // whip pan to the second photo
+  tl.to('#shotA .card', { x: -1200, skewX: 12, duration: .25, ease: 'power3.in' }, tC2 - .2);
+  OM.sfx('whip', tC2, { gain: .55 });
+  show('#shotB', tC2, tD + .5);
+  tl.fromTo('#shotB .card', { x: 1200, skewX: -12 }, { x: 0, skewX: 0, duration: .35, ease: 'power3.out' }, tC2);
+  tl.fromTo('#phB', { scale: 1 }, { scale: 1.3, duration: tD - tC2 + .4, ease: 'power1.inOut', transformOrigin: '58% 33%' }, tC2);
+  tl.fromTo('#shotB .t1', { xPercent: -120 }, { xPercent: 0, duration: .35 }, tC2 + .1);
+  tl.fromTo('#shotB .t2', { xPercent: -130 }, { xPercent: 0, duration: .35 }, tC2 + .2);
+  draw('#inkHomes', T('機能', 'start'), .6);
+  draw('#arrHomes', T('成熟', 'start'), .3);
+  write('#txtHomes', T('成熟', 'start') + .2);
+  // transition 3 · iris open from the pin
+  tl.fromTo('#s4', { clipPath: 'circle(0% at 65% 40%)' }, { clipPath: 'circle(150% at 65% 40%)', duration: .6, ease: 'power3.in' }, tD - .1);
+  OM.sfx('whoosh', tD + .4, { gain: .5 });
+
+  // ---------- D · area (tD → tE) ----------
+  tl.addLabel('scene:area', tD - .1);
+  show('#s4', tD - .1, tE + .1);
+  tl.fromTo('#mapw', { scale: 1.4 }, { scale: 1, duration: .9 }, tD - .1);
+  tl.to('#mapw', { scale: 1.12, duration: tE - tD - .8, ease: 'none' }, tD + .8);
+  tl.fromTo('.mpin', { y: -300, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5, ease: 'bounce.out' }, T('文山', 'start'));
+  OM.sfx('thud', T('文山', 'start') + .25, { gain: .6 });
+  ['#ring1', '#ring2'].forEach((r, i) => tl.fromTo(r, { scale: 1, opacity: 1 }, { scale: 9, opacity: 0, duration: 1.2, ease: 'power2.out', repeat: 2 }, T('文山', 'start') + .4 + i * .6));
+  tl.fromTo('#s4 .head', { y: -60, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5 }, tD + .1);
+  draw('#inkPin', T('交界', 'start'), .55);
+  write('#txtPin', T('交界'));
+  [['[data-om-id=card-zones]', T('交界')], ['[data-om-id=card-mrt]', T('捷運黃線')], ['[data-om-id=card-lake]', T('延伸題材') - .2]].forEach(([c, at], i) => {
+    tl.fromTo(c, { y: 300, autoAlpha: 0, rotation: (i - 1) * 6 }, { y: 0, autoAlpha: 1, rotation: 0, duration: .45, ease: 'back.out(1.4)' }, at - .2);
+    OM.sfx('pop', at - .05, { note: 2 + i * 2 });
+  });
+  // the stop: dim, a breath, then the price slams in
+  tl.to('#s4', { filter: 'brightness(.25)', duration: .3, ease: 'power2.in' }, tE - .3);
+  OM.sfx('reverse', tE, { dur: .8 });
+
+  // ---------- E · price (tE → tF) · transition 4 · flash slam ----------
+  tl.addLabel('scene:price', tE);
+  show('#s5', tE, tF + .5);
+  tl.fromTo('#flash5', { opacity: .9 }, { opacity: 0, duration: .4, ease: 'power2.out' }, tE);
+  tl.fromTo('#s5', { scale: 1.25 }, { scale: 1, duration: .5 }, tE);
+  OM.sfx('impact', tE, { gain: .8 });
+  OM.sfx('subdrop', tE);
+  tl.fromTo('.rays', { rotation: 0, scale: .6 }, { rotation: 40, scale: 1, duration: tF - tE, ease: 'power1.out' }, tE);
+  tl.fromTo('.pcap', { y: -60, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .4 }, tE);
+  const u = { v: 0 };
+  tl.fromTo('.pbig', { scale: 1.8, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: .4, ease: 'power4.out' }, T('五十萬', 'start') - .1);
+  tl.fromTo(u, { v: 0 }, { v: V.unit, duration: T('五十萬') - T('五十萬', 'start') + .1, ease: 'power2.out', onUpdate: () => { $('#unitN').textContent = Math.round(u.v * 10) / 10; } }, T('五十萬', 'start') - .1);
+  punch('.pbig', T('五十萬'), 1.1);
+  OM.sfx('stamp', T('五十萬'), { gain: .6 });
+  tl.fromTo('.ptotal', { y: 120, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .45 }, T('總價', 'start'));
+  const tt = { v: 0 };
+  tl.fromTo(tt, { v: 0 }, { v: total, duration: T('四八億') - T('一點', 'start'), ease: 'power2.out', onUpdate: () => { $('#totalN').textContent = tt.v.toFixed(2); } }, T('一點', 'start'));
+  OM.sfx('count', T('一點', 'start'), { dur: T('四八億') - T('一點', 'start'), gain: .35 });
+  punch('.ptotal .b', T('四八億'));
+  OM.sfx('thud', T('四八億'), { gain: .6 });
+
+  // ---------- transition 5 · gold blinds ----------
+  tl.fromTo('#bars i', { scaleY: 0, transformOrigin: '50% 0%' }, { scaleY: 1, duration: .25, stagger: .04, ease: 'power2.in' }, tF - .35);
+  tl.to('#bars i', { scaleY: 0, transformOrigin: '50% 100%', duration: .3, stagger: .04, ease: 'power2.out' }, tF + .1);
+  OM.sfx('whip', tF, { gain: .5 });
+
+  // ---------- F · end card (tF → END) ----------
+  tl.addLabel('scene:end', tF);
+  show('#s6', tF);
+  tl.fromTo('#s6 .gridbg', { x: 0, y: 0 }, { x: -90, y: -90, duration: END - tF, ease: 'none' }, tF);
+  tl.fromTo('.endbox', { scale: 1 }, { scale: 1.04, duration: END - tF - .5, ease: 'none', transformOrigin: '0% 0%' }, tF + .5);
+  tl.fromTo('.endbox .logo', { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: .6, ease: 'back.out(1.8)' }, tF + .1);
+  tl.fromTo('.endbox .t, .endbox .p', { y: 60, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5, stagger: .1 }, tF + .15);
+  tl.fromTo('.endbox .specs span', { y: 40, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .35, stagger: .08 }, tF + .3);
+  tl.fromTo('.contact', { y: 200, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: .5, ease: 'back.out(1.4)' }, T('永慶', 'start'));
+  tl.fromTo('#coLine', { scaleX: 0 }, { scaleX: 1, duration: .4, ease: 'power2.out' }, T('鴻麗店'));
+  punch('#cName', T('陳庭妍'), 1.15);
+  OM.sfx('pop', T('陳庭妍'), { note: 5 });
+  punch('#cPhone', T('來電'), 1.08);
+  OM.sfx('chime', T('來電'), { gain: .6 });
+
+  // ---------- subtitles on the same clock ----------
+  clauses.forEach((c, n) => {
+    const a = CH[c.idx[0]].start - .08;
+    const next = clauses[n + 1];
+    const b = next ? CH[next.idx[0]].start - .08 : END;
+    tl.set(`#cl${n}`, { visibility: 'visible' }, a);
+    tl.set(`#cl${n}`, { visibility: 'hidden' }, b);
+    tl.fromTo(`#cl${n} .box`, { scale: .92, y: 12 }, { scale: 1, y: 0, duration: .2, ease: 'power2.out' }, a);
+    c.idx.forEach((i) => tl.fromTo(`#cl${n} .c[data-i="${i}"]`, { color: '#fff8ec' }, { color: '#e8b64c', duration: Math.max(.06, CH[i].end - CH[i].start), ease: 'none' }, CH[i].start));
+    (c.kws || []).forEach(([sel, last]) => tl.fromTo(`${sel} i`, { scaleX: 0 }, { scaleX: 1, duration: .3, ease: 'power2.out' }, CH[last].end));
+  });
+
+  tl.to({}, { duration: Math.max(0, END - tl.duration()) });
+  window.__timelines['film'] = tl;
+</script>
+</body>
+</html>
