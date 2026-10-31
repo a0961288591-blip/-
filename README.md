@@ -1,5 +1,7 @@
 # 房產短影音自動剪輯系統
 
+> 本 repo 另含 **REBECCA ESTATE AI 房仲 SaaS 平台**，位於 [`rebecca-estate-ai/`](rebecca-estate-ai/README.md)。
+
 以對話驅動的短影音剪輯環境:用 [video-use](https://github.com/browser-use/video-use) 做剪輯決策(轉錄、剪點、調色、字幕),用 FFmpeg 做實際處理,用 [Remotion](https://remotion.dev) 做動畫與版式,ElevenLabs Scribe 提供逐字級轉錄。
 
 ## 一鍵安裝
