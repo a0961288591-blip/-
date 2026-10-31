@@ -99,7 +99,9 @@ export default async function DashboardPage({ params }: { params: Promise<{ slug
                 <li key={t.id} className="flex gap-3 rounded-md border px-3 py-2">
                   <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-primary text-xs font-semibold text-primary-foreground">{i + 1}</span>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-medium">{t.title}</p>
+                    <Link href={`${base}/tasks`} className="block truncate text-sm font-medium hover:underline">
+                      {t.title}
+                    </Link>
                     <div className="mt-1 flex flex-wrap gap-1.5">
                       <Badge variant={t.priority === 1 ? "danger" : "muted"}>優先 {PRIORITY_LABEL[t.priority]}</Badge>
                       <Badge variant="muted">{STATUS_LABEL[t.status]}</Badge>
@@ -142,10 +144,10 @@ export default async function DashboardPage({ params }: { params: Promise<{ slug
             <ul className="divide-y">
               {data.overdueFollowUps.map((c) => (
                 <li key={c.id} className="flex items-center justify-between gap-2 py-2 text-sm">
-                  <span className="flex items-center gap-2 truncate">
+                  <Link href={`${base}/contacts/${c.id}`} className="flex items-center gap-2 truncate hover:underline">
                     {c.grade && <Badge variant={c.grade === "S" ? "gold" : "muted"}>{c.grade}</Badge>}
                     {c.display_name}
-                  </span>
+                  </Link>
                   <span className="shrink-0 text-xs text-destructive">應追蹤 {formatDateTime(c.next_follow_up_at)}</span>
                 </li>
               ))}
@@ -161,10 +163,10 @@ export default async function DashboardPage({ params }: { params: Promise<{ slug
             <ul className="divide-y">
               {data.sellerReportsDue.map((p) => (
                 <li key={p.id} className="flex items-center justify-between gap-2 py-2 text-sm">
-                  <span className="truncate">
+                  <Link href={`${base}/properties/${p.id}`} className="truncate hover:underline">
                     <span className="mr-2 text-xs text-muted-foreground">{p.code}</span>
                     {p.title}
-                  </span>
+                  </Link>
                   <span className="shrink-0 text-xs text-muted-foreground">
                     {p.last_seller_report_at ? `上次 ${formatDateTime(p.last_seller_report_at, false)}` : "尚未回報"}
                   </span>
@@ -182,10 +184,10 @@ export default async function DashboardPage({ params }: { params: Promise<{ slug
             <ul className="divide-y">
               {data.mandatesExpiring.map((p) => (
                 <li key={p.id} className="flex items-center justify-between gap-2 py-2 text-sm">
-                  <span className="truncate">
+                  <Link href={`${base}/properties/${p.id}`} className="truncate hover:underline">
                     <span className="mr-2 text-xs text-muted-foreground">{p.code}</span>
                     {p.title}
-                  </span>
+                  </Link>
                   <Badge variant="warning">{p.mandate_end_date} 到期</Badge>
                 </li>
               ))}
@@ -231,7 +233,9 @@ export default async function DashboardPage({ params }: { params: Promise<{ slug
             <ul className="divide-y">
               {data.developerFollowUps.map((c) => (
                 <li key={c.id} className="flex items-center justify-between gap-2 py-2 text-sm">
-                  <span className="truncate">{c.company ?? c.display_name}</span>
+                  <Link href={`${base}/contacts/${c.id}`} className="truncate hover:underline">
+                    {c.company ?? c.display_name}
+                  </Link>
                   <span className="shrink-0 text-xs text-muted-foreground">{formatDateTime(c.next_follow_up_at)}</span>
                 </li>
               ))}

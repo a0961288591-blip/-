@@ -68,3 +68,11 @@ export function formatDateTime(iso: string | null | undefined, withTime = true):
     ...(withTime ? { hour: "2-digit", minute: "2-digit", hour12: false } : {}),
   }).format(d);
 }
+
+/** ISO → datetime-local 輸入框用的台北時間字串（YYYY-MM-DDTHH:MM） */
+export function toTaipeiLocalInput(iso: string | null | undefined): string | null {
+  if (!iso) return null;
+  const t = Date.parse(iso);
+  if (Number.isNaN(t)) return null;
+  return new Date(t + TAIPEI_OFFSET_MS).toISOString().slice(0, 16);
+}

@@ -3,9 +3,22 @@ import { BrandLockup } from "@/components/brand";
 import { NavLinks, MobileNav } from "./nav-links";
 import { WorkspaceSwitcher } from "./workspace-switcher";
 import { ROLE_LABEL, type Workspace } from "@/lib/workspace";
-import { LogOut } from "lucide-react";
+import { Bell, LogOut } from "lucide-react";
 
-export function AppShell({ ws, children }: { ws: Workspace; children: React.ReactNode }) {
+function BellLink({ href, unread }: { href: string; unread: number }) {
+  return (
+    <Link href={href} aria-label={unread ? `通知（${unread} 則未讀）` : "通知"} className="relative inline-grid size-9 shrink-0 place-items-center rounded-md hover:bg-muted">
+      <Bell className="size-5" />
+      {unread > 0 && (
+        <span className="absolute -right-0.5 -top-0.5 min-w-4 rounded-full bg-accent px-1 text-center text-[10px] font-semibold leading-4 text-accent-foreground">
+          {unread > 99 ? "99+" : unread}
+        </span>
+      )}
+    </Link>
+  );
+}
+
+export function AppShell({ ws, unread = 0, children }: { ws: Workspace; unread?: number; children: React.ReactNode }) {
   const base = `/w/${ws.tenant.slug}`;
   return (
     <div className="min-h-dvh md:grid md:grid-cols-[240px_1fr]">
@@ -16,8 +29,11 @@ export function AppShell({ ws, children }: { ws: Workspace; children: React.Reac
             <BrandLockup />
           </Link>
         </div>
-        <div className="px-3">
-          <WorkspaceSwitcher current={ws.tenant.slug} memberships={ws.memberships} />
+        <div className="flex items-center gap-1 px-3">
+          <div className="min-w-0 flex-1">
+            <WorkspaceSwitcher current={ws.tenant.slug} memberships={ws.memberships} />
+          </div>
+          <BellLink href={`${base}/notifications`} unread={unread} />
         </div>
         <nav aria-label="主要導航" className="mt-4 flex-1 overflow-y-auto px-3 pb-4">
           <NavLinks base={base} />
@@ -39,8 +55,11 @@ export function AppShell({ ws, children }: { ws: Workspace; children: React.Reac
           <Link href={`${base}/dashboard`} aria-label="回首頁">
             <BrandLockup compact />
           </Link>
-          <div className="max-w-[50%]">
-            <WorkspaceSwitcher current={ws.tenant.slug} memberships={ws.memberships} compact />
+          <div className="flex min-w-0 max-w-[60%] items-center gap-1">
+            <div className="min-w-0 flex-1">
+              <WorkspaceSwitcher current={ws.tenant.slug} memberships={ws.memberships} compact />
+            </div>
+            <BellLink href={`${base}/notifications`} unread={unread} />
           </div>
         </header>
 

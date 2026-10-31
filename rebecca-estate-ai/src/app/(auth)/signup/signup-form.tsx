@@ -6,11 +6,12 @@ import { FieldError, Input, Label } from "@/components/ui/input";
 import { FormMessage, SubmitButton } from "@/components/forms";
 import type { FormState } from "@/lib/validation";
 
-export function SignupForm() {
+export function SignupForm({ next }: { next?: string }) {
   const [state, action] = useActionState<FormState, FormData>(signupAction, {});
   if (state.ok) return <FormMessage state={state} />;
   return (
     <form action={action} className="space-y-4" noValidate>
+      <input type="hidden" name="next" value={next ?? "/onboarding"} />
       <div className="space-y-2">
         <Label htmlFor="displayName">姓名</Label>
         <Input id="displayName" name="displayName" defaultValue={state.values?.displayName} autoComplete="name" required aria-invalid={!!state.fieldErrors?.displayName} />

@@ -42,12 +42,27 @@ export type FormState = {
   fieldErrors?: Record<string, string[] | undefined>;
   ok?: boolean;
   message?: string;
-  /** 送出失敗時回填的非機敏欄位（React 19 會在 action 後重設表單） */
-  values?: Record<string, string>;
+  /** 送出失敗時回填的欄位（React 19 會在 action 後重設表單）；密碼類欄位不回填 */
+  values?: Record<string, string | string[]>;
+  /** 可能重複的資料，需使用者確認後才建立 */
+  duplicates?: { href: string; label: string; reason: string }[];
 };
 
 export function keepValues(formData: FormData, keys: string[]): Record<string, string> {
   return Object.fromEntries(keys.map((k) => [k, String(formData.get(k) ?? "")]));
+}
+
+const NEVER_ECHO = /password|token/i;
+
+/** 回填全部文字欄位（多選欄位保留為陣列） */
+export function echoValues(formData: FormData): Record<string, string | string[]> {
+  const out: Record<string, string | string[]> = {};
+  for (const key of new Set(formData.keys())) {
+    if (key.startsWith("$ACTION") || NEVER_ECHO.test(key)) continue;
+    const all = formData.getAll(key).filter((v): v is string => typeof v === "string");
+    out[key] = all.length > 1 ? all : (all[0] ?? "");
+  }
+  return out;
 }
 
 export function fieldErrorsOf(error: z.ZodError): Record<string, string[] | undefined> {

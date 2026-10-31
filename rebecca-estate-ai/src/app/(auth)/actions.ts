@@ -32,6 +32,8 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
     displayName: formData.get("displayName"),
   });
   const values = keepValues(formData, ["email", "displayName"]);
+  // 受邀者註冊後回到邀請頁；一般註冊進入建立工作空間
+  const next = safeNextPath(formData.get("next"), "/onboarding");
   if (!parsed.success) return { fieldErrors: fieldErrorsOf(parsed.error), values };
   if (!isSupabaseConfigured()) return { ...NOT_CONFIGURED, values };
 
@@ -41,12 +43,12 @@ export async function signupAction(_prev: FormState, formData: FormData): Promis
     password: parsed.data.password,
     options: {
       data: { display_name: parsed.data.displayName },
-      emailRedirectTo: `${siteUrl()}/auth/callback?next=/onboarding`,
+      emailRedirectTo: `${siteUrl()}/auth/callback?next=${encodeURIComponent(next)}`,
     },
   });
   if (error) return { error: "註冊失敗，請稍後再試或更換 Email", values };
 
   // 專案若關閉 Email 驗證，會直接拿到 session
-  if (data.session) redirect("/onboarding");
+  if (data.session) redirect(next);
   return { ok: true, message: "已寄出驗證信，請至信箱點擊連結完成註冊。" };
 }

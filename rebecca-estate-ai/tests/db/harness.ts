@@ -64,12 +64,12 @@ export class TestDb {
    * 等同 Supabase PostgREST 對每個請求所做的事。失敗時會 rollback。
    */
   async as<T>(
-    who: { role: "authenticated" | "anon" | "service_role"; sub?: string },
+    who: { role: "authenticated" | "anon" | "service_role"; sub?: string; email?: string },
     fn: (q: <R extends QueryResultRow = QueryResultRow>(text: string, params?: unknown[]) => Promise<R[]>) => Promise<T>,
   ): Promise<T> {
     await this.db.query("begin");
     try {
-      const claims = JSON.stringify(who.sub ? { sub: who.sub, role: who.role } : { role: who.role });
+      const claims = JSON.stringify({ role: who.role, ...(who.sub ? { sub: who.sub } : {}), ...(who.email ? { email: who.email } : {}) });
       await this.db.query("select set_config('request.jwt.claims', $1, true)", [claims]);
       await this.db.query(`set local role ${who.role}`);
       const result = await fn(async (text, params = []) => (await this.db.query(text, params)).rows);
@@ -81,8 +81,8 @@ export class TestDb {
     }
   }
 
-  asUser<T>(sub: string, fn: (q: Query) => Promise<T>) {
-    return this.as<T>({ role: "authenticated", sub }, fn);
+  asUser<T>(sub: string, fn: (q: Query) => Promise<T>, email?: string) {
+    return this.as<T>({ role: "authenticated", sub, email }, fn);
   }
 }
 

@@ -82,7 +82,7 @@ export async function loadDashboard(supabase: SupabaseClient, ws: Workspace, now
         .is("archived_at", null)
         .in("status", ["active", "negotiating"])
         .in("mandate_type", ["exclusive", "general", "co_brokerage"])
-        .or(`last_seller_report_at.is.null,last_seller_report_at.lt.${new Date(now.getTime() - SELLER_REPORT_INTERVAL_DAYS * 86_400_000).toISOString()}`)
+        .or(`last_seller_report_at.is.null,last_seller_report_at.lt."${new Date(now.getTime() - SELLER_REPORT_INTERVAL_DAYS * 86_400_000).toISOString()}"`)
         .order("last_seller_report_at", { ascending: true, nullsFirst: true })
         .limit(5),
       "owner_agent_id",

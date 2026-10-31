@@ -22,7 +22,7 @@ export function OnboardingForm() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="kind">類型</Label>
-        <Select id="kind" name="kind" key={state.values?.kind} defaultValue={state.values?.kind ?? "solo"}>
+        <Select id="kind" name="kind" key={String(state.values?.kind ?? "")} defaultValue={String(state.values?.kind ?? "solo")}>
           <option value="solo">個人工作室</option>
           <option value="team">團隊</option>
           <option value="company">房仲公司</option>

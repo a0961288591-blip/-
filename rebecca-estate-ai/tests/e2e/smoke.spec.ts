@@ -18,8 +18,27 @@ test.describe("未設定憑證時的行為", () => {
   });
 
   test("工作空間頁面不可直接進入", async ({ page }) => {
-    await page.goto("/w/any-tenant/dashboard");
-    await expect(page).toHaveURL(/\/setup$/);
+    for (const path of [
+      "/w/any-tenant/dashboard",
+      "/w/any-tenant/properties",
+      "/w/any-tenant/properties/new",
+      "/w/any-tenant/contacts/00000000-0000-0000-0000-000000000000",
+      "/w/any-tenant/activities/new",
+      "/w/any-tenant/tasks?view=review",
+      "/w/any-tenant/settings",
+      "/onboarding",
+      "/invite/abc",
+    ]) {
+      await page.goto(path);
+      await expect(page, path).toHaveURL(/\/setup$/);
+    }
+  });
+
+  test("註冊表單保留邀請回跳路徑，且拒絕站外網址", async ({ page }) => {
+    await page.goto("/signup?next=/invite/abc");
+    await expect(page.locator('input[name="next"]')).toHaveValue("/invite/abc");
+    await page.goto("/signup?next=https://evil.example");
+    await expect(page.locator('input[name="next"]')).toHaveValue("/onboarding");
   });
 
   test("登入表單顯示驗證錯誤與未設定提示", async ({ page }) => {

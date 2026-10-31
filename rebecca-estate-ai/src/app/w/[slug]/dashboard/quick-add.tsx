@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { Plus, X } from "lucide-react";
 import { quickAddTaskAction } from "./actions";
 import { Button } from "@/components/ui/button";
@@ -8,11 +9,14 @@ import { FieldError, Input, Label, Select } from "@/components/ui/input";
 import { FormMessage, SubmitButton } from "@/components/forms";
 import type { FormState } from "@/lib/validation";
 
+const LINKS = [
+  { label: "電話紀錄", path: "activities/new" },
+  { label: "物件", path: "properties/new" },
+  { label: "買方", path: "contacts/new?type=buyer" },
+];
+
 /** 尚未開放的快速新增項目：以停用狀態顯示並註明開放階段，不偽裝成可操作 */
 const UPCOMING = [
-  { label: "物件", phase: 2 },
-  { label: "買方", phase: 2 },
-  { label: "電話紀錄", phase: 2 },
   { label: "議價", phase: 5 },
   { label: "文案", phase: 4 },
 ];
@@ -37,6 +41,14 @@ export function QuickAdd({ slug, canWrite }: { slug: string; canWrite: boolean }
         <Button size="sm" onClick={() => setOpen((v) => !v)} disabled={!canWrite} aria-expanded={open}>
           {open ? <X /> : <Plus />} 待辦
         </Button>
+        {canWrite &&
+          LINKS.map((l) => (
+            <Button key={l.path} asChild size="sm" variant="outline">
+              <Link href={`/w/${slug}/${l.path}`}>
+                <Plus /> {l.label}
+              </Link>
+            </Button>
+          ))}
         {UPCOMING.map((u) => (
           <Button key={u.label} size="sm" variant="outline" disabled title={`Phase ${u.phase} 開放`}>
             {u.label}
@@ -55,7 +67,7 @@ export function QuickAdd({ slug, canWrite }: { slug: string; canWrite: boolean }
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="qa-priority">優先</Label>
-            <Select id="qa-priority" name="priority" key={state.values?.priority} defaultValue={state.values?.priority ?? "2"}>
+            <Select id="qa-priority" name="priority" key={String(state.values?.priority ?? "")} defaultValue={String(state.values?.priority ?? "2")}>
               <option value="1">高</option>
               <option value="2">中</option>
               <option value="3">低</option>

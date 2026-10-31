@@ -167,38 +167,51 @@ erDiagram
 
 ## 4. 頁面清單
 
+「需 Supabase 驗證」＝程式與資料庫規則已完成並通過測試，但登入後的畫面尚未在真實 Supabase 上端對端跑過。
+
 | 路徑 | 說明 | 狀態 |
 |---|---|---|
-| `/` | 依登入狀態導向 | Phase 1 ✓ |
-| `/setup` | 未設定 Supabase 時的設定說明 | Phase 1 ✓ |
-| `/login`、`/signup` | 登入、註冊 | Phase 1 ✓（需 Supabase 驗證） |
-| `/auth/callback` | Email 驗證回跳 | Phase 1 ✓（需 Supabase 驗證） |
-| `/auth/signout` | 登出（僅 POST） | Phase 1 ✓ |
-| `/onboarding` | 建立工作空間 | Phase 1 ✓（需 Supabase 驗證） |
-| `/w/[slug]/dashboard` | 智慧 Dashboard + 快速新增待辦 | Phase 1 ✓（需 Supabase 驗證） |
-| `/w/[slug]/settings` | 成員權限、方案額度（唯讀） | Phase 1 ✓（需 Supabase 驗證） |
-| `/w/[slug]/properties` | 房源列表/新增/編輯/封存/搜尋 | Phase 2 |
-| `/w/[slug]/contacts` | 客戶 CRM、聯繫紀錄 | Phase 2 |
-| `/w/[slug]/requirements` | 買方需求 | Phase 2 |
-| `/w/[slug]/tasks` | 任務清單、晚間回顧、週結算 | Phase 2 |
-| `/w/[slug]/matches` | 配案 | Phase 3 |
-| `/w/[slug]/developers` | 建商與大型買方池 | Phase 3 |
+| `/` | 依登入狀態導向 | ✓ |
+| `/setup` | 未設定 Supabase 時的設定說明 | ✓ |
+| `/login`、`/signup` | 登入、註冊（支援邀請回跳） | ✓（需 Supabase 驗證） |
+| `/auth/callback`、`/auth/signout` | Email 驗證回跳、登出（僅 POST） | ✓（需 Supabase 驗證） |
+| `/onboarding` | 建立工作空間 | ✓（需 Supabase 驗證） |
+| `/invite/[token]` | 接受成員邀請 | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/dashboard` | Dashboard、快速新增（待辦／電話紀錄／物件／買方） | ✓（需 Supabase 驗證） |
+| `/w/[slug]/properties` | 房源列表、搜尋、篩選、封存檢視 | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/properties/new`、`/[id]/edit` | 新增（含重複提醒、底價）、編輯 | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/properties/[id]` | 明細：查證狀態、底價、地號、附件上傳/短效下載、屋主、共同開發、開價歷史 | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/contacts`、`/new`、`/[id]`、`/[id]/edit` | 客戶 CRM、個資遮罩、聯繫紀錄、重複提醒 | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/contacts/[id]/requirements/new`、`/w/[slug]/requirements`、`/requirements/[id]/edit` | 買方需求 | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/activities/new` | 手機快速記錄聯繫（可同時建立追蹤待辦） | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/tasks` | 今日／今日回顧／本週結算／全部未完成；團隊檢視（經理） | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/notifications` | 站內通知 | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/settings` | 成員權限調整、邀請連結、個人提醒時段、方案額度 | Phase 2 ✓（需 Supabase 驗證） |
+| `/w/[slug]/matches`、`/developers` | 配案、建商 | Phase 3 |
 | `/w/[slug]/marketing` | AI 行銷中心 | Phase 4 |
-| `/w/[slug]/deals` | 成交與議價 | Phase 5 |
-| `/w/[slug]/reports` | 報表 | Phase 5 |
-| `/api/cron/daily` | 每日排程（CRON_SECRET） | Phase 1 ✓ |
+| `/w/[slug]/deals`、`/reports` | 成交、報表 | Phase 5 |
+| `/api/cron/daily` | 備援排程（`?job=carry_over` / `reminders`） | ✓ |
 
 ## 5. 開發階段
 
-| 階段 | 內容 |
-|---|---|
-| **Phase 1（本次）** | 專案初始化、ERD、全部核心資料表與 RLS、Storage 權限、Auth、多工作空間、Dashboard（真實查詢）、設定頁、PWA、安全測試 |
-| Phase 2 | 物件（含地號、附件上傳/短效下載、價格歷史、重複提醒）、客戶與 PII 遮罩、買方需求、聯繫紀錄（手機快速紀錄）、任務頁、成員邀請與權限調整 UI、站內通知產生 |
-| Phase 3 | 建商資料庫、公開線索/實際需求分離、規則式配對引擎（0–100、原因、排除、未知）、變更時重算、人工確認 |
-| Phase 4 | AI 行銷（OpenAI，只用已核實欄位）、平台模板、品牌設定、審核流程、版本與成本、PDF/DM、刊登紀錄、屋主週報 |
-| Phase 5 | 成交管線、出價紀錄、成交漏斗、CSV 匯入匯出、備份與刪除流程、訂閱額度強化、金流抽象、整合測試、部署 |
+| 階段 | 內容 | 狀態 |
+|---|---|---|
+| Phase 1 | 專案初始化、ERD、核心資料表與 RLS、Storage 權限、Auth、多工作空間、Dashboard、設定頁、PWA、安全測試 | 完成 |
+| Phase 2 | 物件（地號、附件、查證、底價、開價歷史、重複提醒、搜尋封存）、客戶（個資遮罩、重複提醒）、買方需求、聯繫紀錄、任務頁、成員邀請與權限調整、提醒排程與站內通知 | 完成（待真實 Supabase 驗證） |
+| Phase 3 | 建商資料庫、公開線索／實際需求分離、規則式配對引擎（0–100、原因、排除、未知）、變更時重算、人工確認 | 未開始 |
+| Phase 4 | AI 行銷（OpenAI，只用已核實欄位）、平台模板、品牌設定、審核流程、版本與成本、PDF/DM、刊登紀錄、屋主週報 | 未開始 |
+| Phase 5 | 成交管線、出價紀錄、成交漏斗、CSV 匯入匯出、備份與刪除流程、金流抽象、整合測試、部署 | 未開始 |
 
-## 6. Phase 1 新增檔案
+### Phase 2 新增的資料庫物件（`20261101000500_phase2.sql`、`20261101000600_schedules.sql`）
+
+- `tenant_invitations`：邀請只存 token 雜湊；`invite_member`／`accept_invitation`／`revoke_invitation`（Email 必須相符、7 天到期、一次性、席次上限）
+- `member_preferences`：每人提醒時段；`generate_reminders()`：上午 TOP 3、晚上回顧、週結算、委託 7/3/1 天前到期提醒（以 dedupe_key 去重）
+- `find_duplicate_properties`（地址正規化、名稱、地號）、`find_duplicate_contacts`（電話含 +886、Email 大小寫；不回傳個資）
+- `create_contact`：客戶與聯絡資訊同一交易建立
+- `contact_pii.phone_normalized`／`email_normalized` 衍生欄位（稽核時忽略）
+- pg_cron 排程：每天 00:05 延續待辦、每小時產生提醒
+
+## 6. 檔案結構（Phase 1 建立）
 
 ```
 rebecca-estate-ai/

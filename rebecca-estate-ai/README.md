@@ -24,4 +24,4 @@ npm run dev
 
 ## 目前進度
 
-Phase 1（基礎架構、Auth、多租戶 RLS、安全測試、Dashboard 骨架）已完成，詳見 docs/ARCHITECTURE.md。
+Phase 1（基礎架構、Auth、多租戶 RLS、安全測試、Dashboard）與 Phase 2（房源、客戶、買方需求、聯繫紀錄、任務、成員邀請、提醒）已完成程式與測試，尚待接上真實 Supabase 做端對端驗證。上線步驟見 [docs/SETUP.md](docs/SETUP.md)。

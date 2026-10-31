@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 /** 主要導航與各模組開放階段。phase > CURRENT_PHASE 的模組只顯示規劃說明。 */
-export const CURRENT_PHASE = 1;
+export const CURRENT_PHASE = 2;
 
 export interface ModuleDef {
   key: string;
