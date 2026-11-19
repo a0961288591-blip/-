@@ -1,0 +1,66 @@
+[
+ {
+  "name": "afu_big.png",
+  "prompt": "A photorealistic bobblehead photo caricature of a weathered Taiwanese rice farmer in his 40s from the 1950s, tanned skin, short black hair. Extreme big-head proportions: the head from crown to chin is about 40 percent of the whole figure height, the head is wider than his shoulders, the body below is short and stocky with short legs, like a bobblehead figurine but photographed as a real person. Head and body are ONE continuous real photograph, no seam, no thin neck. Wearing a bamboo conical hat, faded white cotton undershirt, rolled-up dark shorts, barefoot. Body facing the camera, carrying a bamboo shoulder pole on one shoulder, calm tired expression, mouth closed. Natural soft frontal studio light, sharp real-photo detail, not a cartoon, not 3D render. Full figure from top of head to feet inside the frame with generous margin. Portrait 1024x1536. Background perfectly flat pure white #FFFFFF, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "afu_cheer.png",
+  "prompt": "A photorealistic bobblehead photo caricature of the same farmer as in afu_big.png (same face, same hat and clothes). Extreme big-head proportions: the head from crown to chin is about 40 percent of the whole figure height, the head is wider than his shoulders, the body below is short and stocky with short legs, like a bobblehead figurine but photographed as a real person. Head and body are ONE continuous real photograph, no seam, no thin neck. Both arms raised high holding up a blank wooden plank sign above his head, laughing with mouth open, joyful. Natural soft frontal studio light, sharp real-photo detail, not a cartoon, not 3D render. Full figure from top of head to feet inside the frame with generous margin. Portrait 1024x1536. Background perfectly flat pure white #FFFFFF, no shadow, no text, no logos.",
+  "refs": [
+   "afu_big.png"
+  ]
+ },
+ {
+  "name": "landlord_big.png",
+  "prompt": "A photorealistic bobblehead photo caricature of a Taiwanese landlord in his 50s from the 1950s, round wire glasses, neat slicked hair. Extreme big-head proportions: the head from crown to chin is about 40 percent of the whole figure height, the head is wider than his shoulders, the body below is short and stocky with short legs, like a bobblehead figurine but photographed as a real person. Head and body are ONE continuous real photograph, no seam, no thin neck. Wearing a dark long traditional changshan robe, holding a wooden abacus in one hand, chin up, slightly smug expression, mouth closed. Natural soft frontal studio light, sharp real-photo detail, not a cartoon, not 3D render. Full figure from top of head to feet inside the frame with generous margin. Portrait 1024x1536. Background perfectly flat pure white #FFFFFF, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "landlord_suit.png",
+  "prompt": "A photorealistic bobblehead photo caricature of the same landlord as in landlord_big.png (same face and glasses). Extreme big-head proportions: the head from crown to chin is about 40 percent of the whole figure height, the head is wider than his shoulders, the body below is short and stocky with short legs, like a bobblehead figurine but photographed as a real person. Head and body are ONE continuous real photograph, no seam, no thin neck. Now wearing a 1950s western business suit and tie, hugging a stack of old paper share certificates to his chest, confident smile. Natural soft frontal studio light, sharp real-photo detail, not a cartoon, not 3D render. Full figure from top of head to feet inside the frame with generous margin. Portrait 1024x1536. Background perfectly flat pure white #FFFFFF, no shadow, no text, no logos.",
+  "refs": [
+   "landlord_big.png"
+  ]
+ },
+ {
+  "name": "paddy.png",
+  "prompt": "a small square rice paddy field as a miniature tilt-shift diorama model, raised earth ridges on four sides, rows of young green rice seedlings in shallow water, photorealistic product photo, 3/4 top-down view, soft studio light, isolated on perfectly flat pure white #FFFFFF background, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "sign_board.png",
+  "prompt": "a blank weathered wooden plank sign on a wooden stake, as used to mark a farm field, nothing written on it, photorealistic product photo, front view, soft studio light, isolated on perfectly flat pure white #FFFFFF background, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "rice_baskets.png",
+  "prompt": "2 separate round bamboo baskets each heaped full of golden unhusked rice grains, well spaced apart, not touching, photorealistic product photo, 3/4 view, soft studio light, isolated on perfectly flat pure white #FFFFFF background, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "rice_measure.png",
+  "prompt": "an old square wooden rice measuring box (dou) with iron corner brackets, empty, photorealistic product photo, 3/4 view, soft studio light, isolated on perfectly flat pure white #FFFFFF background, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "bond_bag.png",
+  "prompt": "an old 1950s cloth rice sack tied with string, with a blank paper tag, photorealistic product photo, front view, soft studio light, isolated on perfectly flat pure white #FFFFFF background, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "stock_cert.png",
+  "prompt": "a single old 1950s paper share certificate with ornate printed border and blank center, slightly yellowed, photorealistic product photo, front view, flat, soft studio light, isolated on perfectly flat pure white #FFFFFF background, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "factory.png",
+  "prompt": "a 1950s cement factory with a tall brick chimney and grey silos as a miniature tilt-shift diorama model, photorealistic product photo, 3/4 view, soft studio light, isolated on perfectly flat pure white #FFFFFF background, no shadow, no text, no logos.",
+  "refs": []
+ },
+ {
+  "name": "bg_paper.png",
+  "prompt": "A flat texture photo of coarse crumpled brown kraft paper filling the whole frame, even soft light, no objects, no text. Portrait 1024x1536.",
+  "refs": []
+ }
+]
