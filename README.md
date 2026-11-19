@@ -54,3 +54,10 @@ bash setup.sh
 
 - 需要：Python 3.10+、FFmpeg、中文字型（找不到時設 `ISTREAM_FONT`）；切片需要 numpy。
 - 自檢：`cd .agents/skills/lanshu-infinite-stream-koubo && python3 tools/check_environment.py --render`
+
+## 大頭拼貼故事片（bighead-collage）：台灣土地傳奇
+
+已安裝 [bighead-collage](https://github.com/HeyChengC/bighead-collage) skill（`.agents/skills/`，symlink 到 `.claude/skills/`）：大頭照片剪紙＋道具＋音效的 9:16 故事短片。系列「台灣土地傳奇」第 1 集在 [`films/taiwan-land-legend-01/`](films/taiwan-land-legend-01/director.md)（文案 `script.json`、導演表 `director.md`）。
+
+- 生圖需要 OpenAI API Key（或 `image.provider manual`：只產提示詞，自己拿去 ChatGPT 生圖再放回 `gen/`）。
+- 依賴：`pip install -r .agents/skills/bighead-collage/requirements.txt`、`npm install`（在 skill 目錄）；自檢 `python scripts/doctor.py`。
