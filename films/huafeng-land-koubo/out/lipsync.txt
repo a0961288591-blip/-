@@ -1,0 +1,6 @@
+lip-sync: 4 jobs, 26.37s sent, 13.53s skipped (host hidden)
+  j01   0.00-  5.47 ( 5.47s) tier=hero     engine=sync-2-pro  face≈360px zh-risk=low (3.91 字/s, b/p/m×1)
+  j02  14.52- 21.39 ( 6.87s) tier=small    engine=musetalk    face≈78px zh-risk=low (3.5 字/s, b/p/m×3)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j03  25.87- 31.10 ( 5.23s) tier=small    engine=musetalk    face≈78px zh-risk=low (3.88 字/s, b/p/m×0)
+  j04  31.10- 39.90 ( 8.80s) tier=hero     engine=sync-2-pro  face≈414px zh-risk=low (3.8 字/s, b/p/m×3)

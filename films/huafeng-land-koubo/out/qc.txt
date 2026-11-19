@@ -1,0 +1,3 @@
+QC: PASS — 0 FAIL, 0 RISK (must review after lip-sync), 1 WARN
+metrics: clips=9, host_shots=5, unique_shots=7, asl_s=2.85, longest_s=4.02, coverage=0.642, visible_talking_s=26.37
+  [WARN] coverage_ratio: B-roll/MG coverage 64% outside 15%–35%

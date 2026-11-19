@@ -1,0 +1,15 @@
+QC: PASS — 0 FAIL, 0 RISK (must review after lip-sync), 13 WARN
+metrics: clips=50, host_shots=40, unique_shots=30, asl_s=4.28, longest_s=7.4, coverage=0.262, visible_talking_s=212.41
+  [WARN] upscale: K01H: 3 clips upscaled up to 1.99× — generate this plate at higher resolution (or native aspect) for the final master
+  [WARN] repeat: @119.00s c25 reuses L01_s4 as a variant (scale/reverse/PiP) 114.9s after 4.1s — check by eye
+  [WARN] repeat: @141.51s c30 reuses L02_s1 as a variant (scale/reverse/PiP) 123.9s after 17.6s — check by eye
+  [WARN] repeat: @151.36s c33 reuses L01_s1 as a variant (scale/reverse/PiP) 73.2s after 78.2s — check by eye
+  [WARN] repeat: @155.33s c34 reuses L02_s7 as a variant (scale/reverse/PiP) 114.4s after 40.9s — check by eye
+  [WARN] repeat: @164.88s c36 reuses K02_s1 as a variant (scale/reverse/PiP) 137.7s after 27.2s — check by eye
+  [WARN] repeat: @175.53s c38 reuses K02_s2 as a variant (scale/reverse/PiP) 41.7s after 133.9s — check by eye
+  [WARN] repeat: @191.93s c42 reuses K01_s1 as a variant (scale/reverse/PiP) 63.9s after 128.1s — check by eye
+  [WARN] repeat: @198.38s c43 reuses K03_s1 as a variant (scale/reverse/PiP) 145.7s after 52.6s — check by eye
+  [WARN] repeat: @206.66s c45 reuses K02_s3 as a variant (scale/reverse/PiP) 170.8s after 35.9s — check by eye
+  [WARN] repeat: @210.88s c46 reuses L02_s4 as a variant (scale/reverse/PiP) 152.1s after 58.8s — check by eye
+  [WARN] repeat: @216.08s c47 reuses L02_s2 as a variant (scale/reverse/PiP) 106.7s after 109.3s — check by eye
+  [WARN] repeat: @223.83s c49 reuses K03_s4 as a variant (scale/reverse/PiP) 213.4s after 10.4s — check by eye

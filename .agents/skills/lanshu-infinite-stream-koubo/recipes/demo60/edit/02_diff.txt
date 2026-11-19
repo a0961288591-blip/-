@@ -1,0 +1,4 @@
+~ c02 shot: P01_s6 → P01_s2
+~ c07 shot: P01_s1 → None; layout: full → hidden; ops: [] → [hide:broll:旧流程里塞进AI的办公室]
+~ c15 ops: [scale1.15] → []
+~ c20 layout: full → punch; ops: [] → [scale1.1]

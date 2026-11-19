@@ -1,0 +1,6 @@
+~ c02 shot: P01_s1 → P01_s6
+~ c03 shot: P02_s6 → P01_s3
+~ c07 shot: P01_s3 → P01_s1
+~ c09 layout: full → punch; ops: [scale1.1] → [scale1.15]
+~ c13 shot: P01_s4 → None; layout: full → hidden; ops: [] → [hide:card]
+~ c20 shot: P01_s6 → P01_s3

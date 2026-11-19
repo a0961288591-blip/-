@@ -1,0 +1,21 @@
+{
+  "note": "Shipped default persona (K01–K03 frozen_check). Restored by `istream identity restore`. Do not edit by hand — edit library.json via identity set/restore.",
+  "blocks_identity": {
+    "en": "Identity: the same East Asian woman in her early thirties as in the reference image — shoulder-length black hair neatly tied back in a low ponytail with no loose strands near the face, natural makeup, wearing a solid navy blazer over a plain white crew-neck top, no jewelry, no glasses.",
+    "zh": "人物：与参考图中同一位三十出头的东亚女性：黑色及肩发整齐地扎成低马尾，脸旁没有碎发，淡妆，身穿纯色藏青西装外套，内搭素白圆领上衣，不戴首饰，不戴眼镜。"
+  },
+  "first_frames": {
+    "IMG-A": {
+      "en": "Photorealistic 9:16 vertical portrait photo, medium close-up from mid-chest up, subject centered, eyes on the upper third line, a little headroom. Subject: the same East Asian woman in her early thirties as in the reference image — shoulder-length black hair neatly tied back in a low ponytail with no loose strands near the face, natural makeup, wearing a solid navy blazer over a plain white crew-neck top, no jewelry, no glasses. She faces the lens directly with a relaxed neutral expression, lips relaxed and gently closed, shoulders relaxed and level, hands out of view below the frame. Background: plain warm light-grey seamless wall. Large soft key light 45 degrees from camera left, soft fill from camera right, subtle hair rim light, neutral 5600K. True-to-life skin texture, sharp focus on the eyes, natural color. No text, no logo.",
+      "zh": "写实 9:16 竖幅人像照片，胸部以上近景，人物居中，眼睛位于画面上三分之一线，头顶略留空间。人物：与参考图中同一位三十出头的东亚女性：黑色及肩发整齐地扎成低马尾，脸旁没有碎发，淡妆，身穿纯色藏青西装外套，内搭素白圆领上衣，不戴首饰，不戴眼镜。她正对镜头，表情放松中性，嘴唇放松、轻轻闭合，双肩放松、水平，双手在画面以下不入画。背景：纯净的浅暖灰无缝墙。镜头左侧 45 度大面积柔光主光，镜头右侧柔和补光，细微发丝轮廓光，5600K 中性色温。真实皮肤纹理，眼睛焦点清晰，自然色彩。无文字，无 logo。"
+    },
+    "IMG-B": {
+      "en": "Photorealistic 9:16 vertical portrait photo, medium shot from the waist up, subject centered, eyes on the upper third line, room on both sides of the body. Subject: the same East Asian woman in her early thirties as in the reference image — shoulder-length black hair neatly tied back in a low ponytail with no loose strands near the face, natural makeup, wearing a solid navy blazer over a plain white crew-neck top, no jewelry, no glasses. She faces the lens directly with a relaxed neutral expression, lips relaxed and gently closed, shoulders relaxed and level, hands loosely clasped in front of the waist, all fingers natural. Background: plain warm light-grey seamless wall. Large soft key light 45 degrees from camera left, soft fill from camera right, subtle hair rim light, neutral 5600K. True-to-life skin texture, sharp focus on the eyes, natural color. No text, no logo.",
+      "zh": "写实 9:16 竖幅人像照片，腰部以上中景，人物居中，眼睛位于画面上三分之一线，身体两侧留有空间。人物：与参考图中同一位三十出头的东亚女性：黑色及肩发整齐地扎成低马尾，脸旁没有碎发，淡妆，身穿纯色藏青西装外套，内搭素白圆领上衣，不戴首饰，不戴眼镜。她正对镜头，表情放松中性，嘴唇放松、轻轻闭合，双肩放松、水平，双手在腰前轻握，手指自然。背景：纯净的浅暖灰无缝墙。镜头左侧 45 度大面积柔光主光，镜头右侧柔和补光，细微发丝轮廓光，5600K 中性色温。真实皮肤纹理，眼睛焦点清晰，自然色彩。无文字，无 logo。"
+    },
+    "IMG-A169": {
+      "en": "Photorealistic 16:9 horizontal photo, medium close-up from mid-chest up, subject on the left third facing the lens, eyes on the upper third line, a little headroom, the right half of the frame clean softly lit wall. Subject: the same East Asian woman in her early thirties as in the reference image — shoulder-length black hair neatly tied back in a low ponytail with no loose strands near the face, natural makeup, wearing a solid navy blazer over a plain white crew-neck top, no jewelry, no glasses. She faces the lens directly with a relaxed neutral expression, lips relaxed and gently closed, shoulders relaxed and level, hands out of view below the frame. Background: plain warm light-grey seamless wall. Large soft key light 45 degrees from camera left, soft fill from camera right, subtle hair rim light, neutral 5600K. True-to-life skin texture, sharp focus on the eyes, natural color. No text, no logo.",
+      "zh": "写实 16:9 横幅照片，胸部以上近景，人物位于左三分之一处、正对镜头，眼睛位于画面上三分之一线，头顶略留空间，画面右半边是干净、柔和受光的墙面。人物：与参考图中同一位三十出头的东亚女性：黑色及肩发整齐地扎成低马尾，脸旁没有碎发，淡妆，身穿纯色藏青西装外套，内搭素白圆领上衣，不戴首饰，不戴眼镜。她正对镜头，表情放松中性，嘴唇放松、轻轻闭合，双肩放松、水平，双手在画面以下不入画。背景：纯净的浅暖灰无缝墙。镜头左侧 45 度大面积柔光主光，镜头右侧柔和补光，细微发丝轮廓光，5600K 中性色温。真实皮肤纹理，眼睛焦点清晰，自然色彩。无文字，无 logo。"
+    }
+  }
+}

@@ -1,0 +1,3851 @@
+{
+ "shots": [
+  {
+   "id": "K01_s1",
+   "plate": "K01",
+   "src": {
+    "in": 0.5,
+    "out": 7.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播主底板 · 平静、中性地叙述，在重音处缓慢地小幅点头，肩部几乎不动。"
+  },
+  {
+   "id": "K01_s2",
+   "plate": "K01",
+   "src": {
+    "in": 7.5,
+    "out": 14.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "curious",
+    "gestures": [
+     {
+      "g": "think_glance",
+      "t": 2.0
+     },
+     {
+      "g": "head_tilt",
+      "t": 2.5
+     },
+     {
+      "g": "brow_raise",
+      "t": 4.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "question",
+     "think"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播主底板 · 继续说话，头部极轻微地向左倾斜；说到关键词前，目光短暂地向斜上方一瞥，像在找合适的词，随即回到镜头，轻扬一次眉毛，然后回正。"
+  },
+  {
+   "id": "K01_s3",
+   "plate": "K01",
+   "src": {
+    "in": 14.5,
+    "out": 21.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "smile_greet",
+      "t": 1.5
+     },
+     {
+      "g": "nod",
+      "t": 2.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "open",
+     "hook",
+     "close"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播主底板 · 她看向镜头，露出明亮温暖的笑容，轻轻点头表示欢迎，然后带着浅笑温暖地继续说。"
+  },
+  {
+   "id": "K01_s4",
+   "plate": "K01",
+   "src": {
+    "in": 21.5,
+    "out": 29.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 1,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 2.5
+     },
+     {
+      "g": "nod",
+      "t": 4.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "smile_closed",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": false
+   },
+   "edit": {
+    "roles": [
+     "pause",
+     "listen",
+     "close",
+     "cta"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": false,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播主底板 · 她停止说话，双唇轻闭，专注倾听，带着闭唇浅笑，在不规律的时刻小幅点头两次，脸上有安静的回应，像听到了一个好观点，自然眨眼。"
+  },
+  {
+   "id": "K02_s1",
+   "plate": "K02",
+   "src": {
+    "in": 0.5,
+    "out": 7.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "soft_smile",
+      "t": 2.5
+     },
+     {
+      "g": "nod",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "agree"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "ok",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景口播底板（自然手势） · 自然的对话式说话，双手在腰前轻握；说话间手指自然松开又重新握一次，带着浅笑，认同地小幅点头一次。"
+  },
+  {
+   "id": "K02_s2",
+   "plate": "K02",
+   "src": {
+    "in": 7.5,
+    "out": 14.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "palms_open",
+      "t": 3.0
+     },
+     {
+      "g": "brow_raise",
+      "t": 3.1
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      2.0,
+      5.0
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景口播底板（自然手势） · 双手在胸口略低处向外摊开，做一个放松的讲解手势，一只手略早于另一只，关键词上眉毛微微上扬，然后双手回到腰前合拢。"
+  },
+  {
+   "id": "K02_s3",
+   "plate": "K02",
+   "src": {
+    "in": 14.5,
+    "out": 21.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "palm_single",
+      "t": 3.5
+     },
+     {
+      "g": "shrug",
+      "t": 3.7
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "story",
+     "caveat"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      2.5,
+      5.0
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景口播底板（自然手势） · 带着浅笑继续说话，右手在腰部高度掌心向上、把观点轻轻往前“递”一下，双肩随之轻松地微微一耸，然后与另一只手重新合拢。"
+  },
+  {
+   "id": "K02_s4",
+   "plate": "K02",
+   "src": {
+    "in": 21.5,
+    "out": 29.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "hands_together",
+      "t": 2.5
+     },
+     {
+      "g": "nod",
+      "t": 4.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "summary",
+     "emphasis"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景口播底板（自然手势） · 总结时双手在胸前略低处轻轻合拢，表情落定为平静笃定的浅笑，然后双手放回腰前，有力地点头一次。"
+  },
+  {
+   "id": "K03_s1",
+   "plate": "K03",
+   "src": {
+    "in": 0.5,
+    "out": 7.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "sway",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "story"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播变体（可选） · 对话式讲述，头部随着语言节奏轻微地左右摆动。"
+  },
+  {
+   "id": "K03_s2",
+   "plate": "K03",
+   "src": {
+    "in": 7.5,
+    "out": 14.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "nod_multi",
+      "t": 3.0
+     },
+     {
+      "g": "knowing_look",
+      "t": 4.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "summary",
+     "emphasis",
+     "agree"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "ok",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播变体（可选） · 两三个时机不均的小幅认同点头，眉毛微抬，带一点会心的浅笑，像在肯定自己的观点。"
+  },
+  {
+   "id": "K03_s3",
+   "plate": "K03",
+   "src": {
+    "in": 14.5,
+    "out": 21.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "serious",
+    "gestures": [
+     {
+      "g": "brow_furrow",
+      "t": 2.5
+     },
+     {
+      "g": "nod",
+      "t": 4.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "data",
+     "emphasis",
+     "explain",
+     "caveat"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播变体（可选） · 讲严肃观点时平静专注：目光坚定，说到难点时眉头轻轻收拢、头微微一侧，带一点关切（不是生气、不是皱眉），随即舒展，缓慢点头一次。"
+  },
+  {
+   "id": "K03_s4",
+   "plate": "K03",
+   "src": {
+    "in": 21.5,
+    "out": 29.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "soft_smile",
+      "t": 2.0
+     },
+     {
+      "g": "lean_back",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "close",
+     "cta",
+     "summary"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播变体（可选） · 说话时短暂地温暖一笑，笑意先从眼睛里升起、又自然退去，然后身体略微后靠，放松而自信地把话说完。"
+  },
+  {
+   "id": "K01H_s1",
+   "plate": "K01H",
+   "src": {
+    "in": 0.5,
+    "out": 7.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.25,
+     0.17,
+     0.13,
+     0.31
+    ],
+    "face_h_px": 330
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.2,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "lower_third",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播主底板 · 横屏左三分之一 · 平静、中性地叙述，在重音处缓慢地小幅点头，肩部几乎不动。"
+  },
+  {
+   "id": "K01H_s2",
+   "plate": "K01H",
+   "src": {
+    "in": 7.5,
+    "out": 14.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.25,
+     0.17,
+     0.13,
+     0.31
+    ],
+    "face_h_px": 330
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "curious",
+    "gestures": [
+     {
+      "g": "think_glance",
+      "t": 2.0
+     },
+     {
+      "g": "head_tilt",
+      "t": 2.5
+     },
+     {
+      "g": "brow_raise",
+      "t": 4.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "question",
+     "think"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.2,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "lower_third",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播主底板 · 横屏左三分之一 · 继续说话，头部极轻微地向左倾斜；说到关键词前，目光短暂地向斜上方一瞥，像在找合适的词，随即回到镜头，轻扬一次眉毛，然后回正。"
+  },
+  {
+   "id": "K01H_s3",
+   "plate": "K01H",
+   "src": {
+    "in": 14.5,
+    "out": 21.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.25,
+     0.17,
+     0.13,
+     0.31
+    ],
+    "face_h_px": 330
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "smile_greet",
+      "t": 1.5
+     },
+     {
+      "g": "nod",
+      "t": 2.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "open",
+     "hook",
+     "close"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.2,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "lower_third",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播主底板 · 横屏左三分之一 · 她看向镜头，露出明亮温暖的笑容，轻轻点头表示欢迎，然后带着浅笑温暖地继续说。"
+  },
+  {
+   "id": "K01H_s4",
+   "plate": "K01H",
+   "src": {
+    "in": 21.5,
+    "out": 29.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.25,
+     0.17,
+     0.13,
+     0.31
+    ],
+    "face_h_px": 330
+   },
+   "performance": {
+    "energy": 1,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 2.5
+     },
+     {
+      "g": "nod",
+      "t": 4.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "smile_closed",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": false
+   },
+   "edit": {
+    "roles": [
+     "pause",
+     "listen",
+     "close",
+     "cta"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.2,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "lower_third",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": false,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景口播主底板 · 横屏左三分之一 · 她停止说话，双唇轻闭，专注倾听，带着闭唇浅笑，在不规律的时刻小幅点头两次，脸上有安静的回应，像听到了一个好观点，自然眨眼。"
+  },
+  {
+   "id": "L01_s1",
+   "plate": "L01",
+   "src": {
+    "in": 0.5,
+    "out": 7.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 5.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景 60 秒长底板（8 段不重样） · 平稳、从容地叙述，每句话末尾缓慢点头一次，肩部保持不动。"
+  },
+  {
+   "id": "L01_s2",
+   "plate": "L01",
+   "src": {
+    "in": 7.5,
+    "out": 14.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "lean_in",
+      "t": 3.0
+     },
+     {
+      "g": "brow_raise",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "emphasis",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景 60 秒长底板（8 段不重样） · 讲到重点时身体极轻微地向镜头前倾，眉毛微微上扬，然后坐回。"
+  },
+  {
+   "id": "L01_s3",
+   "plate": "L01",
+   "src": {
+    "in": 14.5,
+    "out": 21.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "curious",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 4.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "question",
+     "story"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      1.0,
+      3.0
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景 60 秒长底板（8 段不重样） · 像在回想什么，目光短暂地向左上方看一下，随即回到镜头，带着心中有数的小点头继续说。"
+  },
+  {
+   "id": "L01_s4",
+   "plate": "L01",
+   "src": {
+    "in": 21.5,
+    "out": 29.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "head_tilt",
+      "t": 2.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "open"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "ok",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景 60 秒长底板（8 段不重样） · 带着浅笑，头部轻微向右侧倾，亲切放松。"
+  },
+  {
+   "id": "L01_s5",
+   "plate": "L01",
+   "src": {
+    "in": 29.5,
+    "out": 37.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "serious",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 5.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "data",
+     "emphasis"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景 60 秒长底板（8 段不重样） · 讲关键事实时严肃专注：目光稳定，几乎不动，缓慢点头一次。"
+  },
+  {
+   "id": "L01_s6",
+   "plate": "L01",
+   "src": {
+    "in": 37.5,
+    "out": 44.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "nod_multi",
+      "t": 3.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "summary",
+     "emphasis"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "ok",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景 60 秒长底板（8 段不重样） · 连续两个快速的小点头，像在说“对吧？”，带一点笃定的浅笑。"
+  },
+  {
+   "id": "L01_s7",
+   "plate": "L01",
+   "src": {
+    "in": 44.5,
+    "out": 51.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "empathetic",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 4.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "explain",
+     "narrate"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景 60 秒长底板（8 段不重样） · 语气更柔和、带共情：语速略慢，眼神温暖，轻轻点头一次。"
+  },
+  {
+   "id": "L01_s8",
+   "plate": "L01",
+   "src": {
+    "in": 51.5,
+    "out": 59.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 1,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "smile_closed",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": false
+   },
+   "edit": {
+    "roles": [
+     "pause",
+     "listen",
+     "close"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "good",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": false,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景 60 秒长底板（8 段不重样） · 她停止说话，双唇轻闭地倾听，带着闭唇浅笑缓慢点头一次，自然眨眼。"
+  },
+  {
+   "id": "L02_s1",
+   "plate": "L02",
+   "src": {
+    "in": 0.5,
+    "out": 7.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "ok",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景 60 秒长底板（含左右托举位） · 自然的对话式说话，双手在腰前轻握，小幅点头。"
+  },
+  {
+   "id": "L02_s2",
+   "plate": "L02",
+   "src": {
+    "in": 7.5,
+    "out": 14.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "palm_present",
+      "t": 3.0,
+      "zone": "right_half"
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "emphasis",
+     "data",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      2.0,
+      5.0
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景 60 秒长底板（含左右托举位） · 画面右侧的那只手在胸口高度掌心向上，轻轻向画面右侧呈现，像托着一个小东西，停一拍，然后回到腰前。"
+  },
+  {
+   "id": "L02_s3",
+   "plate": "L02",
+   "src": {
+    "in": 14.5,
+    "out": 21.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "palms_open",
+      "t": 3.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      2.0,
+      5.0
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景 60 秒长底板（含左右托举位） · 双手在胸口高度向外摊开，做一个放松的讲解手势，然后回到腰前合拢。"
+  },
+  {
+   "id": "L02_s4",
+   "plate": "L02",
+   "src": {
+    "in": 21.5,
+    "out": 29.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "hands_together",
+      "t": 2.5
+     },
+     {
+      "g": "nod",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "summary"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景 60 秒长底板（含左右托举位） · 总结时双手在胸前轻轻合拢，自信地点头一次，再放回腰前。"
+  },
+  {
+   "id": "L02_s5",
+   "plate": "L02",
+   "src": {
+    "in": 29.5,
+    "out": 37.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "serious",
+    "gestures": [
+     {
+      "g": "lean_in",
+      "t": 3.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "data",
+     "emphasis"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "ok",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景 60 秒长底板（含左右托举位） · 她身体极轻微地前倾，双手放在腰前，用严肃专注的语气说话。"
+  },
+  {
+   "id": "L02_s6",
+   "plate": "L02",
+   "src": {
+    "in": 37.5,
+    "out": 44.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "palm_present",
+      "t": 3.0,
+      "zone": "left_half"
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "emphasis",
+     "data",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      2.0,
+      5.0
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景 60 秒长底板（含左右托举位） · 画面左侧的那只手在胸口高度掌心向上，轻轻向画面左侧呈现，停一拍，然后回到腰前。"
+  },
+  {
+   "id": "L02_s7",
+   "plate": "L02",
+   "src": {
+    "in": 44.5,
+    "out": 51.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "nod_multi",
+      "t": 3.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "list"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "ok",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景 60 秒长底板（含左右托举位） · 双手轻握，用三个小点头标出三个短句，不数手指。"
+  },
+  {
+   "id": "L02_s8",
+   "plate": "L02",
+   "src": {
+    "in": 51.5,
+    "out": 59.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 4.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "close",
+     "cta"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景 60 秒长底板（含左右托举位） · 温暖收尾：说完这句话时露出亲切的笑容，然后双手在腰前合拢，温暖地轻轻点头。"
+  },
+  {
+   "id": "O01_s1",
+   "plate": "O01",
+   "src": {
+    "in": 2.2,
+    "out": 7.5
+   },
+   "home_in": false,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "look_up_to_lens",
+      "t": 0.8
+     },
+     {
+      "g": "smile_greet",
+      "t": 1.6
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "open"
+    ],
+    "transitions_in": [
+     "first_only"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "first_only",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [],
+    "speech_offset": 1.6
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "开场入镜底板（4 种自然开场） · 她抬眼看向镜头，自然地吸一小口气，绽开温暖的笑容，开始说话。"
+  },
+  {
+   "id": "O01_s2",
+   "plate": "O01",
+   "src": {
+    "in": 9.2,
+    "out": 14.5
+   },
+   "home_in": false,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "turn_to_lens",
+      "t": 0.7
+     },
+     {
+      "g": "smile_greet",
+      "t": 1.3
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "open"
+    ],
+    "transitions_in": [
+     "first_only"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "first_only",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [],
+    "speech_offset": 1.3
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "开场入镜底板（4 种自然开场） · 她转回镜头，带着明亮、轻松的笑容开始说话。"
+  },
+  {
+   "id": "O01_s3",
+   "plate": "O01",
+   "src": {
+    "in": 16.2,
+    "out": 21.5
+   },
+   "home_in": false,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 4,
+    "emotion": "curious",
+    "gestures": [
+     {
+      "g": "lean_in",
+      "t": 0.6
+     },
+     {
+      "g": "brow_raise",
+      "t": 1.3
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "open",
+     "hook"
+    ],
+    "transitions_in": [
+     "first_only"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "first_only",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [],
+    "speech_offset": 1.3
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "开场入镜底板（4 种自然开场） · 她向镜头前倾回到回位构图，眉毛带着友好的劲头微微上扬，开始说话。"
+  },
+  {
+   "id": "O01_s4",
+   "plate": "O01",
+   "src": {
+    "in": 21.5,
+    "out": 29.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "settle_in",
+      "t": 1.3
+     },
+     {
+      "g": "smile_greet",
+      "t": 1.7
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "open",
+     "transition"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [],
+    "speech_offset": 1.4
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "开场入镜底板（4 种自然开场） · 从完全静止开始，她平静地吸一口气，双肩微微抬起，露出一个小小的笑容，然后平静地开始说话。"
+  },
+  {
+   "id": "K04_s1",
+   "plate": "K04",
+   "src": {
+    "in": 0.5,
+    "out": 7.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "palm_single",
+      "t": 3.0
+     },
+     {
+      "g": "soft_smile",
+      "t": 2.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "explain",
+     "open",
+     "narrate"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      2.3,
+      4.7
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景手势底板（手势密集） · 自然地说着话，右手在腰部高度掌心向上，把想法轻轻往前“递”一下，笑意先从眼睛里升起，然后手回到腰前。"
+  },
+  {
+   "id": "K04_s2",
+   "plate": "K04",
+   "src": {
+    "in": 7.5,
+    "out": 14.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "curious",
+    "gestures": [
+     {
+      "g": "contrast_hands",
+      "t": 2.0
+     },
+     {
+      "g": "brow_raise",
+      "t": 4.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "contrast",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      1.5,
+      5.3
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景手势底板（手势密集） · 比较两个选项时，一只手在腰部高度掌心向上移到一侧，另一只手晚半拍移到另一侧，说到第二个选项时眉毛微微上扬；然后两手回到腰前。"
+  },
+  {
+   "id": "K04_s3",
+   "plate": "K04",
+   "src": {
+    "in": 14.5,
+    "out": 21.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "hand_beat",
+      "t": 2.0
+     },
+     {
+      "g": "nod",
+      "t": 5.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "list",
+     "data",
+     "emphasis"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      1.5,
+      5.3
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景手势底板（手势密集） · 列举三个短点时，右手侧掌在腰部高度轻轻向下点三下，每一下落在一个重音词上，间隔不均匀，最后一下配一个小点头；然后手回到腰前。"
+  },
+  {
+   "id": "K04_s4",
+   "plate": "K04",
+   "src": {
+    "in": 21.5,
+    "out": 29.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "ms",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.41,
+     0.15,
+     0.18,
+     0.12
+    ],
+    "face_h_px": 230
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "playful",
+    "gestures": [
+     {
+      "g": "shrug",
+      "t": 2.0
+     },
+     {
+      "g": "soft_laugh",
+      "t": 2.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "caveat",
+     "story",
+     "agree"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      1.5,
+      3.7
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "中景手势底板（手势密集） · 用轻松的语气小小地耸一下肩，掌心在腰前微微翻向上，从鼻子里轻笑一声，然后落定为平静笃定的神情，双手回到腰前。"
+  },
+  {
+   "id": "K05_s1",
+   "plate": "K05",
+   "src": {
+    "in": 0.5,
+    "out": 7.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "curious",
+    "gestures": [
+     {
+      "g": "think_glance",
+      "t": 1.3
+     },
+     {
+      "g": "brow_raise",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "think",
+     "question",
+     "emphasis"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      1.0,
+      2.4
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景表情底板（表情密集） · 她开始讲一个想法，目光短暂地向斜上方飘一下，像在找合适的词，随即回到镜头，在关键词上扬起眉毛。"
+  },
+  {
+   "id": "K05_s2",
+   "plate": "K05",
+   "src": {
+    "in": 7.5,
+    "out": 14.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "empathetic",
+    "gestures": [
+     {
+      "g": "brow_furrow",
+      "t": 2.0
+     },
+     {
+      "g": "soft_eyes",
+      "t": 4.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "caveat",
+     "empathy",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景表情底板（表情密集） · 说到需要提醒的地方，眉头轻轻收拢，头微微一侧，语气放软，然后在说完这句话时眼神柔和下来，带着共情。"
+  },
+  {
+   "id": "K05_s3",
+   "plate": "K05",
+   "src": {
+    "in": 14.5,
+    "out": 21.5
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "playful",
+    "gestures": [
+     {
+      "g": "soft_laugh",
+      "t": 1.7
+     },
+     {
+      "g": "soft_smile",
+      "t": 3.5
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "story",
+     "agree"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": [
+     [
+      1.3,
+      2.7
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景表情底板（表情密集） · 一句轻松、让人有共鸣的插话：从鼻子里短促地轻笑一声，肩膀微微一抬，然后立刻回到平静的说话状态，嘴角留着一点浅笑。"
+  },
+  {
+   "id": "K05_s4",
+   "plate": "K05",
+   "src": {
+    "in": 21.5,
+    "out": 29.0
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "9:16",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.37,
+     0.17,
+     0.26,
+     0.19
+    ],
+    "face_h_px": 360
+   },
+   "performance": {
+    "energy": 1,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "head_tilt",
+      "t": 1.3
+     },
+     {
+      "g": "nod",
+      "t": 2.5
+     },
+     {
+      "g": "knowing_look",
+      "t": 5.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "smile_closed",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": false
+   },
+   "edit": {
+    "roles": [
+     "listen",
+     "pause"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade",
+     "mgwipe"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.25,
+    "reversible": "ok",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "lower_third"
+    ]
+   },
+   "lipsync": {
+    "ready": false,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "spec",
+   "notes": "近景表情底板（表情密集） · 她停止说话，双唇闭合地倾听，头微微一侧，在不规律的时刻小幅点头两次，浮现一个短暂的会心浅笑。"
+  }
+ ]
+}

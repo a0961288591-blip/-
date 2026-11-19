@@ -1,0 +1,17 @@
+QC: PASS — 0 FAIL, 3 RISK (must review after lip-sync), 12 WARN
+metrics: clips=21, host_shots=18, unique_shots=12, asl_s=2.5, longest_s=3.9, coverage=0.196, visible_talking_s=50.75
+  [RISK] rate: @26.16s b07 6.7 字/s — high risk for Chinese lip-sync (b/p/m closures); slow TTS 5–10% / split the sentence, or review this span frame by frame
+  [RISK] rate: @28.79s b08 7.4 字/s — high risk for Chinese lip-sync (b/p/m closures); slow TTS 5–10% / split the sentence, or review this span frame by frame
+  [RISK] rate: @33.03s b10 7.3 字/s — high risk for Chinese lip-sync (b/p/m closures); slow TTS 5–10% / split the sentence, or review this span frame by frame
+  [WARN] upscale: P02: 9 clips upscaled up to 3.07× — generate this plate at higher resolution (or native aspect) for the final master
+  [WARN] upscale: P01: 9 clips upscaled up to 3.07× — generate this plate at higher resolution (or native aspect) for the final master
+  [WARN] rate: @0.45s b01 6.1 字/s — at the edge for b/p/m closures; listen at 1x
+  [WARN] rate: @3.43s b02 6.3 字/s — at the edge for b/p/m closures; listen at 1x
+  [WARN] rate: @8.93s b03 6.1 字/s — at the edge for b/p/m closures; listen at 1x
+  [WARN] rate: @14.59s b04 6.1 字/s — at the edge for b/p/m closures; listen at 1x
+  [WARN] repeat: @28.73s c11 reuses P01_s5 as a variant (scale/reverse/PiP) 25.4s after 3.4s — check by eye
+  [WARN] repeat: @36.45s c15 reuses P02_s2 as a variant (scale/reverse/PiP) 30.3s after 6.1s — check by eye
+  [WARN] repeat: @41.75s c17 reuses P02_s3 as a variant (scale/reverse/PiP) 32.9s after 8.9s — check by eye
+  [WARN] rate: @41.81s b14 6.1 字/s — at the edge for b/p/m closures; listen at 1x
+  [WARN] repeat: @46.99s c19 reuses P01_s5 as a variant (scale/reverse/PiP) 43.6s after 3.4s — check by eye
+  [WARN] repeat: @46.99s c19 reuses P01_s5 as a variant (scale/reverse/PiP) 18.3s after 28.7s — check by eye

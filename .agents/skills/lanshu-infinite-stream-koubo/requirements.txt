@@ -1,0 +1,2 @@
+# Optional for shot slicing; planning and prompt composition use the standard library.
+numpy>=1.23

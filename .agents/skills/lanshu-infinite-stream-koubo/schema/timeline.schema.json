@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "istream/timeline.schema.json",
+  "title": "Infinite Stream timeline (时间轴即代码)",
+  "description": "VO-locked edit decision list. rec = record time on the final video; src = time in the plate. Temporal ops (reverse/speed) are applied before lip-sync; spatial ops (scale/crop/pip/hide) after.",
+  "type": "object",
+  "required": [
+    "version",
+    "meta",
+    "host"
+  ],
+  "properties": {
+    "version": {
+      "const": "istream.timeline/1"
+    },
+    "meta": {
+      "type": "object",
+      "required": [
+        "fps",
+        "aspect",
+        "size",
+        "duration"
+      ]
+    },
+    "beats": {
+      "type": "array"
+    },
+    "host": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "rec",
+          "layout"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "shot": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "plate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "src": {
+            "type": "object",
+            "required": [
+              "in",
+              "out"
+            ],
+            "properties": {
+              "in": {
+                "type": "number"
+              },
+              "out": {
+                "type": "number"
+              }
+            }
+          },
+          "rec": {
+            "type": "object",
+            "required": [
+              "in",
+              "out"
+            ],
+            "properties": {
+              "in": {
+                "type": "number"
+              },
+              "out": {
+                "type": "number"
+              }
+            }
+          },
+          "layout": {
+            "type": "string",
+            "enum": [
+              "full",
+              "punch",
+              "split",
+              "pip",
+              "hidden"
+            ]
+          },
+          "ops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "op"
+              ],
+              "properties": {
+                "op": {
+                  "type": "string",
+                  "enum": [
+                    "reverse",
+                    "speed",
+                    "scale",
+                    "crop",
+                    "pip",
+                    "hide",
+                    "mirror"
+                  ]
+                }
+              }
+            }
+          },
+          "transition_in": {
+            "type": "string",
+            "enum": [
+              "cut",
+              "zoomcut",
+              "broll_fade",
+              "mgwipe",
+              "dip",
+              "first_only"
+            ]
+          },
+          "beats": {
+            "type": "array"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "why": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "mg": {
+      "type": "array"
+    },
+    "broll": {
+      "type": "array"
+    },
+    "captions": {
+      "type": "array"
+    }
+  }
+}

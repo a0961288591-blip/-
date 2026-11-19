@@ -1,0 +1,28 @@
+lip-sync: 10 jobs, 46.63s sent, 9.44s skipped (host hidden)
+  j01   0.00-  3.37 ( 3.37s) tier=hero     engine=sync-2-pro  face≈276px zh-risk=high (6.13 字/s, b/p/m×2, AI)
+       · 语速 6.1 字/s 偏快：TTS 放慢 5–10% 或拆句
+       · 夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍
+  j02   3.37-  8.87 ( 5.50s) tier=standard engine=latentsync  face≈276px zh-risk=mid (6.32 字/s, b/p/m×4)
+       · 语速 6.3 字/s 偏快：TTS 放慢 5–10% 或拆句
+  j03   8.87- 14.53 ( 5.66s) tier=small    engine=musetalk    face≈85px zh-risk=mid (6.07 字/s, b/p/m×4)
+       · 语速 6.1 字/s 偏快：TTS 放慢 5–10% 或拆句
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j04  22.53- 30.57 ( 8.04s) tier=hero     engine=sync-2-pro  face≈317px zh-risk=mid (5.96 字/s, b/p/m×3, AI/Native)
+       · 夹杂英文 / 缩写（AI、Native）：字母口型和中文不同，单独看一遍
+  j05  30.57- 32.97 ( 2.40s) tier=standard engine=latentsync  face≈276px zh-risk=mid (3.77 字/s, b/p/m×1, AI)
+       · 夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍
+       · 数字读法要和 TTS 一致（十 / 一百 / 10）
+  j06  34.41- 36.45 ( 2.04s) tier=hero     engine=sync-2-pro  face≈304px zh-risk=mid (1.67 字/s, b/p/m×3, AI/MCP/USB-C)
+       · 闭唇音 b/p/m 密集（3 个）：重点检查是否真正闭合
+       · 夹杂英文 / 缩写（AI、MCP、USB-C）：字母口型和中文不同，单独看一遍
+  j07  36.45- 44.37 ( 7.92s) tier=standard engine=latentsync  face≈284px zh-risk=mid (4.8 字/s, b/p/m×3, AI/Agent/MCP)
+       · 唇齿音 f ×1：看上齿是否压下唇
+       · 夹杂英文 / 缩写（AI、Agent、MCP）：字母口型和中文不同，单独看一遍
+       · 数字读法要和 TTS 一致（十 / 一百 / 10）
+  j08  44.37- 46.99 ( 2.62s) tier=hero     engine=sync-2-pro  face≈312px zh-risk=mid (7.23 字/s, b/p/m×2)
+       · 语速 7.2 字/s 偏快：TTS 放慢 5–10% 或拆句
+  j09  46.99- 50.89 ( 3.90s) tier=small    engine=musetalk    face≈83px zh-risk=low (5.38 字/s, b/p/m×4, GitHub/bug)
+       · 唇齿音 f ×1：看上齿是否压下唇
+       · 夹杂英文 / 缩写（GitHub、bug）：字母口型和中文不同，单独看一遍
+  j10  50.89- 56.07 ( 5.18s) tier=hero     engine=sync-2-pro  face≈312px zh-risk=mid (5.88 字/s, b/p/m×3, Agent)
+       · 夹杂英文 / 缩写（Agent）：字母口型和中文不同，单独看一遍

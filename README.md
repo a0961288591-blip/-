@@ -47,3 +47,10 @@ bash setup.sh
 - 轉錄結果會依來源檔快取,同一素材不會重複扣 Scribe 額度。
 - 剪輯一律逐段無損切割再合併,不會重複轉檔劣化畫質。
 - 原始素材永遠不被修改或覆蓋。
+
+## 數位人口播（lanshu-infinite-stream-koubo）
+
+已安裝 [lanshu-infinite-stream-koubo](https://github.com/cclank/lanshu-infinite-stream-koubo) skill（`.agents/skills/`，symlink 到 `.claude/skills/`）：先做一套本人數位人「母片」，之後每支新物件只換文案、配音，只為主播露臉的片段付口型費。範例與「換成本人」步驟見 [`films/huafeng-land-koubo/`](films/huafeng-land-koubo/README.md)。
+
+- 需要：Python 3.10+、FFmpeg、中文字型（找不到時設 `ISTREAM_FONT`）；切片需要 numpy。
+- 自檢：`cd .agents/skills/lanshu-infinite-stream-koubo && python3 tools/check_environment.py --render`

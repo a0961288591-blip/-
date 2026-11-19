@@ -1,0 +1,829 @@
+{
+ "version": "istream.timeline/1",
+ "meta": {
+  "title": "手势与表情配方：同一套底板，让主播“会比划、有表情”（约 45 秒 · 计划 + QC，不出片）",
+  "fps": 30,
+  "aspect": "9:16",
+  "size": [
+   1080,
+   1920
+  ],
+  "duration": 54.2,
+  "profile": "short",
+  "seed": 7,
+  "vo": null,
+  "vo_offset": 1.4,
+  "coverage_planned": 0.204,
+  "generator": "istream 1.0",
+  "warnings": []
+ },
+ "beats": [
+  {
+   "id": "b01",
+   "text": "很多人做数字人口播，最大的问题不是嘴型，而是人不像人。",
+   "chapter": "开场",
+   "roles": [
+    "open"
+   ],
+   "start": 1.65,
+   "end": 7.05,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.44
+  },
+  {
+   "id": "b02",
+   "text": "其实你回想一下，真人主持人说话的时候，手和脸一直在帮忙。",
+   "chapter": "开场",
+   "roles": [
+    "think"
+   ],
+   "start": 7.05,
+   "end": 12.65,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.46
+  },
+  {
+   "id": "b03",
+   "text": "一种是双手焊在腰上，从头站到尾；",
+   "chapter": "正文",
+   "roles": [
+    "contrast"
+   ],
+   "start": 12.65,
+   "end": 15.9,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.31
+  },
+  {
+   "id": "b04",
+   "text": "另一种是每句话都有一个小动作，说完就收回来。",
+   "chapter": "正文",
+   "roles": [
+    "narrate"
+   ],
+   "start": 15.9,
+   "end": 20.35,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.49
+  },
+  {
+   "id": "b05",
+   "text": "我们给它三条规矩：从回位出发，落在重音上，两秒内收回。",
+   "chapter": "正文",
+   "roles": [
+    "list"
+   ],
+   "start": 20.35,
+   "end": 25.75,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.26
+  },
+  {
+   "id": "b06",
+   "text": "但是要注意，手绝对不能挡到脸和嘴，不然这一段就废了。",
+   "chapter": "正文",
+   "roles": [
+    "caveat"
+   ],
+   "start": 25.75,
+   "end": 30.95,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.42
+  },
+  {
+   "id": "b07",
+   "text": "我知道一开始抽到的手指可能会很怪，这很正常。",
+   "chapter": "正文",
+   "roles": [
+    "empathy"
+   ],
+   "start": 30.95,
+   "end": 35.4,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.49
+  },
+  {
+   "id": "b08",
+   "text": "我们的做法是同一句话抽三到六次，逐帧放大看手指，再挑最干净的一条。",
+   "chapter": "正文",
+   "roles": [
+    "story"
+   ],
+   "start": 35.4,
+   "end": 42.0,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": "同一句话六次抽卡的缩略图墙，逐帧放大手指",
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.55
+  },
+  {
+   "id": "b09",
+   "text": "对，宁可多抽几次，也别把一只怪手放进成片。",
+   "chapter": "正文",
+   "roles": [
+    "agree"
+   ],
+   "start": 42.0,
+   "end": 46.2,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.29
+  },
+  {
+   "id": "b10",
+   "text": "一句话：小、短、有来有回，才像真人。",
+   "chapter": "收尾",
+   "roles": [
+    "summary"
+   ],
+   "start": 46.2,
+   "end": 49.75,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.66
+  },
+  {
+   "id": "b11",
+   "text": "关注我，下期教你怎么给这些动作打标签。",
+   "chapter": "收尾",
+   "roles": [
+    "cta"
+   ],
+   "start": 49.75,
+   "end": 53.6,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.42
+  }
+ ],
+ "host": [
+  {
+   "id": "c01",
+   "rec": {
+    "in": 0.0,
+    "out": 3.495
+   },
+   "layout": "full",
+   "beats": [
+    "b01"
+   ],
+   "why": "opening: the host must appear naturally in the first frames | pick O01_s1 score 6.71: role open, emotion warm, gesture smile_greet",
+   "role": "open",
+   "shot": "O01_s1",
+   "plate": "O01",
+   "src": {
+    "in": 2.2,
+    "out": 5.695
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c02",
+   "rec": {
+    "in": 3.495,
+    "out": 6.99
+   },
+   "layout": "full",
+   "beats": [
+    "b01"
+   ],
+   "why": "opening: the host must appear naturally in the first frames · jump-cut part 2/2 | pick L01_s4 score 5.11: role open, emotion warm",
+   "role": "open",
+   "shot": "L01_s4",
+   "plate": "L01",
+   "src": {
+    "in": 21.5,
+    "out": 24.995
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c03",
+   "rec": {
+    "in": 6.99,
+    "out": 9.79
+   },
+   "layout": "full",
+   "beats": [
+    "b02"
+   ],
+   "why": "think | pick K05_s1 score 6.21: role think, emotion curious, gesture think_glance",
+   "role": "think",
+   "shot": "K05_s1",
+   "plate": "K05",
+   "src": {
+    "in": 0.5,
+    "out": 3.3
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c04",
+   "rec": {
+    "in": 9.79,
+    "out": 12.59
+   },
+   "layout": "full",
+   "beats": [
+    "b02"
+   ],
+   "why": "think · jump-cut part 2/2 | pick K01_s2 score 4.53: role think, emotion curious, gesture think_glance",
+   "role": "think",
+   "shot": "K01_s2",
+   "plate": "K01",
+   "src": {
+    "in": 7.5,
+    "out": 10.3
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c05",
+   "rec": {
+    "in": 12.59,
+    "out": 15.84
+   },
+   "layout": "full",
+   "beats": [
+    "b03"
+   ],
+   "why": "contrast | pick K04_s2 score 6.51: role contrast, emotion curious, gesture contrast_hands",
+   "role": "contrast",
+   "shot": "K04_s2",
+   "plate": "K04",
+   "src": {
+    "in": 7.5,
+    "out": 10.75
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c06",
+   "rec": {
+    "in": 15.84,
+    "out": 20.29
+   },
+   "layout": "pip",
+   "beats": [
+    "b04"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 15%–35%) | pick L02_s1 score 5.11: role narrate, emotion neutral",
+   "role": "narrate",
+   "shot": "L02_s1",
+   "plate": "L02",
+   "src": {
+    "in": 0.5,
+    "out": 4.95
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c07",
+   "rec": {
+    "in": 20.29,
+    "out": 22.99
+   },
+   "layout": "split",
+   "beats": [
+    "b05"
+   ],
+   "why": "list: host + side content zone | pick K04_s3 score 5.80: role list, emotion confident, gesture hand_beat",
+   "role": "list",
+   "shot": "K04_s3",
+   "plate": "K04",
+   "src": {
+    "in": 14.5,
+    "out": 17.2
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c08",
+   "rec": {
+    "in": 22.99,
+    "out": 25.69
+   },
+   "layout": "split",
+   "beats": [
+    "b05"
+   ],
+   "why": "list: host + side content zone · jump-cut part 2/2 | pick L02_s7 score 5.06: role list, emotion neutral",
+   "role": "list",
+   "shot": "L02_s7",
+   "plate": "L02",
+   "src": {
+    "in": 44.5,
+    "out": 47.2
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c09",
+   "rec": {
+    "in": 25.69,
+    "out": 28.29
+   },
+   "layout": "full",
+   "beats": [
+    "b06"
+   ],
+   "why": "caveat | pick K05_s2 score 7.10: role caveat, emotion empathetic, gesture brow_furrow",
+   "role": "caveat",
+   "shot": "K05_s2",
+   "plate": "K05",
+   "src": {
+    "in": 7.5,
+    "out": 10.1
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c10",
+   "rec": {
+    "in": 28.29,
+    "out": 30.89
+   },
+   "layout": "full",
+   "beats": [
+    "b06"
+   ],
+   "why": "caveat · jump-cut part 2/2 | pick K03_s3 score 5.72: role caveat, emotion serious, gesture brow_furrow",
+   "role": "caveat",
+   "shot": "K03_s3",
+   "plate": "K03",
+   "src": {
+    "in": 14.5,
+    "out": 17.1
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c11",
+   "rec": {
+    "in": 30.89,
+    "out": 33.115
+   },
+   "layout": "full",
+   "beats": [
+    "b07"
+   ],
+   "why": "empathy | pick K05_s2 score 3.80: role empathy, emotion empathetic, gesture soft_eyes",
+   "role": "empathy",
+   "shot": "K05_s2",
+   "plate": "K05",
+   "src": {
+    "in": 10.25,
+    "out": 12.475
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c12",
+   "rec": {
+    "in": 33.115,
+    "out": 35.34
+   },
+   "layout": "full",
+   "beats": [
+    "b07"
+   ],
+   "why": "empathy · jump-cut part 2/2 | pick L02_s8 score 2.40: emotion warm",
+   "role": "empathy",
+   "shot": "L02_s8",
+   "plate": "L02",
+   "src": {
+    "in": 51.5,
+    "out": 53.725
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c13",
+   "rec": {
+    "in": 35.34,
+    "out": 41.94
+   },
+   "layout": "hidden",
+   "beats": [
+    "b08"
+   ],
+   "why": "B-roll '同一句话六次抽卡的缩略图墙，逐帧放大手指' covers the sentence",
+   "role": "story",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "broll:同一句话六次抽卡的缩略图墙，逐帧放大手指"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c14",
+   "rec": {
+    "in": 41.94,
+    "out": 44.04
+   },
+   "layout": "full",
+   "beats": [
+    "b09"
+   ],
+   "why": "agree | pick K03_s2 score 6.80: role agree, emotion confident, gesture knowing_look",
+   "role": "agree",
+   "shot": "K03_s2",
+   "plate": "K03",
+   "src": {
+    "in": 7.5,
+    "out": 9.6
+   },
+   "ops": [],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c15",
+   "rec": {
+    "in": 44.04,
+    "out": 46.14
+   },
+   "layout": "full",
+   "beats": [
+    "b09"
+   ],
+   "why": "agree · jump-cut part 2/2 | pick K02_s1 score 4.52: role agree, gesture nod",
+   "role": "agree",
+   "shot": "K02_s1",
+   "plate": "K02",
+   "src": {
+    "in": 0.5,
+    "out": 2.6
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c16",
+   "rec": {
+    "in": 46.14,
+    "out": 49.69
+   },
+   "layout": "full",
+   "beats": [
+    "b10"
+   ],
+   "why": "summary | pick L02_s4 score 6.70: role summary, emotion confident, gesture hands_together",
+   "role": "summary",
+   "shot": "L02_s4",
+   "plate": "L02",
+   "src": {
+    "in": 21.5,
+    "out": 25.05
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c17",
+   "rec": {
+    "in": 49.69,
+    "out": 51.945
+   },
+   "layout": "full",
+   "beats": [
+    "b11"
+   ],
+   "why": "cta | pick K03_s4 score 5.15: role cta, emotion warm",
+   "role": "cta",
+   "shot": "K03_s4",
+   "plate": "K03",
+   "src": {
+    "in": 21.5,
+    "out": 23.755
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c18",
+   "rec": {
+    "in": 51.945,
+    "out": 54.2
+   },
+   "layout": "full",
+   "beats": [
+    "b11"
+   ],
+   "why": "cta · jump-cut part 2/2 | pick K02_s3 score 2.24: emotion warm",
+   "role": "cta",
+   "shot": "K02_s3",
+   "plate": "K02",
+   "src": {
+    "in": 14.5,
+    "out": 16.755
+   },
+   "ops": [],
+   "transition_in": "cut"
+  }
+ ],
+ "mg": [
+  {
+   "id": "m01",
+   "template": "list_chips",
+   "asset": null,
+   "rec": {
+    "in": 20.3,
+    "out": 25.65
+   },
+   "zone": "lower_third",
+   "beat": "b05",
+   "text": ""
+  },
+  {
+   "id": "m02",
+   "template": "follow_pill",
+   "asset": null,
+   "rec": {
+    "in": 49.7,
+    "out": 53.9
+   },
+   "zone": "lower_third",
+   "beat": "b11",
+   "text": ""
+  }
+ ],
+ "broll": [
+  {
+   "id": "r01",
+   "query": "同一句话六次抽卡的缩略图墙，逐帧放大手指",
+   "rec": {
+    "in": 35.34,
+    "out": 41.94
+   },
+   "status": "to_source"
+  }
+ ],
+ "captions": [
+  {
+   "rec": {
+    "in": 1.65,
+    "out": 3.675
+   },
+   "text": "很多人做数字人口播"
+  },
+  {
+   "rec": {
+    "in": 3.675,
+    "out": 5.7
+   },
+   "text": "最大的问题不是嘴型"
+  },
+  {
+   "rec": {
+    "in": 5.7,
+    "out": 7.05
+   },
+   "text": "而是人不像人"
+  },
+  {
+   "rec": {
+    "in": 7.05,
+    "out": 8.618
+   },
+   "text": "其实你回想一下"
+  },
+  {
+   "rec": {
+    "in": 8.618,
+    "out": 10.858
+   },
+   "text": "真人主持人说话的时候"
+  },
+  {
+   "rec": {
+    "in": 10.858,
+    "out": 12.65
+   },
+   "text": "手和脸一直在帮忙"
+  },
+  {
+   "rec": {
+    "in": 12.65,
+    "out": 14.739
+   },
+   "text": "一种是双手焊在腰上"
+  },
+  {
+   "rec": {
+    "in": 14.739,
+    "out": 15.9
+   },
+   "text": "从头站到尾"
+  },
+  {
+   "rec": {
+    "in": 15.9,
+    "out": 19.015
+   },
+   "text": "另一种是每句话都有一个小动作"
+  },
+  {
+   "rec": {
+    "in": 19.015,
+    "out": 20.35
+   },
+   "text": "说完就收回来"
+  },
+  {
+   "rec": {
+    "in": 20.35,
+    "out": 22.228
+   },
+   "text": "我们给它三条规矩"
+  },
+  {
+   "rec": {
+    "in": 22.228,
+    "out": 23.402
+   },
+   "text": "从回位出发"
+  },
+  {
+   "rec": {
+    "in": 23.402,
+    "out": 24.576
+   },
+   "text": "落在重音上"
+  },
+  {
+   "rec": {
+    "in": 24.576,
+    "out": 25.75
+   },
+   "text": "两秒内收回"
+  },
+  {
+   "rec": {
+    "in": 25.75,
+    "out": 26.88
+   },
+   "text": "但是要注意"
+  },
+  {
+   "rec": {
+    "in": 26.88,
+    "out": 29.141
+   },
+   "text": "手绝对不能挡到脸和嘴"
+  },
+  {
+   "rec": {
+    "in": 29.141,
+    "out": 30.95
+   },
+   "text": "不然这一段就废了"
+  },
+  {
+   "rec": {
+    "in": 30.95,
+    "out": 33.917
+   },
+   "text": "我知道一开始抽到的手指可能会"
+  },
+  {
+   "rec": {
+    "in": 33.917,
+    "out": 35.4
+   },
+   "text": "很怪，这很正常"
+  },
+  {
+   "rec": {
+    "in": 35.4,
+    "out": 38.381
+   },
+   "text": "我们的做法是同一句话抽三到六"
+  },
+  {
+   "rec": {
+    "in": 38.381,
+    "out": 40.297
+   },
+   "text": "次，逐帧放大看手指"
+  },
+  {
+   "rec": {
+    "in": 40.297,
+    "out": 42.0
+   },
+   "text": "再挑最干净的一条"
+  },
+  {
+   "rec": {
+    "in": 42.0,
+    "out": 43.768
+   },
+   "text": "对，宁可多抽几次"
+  },
+  {
+   "rec": {
+    "in": 43.768,
+    "out": 46.2
+   },
+   "text": "也别把一只怪手放进成片"
+  },
+  {
+   "rec": {
+    "in": 46.2,
+    "out": 46.91
+   },
+   "text": "一句话"
+  },
+  {
+   "rec": {
+    "in": 46.91,
+    "out": 48.803
+   },
+   "text": "小、短、有来有回"
+  },
+  {
+   "rec": {
+    "in": 48.803,
+    "out": 49.75
+   },
+   "text": "才像真人"
+  },
+  {
+   "rec": {
+    "in": 49.75,
+    "out": 50.429
+   },
+   "text": "关注我"
+  },
+  {
+   "rec": {
+    "in": 50.429,
+    "out": 53.6
+   },
+   "text": "下期教你怎么给这些动作打标签"
+  }
+ ]
+}

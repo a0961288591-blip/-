@@ -1,0 +1,486 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "istream/shot.schema.json",
+  "title": "Infinite Stream shot unit (镜头单元)",
+  "description": "One reusable slice of a plate, normally between two home-pose holds. Times inside the shot are relative to src.in.",
+  "type": "object",
+  "required": [
+    "id",
+    "plate",
+    "src",
+    "camera",
+    "performance",
+    "edit",
+    "lipsync",
+    "quality",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*_s[0-9]+[a-z]?$",
+      "description": "PLATE_sN, e.g. K01_s3"
+    },
+    "plate": {
+      "type": "string"
+    },
+    "src": {
+      "type": "object",
+      "required": [
+        "in",
+        "out"
+      ],
+      "properties": {
+        "in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "out": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "description": "seconds in the plate file"
+    },
+    "home_in": {
+      "type": "boolean",
+      "description": "starts on the home pose (seamless entry)"
+    },
+    "home_out": {
+      "type": "boolean",
+      "description": "ends on the home pose (seamless exit)"
+    },
+    "camera": {
+      "type": "object",
+      "required": [
+        "framing",
+        "aspect"
+      ],
+      "properties": {
+        "framing": {
+          "type": "string",
+          "enum": [
+            "cu",
+            "mcu",
+            "ms",
+            "mws"
+          ]
+        },
+        "aspect": {
+          "type": "string",
+          "enum": [
+            "9:16",
+            "16:9",
+            "1:1"
+          ]
+        },
+        "angle": {
+          "type": "string",
+          "enum": [
+            "front",
+            "l30",
+            "r30"
+          ]
+        },
+        "subject_pos": {
+          "type": "string",
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "face_box": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4,
+          "description": "normalized x,y,w,h of the face"
+        },
+        "face_h_px": {
+          "type": "number",
+          "description": "face height in source pixels — drives lip-sync engine routing and max punch-in"
+        }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "required": [
+        "energy",
+        "emotion",
+        "mouth"
+      ],
+      "properties": {
+        "energy": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "emotion": {
+          "type": "string",
+          "enum": [
+            "neutral",
+            "warm",
+            "serious",
+            "curious",
+            "confident",
+            "empathetic",
+            "playful",
+            "surprised"
+          ]
+        },
+        "gestures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "g"
+            ],
+            "properties": {
+              "g": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "nod",
+                  "nod_multi",
+                  "head_tilt",
+                  "brow_raise",
+                  "soft_smile",
+                  "think_glance",
+                  "brow_furrow",
+                  "soft_laugh",
+                  "soft_eyes",
+                  "knowing_look",
+                  "sway",
+                  "palms_open",
+                  "palm_single",
+                  "hands_together",
+                  "palm_present",
+                  "contrast_hands",
+                  "hand_beat",
+                  "shrug",
+                  "size_frame",
+                  "hand_on_chest",
+                  "steeple",
+                  "lean_in",
+                  "lean_back",
+                  "smile_greet",
+                  "look_up_to_lens",
+                  "turn_to_lens",
+                  "settle_in",
+                  "point_left",
+                  "point_right",
+                  "count"
+                ]
+              },
+              "t": {
+                "type": "number",
+                "minimum": 0
+              },
+              "zone": {
+                "type": "string",
+                "enum": [
+                  "right_half",
+                  "left_half",
+                  "upper_band",
+                  "lower_third",
+                  "right_strip",
+                  "left_strip",
+                  "full"
+                ]
+              }
+            }
+          }
+        },
+        "gaze": {
+          "type": "string",
+          "enum": [
+            "lens",
+            "down",
+            "off_left",
+            "off_right",
+            "up"
+          ]
+        },
+        "mouth": {
+          "type": "string",
+          "enum": [
+            "talking",
+            "closed",
+            "smile_closed",
+            "open_smile"
+          ]
+        },
+        "hands": {
+          "type": "string",
+          "enum": [
+            "out_of_frame",
+            "low",
+            "chest",
+            "near_face"
+          ]
+        },
+        "head_motion": {
+          "type": "string",
+          "enum": [
+            "still",
+            "small",
+            "medium",
+            "large"
+          ]
+        },
+        "speaking": {
+          "type": "boolean"
+        }
+      }
+    },
+    "edit": {
+      "type": "object",
+      "required": [
+        "roles",
+        "layouts"
+      ],
+      "properties": {
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "open",
+              "hook",
+              "narrate",
+              "explain",
+              "story",
+              "list",
+              "data",
+              "question",
+              "emphasis",
+              "agree",
+              "contrast",
+              "caveat",
+              "think",
+              "empathy",
+              "summary",
+              "pause",
+              "listen",
+              "transition",
+              "close",
+              "cta"
+            ]
+          }
+        },
+        "transitions_in": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "cut",
+              "zoomcut",
+              "broll_fade",
+              "mgwipe",
+              "dip",
+              "first_only"
+            ]
+          }
+        },
+        "layouts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "full",
+              "punch",
+              "split",
+              "pip",
+              "hidden"
+            ]
+          }
+        },
+        "position": {
+          "type": "string",
+          "enum": [
+            "any",
+            "first_only",
+            "last_only"
+          ]
+        },
+        "scale_max": {
+          "type": "number",
+          "minimum": 1.0,
+          "maximum": 2.0
+        },
+        "reversible": {
+          "type": "string",
+          "enum": [
+            "no",
+            "ok",
+            "good"
+          ]
+        },
+        "mirror_ok": {
+          "type": "boolean"
+        },
+        "cut_points": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0
+          },
+          "description": "safe internal cut points (relative seconds)"
+        },
+        "keep_out": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "description": "never cut inside these (gesture in progress)"
+        },
+        "speech_offset": {
+          "type": "number",
+          "minimum": 0,
+          "description": "opening shots: seconds of silent presence before the mouth starts (planner delays the VO by this much)"
+        }
+      }
+    },
+    "mg": {
+      "type": "object",
+      "properties": {
+        "safe_zones": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "right_half",
+              "left_half",
+              "upper_band",
+              "lower_third",
+              "right_strip",
+              "left_strip",
+              "full"
+            ]
+          }
+        }
+      }
+    },
+    "lipsync": {
+      "type": "object",
+      "required": [
+        "ready"
+      ],
+      "properties": {
+        "ready": {
+          "type": "boolean"
+        },
+        "jaw": {
+          "type": "string",
+          "enum": [
+            "low",
+            "mid",
+            "high"
+          ]
+        },
+        "second_face": {
+          "type": "boolean",
+          "description": "a reflection / poster face is visible — pass a face-lock box to the engine"
+        }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "required": [
+        "qc"
+      ],
+      "properties": {
+        "qc": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "defects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "type",
+              "in",
+              "out"
+            ],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "dissolve",
+                  "hard_cut",
+                  "baked_overlay",
+                  "hand_glitch",
+                  "identity_drift",
+                  "flicker",
+                  "mouth_blur",
+                  "extra_object"
+                ]
+              },
+              "in": {
+                "type": "number",
+                "minimum": 0
+              },
+              "out": {
+                "type": "number",
+                "minimum": 0
+              },
+              "zone": {
+                "type": "string",
+                "enum": [
+                  "right_half",
+                  "left_half",
+                  "upper_band",
+                  "lower_third",
+                  "right_strip",
+                  "left_strip",
+                  "full"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "times_used": {
+          "type": "integer"
+        },
+        "last_used": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "string",
+      "enum": [
+        "spec",
+        "measured",
+        "reviewed"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

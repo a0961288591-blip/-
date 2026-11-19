@@ -1,0 +1,74 @@
+{
+ "catalog": "standin",
+ "plates": [
+  {
+   "id": "P01",
+   "file": "../../source/original-koubo.mp4",
+   "name": "standin_mcp-koubo_169_30s.mp4",
+   "title": "替身底板 1：MCP 口播原片（3 个机位）",
+   "framing": "ms",
+   "aspect": "16:9",
+   "size": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "duration": 30.02,
+   "source_type": "standin",
+   "status": "approved for demo only — not a production plate (720p, printed T-shirt, baked dissolve)",
+   "setups": [
+    [
+     0.0,
+     15.47,
+     "host left third, clean right half"
+    ],
+    [
+     15.83,
+     24.73,
+     "host right third, glass reflection of the host on the left"
+    ],
+    [
+     24.73,
+     30.02,
+     "host centered, closer, monitor at left"
+    ]
+   ],
+   "defects": [
+    {
+     "type": "dissolve",
+     "in": 15.47,
+     "out": 15.83
+    },
+    {
+     "type": "hard_cut",
+     "in": 24.73,
+     "out": 24.73
+    }
+   ]
+  },
+  {
+   "id": "P02",
+   "file": "../../source/ai-native-original.mp4",
+   "name": "standin_ai-native_169_30s.mp4",
+   "title": "替身底板 2：AI Native 口播原片（左三分之一，右侧烧录乱码）",
+   "framing": "ms",
+   "aspect": "16:9",
+   "size": [
+    1280,
+    720
+   ],
+   "fps": 30,
+   "duration": 30.02,
+   "source_type": "standin",
+   "status": "approved for demo only — right half has baked gibberish graphics 14.53–25.83 s",
+   "defects": [
+    {
+     "type": "baked_overlay",
+     "in": 14.53,
+     "out": 25.83,
+     "zone": "right_half"
+    }
+   ]
+  }
+ ]
+}

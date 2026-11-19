@@ -1,0 +1,3498 @@
+{
+ "version": "istream.timeline/1",
+ "meta": {
+  "title": "AI Native 第一步：选、拆、量（约 4 分钟实操 · 长视频配方）",
+  "fps": 30,
+  "aspect": "9:16",
+  "size": [
+   1080,
+   1920
+  ],
+  "duration": 231.61,
+  "profile": "long",
+  "seed": 7,
+  "vo": null,
+  "vo_offset": 1.4,
+  "coverage_planned": 0.262,
+  "generator": "istream 1.0",
+  "warnings": []
+ },
+ "beats": [
+  {
+   "id": "b01",
+   "text": "上期说了，AI Native 不是把AI塞进旧流程，而是围着AI重新设计流程。",
+   "chapter": "开场",
+   "roles": [
+    "open",
+    "hook"
+   ],
+   "start": 1.65,
+   "end": 8.21,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.35
+  },
+  {
+   "id": "b02",
+   "text": "那第一步到底从哪下手？",
+   "chapter": "开场",
+   "roles": [
+    "question"
+   ],
+   "start": 8.21,
+   "end": 10.51,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.35
+  },
+  {
+   "id": "b03",
+   "text": "很多团队卡在这里：道理都懂，可周一早上打开电脑，还是不知道该先动哪一块。",
+   "chapter": "开场",
+   "roles": [
+    "narrate"
+   ],
+   "start": 10.51,
+   "end": 17.71,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.44
+  },
+  {
+   "id": "b04",
+   "text": "今天用几分钟，把这一步拆成三个动作：选、拆、量。",
+   "chapter": "开场",
+   "roles": [
+    "narrate"
+   ],
+   "start": 17.71,
+   "end": 22.46,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.0
+  },
+  {
+   "id": "b05",
+   "text": "选一条流程，拆到每一个动作，量出改之前和改之后。",
+   "chapter": "开场",
+   "roles": [
+    "list"
+   ],
+   "start": 22.46,
+   "end": 27.26,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.37
+  },
+  {
+   "id": "b06",
+   "text": "每一步我都给一个能直接照做的方法，最后再说三个最常见的坑。",
+   "chapter": "开场",
+   "roles": [
+    "narrate"
+   ],
+   "start": 27.26,
+   "end": 33.11,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.62
+  },
+  {
+   "id": "b07",
+   "text": "公司里流程那么多，先改哪条？",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "question"
+   ],
+   "start": 33.11,
+   "end": 35.96,
+   "pause_after": 0.0,
+   "kw_times": {
+    "先改哪条": [
+     35.01,
+     35.96
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.21
+  },
+  {
+   "id": "b08",
+   "text": "我的建议是，先别碰最重要的那条，而是挑一条最烦的。",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "narrate"
+   ],
+   "start": 35.96,
+   "end": 40.96,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.4
+  },
+  {
+   "id": "b09",
+   "text": "它要满足三个条件：①每周都在发生，②规则说得清楚，③结果能量化。",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "list"
+   ],
+   "start": 40.96,
+   "end": 46.76,
+   "pause_after": 0.0,
+   "kw_times": {
+    "三个条件": [
+     41.789,
+     42.617
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.31
+  },
+  {
+   "id": "b10",
+   "text": "比如报销审核，每天几十单，规则写在制度里，处理时长一查就有。",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "story"
+   ],
+   "start": 46.76,
+   "end": 52.71,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": "报销单据堆成山的桌面",
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.37
+  },
+  {
+   "id": "b11",
+   "text": "再比如客服周报，每周五下午固定要做，数据来源固定，格式也固定。",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "narrate"
+   ],
+   "start": 52.71,
+   "end": 58.86,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.39
+  },
+  {
+   "id": "b12",
+   "text": "这两条流程都不起眼，可正因为不起眼，改起来没人反对，改好了大家都能感觉到。",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "explain"
+   ],
+   "start": 58.86,
+   "end": 66.21,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.49
+  },
+  {
+   "id": "b13",
+   "text": "记住，先改烦的，不先改大的。",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "emphasis"
+   ],
+   "start": 66.21,
+   "end": 69.01,
+   "pause_after": 0.0,
+   "kw_times": {
+    "先改烦的": [
+     66.719,
+     67.737
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.93
+  },
+  {
+   "id": "b14",
+   "text": "大流程牵扯太多部门，改一次要开十个会；",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "narrate"
+   ],
+   "start": 69.01,
+   "end": 72.86,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.42
+  },
+  {
+   "id": "b15",
+   "text": "烦的小流程，你一个人就能推动。",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "narrate"
+   ],
+   "start": 72.86,
+   "end": 75.91,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.26
+  },
+  {
+   "id": "b16",
+   "text": "那怎么找到最烦的那条？",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "question"
+   ],
+   "start": 75.91,
+   "end": 78.21,
+   "pause_after": 0.0,
+   "kw_times": {
+    "怎么找": [
+     76.14,
+     76.83
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.35
+  },
+  {
+   "id": "b17",
+   "text": "很简单，问团队一个问题：每周最不想做、但又不得不做的事是什么？",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "explain"
+   ],
+   "start": 78.21,
+   "end": 84.41,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.35
+  },
+  {
+   "id": "b18",
+   "text": "答案出现最多的那条，就是你的起点。",
+   "chapter": "第一步 · 选",
+   "roles": [
+    "narrate"
+   ],
+   "start": 84.41,
+   "end": 87.86,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.35
+  },
+  {
+   "id": "b19",
+   "text": "选好了，第二步是拆。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "transition"
+   ],
+   "start": 87.86,
+   "end": 89.91,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.9
+  },
+  {
+   "id": "b20",
+   "text": "很多人拆流程，只拆到提交、审批、归档这种步骤，这还不够。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "explain"
+   ],
+   "start": 89.91,
+   "end": 95.41,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.18
+  },
+  {
+   "id": "b21",
+   "text": "要拆到动作：谁，在哪个系统，看了什么，做了什么判断。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "emphasis"
+   ],
+   "start": 95.41,
+   "end": 100.56,
+   "pause_after": 0.0,
+   "kw_times": {
+    "动作": [
+     96.146,
+     96.636
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.08
+  },
+  {
+   "id": "b22",
+   "text": "比如报销审核，真实的动作可能是：打开邮件，下载附件，对照制度，填进系统，再写一句审批意见。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "story"
+   ],
+   "start": 100.56,
+   "end": 109.41,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": "审核员在两个系统之间来回切换的屏幕录制",
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.29
+  },
+  {
+   "id": "b23",
+   "text": "最省事的拆法，是请做这件事的同事录一小时屏，你在旁边边看边记。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "explain"
+   ],
+   "start": 109.41,
+   "end": 115.61,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.52
+  },
+  {
+   "id": "b24",
+   "text": "不要听他讲流程，要看他实际怎么做。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "explain"
+   ],
+   "start": 115.61,
+   "end": 119.06,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.35
+  },
+  {
+   "id": "b25",
+   "text": "讲出来的流程和做出来的流程，往往差得很远。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "narrate"
+   ],
+   "start": 119.06,
+   "end": 123.31,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.47
+  },
+  {
+   "id": "b26",
+   "text": "拆完你会发现，大概七成的动作，其实是搬运和对照。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "data"
+   ],
+   "start": 123.31,
+   "end": 128.11,
+   "pause_after": 0.0,
+   "kw_times": {
+    "七成": [
+     125.139,
+     125.596
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.37
+  },
+  {
+   "id": "b27",
+   "text": "搬运和对照，恰恰是AI最擅长的；",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "explain"
+   ],
+   "start": 128.11,
+   "end": 131.28,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.79
+  },
+  {
+   "id": "b28",
+   "text": "需要拍板的判断，才留给人。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "narrate"
+   ],
+   "start": 131.28,
+   "end": 133.93,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.15
+  },
+  {
+   "id": "b29",
+   "text": "所以拆完以后，每个动作打一个标签：①AI做，②AI做、人确认，③人做。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "list"
+   ],
+   "start": 133.93,
+   "end": 140.07,
+   "pause_after": 0.0,
+   "kw_times": {
+    "打一个标签": [
+     136.047,
+     137.106
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.58
+  },
+  {
+   "id": "b30",
+   "text": "第二类最关键。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "emphasis"
+   ],
+   "start": 140.07,
+   "end": 141.57,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.0
+  },
+  {
+   "id": "b31",
+   "text": "一开始宁可多放几步在“人确认”，跑稳了再慢慢放手。",
+   "chapter": "第二步 · 拆",
+   "roles": [
+    "narrate"
+   ],
+   "start": 141.57,
+   "end": 146.22,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.52
+  },
+  {
+   "id": "b32",
+   "text": "第三步，量。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "transition"
+   ],
+   "start": 146.22,
+   "end": 147.47,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.2
+  },
+  {
+   "id": "b33",
+   "text": "这一步最容易被跳过，也最致命。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "narrate"
+   ],
+   "start": 147.47,
+   "end": 150.52,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.26
+  },
+  {
+   "id": "b34",
+   "text": "为什么？",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "question"
+   ],
+   "start": 150.52,
+   "end": 151.42,
+   "pause_after": 0.0,
+   "kw_times": {
+    "为什么": [
+     150.52,
+     151.42
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.33
+  },
+  {
+   "id": "b35",
+   "text": "因为不量，你永远说不清AI到底帮了多少。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "explain"
+   ],
+   "start": 151.42,
+   "end": 155.39,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.03
+  },
+  {
+   "id": "b36",
+   "text": "改之前，先量三个数：①每单平均耗时，②出错率，③每周总量。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "list"
+   ],
+   "start": 155.39,
+   "end": 160.54,
+   "pause_after": 0.0,
+   "kw_times": {
+    "三个数": [
+     156.463,
+     157.107
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.08
+  },
+  {
+   "id": "b37",
+   "text": "用一周时间，老老实实记下来，这就是你的基线。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "story"
+   ],
+   "start": 160.54,
+   "end": 164.94,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": "秒表和手写记录表",
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.32
+  },
+  {
+   "id": "b38",
+   "text": "改完以后，再用同样的方法量一周。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "narrate"
+   ],
+   "start": 164.94,
+   "end": 168.19,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.31
+  },
+  {
+   "id": "b39",
+   "text": "比如每单从四十分钟降到八分钟，出错率从百分之六降到百分之一，这才叫有结果。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "data"
+   ],
+   "start": 168.19,
+   "end": 175.59,
+   "pause_after": 0.0,
+   "kw_times": {
+    "四十分钟": [
+     169.278,
+     170.149
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.59
+  },
+  {
+   "id": "b40",
+   "text": "有了这两组数字，你去申请更多预算、说服别的部门，都只需要一页纸。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "explain"
+   ],
+   "start": 175.59,
+   "end": 181.94,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.41
+  },
+  {
+   "id": "b41",
+   "text": "没有基线的提效，都是感觉。",
+   "chapter": "第三步 · 量",
+   "roles": [
+    "emphasis"
+   ],
+   "start": 181.94,
+   "end": 184.59,
+   "pause_after": 0.0,
+   "kw_times": {
+    "没有基线": [
+     181.94,
+     182.904
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.15
+  },
+  {
+   "id": "b42",
+   "text": "最后说三个常见的坑。",
+   "chapter": "三个常见的坑",
+   "roles": [
+    "list"
+   ],
+   "start": 184.59,
+   "end": 186.69,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.29
+  },
+  {
+   "id": "b43",
+   "text": "第一，一口气改太多。",
+   "chapter": "三个常见的坑",
+   "roles": [
+    "explain"
+   ],
+   "start": 186.69,
+   "end": 188.74,
+   "pause_after": 0.0,
+   "kw_times": {
+    "一口气": [
+     187.203,
+     187.971
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.9
+  },
+  {
+   "id": "b44",
+   "text": "一次只改一条流程，跑通了再复制。",
+   "chapter": "三个常见的坑",
+   "roles": [
+    "narrate"
+   ],
+   "start": 188.74,
+   "end": 191.99,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.31
+  },
+  {
+   "id": "b45",
+   "text": "第二，只买工具不改流程，那又回到了更快的打字机。",
+   "chapter": "三个常见的坑",
+   "roles": [
+    "explain"
+   ],
+   "start": 191.99,
+   "end": 196.79,
+   "pause_after": 0.0,
+   "kw_times": {
+    "只买工具": [
+     192.447,
+     193.361
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.38
+  },
+  {
+   "id": "b46",
+   "text": "第三，没人负责。",
+   "chapter": "三个常见的坑",
+   "roles": [
+    "explain"
+   ],
+   "start": 196.79,
+   "end": 198.44,
+   "pause_after": 0.0,
+   "kw_times": {
+    "没人负责": [
+     197.34,
+     198.44
+    ]
+   },
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.64
+  },
+  {
+   "id": "b47",
+   "text": "每条改过的流程，都要有一个人对结果负责。",
+   "chapter": "三个常见的坑",
+   "roles": [
+    "narrate"
+   ],
+   "start": 198.44,
+   "end": 202.49,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.44
+  },
+  {
+   "id": "b48",
+   "text": "我见过最可惜的情况，是工具买了、账号开了、培训也做了，三个月后一查，流程还是原来那条。",
+   "chapter": "三个常见的坑",
+   "roles": [
+    "story"
+   ],
+   "start": 202.49,
+   "end": 210.94,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.38
+  },
+  {
+   "id": "b49",
+   "text": "总结一下：选一条烦的流程，拆到动作，改之前先量基线。",
+   "chapter": "总结",
+   "roles": [
+    "summary"
+   ],
+   "start": 210.94,
+   "end": 216.14,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.23
+  },
+  {
+   "id": "b50",
+   "text": "做到这三步，你的团队就已经走在大多数人前面了。",
+   "chapter": "总结",
+   "roles": [
+    "emphasis"
+   ],
+   "start": 216.14,
+   "end": 220.79,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.52
+  },
+  {
+   "id": "b51",
+   "text": "你们团队最烦的那条流程是什么？",
+   "chapter": "总结",
+   "roles": [
+    "question"
+   ],
+   "start": 220.79,
+   "end": 223.89,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.52
+  },
+  {
+   "id": "b52",
+   "text": "可以在评论区告诉我。",
+   "chapter": "总结",
+   "roles": [
+    "narrate"
+   ],
+   "start": 223.89,
+   "end": 225.99,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 4.29
+  },
+  {
+   "id": "b53",
+   "text": "下期讲，怎么把拆好的动作交给AI。",
+   "chapter": "总结",
+   "roles": [
+    "cta"
+   ],
+   "start": 225.99,
+   "end": 229.36,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.86
+  },
+  {
+   "id": "b54",
+   "text": "关注我，别错过。",
+   "chapter": "总结",
+   "roles": [
+    "cta"
+   ],
+   "start": 229.36,
+   "end": 231.01,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "estimated",
+   "rate_cps": 3.64
+  }
+ ],
+ "host": [
+  {
+   "id": "c01",
+   "rec": {
+    "in": 0.0,
+    "out": 4.075
+   },
+   "layout": "full",
+   "beats": [
+    "b01"
+   ],
+   "why": "opening: the host must appear naturally in the first frames | pick O01_s1 score 4.71: role open, emotion warm",
+   "role": "open",
+   "shot": "O01_s1",
+   "plate": "O01",
+   "src": {
+    "in": 2.2,
+    "out": 6.275
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c02",
+   "rec": {
+    "in": 4.075,
+    "out": 8.15
+   },
+   "layout": "full",
+   "beats": [
+    "b01"
+   ],
+   "why": "opening: the host must appear naturally in the first frames · jump-cut part 2/2 | pick L01_s4 score 5.08: role open, emotion warm",
+   "role": "open",
+   "shot": "L01_s4",
+   "plate": "L01",
+   "src": {
+    "in": 21.5,
+    "out": 25.575
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c03",
+   "rec": {
+    "in": 8.15,
+    "out": 10.45
+   },
+   "layout": "punch",
+   "beats": [
+    "b02"
+   ],
+   "why": "question: punch-in lands on the line | pick K01H_s2 score 3.61: role question, emotion curious, upscale 1.8×",
+   "role": "question",
+   "shot": "K01H_s2",
+   "plate": "K01H",
+   "src": {
+    "in": 7.5,
+    "out": 9.8
+   },
+   "ops": [
+    {
+     "op": "crop",
+     "aspect": "9:16",
+     "cx": 0.315,
+     "frac": 0.3164
+    },
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c04",
+   "rec": {
+    "in": 10.45,
+    "out": 17.65
+   },
+   "layout": "pip",
+   "beats": [
+    "b03"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 25%–40%) | pick K03_s4 score 2.14: emotion warm",
+   "role": "narrate",
+   "shot": "K03_s4",
+   "plate": "K03",
+   "src": {
+    "in": 21.5,
+    "out": 28.7
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c05",
+   "rec": {
+    "in": 17.65,
+    "out": 22.4
+   },
+   "layout": "full",
+   "beats": [
+    "b04"
+   ],
+   "why": "narrate | pick L02_s1 score 5.40: role narrate, emotion neutral",
+   "role": "narrate",
+   "shot": "L02_s1",
+   "plate": "L02",
+   "src": {
+    "in": 0.5,
+    "out": 5.25
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c06",
+   "rec": {
+    "in": 22.4,
+    "out": 27.2
+   },
+   "layout": "split",
+   "beats": [
+    "b05"
+   ],
+   "why": "list: host + side content zone | pick L01_s6 score 2.47: emotion confident",
+   "role": "list",
+   "shot": "L01_s6",
+   "plate": "L01",
+   "src": {
+    "in": 37.5,
+    "out": 42.3
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c07",
+   "rec": {
+    "in": 27.2,
+    "out": 33.05
+   },
+   "layout": "pip",
+   "beats": [
+    "b06"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 25%–40%) | pick K02_s1 score 6.11: role narrate, emotion neutral",
+   "role": "narrate",
+   "shot": "K02_s1",
+   "plate": "K02",
+   "src": {
+    "in": 0.5,
+    "out": 6.35
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c08",
+   "rec": {
+    "in": 33.05,
+    "out": 35.9
+   },
+   "layout": "punch",
+   "beats": [
+    "b07"
+   ],
+   "why": "question: punch-in lands on the line | pick K01_s2 score 5.29: role question, emotion curious",
+   "role": "question",
+   "shot": "K01_s2",
+   "plate": "K01",
+   "src": {
+    "in": 8.0,
+    "out": 10.85
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "mgwipe"
+  },
+  {
+   "id": "c09",
+   "rec": {
+    "in": 35.9,
+    "out": 40.9
+   },
+   "layout": "full",
+   "beats": [
+    "b08"
+   ],
+   "why": "narrate | pick K02_s3 score 5.58: role narrate, emotion warm",
+   "role": "narrate",
+   "shot": "K02_s3",
+   "plate": "K02",
+   "src": {
+    "in": 14.5,
+    "out": 19.5
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c10",
+   "rec": {
+    "in": 40.9,
+    "out": 46.7
+   },
+   "layout": "split",
+   "beats": [
+    "b09"
+   ],
+   "why": "list: host + side content zone | pick L02_s7 score 4.86: role list, emotion neutral",
+   "role": "list",
+   "shot": "L02_s7",
+   "plate": "L02",
+   "src": {
+    "in": 44.5,
+    "out": 50.3
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c11",
+   "rec": {
+    "in": 46.7,
+    "out": 52.65
+   },
+   "layout": "hidden",
+   "beats": [
+    "b10"
+   ],
+   "why": "B-roll '报销单据堆成山的桌面' covers the sentence",
+   "role": "story",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "broll:报销单据堆成山的桌面"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c12",
+   "rec": {
+    "in": 52.65,
+    "out": 58.8
+   },
+   "layout": "full",
+   "beats": [
+    "b11"
+   ],
+   "why": "narrate | pick K03_s1 score 4.52: role narrate, emotion warm",
+   "role": "narrate",
+   "shot": "K03_s1",
+   "plate": "K03",
+   "src": {
+    "in": 0.5,
+    "out": 6.65
+   },
+   "ops": [],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c13",
+   "rec": {
+    "in": 58.8,
+    "out": 66.15
+   },
+   "layout": "pip",
+   "beats": [
+    "b12"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 25%–40%) | pick L02_s4 score 1.55: ",
+   "role": "explain",
+   "shot": "L02_s4",
+   "plate": "L02",
+   "src": {
+    "in": 21.5,
+    "out": 28.85
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c14",
+   "rec": {
+    "in": 66.15,
+    "out": 68.95
+   },
+   "layout": "punch",
+   "beats": [
+    "b13"
+   ],
+   "why": "emphasis: punch-in lands on the line | pick L01_s2 score 5.00: role emphasis, emotion confident",
+   "role": "emphasis",
+   "shot": "L01_s2",
+   "plate": "L01",
+   "src": {
+    "in": 10.0,
+    "out": 12.8
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c15",
+   "rec": {
+    "in": 68.95,
+    "out": 75.85
+   },
+   "layout": "full",
+   "beats": [
+    "b14",
+    "b15"
+   ],
+   "why": "narrate | pick K01H_s1 score 3.98: role narrate, emotion neutral, upscale 1.8×",
+   "role": "narrate",
+   "shot": "K01H_s1",
+   "plate": "K01H",
+   "src": {
+    "in": 0.5,
+    "out": 7.4
+   },
+   "ops": [
+    {
+     "op": "crop",
+     "aspect": "9:16",
+     "cx": 0.315,
+     "frac": 0.3164
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c16",
+   "rec": {
+    "in": 75.85,
+    "out": 78.15
+   },
+   "layout": "punch",
+   "beats": [
+    "b16"
+   ],
+   "why": "question: punch-in lands on the line | pick L01_s3 score 5.19: role question, emotion curious",
+   "role": "question",
+   "shot": "L01_s3",
+   "plate": "L01",
+   "src": {
+    "in": 18.25,
+    "out": 20.55
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c17",
+   "rec": {
+    "in": 78.15,
+    "out": 84.35
+   },
+   "layout": "pip",
+   "beats": [
+    "b17"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 25%–40%) | pick L01_s1 score 4.17: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "L01_s1",
+   "plate": "L01",
+   "src": {
+    "in": 0.5,
+    "out": 6.7
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c18",
+   "rec": {
+    "in": 84.35,
+    "out": 87.8
+   },
+   "layout": "full",
+   "beats": [
+    "b18"
+   ],
+   "why": "narrate | pick L01_s7 score 2.37: role narrate",
+   "role": "narrate",
+   "shot": "L01_s7",
+   "plate": "L01",
+   "src": {
+    "in": 44.5,
+    "out": 47.95
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c19",
+   "rec": {
+    "in": 87.8,
+    "out": 89.85
+   },
+   "layout": "full",
+   "beats": [
+    "b19"
+   ],
+   "why": "transition | pick O01_s4 score 3.60: role transition",
+   "role": "transition",
+   "shot": "O01_s4",
+   "plate": "O01",
+   "src": {
+    "in": 21.5,
+    "out": 23.55
+   },
+   "ops": [],
+   "transition_in": "mgwipe"
+  },
+  {
+   "id": "c20",
+   "rec": {
+    "in": 89.85,
+    "out": 95.35
+   },
+   "layout": "full",
+   "beats": [
+    "b20"
+   ],
+   "why": "explain | pick K03_s3 score 4.78: role explain, emotion serious",
+   "role": "explain",
+   "shot": "K03_s3",
+   "plate": "K03",
+   "src": {
+    "in": 14.5,
+    "out": 20.0
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c21",
+   "rec": {
+    "in": 95.35,
+    "out": 100.5
+   },
+   "layout": "punch",
+   "beats": [
+    "b21"
+   ],
+   "why": "emphasis: punch-in lands on the line | pick K02_s4 score 4.37: role emphasis, emotion confident",
+   "role": "emphasis",
+   "shot": "K02_s4",
+   "plate": "K02",
+   "src": {
+    "in": 23.25,
+    "out": 28.4
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c22",
+   "rec": {
+    "in": 100.5,
+    "out": 109.35
+   },
+   "layout": "hidden",
+   "beats": [
+    "b22"
+   ],
+   "why": "B-roll '审核员在两个系统之间来回切换的屏幕录制' covers the sentence",
+   "role": "story",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "broll:审核员在两个系统之间来回切换的屏幕录制"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c23",
+   "rec": {
+    "in": 109.35,
+    "out": 115.55
+   },
+   "layout": "full",
+   "beats": [
+    "b23"
+   ],
+   "why": "explain | pick L02_s2 score 3.58: role explain",
+   "role": "explain",
+   "shot": "L02_s2",
+   "plate": "L02",
+   "src": {
+    "in": 7.5,
+    "out": 13.7
+   },
+   "ops": [],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c24",
+   "rec": {
+    "in": 115.55,
+    "out": 119.0
+   },
+   "layout": "full",
+   "beats": [
+    "b24"
+   ],
+   "why": "explain | pick L02_s6 score 2.74: role explain",
+   "role": "explain",
+   "shot": "L02_s6",
+   "plate": "L02",
+   "src": {
+    "in": 39.25,
+    "out": 42.7
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.08,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c25",
+   "rec": {
+    "in": 119.0,
+    "out": 123.25
+   },
+   "layout": "full",
+   "beats": [
+    "b25"
+   ],
+   "why": "narrate | pick L01_s4 score 3.89: role narrate, emotion warm",
+   "role": "narrate",
+   "shot": "L01_s4",
+   "plate": "L01",
+   "src": {
+    "in": 21.5,
+    "out": 25.75
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.08,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c26",
+   "rec": {
+    "in": 123.25,
+    "out": 128.05
+   },
+   "layout": "split",
+   "beats": [
+    "b26"
+   ],
+   "why": "data: host + side content zone | pick L02_s5 score 4.42: role data, emotion serious",
+   "role": "data",
+   "shot": "L02_s5",
+   "plate": "L02",
+   "src": {
+    "in": 30.5,
+    "out": 35.3
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c27",
+   "rec": {
+    "in": 128.05,
+    "out": 133.87
+   },
+   "layout": "full",
+   "beats": [
+    "b27",
+    "b28"
+   ],
+   "why": "explain | pick K01_s1 score 1.51: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "K01_s1",
+   "plate": "K01",
+   "src": {
+    "in": 0.5,
+    "out": 6.32
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c28",
+   "rec": {
+    "in": 133.87,
+    "out": 140.01
+   },
+   "layout": "split",
+   "beats": [
+    "b29"
+   ],
+   "why": "list: host + side content zone | pick K02_s2 score 2.53: emotion neutral",
+   "role": "list",
+   "shot": "K02_s2",
+   "plate": "K02",
+   "src": {
+    "in": 8.36,
+    "out": 14.5
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c29",
+   "rec": {
+    "in": 140.01,
+    "out": 141.51
+   },
+   "layout": "punch",
+   "beats": [
+    "b30"
+   ],
+   "why": "emphasis: punch-in lands on the line | pick L01_s6 score 3.14: role emphasis, emotion confident",
+   "role": "emphasis",
+   "shot": "L01_s6",
+   "plate": "L01",
+   "src": {
+    "in": 42.5,
+    "out": 44.0
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c30",
+   "rec": {
+    "in": 141.51,
+    "out": 146.16
+   },
+   "layout": "full",
+   "beats": [
+    "b31"
+   ],
+   "why": "narrate | pick L02_s1 score 2.90: role narrate, emotion neutral",
+   "role": "narrate",
+   "shot": "L02_s1",
+   "plate": "L02",
+   "src": {
+    "in": 0.5,
+    "out": 5.15
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.08,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c31",
+   "rec": {
+    "in": 146.16,
+    "out": 150.46
+   },
+   "layout": "full",
+   "beats": [
+    "b32",
+    "b33"
+   ],
+   "why": "transition | pick O01_s4 score 1.32: role transition",
+   "role": "transition",
+   "shot": "O01_s4",
+   "plate": "O01",
+   "src": {
+    "in": 23.75,
+    "out": 28.05
+   },
+   "ops": [],
+   "transition_in": "mgwipe"
+  },
+  {
+   "id": "c32",
+   "rec": {
+    "in": 150.46,
+    "out": 151.36
+   },
+   "layout": "punch",
+   "beats": [
+    "b34"
+   ],
+   "why": "question: punch-in lands on the line | pick K01H_s2 score 4.53: role question, emotion curious, upscale 1.8×",
+   "role": "question",
+   "shot": "K01H_s2",
+   "plate": "K01H",
+   "src": {
+    "in": 10.0,
+    "out": 10.9
+   },
+   "ops": [
+    {
+     "op": "crop",
+     "aspect": "9:16",
+     "cx": 0.315,
+     "frac": 0.3164
+    },
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c33",
+   "rec": {
+    "in": 151.36,
+    "out": 155.33
+   },
+   "layout": "full",
+   "beats": [
+    "b35"
+   ],
+   "why": "explain | pick L01_s1 score 1.39: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "L01_s1",
+   "plate": "L01",
+   "src": {
+    "in": 0.5,
+    "out": 4.47
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c34",
+   "rec": {
+    "in": 155.33,
+    "out": 160.48
+   },
+   "layout": "split",
+   "beats": [
+    "b36"
+   ],
+   "why": "list: host + side content zone | pick L02_s7 score 3.12: role list, emotion neutral",
+   "role": "list",
+   "shot": "L02_s7",
+   "plate": "L02",
+   "src": {
+    "in": 46.35,
+    "out": 51.5
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.08,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c35",
+   "rec": {
+    "in": 160.48,
+    "out": 164.88
+   },
+   "layout": "hidden",
+   "beats": [
+    "b37"
+   ],
+   "why": "B-roll '秒表和手写记录表' covers the sentence",
+   "role": "story",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "broll:秒表和手写记录表"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c36",
+   "rec": {
+    "in": 164.88,
+    "out": 168.13
+   },
+   "layout": "full",
+   "beats": [
+    "b38"
+   ],
+   "why": "narrate | pick K02_s1 score 2.85: role narrate, emotion neutral",
+   "role": "narrate",
+   "shot": "K02_s1",
+   "plate": "K02",
+   "src": {
+    "in": 0.5,
+    "out": 3.75
+   },
+   "ops": [],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c37",
+   "rec": {
+    "in": 168.13,
+    "out": 175.53
+   },
+   "layout": "split",
+   "beats": [
+    "b39"
+   ],
+   "why": "data: host + side content zone | pick L01_s5 score 4.18: role data, emotion serious",
+   "role": "data",
+   "shot": "L01_s5",
+   "plate": "L01",
+   "src": {
+    "in": 29.5,
+    "out": 36.9
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c38",
+   "rec": {
+    "in": 175.53,
+    "out": 181.88
+   },
+   "layout": "pip",
+   "beats": [
+    "b40"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 25%–40%) | pick K02_s2 score 2.15: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "K02_s2",
+   "plate": "K02",
+   "src": {
+    "in": 7.5,
+    "out": 13.85
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c39",
+   "rec": {
+    "in": 181.88,
+    "out": 184.53
+   },
+   "layout": "punch",
+   "beats": [
+    "b41"
+   ],
+   "why": "emphasis: punch-in lands on the line | pick K03_s2 score 4.72: role emphasis, emotion confident",
+   "role": "emphasis",
+   "shot": "K03_s2",
+   "plate": "K03",
+   "src": {
+    "in": 10.5,
+    "out": 13.15
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c40",
+   "rec": {
+    "in": 184.53,
+    "out": 186.63
+   },
+   "layout": "split",
+   "beats": [
+    "b42"
+   ],
+   "why": "list: host + side content zone | pick L01_s2 score 1.62: emotion confident",
+   "role": "list",
+   "shot": "L01_s2",
+   "plate": "L01",
+   "src": {
+    "in": 7.5,
+    "out": 9.6
+   },
+   "ops": [],
+   "transition_in": "mgwipe"
+  },
+  {
+   "id": "c41",
+   "rec": {
+    "in": 186.63,
+    "out": 191.93
+   },
+   "layout": "full",
+   "beats": [
+    "b43",
+    "b44"
+   ],
+   "why": "explain | pick L02_s3 score 4.58: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "L02_s3",
+   "plate": "L02",
+   "src": {
+    "in": 14.5,
+    "out": 19.8
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c42",
+   "rec": {
+    "in": 191.93,
+    "out": 198.38
+   },
+   "layout": "full",
+   "beats": [
+    "b45",
+    "b46"
+   ],
+   "why": "explain | pick K01_s1 score 4.77: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "K01_s1",
+   "plate": "K01",
+   "src": {
+    "in": 0.5,
+    "out": 6.95
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.08,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c43",
+   "rec": {
+    "in": 198.38,
+    "out": 202.43
+   },
+   "layout": "full",
+   "beats": [
+    "b47"
+   ],
+   "why": "narrate | pick K03_s1 score 2.87: role narrate, emotion warm",
+   "role": "narrate",
+   "shot": "K03_s1",
+   "plate": "K03",
+   "src": {
+    "in": 0.5,
+    "out": 4.55
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.08,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c44",
+   "rec": {
+    "in": 202.43,
+    "out": 206.655
+   },
+   "layout": "pip",
+   "beats": [
+    "b48"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 25%–40%) | pick L02_s8 score 2.56: emotion warm",
+   "role": "story",
+   "shot": "L02_s8",
+   "plate": "L02",
+   "src": {
+    "in": 51.5,
+    "out": 55.725
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c45",
+   "rec": {
+    "in": 206.655,
+    "out": 210.88
+   },
+   "layout": "pip",
+   "beats": [
+    "b48"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 25%–40%) | pick K02_s3 score 1.26: role story, emotion warm",
+   "role": "story",
+   "shot": "K02_s3",
+   "plate": "K02",
+   "src": {
+    "in": 15.5,
+    "out": 19.725
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c46",
+   "rec": {
+    "in": 210.88,
+    "out": 216.08
+   },
+   "layout": "full",
+   "beats": [
+    "b49"
+   ],
+   "why": "summary | pick L02_s4 score 2.35: role summary, emotion confident",
+   "role": "summary",
+   "shot": "L02_s4",
+   "plate": "L02",
+   "src": {
+    "in": 21.5,
+    "out": 26.7
+   },
+   "ops": [],
+   "transition_in": "mgwipe"
+  },
+  {
+   "id": "c47",
+   "rec": {
+    "in": 216.08,
+    "out": 220.73
+   },
+   "layout": "punch",
+   "beats": [
+    "b50"
+   ],
+   "why": "emphasis: punch-in lands on the line | pick L02_s2 score 1.78: role emphasis, emotion confident",
+   "role": "emphasis",
+   "shot": "L02_s2",
+   "plate": "L02",
+   "src": {
+    "in": 8.0,
+    "out": 12.65
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c48",
+   "rec": {
+    "in": 220.73,
+    "out": 223.83
+   },
+   "layout": "punch",
+   "beats": [
+    "b51"
+   ],
+   "why": "question: punch-in lands on the line | pick L01_s3 score 4.45: role question, emotion curious",
+   "role": "question",
+   "shot": "L01_s3",
+   "plate": "L01",
+   "src": {
+    "in": 14.5,
+    "out": 17.6
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.12,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c49",
+   "rec": {
+    "in": 223.83,
+    "out": 229.3
+   },
+   "layout": "full",
+   "beats": [
+    "b52",
+    "b53"
+   ],
+   "why": "cta | pick K03_s4 score 2.81: role cta, emotion warm",
+   "role": "cta",
+   "shot": "K03_s4",
+   "plate": "K03",
+   "src": {
+    "in": 21.5,
+    "out": 26.97
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c50",
+   "rec": {
+    "in": 229.3,
+    "out": 231.61
+   },
+   "layout": "full",
+   "beats": [
+    "b54"
+   ],
+   "why": "cta | pick K01_s3 score 1.64: emotion warm",
+   "role": "cta",
+   "shot": "K01_s3",
+   "plate": "K01",
+   "src": {
+    "in": 14.5,
+    "out": 16.81
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  }
+ ],
+ "mg": [
+  {
+   "id": "m01",
+   "template": "chapter_card",
+   "asset": null,
+   "rec": {
+    "in": 1.59,
+    "out": 3.25
+   },
+   "zone": "full",
+   "beat": "b01",
+   "text": "开场"
+  },
+  {
+   "id": "m02",
+   "template": "question_pop",
+   "asset": null,
+   "rec": {
+    "in": 8.16,
+    "out": 10.41
+   },
+   "zone": "upper_band",
+   "beat": "b02",
+   "text": ""
+  },
+  {
+   "id": "m03",
+   "template": "list_chips",
+   "asset": null,
+   "rec": {
+    "in": 22.41,
+    "out": 27.16
+   },
+   "zone": "lower_third",
+   "beat": "b05",
+   "text": "选、拆、量"
+  },
+  {
+   "id": "m04",
+   "template": "question_pop",
+   "asset": null,
+   "rec": {
+    "in": 33.06,
+    "out": 35.86
+   },
+   "zone": "upper_band",
+   "beat": "b07",
+   "text": "先改哪条"
+  },
+  {
+   "id": "m05",
+   "template": "chapter_card",
+   "asset": null,
+   "rec": {
+    "in": 33.05,
+    "out": 34.71
+   },
+   "zone": "full",
+   "beat": "b07",
+   "text": "第一步 · 选"
+  },
+  {
+   "id": "m06",
+   "template": "list_chips",
+   "asset": null,
+   "rec": {
+    "in": 40.91,
+    "out": 46.66
+   },
+   "zone": "lower_third",
+   "beat": "b09",
+   "text": "三个条件"
+  },
+  {
+   "id": "m07",
+   "template": "keyword_pop",
+   "asset": null,
+   "rec": {
+    "in": 66.16,
+    "out": 68.91
+   },
+   "zone": "lower_third",
+   "beat": "b13",
+   "text": "先改烦的"
+  },
+  {
+   "id": "m08",
+   "template": "question_pop",
+   "asset": null,
+   "rec": {
+    "in": 75.86,
+    "out": 78.11
+   },
+   "zone": "upper_band",
+   "beat": "b16",
+   "text": "怎么找"
+  },
+  {
+   "id": "m09",
+   "template": "chapter_card",
+   "asset": null,
+   "rec": {
+    "in": 87.8,
+    "out": 89.46
+   },
+   "zone": "full",
+   "beat": "b19",
+   "text": "第二步 · 拆"
+  },
+  {
+   "id": "m10",
+   "template": "keyword_pop",
+   "asset": null,
+   "rec": {
+    "in": 95.36,
+    "out": 100.46
+   },
+   "zone": "lower_third",
+   "beat": "b21",
+   "text": "动作"
+  },
+  {
+   "id": "m11",
+   "template": "counter_card",
+   "asset": null,
+   "rec": {
+    "in": 123.26,
+    "out": 128.01
+   },
+   "zone": "upper_band",
+   "beat": "b26",
+   "text": "七成"
+  },
+  {
+   "id": "m12",
+   "template": "list_chips",
+   "asset": null,
+   "rec": {
+    "in": 133.88,
+    "out": 139.97
+   },
+   "zone": "lower_third",
+   "beat": "b29",
+   "text": "打一个标签"
+  },
+  {
+   "id": "m13",
+   "template": "keyword_pop",
+   "asset": null,
+   "rec": {
+    "in": 140.02,
+    "out": 141.47
+   },
+   "zone": "lower_third",
+   "beat": "b30",
+   "text": "人确认"
+  },
+  {
+   "id": "m14",
+   "template": "chapter_card",
+   "asset": null,
+   "rec": {
+    "in": 146.16,
+    "out": 147.82
+   },
+   "zone": "full",
+   "beat": "b32",
+   "text": "第三步 · 量"
+  },
+  {
+   "id": "m15",
+   "template": "question_pop",
+   "asset": null,
+   "rec": {
+    "in": 150.47,
+    "out": 151.32
+   },
+   "zone": "upper_band",
+   "beat": "b34",
+   "text": "为什么"
+  },
+  {
+   "id": "m16",
+   "template": "list_chips",
+   "asset": null,
+   "rec": {
+    "in": 155.34,
+    "out": 160.44
+   },
+   "zone": "lower_third",
+   "beat": "b36",
+   "text": "三个数"
+  },
+  {
+   "id": "m17",
+   "template": "counter_card",
+   "asset": null,
+   "rec": {
+    "in": 168.14,
+    "out": 175.49
+   },
+   "zone": "upper_band",
+   "beat": "b39",
+   "text": "四十分钟"
+  },
+  {
+   "id": "m18",
+   "template": "keyword_pop",
+   "asset": null,
+   "rec": {
+    "in": 181.89,
+    "out": 184.49
+   },
+   "zone": "lower_third",
+   "beat": "b41",
+   "text": "没有基线"
+  },
+  {
+   "id": "m19",
+   "template": "list_chips",
+   "asset": null,
+   "rec": {
+    "in": 184.54,
+    "out": 186.59
+   },
+   "zone": "lower_third",
+   "beat": "b42",
+   "text": "三个坑"
+  },
+  {
+   "id": "m20",
+   "template": "chapter_card",
+   "asset": null,
+   "rec": {
+    "in": 184.53,
+    "out": 186.19
+   },
+   "zone": "full",
+   "beat": "b42",
+   "text": "三个常见的坑"
+  },
+  {
+   "id": "m21",
+   "template": "chapter_card",
+   "asset": null,
+   "rec": {
+    "in": 210.88,
+    "out": 212.54
+   },
+   "zone": "full",
+   "beat": "b49",
+   "text": "总结"
+  },
+  {
+   "id": "m22",
+   "template": "keyword_pop",
+   "asset": null,
+   "rec": {
+    "in": 216.09,
+    "out": 220.69
+   },
+   "zone": "lower_third",
+   "beat": "b50",
+   "text": "走在前面"
+  },
+  {
+   "id": "m23",
+   "template": "question_pop",
+   "asset": null,
+   "rec": {
+    "in": 220.74,
+    "out": 223.79
+   },
+   "zone": "upper_band",
+   "beat": "b51",
+   "text": ""
+  },
+  {
+   "id": "m24",
+   "template": "follow_pill",
+   "asset": null,
+   "rec": {
+    "in": 225.94,
+    "out": 229.26
+   },
+   "zone": "lower_third",
+   "beat": "b53",
+   "text": "关注我"
+  },
+  {
+   "id": "m25",
+   "template": "follow_pill",
+   "asset": null,
+   "rec": {
+    "in": 229.31,
+    "out": 231.31
+   },
+   "zone": "lower_third",
+   "beat": "b54",
+   "text": ""
+  }
+ ],
+ "broll": [
+  {
+   "id": "r01",
+   "query": "报销单据堆成山的桌面",
+   "rec": {
+    "in": 46.7,
+    "out": 52.65
+   },
+   "status": "to_source"
+  },
+  {
+   "id": "r02",
+   "query": "审核员在两个系统之间来回切换的屏幕录制",
+   "rec": {
+    "in": 100.5,
+    "out": 109.35
+   },
+   "status": "to_source"
+  },
+  {
+   "id": "r03",
+   "query": "秒表和手写记录表",
+   "rec": {
+    "in": 160.48,
+    "out": 164.88
+   },
+   "status": "to_source"
+  }
+ ],
+ "captions": [
+  {
+   "rec": {
+    "in": 1.65,
+    "out": 2.379
+   },
+   "text": "上期说了"
+  },
+  {
+   "rec": {
+    "in": 2.379,
+    "out": 6.023
+   },
+   "text": "AI Native 不是把AI塞进旧流程"
+  },
+  {
+   "rec": {
+    "in": 6.023,
+    "out": 8.21
+   },
+   "text": "而是围着AI重新设计流程"
+  },
+  {
+   "rec": {
+    "in": 8.21,
+    "out": 10.51
+   },
+   "text": "那第一步到底从哪下手"
+  },
+  {
+   "rec": {
+    "in": 10.51,
+    "out": 12.31
+   },
+   "text": "很多团队卡在这里"
+  },
+  {
+   "rec": {
+    "in": 12.31,
+    "out": 13.21
+   },
+   "text": "道理都懂"
+  },
+  {
+   "rec": {
+    "in": 13.21,
+    "out": 15.235
+   },
+   "text": "可周一早上打开电脑"
+  },
+  {
+   "rec": {
+    "in": 15.235,
+    "out": 17.71
+   },
+   "text": "还是不知道该先动哪一块"
+  },
+  {
+   "rec": {
+    "in": 17.71,
+    "out": 19.067
+   },
+   "text": "今天用几分钟"
+  },
+  {
+   "rec": {
+    "in": 19.067,
+    "out": 21.329
+   },
+   "text": "把这一步拆成三个动作"
+  },
+  {
+   "rec": {
+    "in": 21.329,
+    "out": 22.46
+   },
+   "text": "选、拆、量"
+  },
+  {
+   "rec": {
+    "in": 22.46,
+    "out": 23.603
+   },
+   "text": "选一条流程"
+  },
+  {
+   "rec": {
+    "in": 23.603,
+    "out": 25.203
+   },
+   "text": "拆到每一个动作"
+  },
+  {
+   "rec": {
+    "in": 25.203,
+    "out": 27.26
+   },
+   "text": "量出改之前和改之后"
+  },
+  {
+   "rec": {
+    "in": 27.26,
+    "out": 30.185
+   },
+   "text": "每一步我都给一个能直接照做的"
+  },
+  {
+   "rec": {
+    "in": 30.185,
+    "out": 33.11
+   },
+   "text": "方法，最后再说三个最常见的坑"
+  },
+  {
+   "rec": {
+    "in": 33.11,
+    "out": 35.01
+   },
+   "text": "公司里流程那么多"
+  },
+  {
+   "rec": {
+    "in": 35.01,
+    "out": 35.96
+   },
+   "text": "先改哪条"
+  },
+  {
+   "rec": {
+    "in": 35.96,
+    "out": 37.096
+   },
+   "text": "我的建议是"
+  },
+  {
+   "rec": {
+    "in": 37.096,
+    "out": 39.142
+   },
+   "text": "先别碰最重要的那条"
+  },
+  {
+   "rec": {
+    "in": 39.142,
+    "out": 40.96
+   },
+   "text": "而是挑一条最烦的"
+  },
+  {
+   "rec": {
+    "in": 40.96,
+    "out": 42.617
+   },
+   "text": "它要满足三个条件"
+  },
+  {
+   "rec": {
+    "in": 42.617,
+    "out": 44.067
+   },
+   "text": "①每周都在发生"
+  },
+  {
+   "rec": {
+    "in": 44.067,
+    "out": 45.517
+   },
+   "text": "②规则说得清楚"
+  },
+  {
+   "rec": {
+    "in": 45.517,
+    "out": 46.76
+   },
+   "text": "③结果能量化"
+  },
+  {
+   "rec": {
+    "in": 46.76,
+    "out": 48.133
+   },
+   "text": "比如报销审核"
+  },
+  {
+   "rec": {
+    "in": 48.133,
+    "out": 49.277
+   },
+   "text": "每天几十单"
+  },
+  {
+   "rec": {
+    "in": 49.277,
+    "out": 50.879
+   },
+   "text": "规则写在制度里"
+  },
+  {
+   "rec": {
+    "in": 50.879,
+    "out": 52.71
+   },
+   "text": "处理时长一查就有"
+  },
+  {
+   "rec": {
+    "in": 52.71,
+    "out": 54.304
+   },
+   "text": "再比如客服周报"
+  },
+  {
+   "rec": {
+    "in": 54.304,
+    "out": 56.354
+   },
+   "text": "每周五下午固定要做"
+  },
+  {
+   "rec": {
+    "in": 56.354,
+    "out": 57.721
+   },
+   "text": "数据来源固定"
+  },
+  {
+   "rec": {
+    "in": 57.721,
+    "out": 58.86
+   },
+   "text": "格式也固定"
+  },
+  {
+   "rec": {
+    "in": 58.86,
+    "out": 60.865
+   },
+   "text": "这两条流程都不起眼"
+  },
+  {
+   "rec": {
+    "in": 60.865,
+    "out": 62.424
+   },
+   "text": "可正因为不起眼"
+  },
+  {
+   "rec": {
+    "in": 62.424,
+    "out": 63.983
+   },
+   "text": "改起来没人反对"
+  },
+  {
+   "rec": {
+    "in": 63.983,
+    "out": 66.21
+   },
+   "text": "改好了大家都能感觉到"
+  },
+  {
+   "rec": {
+    "in": 66.21,
+    "out": 67.843
+   },
+   "text": "记住，先改烦的"
+  },
+  {
+   "rec": {
+    "in": 67.843,
+    "out": 69.01
+   },
+   "text": "不先改大的"
+  },
+  {
+   "rec": {
+    "in": 69.01,
+    "out": 71.048
+   },
+   "text": "大流程牵扯太多部门"
+  },
+  {
+   "rec": {
+    "in": 71.048,
+    "out": 72.86
+   },
+   "text": "改一次要开十个会"
+  },
+  {
+   "rec": {
+    "in": 72.86,
+    "out": 74.033
+   },
+   "text": "烦的小流程"
+  },
+  {
+   "rec": {
+    "in": 74.033,
+    "out": 75.91
+   },
+   "text": "你一个人就能推动"
+  },
+  {
+   "rec": {
+    "in": 75.91,
+    "out": 78.21
+   },
+   "text": "那怎么找到最烦的那条"
+  },
+  {
+   "rec": {
+    "in": 78.21,
+    "out": 78.874
+   },
+   "text": "很简单"
+  },
+  {
+   "rec": {
+    "in": 78.874,
+    "out": 80.424
+   },
+   "text": "问团队一个问题"
+  },
+  {
+   "rec": {
+    "in": 80.424,
+    "out": 83.524
+   },
+   "text": "每周最不想做、但又不得不做的"
+  },
+  {
+   "rec": {
+    "in": 83.524,
+    "out": 84.41
+   },
+   "text": "事是什么"
+  },
+  {
+   "rec": {
+    "in": 84.41,
+    "out": 86.48
+   },
+   "text": "答案出现最多的那条"
+  },
+  {
+   "rec": {
+    "in": 86.48,
+    "out": 87.86
+   },
+   "text": "就是你的起点"
+  },
+  {
+   "rec": {
+    "in": 87.86,
+    "out": 88.629
+   },
+   "text": "选好了"
+  },
+  {
+   "rec": {
+    "in": 88.629,
+    "out": 89.91
+   },
+   "text": "第二步是拆"
+  },
+  {
+   "rec": {
+    "in": 89.91,
+    "out": 91.285
+   },
+   "text": "很多人拆流程"
+  },
+  {
+   "rec": {
+    "in": 91.285,
+    "out": 93.118
+   },
+   "text": "只拆到提交、审批"
+  },
+  {
+   "rec": {
+    "in": 93.118,
+    "out": 94.493
+   },
+   "text": "归档这种步骤"
+  },
+  {
+   "rec": {
+    "in": 94.493,
+    "out": 95.41
+   },
+   "text": "这还不够"
+  },
+  {
+   "rec": {
+    "in": 95.41,
+    "out": 96.58
+   },
+   "text": "要拆到动作"
+  },
+  {
+   "rec": {
+    "in": 96.58,
+    "out": 98.219
+   },
+   "text": "谁，在哪个系统"
+  },
+  {
+   "rec": {
+    "in": 98.219,
+    "out": 99.155
+   },
+   "text": "看了什么"
+  },
+  {
+   "rec": {
+    "in": 99.155,
+    "out": 100.56
+   },
+   "text": "做了什么判断"
+  },
+  {
+   "rec": {
+    "in": 100.56,
+    "out": 101.957
+   },
+   "text": "比如报销审核"
+  },
+  {
+   "rec": {
+    "in": 101.957,
+    "out": 103.821
+   },
+   "text": "真实的动作可能是"
+  },
+  {
+   "rec": {
+    "in": 103.821,
+    "out": 104.752
+   },
+   "text": "打开邮件"
+  },
+  {
+   "rec": {
+    "in": 104.752,
+    "out": 105.684
+   },
+   "text": "下载附件"
+  },
+  {
+   "rec": {
+    "in": 105.684,
+    "out": 106.615
+   },
+   "text": "对照制度"
+  },
+  {
+   "rec": {
+    "in": 106.615,
+    "out": 107.547
+   },
+   "text": "填进系统"
+  },
+  {
+   "rec": {
+    "in": 107.547,
+    "out": 109.41
+   },
+   "text": "再写一句审批意见"
+  },
+  {
+   "rec": {
+    "in": 109.41,
+    "out": 110.739
+   },
+   "text": "最省事的拆法"
+  },
+  {
+   "rec": {
+    "in": 110.739,
+    "out": 113.839
+   },
+   "text": "是请做这件事的同事录一小时屏"
+  },
+  {
+   "rec": {
+    "in": 113.839,
+    "out": 115.61
+   },
+   "text": "你在旁边边看边记"
+  },
+  {
+   "rec": {
+    "in": 115.61,
+    "out": 117.22
+   },
+   "text": "不要听他讲流程"
+  },
+  {
+   "rec": {
+    "in": 117.22,
+    "out": 119.06
+   },
+   "text": "要看他实际怎么做"
+  },
+  {
+   "rec": {
+    "in": 119.06,
+    "out": 121.968
+   },
+   "text": "讲出来的流程和做出来的流程"
+  },
+  {
+   "rec": {
+    "in": 121.968,
+    "out": 123.31
+   },
+   "text": "往往差得很远"
+  },
+  {
+   "rec": {
+    "in": 123.31,
+    "out": 124.681
+   },
+   "text": "拆完你会发现"
+  },
+  {
+   "rec": {
+    "in": 124.681,
+    "out": 126.281
+   },
+   "text": "大概七成的动作"
+  },
+  {
+   "rec": {
+    "in": 126.281,
+    "out": 128.11
+   },
+   "text": "其实是搬运和对照"
+  },
+  {
+   "rec": {
+    "in": 128.11,
+    "out": 129.242
+   },
+   "text": "搬运和对照"
+  },
+  {
+   "rec": {
+    "in": 129.242,
+    "out": 131.28
+   },
+   "text": "恰恰是AI最擅长的"
+  },
+  {
+   "rec": {
+    "in": 131.28,
+    "out": 132.966
+   },
+   "text": "需要拍板的判断"
+  },
+  {
+   "rec": {
+    "in": 132.966,
+    "out": 133.93
+   },
+   "text": "才留给人"
+  },
+  {
+   "rec": {
+    "in": 133.93,
+    "out": 135.158
+   },
+   "text": "所以拆完以后"
+  },
+  {
+   "rec": {
+    "in": 135.158,
+    "out": 137.0
+   },
+   "text": "每个动作打一个标签"
+  },
+  {
+   "rec": {
+    "in": 137.0,
+    "out": 137.819
+   },
+   "text": "①AI做"
+  },
+  {
+   "rec": {
+    "in": 137.819,
+    "out": 139.456
+   },
+   "text": "②AI做、人确认"
+  },
+  {
+   "rec": {
+    "in": 139.456,
+    "out": 140.07
+   },
+   "text": "③人做"
+  },
+  {
+   "rec": {
+    "in": 140.07,
+    "out": 141.57
+   },
+   "text": "第二类最关键"
+  },
+  {
+   "rec": {
+    "in": 141.57,
+    "out": 144.282
+   },
+   "text": "一开始宁可多放几步在“人确认"
+  },
+  {
+   "rec": {
+    "in": 144.282,
+    "out": 146.22
+   },
+   "text": "”，跑稳了再慢慢放手"
+  },
+  {
+   "rec": {
+    "in": 146.22,
+    "out": 147.47
+   },
+   "text": "第三步量"
+  },
+  {
+   "rec": {
+    "in": 147.47,
+    "out": 149.582
+   },
+   "text": "这一步最容易被跳过"
+  },
+  {
+   "rec": {
+    "in": 149.582,
+    "out": 150.52
+   },
+   "text": "也最致命"
+  },
+  {
+   "rec": {
+    "in": 150.52,
+    "out": 151.42
+   },
+   "text": "为什么"
+  },
+  {
+   "rec": {
+    "in": 151.42,
+    "out": 152.302
+   },
+   "text": "因为不量"
+  },
+  {
+   "rec": {
+    "in": 152.302,
+    "out": 155.39
+   },
+   "text": "你永远说不清AI到底帮了多少"
+  },
+  {
+   "rec": {
+    "in": 155.39,
+    "out": 156.034
+   },
+   "text": "改之前"
+  },
+  {
+   "rec": {
+    "in": 156.034,
+    "out": 157.107
+   },
+   "text": "先量三个数"
+  },
+  {
+   "rec": {
+    "in": 157.107,
+    "out": 158.609
+   },
+   "text": "①每单平均耗时"
+  },
+  {
+   "rec": {
+    "in": 158.609,
+    "out": 159.467
+   },
+   "text": "②出错率"
+  },
+  {
+   "rec": {
+    "in": 159.467,
+    "out": 160.54
+   },
+   "text": "③每周总量"
+  },
+  {
+   "rec": {
+    "in": 160.54,
+    "out": 161.698
+   },
+   "text": "用一周时间"
+  },
+  {
+   "rec": {
+    "in": 161.698,
+    "out": 163.319
+   },
+   "text": "老老实实记下来"
+  },
+  {
+   "rec": {
+    "in": 163.319,
+    "out": 164.94
+   },
+   "text": "这就是你的基线"
+  },
+  {
+   "rec": {
+    "in": 164.94,
+    "out": 165.869
+   },
+   "text": "改完以后"
+  },
+  {
+   "rec": {
+    "in": 165.869,
+    "out": 168.19
+   },
+   "text": "再用同样的方法量一周"
+  },
+  {
+   "rec": {
+    "in": 168.19,
+    "out": 171.237
+   },
+   "text": "比如每单从四十分钟降到八分钟"
+  },
+  {
+   "rec": {
+    "in": 171.237,
+    "out": 174.284
+   },
+   "text": "出错率从百分之六降到百分之一"
+  },
+  {
+   "rec": {
+    "in": 174.284,
+    "out": 175.59
+   },
+   "text": "这才叫有结果"
+  },
+  {
+   "rec": {
+    "in": 175.59,
+    "out": 177.178
+   },
+   "text": "有了这两组数字"
+  },
+  {
+   "rec": {
+    "in": 177.178,
+    "out": 178.992
+   },
+   "text": "你去申请更多预算"
+  },
+  {
+   "rec": {
+    "in": 178.992,
+    "out": 180.353
+   },
+   "text": "说服别的部门"
+  },
+  {
+   "rec": {
+    "in": 180.353,
+    "out": 181.94
+   },
+   "text": "都只需要一页纸"
+  },
+  {
+   "rec": {
+    "in": 181.94,
+    "out": 183.626
+   },
+   "text": "没有基线的提效"
+  },
+  {
+   "rec": {
+    "in": 183.626,
+    "out": 184.59
+   },
+   "text": "都是感觉"
+  },
+  {
+   "rec": {
+    "in": 184.59,
+    "out": 186.69
+   },
+   "text": "最后说三个常见的坑"
+  },
+  {
+   "rec": {
+    "in": 186.69,
+    "out": 188.74
+   },
+   "text": "第一，一口气改太多"
+  },
+  {
+   "rec": {
+    "in": 188.74,
+    "out": 190.597
+   },
+   "text": "一次只改一条流程"
+  },
+  {
+   "rec": {
+    "in": 190.597,
+    "out": 191.99
+   },
+   "text": "跑通了再复制"
+  },
+  {
+   "rec": {
+    "in": 191.99,
+    "out": 194.39
+   },
+   "text": "第二，只买工具不改流程"
+  },
+  {
+   "rec": {
+    "in": 194.39,
+    "out": 196.79
+   },
+   "text": "那又回到了更快的打字机"
+  },
+  {
+   "rec": {
+    "in": 196.79,
+    "out": 198.44
+   },
+   "text": "第三，没人负责"
+  },
+  {
+   "rec": {
+    "in": 198.44,
+    "out": 200.015
+   },
+   "text": "每条改过的流程"
+  },
+  {
+   "rec": {
+    "in": 200.015,
+    "out": 202.49
+   },
+   "text": "都要有一个人对结果负责"
+  },
+  {
+   "rec": {
+    "in": 202.49,
+    "out": 204.491
+   },
+   "text": "我见过最可惜的情况"
+  },
+  {
+   "rec": {
+    "in": 204.491,
+    "out": 206.715
+   },
+   "text": "是工具买了、账号开了"
+  },
+  {
+   "rec": {
+    "in": 206.715,
+    "out": 207.827
+   },
+   "text": "培训也做了"
+  },
+  {
+   "rec": {
+    "in": 207.827,
+    "out": 209.161
+   },
+   "text": "三个月后一查"
+  },
+  {
+   "rec": {
+    "in": 209.161,
+    "out": 210.94
+   },
+   "text": "流程还是原来那条"
+  },
+  {
+   "rec": {
+    "in": 210.94,
+    "out": 211.885
+   },
+   "text": "总结一下"
+  },
+  {
+   "rec": {
+    "in": 211.885,
+    "out": 213.54
+   },
+   "text": "选一条烦的流程"
+  },
+  {
+   "rec": {
+    "in": 213.54,
+    "out": 214.485
+   },
+   "text": "拆到动作"
+  },
+  {
+   "rec": {
+    "in": 214.485,
+    "out": 216.14
+   },
+   "text": "改之前先量基线"
+  },
+  {
+   "rec": {
+    "in": 216.14,
+    "out": 217.247
+   },
+   "text": "做到这三步"
+  },
+  {
+   "rec": {
+    "in": 217.247,
+    "out": 220.79
+   },
+   "text": "你的团队就已经走在大多数人前面了"
+  },
+  {
+   "rec": {
+    "in": 220.79,
+    "out": 223.89
+   },
+   "text": "你们团队最烦的那条流程是什么"
+  },
+  {
+   "rec": {
+    "in": 223.89,
+    "out": 225.99
+   },
+   "text": "可以在评论区告诉我"
+  },
+  {
+   "rec": {
+    "in": 225.99,
+    "out": 226.664
+   },
+   "text": "下期讲"
+  },
+  {
+   "rec": {
+    "in": 226.664,
+    "out": 229.36
+   },
+   "text": "怎么把拆好的动作交给AI"
+  },
+  {
+   "rec": {
+    "in": 229.36,
+    "out": 230.185
+   },
+   "text": "关注我"
+  },
+  {
+   "rec": {
+    "in": 230.185,
+    "out": 231.01
+   },
+   "text": "别错过"
+  }
+ ]
+}

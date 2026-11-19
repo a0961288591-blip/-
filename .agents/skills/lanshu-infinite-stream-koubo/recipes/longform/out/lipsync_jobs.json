@@ -1,0 +1,907 @@
+{
+ "version": "istream.lipsync/1",
+ "policy": {
+  "hero": "sync-2-pro",
+  "standard": "latentsync",
+  "small": "musetalk",
+  "hero_roles": [
+   "open",
+   "hook",
+   "emphasis",
+   "cta"
+  ],
+  "small_face_px": 160,
+  "hero_face_px": 300,
+  "min_job_s": 2.0
+ },
+ "duration": 231.61,
+ "seconds_sent": 212.41,
+ "seconds_skipped_hidden": 19.2,
+ "jobs": [
+  {
+   "id": "j01",
+   "rec": {
+    "in": 0.0,
+    "out": 10.45
+   },
+   "seconds": 10.45,
+   "clips": [
+    "c01",
+    "c02",
+    "c03"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 657,
+   "zh_risk": {
+    "rate_cps": 3.64,
+    "bilabial": 3,
+    "labiodental": 0,
+    "latin": [
+     "AI",
+     "Native",
+     "AI",
+     "AI"
+    ],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "夹杂英文 / 缩写（AI、Native）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "上期说了，AI Native 不是把AI塞进旧流程，而是围着AI重新设计流程。那第一步到底从哪下手？",
+   "inputs": {
+    "video": "lipsync/in/01_video.mp4",
+    "audio": "lipsync/in/01_audio.wav"
+   },
+   "output": "lipsync/out/01_synced.mp4"
+  },
+  {
+   "id": "j02",
+   "rec": {
+    "in": 10.45,
+    "out": 17.65
+   },
+   "seconds": 7.2,
+   "clips": [
+    "c04"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 122,
+   "zh_risk": {
+    "rate_cps": 4.44,
+    "bilabial": 1,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "那第一步到底从哪下手？很多团队卡在这里：道理都懂，可周一早上打开电脑，还是不知道该先动哪一块。",
+   "inputs": {
+    "video": "lipsync/in/02_video.mp4",
+    "audio": "lipsync/in/02_audio.wav"
+   },
+   "output": "lipsync/out/02_synced.mp4"
+  },
+  {
+   "id": "j03",
+   "rec": {
+    "in": 17.65,
+    "out": 22.4
+   },
+   "seconds": 4.75,
+   "clips": [
+    "c05"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 230,
+   "zh_risk": {
+    "rate_cps": 4.0,
+    "bilabial": 2,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "很多团队卡在这里：道理都懂，可周一早上打开电脑，还是不知道该先动哪一块。今天用几分钟，把这一步拆成三个动作：选、拆、量。",
+   "inputs": {
+    "video": "lipsync/in/03_video.mp4",
+    "audio": "lipsync/in/03_audio.wav"
+   },
+   "output": "lipsync/out/03_synced.mp4"
+  },
+  {
+   "id": "j04",
+   "rec": {
+    "in": 22.4,
+    "out": 27.2
+   },
+   "seconds": 4.8,
+   "clips": [
+    "c06"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 360,
+   "zh_risk": {
+    "rate_cps": 4.37,
+    "bilabial": 1,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "今天用几分钟，把这一步拆成三个动作：选、拆、量。选一条流程，拆到每一个动作，量出改之前和改之后。",
+   "inputs": {
+    "video": "lipsync/in/04_video.mp4",
+    "audio": "lipsync/in/04_audio.wav"
+   },
+   "output": "lipsync/out/04_synced.mp4"
+  },
+  {
+   "id": "j05",
+   "rec": {
+    "in": 27.2,
+    "out": 33.05
+   },
+   "seconds": 5.85,
+   "clips": [
+    "c07"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 78,
+   "zh_risk": {
+    "rate_cps": 4.62,
+    "bilabial": 2,
+    "labiodental": 2,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×2：看上齿是否压下唇"
+    ]
+   },
+   "text": "选一条流程，拆到每一个动作，量出改之前和改之后。每一步我都给一个能直接照做的方法，最后再说三个最常见的坑。",
+   "inputs": {
+    "video": "lipsync/in/05_video.mp4",
+    "audio": "lipsync/in/05_audio.wav"
+   },
+   "output": "lipsync/out/05_synced.mp4"
+  },
+  {
+   "id": "j06",
+   "rec": {
+    "in": 33.05,
+    "out": 35.9
+   },
+   "seconds": 2.85,
+   "clips": [
+    "c08"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 403,
+   "zh_risk": {
+    "rate_cps": 4.21,
+    "bilabial": 1,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "每一步我都给一个能直接照做的方法，最后再说三个最常见的坑。公司里流程那么多，先改哪条？",
+   "inputs": {
+    "video": "lipsync/in/06_video.mp4",
+    "audio": "lipsync/in/06_audio.wav"
+   },
+   "output": "lipsync/out/06_synced.mp4"
+  },
+  {
+   "id": "j07",
+   "rec": {
+    "in": 35.9,
+    "out": 46.7
+   },
+   "seconds": 10.8,
+   "clips": [
+    "c09",
+    "c10"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 230,
+   "zh_risk": {
+    "rate_cps": 4.35,
+    "bilabial": 4,
+    "labiodental": 2,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×2：看上齿是否压下唇"
+    ]
+   },
+   "text": "公司里流程那么多，先改哪条？我的建议是，先别碰最重要的那条，而是挑一条最烦的。它要满足三个条件：①每周都在发生，②规则说得清楚，③结果能量化。",
+   "inputs": {
+    "video": "lipsync/in/07_video.mp4",
+    "audio": "lipsync/in/07_audio.wav"
+   },
+   "output": "lipsync/out/07_synced.mp4"
+  },
+  {
+   "id": "j08",
+   "rec": {
+    "in": 52.65,
+    "out": 58.8
+   },
+   "seconds": 6.15,
+   "clips": [
+    "c12"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 360,
+   "zh_risk": {
+    "rate_cps": 4.39,
+    "bilabial": 3,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "比如报销审核，每天几十单，规则写在制度里，处理时长一查就有。再比如客服周报，每周五下午固定要做，数据来源固定，格式也固定。",
+   "inputs": {
+    "video": "lipsync/in/08_video.mp4",
+    "audio": "lipsync/in/08_audio.wav"
+   },
+   "output": "lipsync/out/08_synced.mp4"
+  },
+  {
+   "id": "j09",
+   "rec": {
+    "in": 58.8,
+    "out": 66.15
+   },
+   "seconds": 7.35,
+   "clips": [
+    "c13"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 78,
+   "zh_risk": {
+    "rate_cps": 4.49,
+    "bilabial": 3,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "再比如客服周报，每周五下午固定要做，数据来源固定，格式也固定。这两条流程都不起眼，可正因为不起眼，改起来没人反对，改好了大家都能感觉到。",
+   "inputs": {
+    "video": "lipsync/in/09_video.mp4",
+    "audio": "lipsync/in/09_audio.wav"
+   },
+   "output": "lipsync/out/09_synced.mp4"
+  },
+  {
+   "id": "j10",
+   "rec": {
+    "in": 66.15,
+    "out": 78.15
+   },
+   "seconds": 12.0,
+   "clips": [
+    "c14",
+    "c15",
+    "c16"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 587,
+   "zh_risk": {
+    "rate_cps": 4.25,
+    "bilabial": 4,
+    "labiodental": 3,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×3：看上齿是否压下唇"
+    ]
+   },
+   "text": "这两条流程都不起眼，可正因为不起眼，改起来没人反对，改好了大家都能感觉到。记住，先改烦的，不先改大的。大流程牵扯太多部门，改一次要开十个会；烦的小流程，你一个人就能推动。那怎么找到最烦的那条？",
+   "inputs": {
+    "video": "lipsync/in/10_video.mp4",
+    "audio": "lipsync/in/10_audio.wav"
+   },
+   "output": "lipsync/out/10_synced.mp4"
+  },
+  {
+   "id": "j11",
+   "rec": {
+    "in": 78.15,
+    "out": 84.35
+   },
+   "seconds": 6.2,
+   "clips": [
+    "c17"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 122,
+   "zh_risk": {
+    "rate_cps": 4.35,
+    "bilabial": 5,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "那怎么找到最烦的那条？很简单，问团队一个问题：每周最不想做、但又不得不做的事是什么？",
+   "inputs": {
+    "video": "lipsync/in/11_video.mp4",
+    "audio": "lipsync/in/11_audio.wav"
+   },
+   "output": "lipsync/out/11_synced.mp4"
+  },
+  {
+   "id": "j12",
+   "rec": {
+    "in": 84.35,
+    "out": 100.5
+   },
+   "seconds": 16.15,
+   "clips": [
+    "c18",
+    "c19",
+    "c20",
+    "c21"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 360,
+   "zh_risk": {
+    "rate_cps": 4.15,
+    "bilabial": 7,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "很简单，问团队一个问题：每周最不想做、但又不得不做的事是什么？答案出现最多的那条，就是你的起点。选好了，第二步是拆。很多人拆流程，只拆到提交、审批、归档这种步骤，这还不够。要拆到动作：谁，在哪个系统，看了什么，做了什么判断。",
+   "inputs": {
+    "video": "lipsync/in/12_video.mp4",
+    "audio": "lipsync/in/12_audio.wav"
+   },
+   "output": "lipsync/out/12_synced.mp4"
+  },
+  {
+   "id": "j13",
+   "rec": {
+    "in": 109.35,
+    "out": 119.0
+   },
+   "seconds": 9.65,
+   "clips": [
+    "c23",
+    "c24"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 248,
+   "zh_risk": {
+    "rate_cps": 4.46,
+    "bilabial": 6,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "比如报销审核，真实的动作可能是：打开邮件，下载附件，对照制度，填进系统，再写一句审批意见。最省事的拆法，是请做这件事的同事录一小时屏，你在旁边边看边记。不要听他讲流程，要看他实际怎么做。",
+   "inputs": {
+    "video": "lipsync/in/13_video.mp4",
+    "audio": "lipsync/in/13_audio.wav"
+   },
+   "output": "lipsync/out/13_synced.mp4"
+  },
+  {
+   "id": "j14",
+   "rec": {
+    "in": 119.0,
+    "out": 123.25
+   },
+   "seconds": 4.25,
+   "clips": [
+    "c25"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 389,
+   "zh_risk": {
+    "rate_cps": 4.47,
+    "bilabial": 0,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "不要听他讲流程，要看他实际怎么做。讲出来的流程和做出来的流程，往往差得很远。",
+   "inputs": {
+    "video": "lipsync/in/14_video.mp4",
+    "audio": "lipsync/in/14_audio.wav"
+   },
+   "output": "lipsync/out/14_synced.mp4"
+  },
+  {
+   "id": "j15",
+   "rec": {
+    "in": 123.25,
+    "out": 128.05
+   },
+   "seconds": 4.8,
+   "clips": [
+    "c26"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 230,
+   "zh_risk": {
+    "rate_cps": 4.37,
+    "bilabial": 1,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "讲出来的流程和做出来的流程，往往差得很远。拆完你会发现，大概七成的动作，其实是搬运和对照。",
+   "inputs": {
+    "video": "lipsync/in/15_video.mp4",
+    "audio": "lipsync/in/15_audio.wav"
+   },
+   "output": "lipsync/out/15_synced.mp4"
+  },
+  {
+   "id": "j16",
+   "rec": {
+    "in": 128.05,
+    "out": 133.87
+   },
+   "seconds": 5.82,
+   "clips": [
+    "c27"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 360,
+   "zh_risk": {
+    "rate_cps": 3.95,
+    "bilabial": 4,
+    "labiodental": 0,
+    "latin": [
+     "AI"
+    ],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "拆完你会发现，大概七成的动作，其实是搬运和对照。搬运和对照，恰恰是AI最擅长的；需要拍板的判断，才留给人。",
+   "inputs": {
+    "video": "lipsync/in/16_video.mp4",
+    "audio": "lipsync/in/16_audio.wav"
+   },
+   "output": "lipsync/out/16_synced.mp4"
+  },
+  {
+   "id": "j17",
+   "rec": {
+    "in": 133.87,
+    "out": 146.16
+   },
+   "seconds": 12.29,
+   "clips": [
+    "c28",
+    "c29",
+    "c30"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 403,
+   "zh_risk": {
+    "rate_cps": 3.99,
+    "bilabial": 6,
+    "labiodental": 2,
+    "latin": [
+     "AI",
+     "AI"
+    ],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×2：看上齿是否压下唇",
+     "夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "需要拍板的判断，才留给人。所以拆完以后，每个动作打一个标签：①AI做，②AI做、人确认，③人做。第二类最关键。一开始宁可多放几步在“人确认”，跑稳了再慢慢放手。",
+   "inputs": {
+    "video": "lipsync/in/17_video.mp4",
+    "audio": "lipsync/in/17_audio.wav"
+   },
+   "output": "lipsync/out/17_synced.mp4"
+  },
+  {
+   "id": "j18",
+   "rec": {
+    "in": 146.16,
+    "out": 155.33
+   },
+   "seconds": 9.17,
+   "clips": [
+    "c31",
+    "c32",
+    "c33"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 657,
+   "zh_risk": {
+    "rate_cps": 3.93,
+    "bilabial": 8,
+    "labiodental": 0,
+    "latin": [
+     "AI"
+    ],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "一开始宁可多放几步在“人确认”，跑稳了再慢慢放手。第三步，量。这一步最容易被跳过，也最致命。为什么？因为不量，你永远说不清AI到底帮了多少。",
+   "inputs": {
+    "video": "lipsync/in/18_video.mp4",
+    "audio": "lipsync/in/18_audio.wav"
+   },
+   "output": "lipsync/out/18_synced.mp4"
+  },
+  {
+   "id": "j19",
+   "rec": {
+    "in": 155.33,
+    "out": 160.48
+   },
+   "seconds": 5.15,
+   "clips": [
+    "c34"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 248,
+   "zh_risk": {
+    "rate_cps": 4.08,
+    "bilabial": 3,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "因为不量，你永远说不清AI到底帮了多少。改之前，先量三个数：①每单平均耗时，②出错率，③每周总量。",
+   "inputs": {
+    "video": "lipsync/in/19_video.mp4",
+    "audio": "lipsync/in/19_audio.wav"
+   },
+   "output": "lipsync/out/19_synced.mp4"
+  },
+  {
+   "id": "j20",
+   "rec": {
+    "in": 164.88,
+    "out": 168.13
+   },
+   "seconds": 3.25,
+   "clips": [
+    "c36"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 230,
+   "zh_risk": {
+    "rate_cps": 4.31,
+    "bilabial": 0,
+    "labiodental": 2,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×2：看上齿是否压下唇"
+    ]
+   },
+   "text": "用一周时间，老老实实记下来，这就是你的基线。改完以后，再用同样的方法量一周。",
+   "inputs": {
+    "video": "lipsync/in/20_video.mp4",
+    "audio": "lipsync/in/20_audio.wav"
+   },
+   "output": "lipsync/out/20_synced.mp4"
+  },
+  {
+   "id": "j21",
+   "rec": {
+    "in": 168.13,
+    "out": 175.53
+   },
+   "seconds": 7.4,
+   "clips": [
+    "c37"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 360,
+   "zh_risk": {
+    "rate_cps": 4.59,
+    "bilabial": 5,
+    "labiodental": 4,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×4：看上齿是否压下唇"
+    ]
+   },
+   "text": "改完以后，再用同样的方法量一周。比如每单从四十分钟降到八分钟，出错率从百分之六降到百分之一，这才叫有结果。",
+   "inputs": {
+    "video": "lipsync/in/21_video.mp4",
+    "audio": "lipsync/in/21_audio.wav"
+   },
+   "output": "lipsync/out/21_synced.mp4"
+  },
+  {
+   "id": "j22",
+   "rec": {
+    "in": 175.53,
+    "out": 181.88
+   },
+   "seconds": 6.35,
+   "clips": [
+    "c38"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 78,
+   "zh_risk": {
+    "rate_cps": 4.41,
+    "bilabial": 3,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "比如每单从四十分钟降到八分钟，出错率从百分之六降到百分之一，这才叫有结果。有了这两组数字，你去申请更多预算、说服别的部门，都只需要一页纸。",
+   "inputs": {
+    "video": "lipsync/in/22_video.mp4",
+    "audio": "lipsync/in/22_audio.wav"
+   },
+   "output": "lipsync/out/22_synced.mp4"
+  },
+  {
+   "id": "j23",
+   "rec": {
+    "in": 181.88,
+    "out": 186.63
+   },
+   "seconds": 4.75,
+   "clips": [
+    "c39",
+    "c40"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 403,
+   "zh_risk": {
+    "rate_cps": 4.21,
+    "bilabial": 1,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "有了这两组数字，你去申请更多预算、说服别的部门，都只需要一页纸。没有基线的提效，都是感觉。最后说三个常见的坑。",
+   "inputs": {
+    "video": "lipsync/in/23_video.mp4",
+    "audio": "lipsync/in/23_audio.wav"
+   },
+   "output": "lipsync/out/23_synced.mp4"
+  },
+  {
+   "id": "j24",
+   "rec": {
+    "in": 186.63,
+    "out": 191.93
+   },
+   "seconds": 5.3,
+   "clips": [
+    "c41"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 230,
+   "zh_risk": {
+    "rate_cps": 4.15,
+    "bilabial": 1,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "最后说三个常见的坑。第一，一口气改太多。一次只改一条流程，跑通了再复制。",
+   "inputs": {
+    "video": "lipsync/in/24_video.mp4",
+    "audio": "lipsync/in/24_audio.wav"
+   },
+   "output": "lipsync/out/24_synced.mp4"
+  },
+  {
+   "id": "j25",
+   "rec": {
+    "in": 191.93,
+    "out": 202.43
+   },
+   "seconds": 10.5,
+   "clips": [
+    "c42",
+    "c43"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 389,
+   "zh_risk": {
+    "rate_cps": 4.29,
+    "bilabial": 4,
+    "labiodental": 2,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×2：看上齿是否压下唇"
+    ]
+   },
+   "text": "一次只改一条流程，跑通了再复制。第二，只买工具不改流程，那又回到了更快的打字机。第三，没人负责。每条改过的流程，都要有一个人对结果负责。",
+   "inputs": {
+    "video": "lipsync/in/25_video.mp4",
+    "audio": "lipsync/in/25_audio.wav"
+   },
+   "output": "lipsync/out/25_synced.mp4"
+  },
+  {
+   "id": "j26",
+   "rec": {
+    "in": 202.43,
+    "out": 210.88
+   },
+   "seconds": 8.45,
+   "clips": [
+    "c44",
+    "c45"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 78,
+   "zh_risk": {
+    "rate_cps": 4.38,
+    "bilabial": 2,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "每条改过的流程，都要有一个人对结果负责。我见过最可惜的情况，是工具买了、账号开了、培训也做了，三个月后一查，流程还是原来那条。",
+   "inputs": {
+    "video": "lipsync/in/26_video.mp4",
+    "audio": "lipsync/in/26_audio.wav"
+   },
+   "output": "lipsync/out/26_synced.mp4"
+  },
+  {
+   "id": "j27",
+   "rec": {
+    "in": 210.88,
+    "out": 216.08
+   },
+   "seconds": 5.2,
+   "clips": [
+    "c46"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 230,
+   "zh_risk": {
+    "rate_cps": 4.23,
+    "bilabial": 0,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "我见过最可惜的情况，是工具买了、账号开了、培训也做了，三个月后一查，流程还是原来那条。总结一下：选一条烦的流程，拆到动作，改之前先量基线。",
+   "inputs": {
+    "video": "lipsync/in/27_video.mp4",
+    "audio": "lipsync/in/27_audio.wav"
+   },
+   "output": "lipsync/out/27_synced.mp4"
+  },
+  {
+   "id": "j28",
+   "rec": {
+    "in": 216.08,
+    "out": 231.61
+   },
+   "seconds": 15.53,
+   "clips": [
+    "c47",
+    "c48",
+    "c49",
+    "c50"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 403,
+   "zh_risk": {
+    "rate_cps": 4.22,
+    "bilabial": 8,
+    "labiodental": 1,
+    "latin": [
+     "AI"
+    ],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇",
+     "夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "总结一下：选一条烦的流程，拆到动作，改之前先量基线。做到这三步，你的团队就已经走在大多数人前面了。你们团队最烦的那条流程是什么？可以在评论区告诉我。下期讲，怎么把拆好的动作交给AI。关注我，别错过。",
+   "inputs": {
+    "video": "lipsync/in/28_video.mp4",
+    "audio": "lipsync/in/28_audio.wav"
+   },
+   "output": "lipsync/out/28_synced.mp4"
+  }
+ ]
+}

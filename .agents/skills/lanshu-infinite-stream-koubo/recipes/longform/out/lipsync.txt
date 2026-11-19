@@ -1,0 +1,50 @@
+lip-sync: 28 jobs, 212.41s sent, 19.2s skipped (host hidden)
+  j01   0.00- 10.45 (10.45s) tier=hero     engine=sync-2-pro  face≈657px zh-risk=low (3.64 字/s, b/p/m×3, AI/Native)
+       · 夹杂英文 / 缩写（AI、Native）：字母口型和中文不同，单独看一遍
+  j02  10.45- 17.65 ( 7.20s) tier=small    engine=musetalk    face≈122px zh-risk=low (4.44 字/s, b/p/m×1)
+  j03  17.65- 22.40 ( 4.75s) tier=standard engine=latentsync  face≈230px zh-risk=low (4.0 字/s, b/p/m×2)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j04  22.40- 27.20 ( 4.80s) tier=hero     engine=sync-2-pro  face≈360px zh-risk=low (4.37 字/s, b/p/m×1)
+  j05  27.20- 33.05 ( 5.85s) tier=small    engine=musetalk    face≈78px zh-risk=low (4.62 字/s, b/p/m×2)
+       · 唇齿音 f ×2：看上齿是否压下唇
+  j06  33.05- 35.90 ( 2.85s) tier=hero     engine=sync-2-pro  face≈403px zh-risk=low (4.21 字/s, b/p/m×1)
+  j07  35.90- 46.70 (10.80s) tier=standard engine=latentsync  face≈230px zh-risk=low (4.35 字/s, b/p/m×4)
+       · 唇齿音 f ×2：看上齿是否压下唇
+  j08  52.65- 58.80 ( 6.15s) tier=hero     engine=sync-2-pro  face≈360px zh-risk=low (4.39 字/s, b/p/m×3)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j09  58.80- 66.15 ( 7.35s) tier=small    engine=musetalk    face≈78px zh-risk=low (4.49 字/s, b/p/m×3)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j10  66.15- 78.15 (12.00s) tier=hero     engine=sync-2-pro  face≈587px zh-risk=low (4.25 字/s, b/p/m×4)
+       · 唇齿音 f ×3：看上齿是否压下唇
+  j11  78.15- 84.35 ( 6.20s) tier=small    engine=musetalk    face≈122px zh-risk=low (4.35 字/s, b/p/m×5)
+  j12  84.35-100.50 (16.15s) tier=hero     engine=sync-2-pro  face≈360px zh-risk=low (4.15 字/s, b/p/m×7)
+  j13 109.35-119.00 ( 9.65s) tier=standard engine=latentsync  face≈248px zh-risk=low (4.46 字/s, b/p/m×6)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j14 119.00-123.25 ( 4.25s) tier=hero     engine=sync-2-pro  face≈389px zh-risk=low (4.47 字/s, b/p/m×0)
+  j15 123.25-128.05 ( 4.80s) tier=standard engine=latentsync  face≈230px zh-risk=low (4.37 字/s, b/p/m×1)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j16 128.05-133.87 ( 5.82s) tier=hero     engine=sync-2-pro  face≈360px zh-risk=low (3.95 字/s, b/p/m×4, AI)
+       · 夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍
+  j17 133.87-146.16 (12.29s) tier=standard engine=latentsync  face≈403px zh-risk=low (3.99 字/s, b/p/m×6, AI)
+       · 唇齿音 f ×2：看上齿是否压下唇
+       · 夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍
+  j18 146.16-155.33 ( 9.17s) tier=hero     engine=sync-2-pro  face≈657px zh-risk=low (3.93 字/s, b/p/m×8, AI)
+       · 夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍
+  j19 155.33-160.48 ( 5.15s) tier=standard engine=latentsync  face≈248px zh-risk=low (4.08 字/s, b/p/m×3)
+  j20 164.88-168.13 ( 3.25s) tier=standard engine=latentsync  face≈230px zh-risk=low (4.31 字/s, b/p/m×0)
+       · 唇齿音 f ×2：看上齿是否压下唇
+  j21 168.13-175.53 ( 7.40s) tier=hero     engine=sync-2-pro  face≈360px zh-risk=low (4.59 字/s, b/p/m×5)
+       · 唇齿音 f ×4：看上齿是否压下唇
+  j22 175.53-181.88 ( 6.35s) tier=small    engine=musetalk    face≈78px zh-risk=low (4.41 字/s, b/p/m×3)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j23 181.88-186.63 ( 4.75s) tier=hero     engine=sync-2-pro  face≈403px zh-risk=low (4.21 字/s, b/p/m×1)
+  j24 186.63-191.93 ( 5.30s) tier=standard engine=latentsync  face≈230px zh-risk=low (4.15 字/s, b/p/m×1)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j25 191.93-202.43 (10.50s) tier=hero     engine=sync-2-pro  face≈389px zh-risk=low (4.29 字/s, b/p/m×4)
+       · 唇齿音 f ×2：看上齿是否压下唇
+  j26 202.43-210.88 ( 8.45s) tier=small    engine=musetalk    face≈78px zh-risk=low (4.38 字/s, b/p/m×2)
+  j27 210.88-216.08 ( 5.20s) tier=standard engine=latentsync  face≈230px zh-risk=low (4.23 字/s, b/p/m×0)
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j28 216.08-231.61 (15.53s) tier=hero     engine=sync-2-pro  face≈403px zh-risk=low (4.22 字/s, b/p/m×8, AI)
+       · 唇齿音 f ×1：看上齿是否压下唇
+       · 夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍

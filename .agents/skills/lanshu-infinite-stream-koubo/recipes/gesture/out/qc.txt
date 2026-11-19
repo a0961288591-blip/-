@@ -1,0 +1,2 @@
+QC: PASS — 0 FAIL, 0 RISK (must review after lip-sync), 0 WARN
+metrics: clips=18, host_shots=16, unique_shots=16, asl_s=2.7, longest_s=3.55, coverage=0.204, visible_talking_s=47.6

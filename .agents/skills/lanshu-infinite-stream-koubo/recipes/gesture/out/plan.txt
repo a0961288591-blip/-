@@ -1,0 +1,19 @@
+planned 18 clips, 2 MG, 29 captions · 54.2s · profile short · 9:16 · VO delayed 1.4s for the opening
+  c01   0.00-  3.50  full   O01_s1      2.20-  5.70  cut        
+  c02   3.50-  6.99  full   L01_s4     21.50- 25.00  zoomcut    
+  c03   6.99-  9.79  full   K05_s1      0.50-  3.30  zoomcut    
+  c04   9.79- 12.59  full   K01_s2      7.50- 10.30  zoomcut    
+  c05  12.59- 15.84  full   K04_s2      7.50- 10.75  cut        
+  c06  15.84- 20.29  pip    L02_s1      0.50-  4.95  zoomcut    pip:bl0.34
+  c07  20.29- 22.99  split  K04_s3     14.50- 17.20  zoomcut    
+  c08  22.99- 25.69  split  L02_s7     44.50- 47.20  zoomcut    
+  c09  25.69- 28.29  full   K05_s2      7.50- 10.10  cut        
+  c10  28.29- 30.89  full   K03_s3     14.50- 17.10  zoomcut    
+  c11  30.89- 33.12  full   K05_s2     10.25- 12.47  zoomcut    
+  c12  33.12- 35.34  full   L02_s8     51.50- 53.73  cut        
+  c13  35.34- 41.94  hidden —               —        broll_fade hide:broll:同一句话六次抽卡的缩略图墙，逐帧放大手指
+  c14  41.94- 44.04  full   K03_s2      7.50-  9.60  broll_fade 
+  c15  44.04- 46.14  full   K02_s1      0.50-  2.60  cut        
+  c16  46.14- 49.69  full   L02_s4     21.50- 25.05  zoomcut    
+  c17  49.69- 51.95  full   K03_s4     21.50- 23.75  cut        
+  c18  51.95- 54.20  full   K02_s3     14.50- 16.75  cut        

@@ -1,0 +1,58 @@
+{
+ "hf_hook": {
+  "asset": "mg/hf_hook.png",
+  "zone": {
+   "9:16": "upper_band",
+   "16:9": "right_half"
+  },
+  "text": ""
+ },
+ "hf_lot": {
+  "asset": "mg/hf_lot.png",
+  "zone": {
+   "9:16": "full",
+   "16:9": "full"
+  },
+  "text": ""
+ },
+ "hf_spec": {
+  "asset": "mg/hf_spec.png",
+  "zone": {
+   "9:16": "full",
+   "16:9": "full"
+  },
+  "text": ""
+ },
+ "hf_street": {
+  "asset": "mg/hf_street.png",
+  "zone": {
+   "9:16": "full",
+   "16:9": "full"
+  },
+  "text": ""
+ },
+ "hf_area": {
+  "asset": "mg/hf_area.png",
+  "zone": {
+   "9:16": "full",
+   "16:9": "full"
+  },
+  "text": ""
+ },
+ "hf_price": {
+  "asset": "mg/hf_price.png",
+  "zone": {
+   "9:16": "upper_band",
+   "16:9": "right_half"
+  },
+  "text": ""
+ },
+ "hf_cta": {
+  "asset": "mg/hf_cta.png",
+  "zone": {
+   "9:16": "upper_band",
+   "16:9": "right_half"
+  },
+  "text": ""
+ }
+}

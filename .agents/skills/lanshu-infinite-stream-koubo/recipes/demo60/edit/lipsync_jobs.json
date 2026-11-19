@@ -1,0 +1,397 @@
+{
+ "version": "istream.lipsync/1",
+ "policy": {
+  "hero": "sync-2-pro",
+  "standard": "latentsync",
+  "small": "musetalk",
+  "hero_roles": [
+   "open",
+   "hook",
+   "emphasis",
+   "cta"
+  ],
+  "small_face_px": 160,
+  "hero_face_px": 300,
+  "min_job_s": 2.0
+ },
+ "duration": 56.07,
+ "seconds_sent": 46.63,
+ "seconds_skipped_hidden": 9.44,
+ "jobs": [
+  {
+   "id": "j01",
+   "rec": {
+    "in": 0.0,
+    "out": 3.37
+   },
+   "seconds": 3.37,
+   "clips": [
+    "c01"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 276,
+   "zh_risk": {
+    "rate_cps": 6.13,
+    "bilabial": 2,
+    "labiodental": 0,
+    "latin": [
+     "AI"
+    ],
+    "level": "high",
+    "exact_pinyin": false,
+    "tips": [
+     "语速 6.1 字/s 偏快：TTS 放慢 5–10% 或拆句",
+     "夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "全员都开了AI账号，效率怎么还原地踏步？",
+   "inputs": {
+    "video": "lipsync/in/01_video.mp4",
+    "audio": "lipsync/in/01_audio.wav"
+   },
+   "output": "lipsync/out/01_synced.mp4"
+  },
+  {
+   "id": "j02",
+   "rec": {
+    "in": 3.37,
+    "out": 8.87
+   },
+   "seconds": 5.5,
+   "clips": [
+    "c02",
+    "c03"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 276,
+   "zh_risk": {
+    "rate_cps": 6.32,
+    "bilabial": 4,
+    "labiodental": 0,
+    "latin": [],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "语速 6.3 字/s 偏快：TTS 放慢 5–10% 或拆句"
+    ]
+   },
+   "text": "一百多年前，美国工厂把蒸汽机换成电动机，结果产量几乎没涨，一等就是几十年。",
+   "inputs": {
+    "video": "lipsync/in/02_video.mp4",
+    "audio": "lipsync/in/02_audio.wav"
+   },
+   "output": "lipsync/out/02_synced.mp4"
+  },
+  {
+   "id": "j03",
+   "rec": {
+    "in": 8.87,
+    "out": 14.53
+   },
+   "seconds": 5.66,
+   "clips": [
+    "c04",
+    "c05"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 85,
+   "zh_risk": {
+    "rate_cps": 6.07,
+    "bilabial": 4,
+    "labiodental": 1,
+    "latin": [],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "语速 6.1 字/s 偏快：TTS 放慢 5–10% 或拆句",
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "因为他们只换了引擎，电机装在老位置，拖着同一根传动轴，厂房布局一点没变。",
+   "inputs": {
+    "video": "lipsync/in/03_video.mp4",
+    "audio": "lipsync/in/03_audio.wav"
+   },
+   "output": "lipsync/out/03_synced.mp4",
+   "face_lock": [
+    0.6469,
+    0.1222,
+    0.1094,
+    0.2625
+   ],
+   "face_lock_note": "second face (reflection) in frame — pass this box to the engine / crop to it"
+  },
+  {
+   "id": "j04",
+   "rec": {
+    "in": 22.53,
+    "out": 30.57
+   },
+   "seconds": 8.04,
+   "clips": [
+    "c08",
+    "c09",
+    "c10",
+    "c11"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 317,
+   "zh_risk": {
+    "rate_cps": 5.96,
+    "bilabial": 3,
+    "labiodental": 0,
+    "latin": [
+     "AI",
+     "AI",
+     "Native",
+     "AI"
+    ],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "夹杂英文 / 缩写（AI、Native）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "AI也一样，塞进旧流程，它只是台更快的打字机。围着AI重新设计流程，才叫AI Native。你的AI能写代码，却连你的日历都打不开。因为每个工具都要单独对接。",
+   "inputs": {
+    "video": "lipsync/in/04_video.mp4",
+    "audio": "lipsync/in/04_audio.wav"
+   },
+   "output": "lipsync/out/04_synced.mp4",
+   "face_lock": [
+    0.6469,
+    0.1222,
+    0.1094,
+    0.2625
+   ],
+   "face_lock_note": "second face (reflection) in frame — pass this box to the engine / crop to it"
+  },
+  {
+   "id": "j05",
+   "rec": {
+    "in": 30.57,
+    "out": 32.97
+   },
+   "seconds": 2.4,
+   "clips": [
+    "c12"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 276,
+   "zh_risk": {
+    "rate_cps": 3.77,
+    "bilabial": 1,
+    "labiodental": 0,
+    "latin": [
+     "AI"
+    ],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍",
+     "数字读法要和 TTS 一致（十 / 一百 / 10）"
+    ]
+   },
+   "text": "10个AI配10个工具，就是100套。",
+   "inputs": {
+    "video": "lipsync/in/05_video.mp4",
+    "audio": "lipsync/in/05_audio.wav"
+   },
+   "output": "lipsync/out/05_synced.mp4"
+  },
+  {
+   "id": "j06",
+   "rec": {
+    "in": 34.41,
+    "out": 36.45
+   },
+   "seconds": 2.04,
+   "clips": [
+    "c14"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 304,
+   "zh_risk": {
+    "rate_cps": 1.67,
+    "bilabial": 3,
+    "labiodental": 0,
+    "latin": [
+     "MCP",
+     "AI",
+     "USB-C"
+    ],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "闭唇音 b/p/m 密集（3 个）：重点检查是否真正闭合",
+     "夹杂英文 / 缩写（AI、MCP、USB-C）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "MCP就是AI的USB-C。",
+   "inputs": {
+    "video": "lipsync/in/06_video.mp4",
+    "audio": "lipsync/in/06_audio.wav"
+   },
+   "output": "lipsync/out/06_synced.mp4"
+  },
+  {
+   "id": "j07",
+   "rec": {
+    "in": 36.45,
+    "out": 44.37
+   },
+   "seconds": 7.92,
+   "clips": [
+    "c15",
+    "c16",
+    "c17"
+   ],
+   "tier": "standard",
+   "engine": "latentsync",
+   "face_px_out": 284,
+   "zh_risk": {
+    "rate_cps": 4.8,
+    "bilabial": 3,
+    "labiodental": 1,
+    "latin": [
+     "MCP",
+     "AI",
+     "Agent"
+    ],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇",
+     "夹杂英文 / 缩写（AI、Agent、MCP）：字母口型和中文不同，单独看一遍",
+     "数字读法要和 TTS 一致（十 / 一百 / 10）"
+    ]
+   },
+   "text": "工具做成MCP服务器，AI应用当客户端，插上就能用。100套变10加10。接上之后，Agent能拿到三样东西：能调用的工具，能读取的资料，现成的提示模板。",
+   "inputs": {
+    "video": "lipsync/in/07_video.mp4",
+    "audio": "lipsync/in/07_audio.wav"
+   },
+   "output": "lipsync/out/07_synced.mp4",
+   "face_lock": [
+    0.65,
+    0.1222,
+    0.1094,
+    0.2625
+   ],
+   "face_lock_note": "second face (reflection) in frame — pass this box to the engine / crop to it"
+  },
+  {
+   "id": "j08",
+   "rec": {
+    "in": 44.37,
+    "out": 46.99
+   },
+   "seconds": 2.62,
+   "clips": [
+    "c18"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 312,
+   "zh_risk": {
+    "rate_cps": 7.23,
+    "bilabial": 2,
+    "labiodental": 0,
+    "latin": [],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "语速 7.2 字/s 偏快：TTS 放慢 5–10% 或拆句"
+    ]
+   },
+   "text": "接上之后，Agent能拿到三样东西：能调用的工具，能读取的资料，现成的提示模板。",
+   "inputs": {
+    "video": "lipsync/in/08_video.mp4",
+    "audio": "lipsync/in/08_audio.wav"
+   },
+   "output": "lipsync/out/08_synced.mp4",
+   "face_lock": [
+    0.6469,
+    0.1222,
+    0.1094,
+    0.2625
+   ],
+   "face_lock_note": "second face (reflection) in frame — pass this box to the engine / crop to it"
+  },
+  {
+   "id": "j09",
+   "rec": {
+    "in": 46.99,
+    "out": 50.89
+   },
+   "seconds": 3.9,
+   "clips": [
+    "c19"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 83,
+   "zh_risk": {
+    "rate_cps": 5.38,
+    "bilabial": 4,
+    "labiodental": 1,
+    "latin": [
+     "GitHub",
+     "bug"
+    ],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇",
+     "夹杂英文 / 缩写（GitHub、bug）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "比如接上GitHub和数据库，它就能自己查bug、读代码、提修复。",
+   "inputs": {
+    "video": "lipsync/in/09_video.mp4",
+    "audio": "lipsync/in/09_audio.wav"
+   },
+   "output": "lipsync/out/09_synced.mp4"
+  },
+  {
+   "id": "j10",
+   "rec": {
+    "in": 50.89,
+    "out": 56.07
+   },
+   "seconds": 5.18,
+   "clips": [
+    "c20",
+    "c21"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 312,
+   "zh_risk": {
+    "rate_cps": 5.88,
+    "bilabial": 3,
+    "labiodental": 0,
+    "latin": [
+     "Agent"
+    ],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "夹杂英文 / 缩写（Agent）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "一句话，接工具从焊死变成即插即用。关注我，明天讲Agent到底怎么用工具。",
+   "inputs": {
+    "video": "lipsync/in/10_video.mp4",
+    "audio": "lipsync/in/10_audio.wav"
+   },
+   "output": "lipsync/out/10_synced.mp4"
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+cost (USD, 2026-10 public prices — verify): video 0.93 min
+  plates: 60s generated once → capex $19–42, amortised over 300 finished minutes → $0.06–0.13 for this video
+  lip-sync: 50.75s sent, 5.32s skipped (host hidden) → $3.31–4.93
+     j01 sync-2-pro     8.87s  $0.65–0.96
+     j02 musetalk       5.66s  $0.01–0.04
+     j03 sync-2-pro    36.22s  $2.66–3.92
+  TOTAL $3.37–5.06  → $3.61–5.41 per finished minute (TTS excluded: every route needs it)
+  naive baseline (whole video on sync-2-pro, no routing): $4.11–6.07
+  alternatives per finished minute: 全量生成：通用视频模型 + 原生音频 $10–25; 全量生成：音频驱动数字人 SaaS $5–8; 现成数字分身服务（本人出镜） $1–1.5

@@ -1,0 +1,168 @@
+{
+ "version": "istream.lipsync/1",
+ "policy": {
+  "hero": "sync-2-pro",
+  "standard": "latentsync",
+  "small": "musetalk",
+  "hero_roles": [
+   "open",
+   "hook",
+   "emphasis",
+   "cta"
+  ],
+  "small_face_px": 160,
+  "hero_face_px": 300,
+  "min_job_s": 2.0
+ },
+ "duration": 56.07,
+ "seconds_sent": 50.75,
+ "seconds_skipped_hidden": 5.32,
+ "jobs": [
+  {
+   "id": "j01",
+   "rec": {
+    "in": 0.0,
+    "out": 8.87
+   },
+   "seconds": 8.87,
+   "clips": [
+    "c01",
+    "c02",
+    "c03"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 504,
+   "zh_risk": {
+    "rate_cps": 6.26,
+    "bilabial": 6,
+    "labiodental": 0,
+    "latin": [
+     "AI"
+    ],
+    "level": "high",
+    "exact_pinyin": false,
+    "tips": [
+     "语速 6.3 字/s 偏快：TTS 放慢 5–10% 或拆句",
+     "夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍"
+    ]
+   },
+   "text": "全员都开了AI账号，效率怎么还原地踏步？一百多年前，美国工厂把蒸汽机换成电动机，结果产量几乎没涨，一等就是几十年。",
+   "inputs": {
+    "video": "lipsync/in/01_video.mp4",
+    "audio": "lipsync/in/01_audio.wav"
+   },
+   "output": "lipsync/out/01_synced.mp4",
+   "face_lock": [
+    0.6469,
+    0.1222,
+    0.1094,
+    0.2625
+   ],
+   "face_lock_note": "second face (reflection) in frame — pass this box to the engine / crop to it"
+  },
+  {
+   "id": "j02",
+   "rec": {
+    "in": 8.87,
+    "out": 14.53
+   },
+   "seconds": 5.66,
+   "clips": [
+    "c04",
+    "c05"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 167,
+   "zh_risk": {
+    "rate_cps": 6.07,
+    "bilabial": 4,
+    "labiodental": 1,
+    "latin": [],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "语速 6.1 字/s 偏快：TTS 放慢 5–10% 或拆句",
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "因为他们只换了引擎，电机装在老位置，拖着同一根传动轴，厂房布局一点没变。",
+   "inputs": {
+    "video": "lipsync/in/02_video.mp4",
+    "audio": "lipsync/in/02_audio.wav"
+   },
+   "output": "lipsync/out/02_synced.mp4"
+  },
+  {
+   "id": "j03",
+   "rec": {
+    "in": 19.85,
+    "out": 56.07
+   },
+   "seconds": 36.22,
+   "clips": [
+    "c07",
+    "c08",
+    "c09",
+    "c10",
+    "c11",
+    "c12",
+    "c13",
+    "c14",
+    "c15",
+    "c16",
+    "c17",
+    "c18",
+    "c19",
+    "c20",
+    "c21"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 580,
+   "zh_risk": {
+    "rate_cps": 5.33,
+    "bilabial": 20,
+    "labiodental": 2,
+    "latin": [
+     "AI",
+     "AI",
+     "AI",
+     "Native",
+     "AI",
+     "AI",
+     "MCP",
+     "AI",
+     "USB-C",
+     "MCP",
+     "AI",
+     "Agent",
+     "GitHub",
+     "bug",
+     "Agent"
+    ],
+    "level": "mid",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×2：看上齿是否压下唇",
+     "夹杂英文 / 缩写（AI、Agent、GitHub、MCP、Native、USB-C、bug）：字母口型和中文不同，单独看一遍",
+     "数字读法要和 TTS 一致（十 / 一百 / 10）"
+    ]
+   },
+   "text": "AI也一样，塞进旧流程，它只是台更快的打字机。围着AI重新设计流程，才叫AI Native。你的AI能写代码，却连你的日历都打不开。因为每个工具都要单独对接。10个AI配10个工具，就是100套。换个平台还得重写。MCP就是AI的USB-C。工具做成MCP服务器，AI应用当客户端，插上就能用。100套变10加10。接上之后，Agent能拿到三样东西：能调用的工具，能读取的资料，现成的提示模板。比如接上GitHub和数据库，它就能自己查bug、读代码、提修复。一句话，接工具从焊死变成即插即用。关注我，明天讲Agent到底怎么用工具。",
+   "inputs": {
+    "video": "lipsync/in/03_video.mp4",
+    "audio": "lipsync/in/03_audio.wav"
+   },
+   "output": "lipsync/out/03_synced.mp4",
+   "face_lock": [
+    0.6469,
+    0.1222,
+    0.1094,
+    0.2625
+   ],
+   "face_lock_note": "second face (reflection) in frame — pass this box to the engine / crop to it"
+  }
+ ]
+}

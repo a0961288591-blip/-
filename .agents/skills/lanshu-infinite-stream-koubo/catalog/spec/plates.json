@@ -1,0 +1,182 @@
+{
+ "catalog": "spec",
+ "note": "expected tags from prompts/library.json — verify after generation (provenance=spec)",
+ "plates": [
+  {
+   "id": "K01",
+   "file": null,
+   "name": "liz01_o1_mcu_916_koubo-main_mid_30s_v01.mov",
+   "title": "近景口播主底板",
+   "framing": "mcu",
+   "aspect": "9:16",
+   "size": [
+    1080,
+    1920
+   ],
+   "fps": 25,
+   "duration": 30,
+   "source_type": "generated",
+   "prompt_ref": "prompts/library.json#plates.K01",
+   "status": "spec — not generated yet",
+   "home_pose_times": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.0
+   ]
+  },
+  {
+   "id": "K02",
+   "file": null,
+   "name": "liz01_o1_ms_916_koubo-hands_mid_30s_v01.mov",
+   "title": "中景口播底板（自然手势）",
+   "framing": "ms",
+   "aspect": "9:16",
+   "size": [
+    1080,
+    1920
+   ],
+   "fps": 25,
+   "duration": 30,
+   "source_type": "generated",
+   "prompt_ref": "prompts/library.json#plates.K02",
+   "status": "spec — not generated yet",
+   "home_pose_times": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.0
+   ]
+  },
+  {
+   "id": "K03",
+   "file": null,
+   "name": "liz01_o1_mcu_916_koubo-alt_mid_30s_v01.mov",
+   "title": "近景口播变体（可选）",
+   "framing": "mcu",
+   "aspect": "9:16",
+   "size": [
+    1080,
+    1920
+   ],
+   "fps": 25,
+   "duration": 30,
+   "source_type": "generated",
+   "prompt_ref": "prompts/library.json#plates.K03",
+   "status": "spec — not generated yet",
+   "home_pose_times": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.0
+   ]
+  },
+  {
+   "id": "K01H",
+   "file": null,
+   "name": "liz01_o1_mcu_169_koubo-main-left_mid_30s_v01.mov",
+   "title": "近景口播主底板 · 横屏左三分之一",
+   "framing": "mcu",
+   "aspect": "16:9",
+   "size": [
+    1920,
+    1080
+   ],
+   "fps": 25,
+   "duration": 30,
+   "source_type": "generated",
+   "prompt_ref": "prompts/library.json#plates.K01H",
+   "status": "spec — not generated yet",
+   "home_pose_times": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.0
+   ]
+  },
+  {
+   "id": "L01",
+   "file": null,
+   "name": "liz01_o1_mcu_916_koubo-long_mid_60s_v01.mov",
+   "title": "近景 60 秒长底板（8 段不重样）",
+   "framing": "mcu",
+   "aspect": "9:16",
+   "size": [
+    1080,
+    1920
+   ],
+   "fps": 25,
+   "duration": 60,
+   "source_type": "generated",
+   "prompt_ref": "prompts/library.json#plates.L01",
+   "status": "spec — not generated yet",
+   "home_pose_times": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.5,
+    37.5,
+    44.5,
+    51.5,
+    59.0
+   ]
+  },
+  {
+   "id": "L02",
+   "file": null,
+   "name": "liz01_o1_ms_916_koubo-hands-long_mid_60s_v01.mov",
+   "title": "中景 60 秒长底板（含左右托举位）",
+   "framing": "ms",
+   "aspect": "9:16",
+   "size": [
+    1080,
+    1920
+   ],
+   "fps": 25,
+   "duration": 60,
+   "source_type": "generated",
+   "prompt_ref": "prompts/library.json#plates.L02",
+   "status": "spec — not generated yet",
+   "home_pose_times": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.5,
+    37.5,
+    44.5,
+    51.5,
+    59.0
+   ]
+  },
+  {
+   "id": "O01",
+   "file": null,
+   "name": "liz01_o1_mcu_916_opening-set_mid_30s_v01.mov",
+   "title": "开场入镜底板（4 种自然开场）",
+   "framing": "mcu",
+   "aspect": "9:16",
+   "size": [
+    1080,
+    1920
+   ],
+   "fps": 25,
+   "duration": 30,
+   "source_type": "generated",
+   "prompt_ref": "prompts/library.json#plates.O01",
+   "status": "spec — not generated yet",
+   "home_pose_times": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.0
+   ]
+  }
+ ]
+}

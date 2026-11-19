@@ -1,0 +1,40 @@
+# Local credentials and private identity material
+.env
+.env.*
+!.env.example
+!.env.sample
+credentials.json
+auth.json
+token.json
+*.pem
+*.key
+*.p12
+*.pfx
+dh-library/00_identity/*
+!dh-library/00_identity/.gitkeep
+
+# Python, editors and render caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+.idea/
+.vscode/
+build/
+build916/
+source/
+footage/
+
+# Generated media; only the bundled public examples are versioned
+*.mov
+*.mp4
+*.wav
+*.mp3
+*.m4a
+!recipes/demo60/vo.m4a
+!recipes/demo60/out/demo60_preview_169.mp4
+!recipes/demo60/out/916/demo60_preview_916.mp4
+!recipes/demo60/edit/demo60_edited_169.mp4
+!recipes/longform/out/longform_animatic_916.mp4

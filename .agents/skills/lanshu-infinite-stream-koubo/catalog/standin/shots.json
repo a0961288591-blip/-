@@ -1,0 +1,1120 @@
+{
+ "shots": [
+  {
+   "id": "P01_s1",
+   "plate": "P01",
+   "src": {
+    "in": 0.05,
+    "out": 5.75
+   },
+   "home_in": false,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2125,
+     0.1389,
+     0.1062,
+     0.255
+    ],
+    "face_h_px": 184
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "smile_greet",
+      "t": 0.2
+     },
+     {
+      "g": "palms_open",
+      "t": 2.8
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "open",
+     "hook",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     1.0,
+     2.33,
+     3.22,
+     4.15
+    ],
+    "keep_out": [
+     [
+      2.3,
+      3.6
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.18,
+    "speech_frac": 0.91
+   },
+   "notes": "开口即在场：第一帧就看镜头带笑；2.8s 双手在胸前摊开。右半区干净，适合放钩子卡。"
+  },
+  {
+   "id": "P01_s2",
+   "plate": "P01",
+   "src": {
+    "in": 5.75,
+    "out": 11.567
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2172,
+     0.1306,
+     0.1062,
+     0.255
+    ],
+    "face_h_px": 184
+   },
+   "performance": {
+    "energy": 4,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "palm_present",
+      "t": 2.35,
+      "zone": "right_half"
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "emphasis",
+     "explain",
+     "data"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     2.17,
+     4.33
+    ],
+    "keep_out": [
+     [
+      2.2,
+      4.8
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.39,
+    "speech_frac": 0.85
+   },
+   "notes": "8.1–10.5s 右手掌心向上托举（原片 MCP = USB-C 的托举位）：动效可以“放在她手上”。0.15s 处有一次眨眼。"
+  },
+  {
+   "id": "P01_s3",
+   "plate": "P01",
+   "src": {
+    "in": 11.567,
+    "out": 15.417
+   },
+   "home_in": true,
+   "home_out": false,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2188,
+     0.1222,
+     0.1062,
+     0.255
+    ],
+    "face_h_px": 184
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "hands_together",
+      "t": 1.9
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "summary",
+     "narrate",
+     "list"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     1.38
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.29,
+    "speech_frac": 0.89
+   },
+   "notes": "胸前合手，带笑，适合总结。末尾 0.05s 接原片叠化，已在切点外。"
+  },
+  {
+   "id": "P01_s4",
+   "plate": "P01",
+   "src": {
+    "in": 15.883,
+    "out": 20.483
+   },
+   "home_in": false,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "right",
+    "face_box": [
+     0.65,
+     0.1222,
+     0.1094,
+     0.2625
+    ],
+    "face_h_px": 189
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "nod",
+      "t": 2.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "list",
+     "narrate"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     1.57,
+     2.58
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "left_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid",
+    "second_face": true
+   },
+   "quality": {
+    "qc": 3,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.18,
+    "speech_frac": 0.95
+   },
+   "notes": "机位 2：主播在右，左半边是她的半透明玻璃倒影（第二张脸）。口型引擎要锁定右侧主脸；MG 叠在倒影上最自然。"
+  },
+  {
+   "id": "P01_s5",
+   "plate": "P01",
+   "src": {
+    "in": 20.483,
+    "out": 24.683
+   },
+   "home_in": true,
+   "home_out": false,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "right",
+    "face_box": [
+     0.6469,
+     0.1222,
+     0.1094,
+     0.2625
+    ],
+    "face_h_px": 189
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "story",
+     "narrate",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     1.72
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "left_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid",
+    "second_face": true
+   },
+   "quality": {
+    "qc": 3,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.28,
+    "speech_frac": 0.87
+   },
+   "notes": "机位 2 续。动作少，适合举例 / 叙述。"
+  },
+  {
+   "id": "P01_s6",
+   "plate": "P01",
+   "src": {
+    "in": 24.783,
+    "out": 29.973
+   },
+   "home_in": false,
+   "home_out": false,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "center",
+    "face_box": [
+     0.4344,
+     0.125,
+     0.1125,
+     0.27
+    ],
+    "face_h_px": 194
+   },
+   "performance": {
+    "energy": 2,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "smile_greet",
+      "t": 4.9
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "out_of_frame",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "summary",
+     "close",
+     "cta",
+     "emphasis"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     0.95,
+     1.57,
+     2.4,
+     3.05,
+     3.77
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band",
+     "left_strip",
+     "right_strip"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 0.74,
+    "speech_frac": 0.95
+   },
+   "notes": "机位 3：居中近景，左侧是一块世界地图显示器（可贴屏）。结尾带笑，适合收尾 / 关注。"
+  },
+  {
+   "id": "P02_s1",
+   "plate": "P02",
+   "src": {
+    "in": 0.05,
+    "out": 5.817
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2031,
+     0.1333,
+     0.1062,
+     0.255
+    ],
+    "face_h_px": 184
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "smile_greet",
+      "t": 0.2
+     },
+     {
+      "g": "palm_single",
+      "t": 2.9
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "open",
+     "hook",
+     "narrate"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     1.43,
+     2.97,
+     3.9,
+     5.12
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.01,
+    "speech_frac": 0.88
+   },
+   "notes": "开口即在场，带笑；2.9s 右手在画面下缘摊掌。"
+  },
+  {
+   "id": "P02_s2",
+   "plate": "P02",
+   "src": {
+    "in": 5.817,
+    "out": 9.967
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2,
+     0.1333,
+     0.1062,
+     0.255
+    ],
+    "face_h_px": 184
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "hands_together",
+      "t": 2.0
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "story",
+     "narrate",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     1.47,
+     2.67
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.27,
+    "speech_frac": 0.94
+   },
+   "notes": "胸前轻握，平稳叙述。"
+  },
+  {
+   "id": "P02_s3",
+   "plate": "P02",
+   "src": {
+    "in": 9.967,
+    "out": 14.15
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2031,
+     0.1333,
+     0.1062,
+     0.255
+    ],
+    "face_h_px": 184
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "neutral",
+    "gestures": [
+     {
+      "g": "palms_open",
+      "t": 2.1
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "explain",
+     "list",
+     "narrate"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     1.35,
+     2.58,
+     3.3
+    ],
+    "keep_out": [
+     [
+      1.6,
+      3.0
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": []
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.29,
+    "speech_frac": 1.0
+   },
+   "notes": "胸前摊手讲解。"
+  },
+  {
+   "id": "P02_s4",
+   "plate": "P02",
+   "src": {
+    "in": 14.15,
+    "out": 19.35
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2016,
+     0.1333,
+     0.1094,
+     0.2625
+    ],
+    "face_h_px": 189
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "confident",
+    "gestures": [],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "narrate",
+     "emphasis"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     2.23,
+     3.85
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 3,
+    "defects": [
+     {
+      "type": "baked_overlay",
+      "in": 0.38,
+      "out": 5.2,
+      "zone": "right_half"
+     }
+    ]
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.29,
+    "speech_frac": 0.96
+   },
+   "notes": "右半区 0.38s 起有烧录乱码图表：16:9 只能用开头 0.38s；竖屏 9:16 裁到人物即可整段使用。"
+  },
+  {
+   "id": "P02_s5",
+   "plate": "P02",
+   "src": {
+    "in": 19.35,
+    "out": 24.483
+   },
+   "home_in": true,
+   "home_out": true,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2,
+     0.1306,
+     0.1062,
+     0.255
+    ],
+    "face_h_px": 184
+   },
+   "performance": {
+    "energy": 4,
+    "emotion": "confident",
+    "gestures": [
+     {
+      "g": "palm_present",
+      "t": 2.3,
+      "zone": "right_half"
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "chest",
+    "head_motion": "medium",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "emphasis",
+     "explain"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     2.08,
+     3.45
+    ],
+    "keep_out": [
+     [
+      1.8,
+      3.4
+     ]
+    ]
+   },
+   "mg": {
+    "safe_zones": [
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 3,
+    "defects": [
+     {
+      "type": "baked_overlay",
+      "in": 0,
+      "out": 5.13,
+      "zone": "right_half"
+     }
+    ]
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.78,
+    "speech_frac": 0.91
+   },
+   "notes": "整段右半区有烧录乱码面板（只能竖屏裁切使用）；2.3s 手伸向右侧。"
+  },
+  {
+   "id": "P02_s6",
+   "plate": "P02",
+   "src": {
+    "in": 24.483,
+    "out": 29.973
+   },
+   "home_in": true,
+   "home_out": false,
+   "camera": {
+    "framing": "mcu",
+    "aspect": "16:9",
+    "angle": "front",
+    "subject_pos": "left",
+    "face_box": [
+     0.2062,
+     0.1278,
+     0.1094,
+     0.2625
+    ],
+    "face_h_px": 189
+   },
+   "performance": {
+    "energy": 3,
+    "emotion": "warm",
+    "gestures": [
+     {
+      "g": "smile_greet",
+      "t": 4.8
+     }
+    ],
+    "gaze": "lens",
+    "mouth": "talking",
+    "hands": "low",
+    "head_motion": "small",
+    "speaking": true
+   },
+   "edit": {
+    "roles": [
+     "close",
+     "cta",
+     "question"
+    ],
+    "transitions_in": [
+     "cut",
+     "zoomcut",
+     "broll_fade"
+    ],
+    "layouts": [
+     "full",
+     "split",
+     "pip"
+    ],
+    "position": "any",
+    "scale_max": 1.15,
+    "reversible": "no",
+    "mirror_ok": false,
+    "cut_points": [
+     0.0,
+     1.05,
+     2.53,
+     3.87,
+     4.38
+    ],
+    "keep_out": []
+   },
+   "mg": {
+    "safe_zones": [
+     "right_half",
+     "upper_band"
+    ]
+   },
+   "lipsync": {
+    "ready": true,
+    "jaw": "mid"
+   },
+   "quality": {
+    "qc": 4,
+    "defects": [
+     {
+      "type": "baked_overlay",
+      "in": 0,
+      "out": 1.35,
+      "zone": "right_half"
+     }
+    ]
+   },
+   "usage": {
+    "times_used": 0,
+    "last_used": null
+   },
+   "provenance": "reviewed",
+   "metrics": {
+    "motion_rel": 1.33,
+    "speech_frac": 0.87
+   },
+   "notes": "前 1.35s 右半区还有乱码残留；之后干净，带笑收尾。"
+  }
+ ]
+}

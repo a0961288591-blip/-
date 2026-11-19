@@ -1,0 +1,1370 @@
+{
+ "version": "istream.timeline/1",
+ "meta": {
+  "title": "AI 落地两件事：先重排流程，再接上接口（替身底板演示 · 56 秒）",
+  "fps": 30,
+  "aspect": "16:9",
+  "size": [
+   1920,
+   1080
+  ],
+  "duration": 56.07,
+  "profile": "short",
+  "seed": 7,
+  "vo": "../vo.m4a",
+  "vo_offset": 0.0,
+  "coverage_planned": 0.182,
+  "generator": "istream 1.0",
+  "warnings": [
+   "slot 46.99-50.89: relaxed to PiP (zone supply exhausted) — add plates with that side free"
+  ]
+ },
+ "beats": [
+  {
+   "id": "b01",
+   "text": "全员都开了AI账号，效率怎么还原地踏步？",
+   "chapter": "第一讲 · AI Native",
+   "roles": [
+    "open",
+    "hook"
+   ],
+   "start": 0.45,
+   "end": 3.06,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "an_hook"
+   ],
+   "timing": "aligned",
+   "rate_cps": 6.13
+  },
+  {
+   "id": "b02",
+   "text": "一百多年前，美国工厂把蒸汽机换成电动机，结果产量几乎没涨，一等就是几十年。",
+   "chapter": "第一讲 · AI Native",
+   "roles": [
+    "story"
+   ],
+   "start": 3.43,
+   "end": 8.65,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "an_history"
+   ],
+   "timing": "aligned",
+   "rate_cps": 6.32
+  },
+  {
+   "id": "b03",
+   "text": "因为他们只换了引擎，电机装在老位置，拖着同一根传动轴，厂房布局一点没变。",
+   "chapter": "第一讲 · AI Native",
+   "roles": [
+    "explain"
+   ],
+   "start": 8.93,
+   "end": 14.2,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "an_floor"
+   ],
+   "timing": "aligned",
+   "rate_cps": 6.07
+  },
+  {
+   "id": "b04",
+   "text": "直到有人给每台机器配上小电机，按流程重排整个车间，效率才真正起飞。",
+   "chapter": "第一讲 · AI Native",
+   "roles": [
+    "story"
+   ],
+   "start": 14.59,
+   "end": 19.51,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": "车间按流程重排的俯拍",
+   "mg": [
+    "an_flow"
+   ],
+   "timing": "aligned",
+   "rate_cps": 6.1
+  },
+  {
+   "id": "b05",
+   "text": "AI也一样，塞进旧流程，它只是台更快的打字机。",
+   "chapter": "第一讲 · AI Native",
+   "roles": [
+    "emphasis"
+   ],
+   "start": 19.91,
+   "end": 23.03,
+   "pause_after": 0.0,
+   "kw_times": {
+    "打字机": [
+     22.6,
+     23.03
+    ]
+   },
+   "broll": null,
+   "mg": [
+    "an_typewriter"
+   ],
+   "timing": "aligned",
+   "rate_cps": 5.77
+  },
+  {
+   "id": "b06",
+   "text": "围着AI重新设计流程，才叫AI Native。",
+   "chapter": "第一讲 · AI Native",
+   "roles": [
+    "emphasis"
+   ],
+   "start": 23.28,
+   "end": 25.64,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "an_native"
+   ],
+   "timing": "aligned",
+   "rate_cps": 4.24
+  },
+  {
+   "id": "b07",
+   "text": "你的AI能写代码，却连你的日历都打不开。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "hook"
+   ],
+   "start": 26.16,
+   "end": 28.56,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "mcp_hook"
+   ],
+   "timing": "aligned",
+   "rate_cps": 6.67
+  },
+  {
+   "id": "b08",
+   "text": "因为每个工具都要单独对接。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "explain"
+   ],
+   "start": 28.79,
+   "end": 30.41,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "aligned",
+   "rate_cps": 7.41
+  },
+  {
+   "id": "b09",
+   "text": "10个AI配10个工具，就是100套。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "data"
+   ],
+   "start": 30.63,
+   "end": 32.75,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "mcp_100"
+   ],
+   "timing": "aligned",
+   "rate_cps": 3.77
+  },
+  {
+   "id": "b10",
+   "text": "换个平台还得重写。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "narrate"
+   ],
+   "start": 33.03,
+   "end": 34.13,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [],
+   "timing": "aligned",
+   "rate_cps": 7.27
+  },
+  {
+   "id": "b11",
+   "text": "MCP就是AI的USB-C。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "emphasis"
+   ],
+   "start": 34.47,
+   "end": 36.27,
+   "pause_after": 0.0,
+   "kw_times": {
+    "USB-C": [
+     35.65,
+     36.25
+    ]
+   },
+   "broll": null,
+   "mg": [
+    "mcp_usbc",
+    "mcp_palm"
+   ],
+   "timing": "aligned",
+   "rate_cps": 1.67
+  },
+  {
+   "id": "b12",
+   "text": "工具做成MCP服务器，AI应用当客户端，插上就能用。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "explain"
+   ],
+   "start": 36.51,
+   "end": 40.08,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "mcp_arch"
+   ],
+   "timing": "aligned",
+   "rate_cps": 5.04
+  },
+  {
+   "id": "b13",
+   "text": "100套变10加10。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "data"
+   ],
+   "start": 40.27,
+   "end": 41.43,
+   "pause_after": 0.0,
+   "kw_times": {
+    "10加10": [
+     40.95,
+     41.43
+    ]
+   },
+   "broll": null,
+   "mg": [
+    "mcp_1010"
+   ],
+   "timing": "aligned",
+   "rate_cps": 2.59
+  },
+  {
+   "id": "b14",
+   "text": "接上之后，Agent能拿到三样东西：能调用的工具，能读取的资料，现成的提示模板。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "list"
+   ],
+   "start": 41.81,
+   "end": 46.72,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "mcp_three"
+   ],
+   "timing": "aligned",
+   "rate_cps": 6.11
+  },
+  {
+   "id": "b15",
+   "text": "比如接上GitHub和数据库，它就能自己查bug、读代码、提修复。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "story"
+   ],
+   "start": 47.05,
+   "end": 50.77,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "mcp_flow"
+   ],
+   "timing": "aligned",
+   "rate_cps": 5.38
+  },
+  {
+   "id": "b16",
+   "text": "一句话，接工具从焊死变成即插即用。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "summary"
+   ],
+   "start": 50.95,
+   "end": 53.48,
+   "pause_after": 0.0,
+   "kw_times": {
+    "即插即用": [
+     52.47,
+     53.48
+    ]
+   },
+   "broll": null,
+   "mg": [
+    "mcp_slam"
+   ],
+   "timing": "aligned",
+   "rate_cps": 5.93
+  },
+  {
+   "id": "b17",
+   "text": "关注我，明天讲Agent到底怎么用工具。",
+   "chapter": "第二讲 · MCP",
+   "roles": [
+    "cta"
+   ],
+   "start": 53.75,
+   "end": 55.98,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "mcp_cta"
+   ],
+   "timing": "aligned",
+   "rate_cps": 5.83
+  }
+ ],
+ "host": [
+  {
+   "id": "c01",
+   "rec": {
+    "in": 0.0,
+    "out": 3.37
+   },
+   "layout": "full",
+   "beats": [
+    "b01"
+   ],
+   "why": "opening: the host must appear naturally in the first frames | pick P02_s1 score 5.01: role open, emotion warm",
+   "role": "open",
+   "shot": "P02_s1",
+   "plate": "P02",
+   "src": {
+    "in": 0.05,
+    "out": 3.42
+   },
+   "ops": [],
+   "transition_in": "cut",
+   "locked": true
+  },
+  {
+   "id": "c02",
+   "rec": {
+    "in": 3.37,
+    "out": 6.12
+   },
+   "layout": "full",
+   "beats": [
+    "b02"
+   ],
+   "why": "manual swap → P01_s2",
+   "role": "story",
+   "shot": "P01_s2",
+   "plate": "P01",
+   "src": {
+    "in": 8.8,
+    "out": 11.55
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c03",
+   "rec": {
+    "in": 6.12,
+    "out": 8.87
+   },
+   "layout": "full",
+   "beats": [
+    "b02"
+   ],
+   "why": "manual swap → P01_s3",
+   "role": "story",
+   "shot": "P01_s3",
+   "plate": "P01",
+   "src": {
+    "in": 11.567,
+    "out": 14.317
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c04",
+   "rec": {
+    "in": 8.87,
+    "out": 11.7
+   },
+   "layout": "pip",
+   "beats": [
+    "b03"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 15%–35%) | pick P01_s5 score 1.49: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "P01_s5",
+   "plate": "P01",
+   "src": {
+    "in": 20.483,
+    "out": 23.313
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.3,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c05",
+   "rec": {
+    "in": 11.7,
+    "out": 14.53
+   },
+   "layout": "pip",
+   "beats": [
+    "b03"
+   ],
+   "why": "coverage balance: content-led beat with host PiP (target 15%–35%) | pick P02_s3 score 1.78: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "P02_s3",
+   "plate": "P02",
+   "src": {
+    "in": 11.217,
+    "out": 14.047
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.3,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c06",
+   "rec": {
+    "in": 14.53,
+    "out": 19.85
+   },
+   "layout": "hidden",
+   "beats": [
+    "b04"
+   ],
+   "why": "B-roll '车间按流程重排的俯拍' covers the sentence",
+   "role": "story",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "broll:车间按流程重排的俯拍"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c07",
+   "rec": {
+    "in": 19.85,
+    "out": 22.53
+   },
+   "layout": "hidden",
+   "beats": [
+    "b05"
+   ],
+   "why": "lead-in before the keyword | pick P01_s3 score -0.44: ",
+   "role": "emphasis",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "broll:旧流程里塞进AI的办公室"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c08",
+   "rec": {
+    "in": 22.53,
+    "out": 23.22
+   },
+   "layout": "punch",
+   "beats": [
+    "b05"
+   ],
+   "why": "punch-in on keyword at 22.60s | pick P01_s2 score 5.02: role emphasis, emotion confident",
+   "role": "emphasis",
+   "shot": "P01_s2",
+   "plate": "P01",
+   "src": {
+    "in": 5.75,
+    "out": 6.44
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.15,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c09",
+   "rec": {
+    "in": 23.22,
+    "out": 26.1
+   },
+   "layout": "punch",
+   "beats": [
+    "b06"
+   ],
+   "why": "script hint | pick P01_s1 score -3.89: ",
+   "role": "emphasis",
+   "shot": "P01_s1",
+   "plate": "P01",
+   "src": {
+    "in": 1.05,
+    "out": 3.93
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.15,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c10",
+   "rec": {
+    "in": 26.1,
+    "out": 28.73
+   },
+   "layout": "full",
+   "beats": [
+    "b07"
+   ],
+   "why": "hook | pick P02_s1 score 0.04: role hook, emotion warm",
+   "role": "hook",
+   "shot": "P02_s1",
+   "plate": "P02",
+   "src": {
+    "in": 0.05,
+    "out": 2.68
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.1,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c11",
+   "rec": {
+    "in": 28.73,
+    "out": 30.57
+   },
+   "layout": "full",
+   "beats": [
+    "b08"
+   ],
+   "why": "explain | pick P01_s5 score -0.15: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "P01_s5",
+   "plate": "P01",
+   "src": {
+    "in": 20.483,
+    "out": 22.323
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c12",
+   "rec": {
+    "in": 30.57,
+    "out": 32.97
+   },
+   "layout": "split",
+   "beats": [
+    "b09"
+   ],
+   "why": "data: host + side content zone | pick P02_s2 score -1.76: emotion neutral",
+   "role": "data",
+   "shot": "P02_s2",
+   "plate": "P02",
+   "src": {
+    "in": 5.817,
+    "out": 8.217
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c13",
+   "rec": {
+    "in": 32.97,
+    "out": 34.41
+   },
+   "layout": "hidden",
+   "beats": [
+    "b10"
+   ],
+   "why": "narrate | pick P01_s4 score 3.22: role narrate, emotion neutral",
+   "role": "narrate",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "card"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c14",
+   "rec": {
+    "in": 34.41,
+    "out": 36.45
+   },
+   "layout": "full",
+   "beats": [
+    "b11"
+   ],
+   "why": "script hint | pick P01_s2 score 2.20: role emphasis, emotion confident",
+   "role": "emphasis",
+   "shot": "P01_s2",
+   "plate": "P01",
+   "src": {
+    "in": 6.75,
+    "out": 8.79
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.1,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c15",
+   "rec": {
+    "in": 36.45,
+    "out": 40.21
+   },
+   "layout": "full",
+   "beats": [
+    "b12"
+   ],
+   "why": "explain | pick P01_s1 score -2.53: role explain",
+   "role": "explain",
+   "shot": "P01_s1",
+   "plate": "P01",
+   "src": {
+    "in": 0.05,
+    "out": 3.81
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c16",
+   "rec": {
+    "in": 40.21,
+    "out": 41.75
+   },
+   "layout": "split",
+   "beats": [
+    "b13"
+   ],
+   "why": "data: host + side content zone | pick P02_s3 score 2.77: emotion neutral",
+   "role": "data",
+   "shot": "P02_s3",
+   "plate": "P02",
+   "src": {
+    "in": 11.467,
+    "out": 13.007
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c17",
+   "rec": {
+    "in": 41.75,
+    "out": 44.37
+   },
+   "layout": "split",
+   "beats": [
+    "b14"
+   ],
+   "why": "list: host + side content zone | pick P01_s4 score 4.91: role list, emotion neutral",
+   "role": "list",
+   "shot": "P01_s4",
+   "plate": "P01",
+   "src": {
+    "in": 15.883,
+    "out": 18.503
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c18",
+   "rec": {
+    "in": 44.37,
+    "out": 46.99
+   },
+   "layout": "split",
+   "beats": [
+    "b14"
+   ],
+   "why": "list: host + side content zone · jump-cut part 2/2 | pick P01_s5 score 1.84: emotion neutral",
+   "role": "list",
+   "shot": "P01_s5",
+   "plate": "P01",
+   "src": {
+    "in": 20.483,
+    "out": 23.103
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.1,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c19",
+   "rec": {
+    "in": 46.99,
+    "out": 50.89
+   },
+   "layout": "pip",
+   "beats": [
+    "b15"
+   ],
+   "why": "story · relaxed to PiP: library has no fresh shot with this MG zone free | pick P02_s2 score 4.48: role story, emotion neutral",
+   "role": "story",
+   "shot": "P02_s2",
+   "plate": "P02",
+   "src": {
+    "in": 5.817,
+    "out": 9.717
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "br",
+     "size": 0.3,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c20",
+   "rec": {
+    "in": 50.89,
+    "out": 53.69
+   },
+   "layout": "punch",
+   "beats": [
+    "b16"
+   ],
+   "why": "summary | pick P01_s6 score 2.81: role summary",
+   "role": "summary",
+   "shot": "P01_s3",
+   "plate": "P01",
+   "src": {
+    "in": 11.567,
+    "out": 14.367
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.1,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c21",
+   "rec": {
+    "in": 53.69,
+    "out": 56.07
+   },
+   "layout": "full",
+   "beats": [
+    "b17"
+   ],
+   "why": "cta | pick P02_s6 score 2.82: role cta, emotion warm",
+   "role": "cta",
+   "shot": "P02_s6",
+   "plate": "P02",
+   "src": {
+    "in": 26.983,
+    "out": 29.363
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.1,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "zoomcut"
+  }
+ ],
+ "mg": [
+  {
+   "id": "m01",
+   "template": "an_hook",
+   "asset": "../mg/an_hook.png",
+   "rec": {
+    "in": 0.4,
+    "out": 3.33
+   },
+   "zone": "right_half",
+   "beat": "b01",
+   "text": "全员开通 AI · 效率≈0"
+  },
+  {
+   "id": "m02",
+   "template": "an_history",
+   "asset": "../mg/an_history.png",
+   "rec": {
+    "in": 3.38,
+    "out": 8.83
+   },
+   "zone": "right_half",
+   "beat": "b02",
+   "text": "1900s · 蒸汽机 → 电动机"
+  },
+  {
+   "id": "m03",
+   "template": "an_floor",
+   "asset": "../mg/an_floor.png",
+   "rec": {
+    "in": 8.88,
+    "out": 14.49
+   },
+   "zone": "right_half",
+   "beat": "b03",
+   "text": "只换引擎 · 布局没变"
+  },
+  {
+   "id": "m04",
+   "template": "an_flow",
+   "asset": "../mg/an_flow.png",
+   "rec": {
+    "in": 14.54,
+    "out": 19.81
+   },
+   "zone": "right_half",
+   "beat": "b04",
+   "text": "按流程重排 → 起飞"
+  },
+  {
+   "id": "m05",
+   "template": "an_typewriter",
+   "asset": "../mg/an_typewriter.png",
+   "rec": {
+    "in": 19.86,
+    "out": 23.18
+   },
+   "zone": "right_half",
+   "beat": "b05",
+   "text": "更快的打字机"
+  },
+  {
+   "id": "m06",
+   "template": "an_native",
+   "asset": "../mg/an_native.png",
+   "rec": {
+    "in": 23.23,
+    "out": 25.94
+   },
+   "zone": "right_half",
+   "beat": "b06",
+   "text": "AI Native"
+  },
+  {
+   "id": "m07",
+   "template": "mcp_hook",
+   "asset": "../mg/mcp_hook.png",
+   "rec": {
+    "in": 26.11,
+    "out": 28.69
+   },
+   "zone": "right_half",
+   "beat": "b07",
+   "text": "会写代码 · 打不开日历"
+  },
+  {
+   "id": "m08",
+   "template": "mcp_100",
+   "asset": "../mg/mcp_100.png",
+   "rec": {
+    "in": 30.58,
+    "out": 32.93
+   },
+   "zone": "right_half",
+   "beat": "b09",
+   "text": "10 × 10 = 100 套"
+  },
+  {
+   "id": "m09",
+   "template": "mcp_usbc",
+   "asset": "../mg/mcp_usbc.png",
+   "rec": {
+    "in": 34.42,
+    "out": 36.41
+   },
+   "zone": "right_half",
+   "beat": "b11",
+   "text": "MCP = AI 的 USB-C"
+  },
+  {
+   "id": "m10",
+   "template": "mcp_palm",
+   "asset": "../mg/mcp_palm.png",
+   "rec": {
+    "in": 35.6,
+    "out": 36.41
+   },
+   "zone": "right_half",
+   "beat": "b11",
+   "text": ""
+  },
+  {
+   "id": "m11",
+   "template": "mcp_arch",
+   "asset": "../mg/mcp_arch.png",
+   "rec": {
+    "in": 36.46,
+    "out": 40.17
+   },
+   "zone": "right_half",
+   "beat": "b12",
+   "text": "服务器 ↔ MCP ↔ 客户端"
+  },
+  {
+   "id": "m12",
+   "template": "mcp_1010",
+   "asset": "../mg/mcp_1010.png",
+   "rec": {
+    "in": 40.22,
+    "out": 41.71
+   },
+   "zone": "right_half",
+   "beat": "b13",
+   "text": "100 → 10 + 10"
+  },
+  {
+   "id": "m13",
+   "template": "mcp_three",
+   "asset": "../mg/mcp_three.png",
+   "rec": {
+    "in": 41.76,
+    "out": 46.95
+   },
+   "zone": "left_half",
+   "beat": "b14",
+   "text": "工具 · 资料 · 提示模板"
+  },
+  {
+   "id": "m14",
+   "template": "mcp_flow",
+   "asset": "../mg/mcp_flow.png",
+   "rec": {
+    "in": 47.0,
+    "out": 50.85
+   },
+   "zone": "left_half",
+   "beat": "b15",
+   "text": "查 bug → 读代码 → 提修复"
+  },
+  {
+   "id": "m15",
+   "template": "mcp_slam",
+   "asset": "../mg/mcp_slam.png",
+   "rec": {
+    "in": 50.9,
+    "out": 53.65
+   },
+   "zone": "right_strip",
+   "beat": "b16",
+   "text": "即插即用"
+  },
+  {
+   "id": "m16",
+   "template": "mcp_cta",
+   "asset": "../mg/mcp_cta.png",
+   "rec": {
+    "in": 53.7,
+    "out": 56.28
+   },
+   "zone": "right_strip",
+   "beat": "b17",
+   "text": "关注 · 明天讲 Agent"
+  },
+  {
+   "id": "m17",
+   "template": "card",
+   "asset": null,
+   "rec": {
+    "in": 32.97,
+    "out": 34.41
+   },
+   "zone": "full",
+   "text": "换个平台 = 重写一遍"
+  },
+  {
+   "id": "m18",
+   "template": "keyword_pop",
+   "asset": null,
+   "rec": {
+    "in": 26.1,
+    "out": 28.7
+   },
+   "zone": "lower_third",
+   "text": "会写代码 ≠ 会用工具"
+  }
+ ],
+ "broll": [
+  {
+   "id": "r01",
+   "query": "车间按流程重排的俯拍",
+   "rec": {
+    "in": 14.53,
+    "out": 19.85
+   },
+   "status": "to_source"
+  }
+ ],
+ "captions": [
+  {
+   "rec": {
+    "in": 0.45,
+    "out": 1.755
+   },
+   "text": "全员都开了AI账号"
+  },
+  {
+   "rec": {
+    "in": 1.755,
+    "out": 3.06
+   },
+   "text": "效率怎么还原地踏步"
+  },
+  {
+   "rec": {
+    "in": 3.43,
+    "out": 4.221
+   },
+   "text": "一百多年前"
+  },
+  {
+   "rec": {
+    "in": 4.221,
+    "out": 6.277
+   },
+   "text": "美国工厂把蒸汽机换成电动机"
+  },
+  {
+   "rec": {
+    "in": 6.277,
+    "out": 7.543
+   },
+   "text": "结果产量几乎没涨"
+  },
+  {
+   "rec": {
+    "in": 7.543,
+    "out": 8.65
+   },
+   "text": "一等就是几十年"
+  },
+  {
+   "rec": {
+    "in": 8.93,
+    "out": 10.412
+   },
+   "text": "因为他们只换了引擎"
+  },
+  {
+   "rec": {
+    "in": 10.412,
+    "out": 11.565
+   },
+   "text": "电机装在老位置"
+  },
+  {
+   "rec": {
+    "in": 11.565,
+    "out": 12.883
+   },
+   "text": "拖着同一根传动轴"
+  },
+  {
+   "rec": {
+    "in": 12.883,
+    "out": 14.2
+   },
+   "text": "厂房布局一点没变"
+  },
+  {
+   "rec": {
+    "in": 14.59,
+    "out": 16.886
+   },
+   "text": "直到有人给每台机器配上小电机"
+  },
+  {
+   "rec": {
+    "in": 16.886,
+    "out": 18.362
+   },
+   "text": "按流程重排整个车间"
+  },
+  {
+   "rec": {
+    "in": 18.362,
+    "out": 19.51
+   },
+   "text": "效率才真正起飞"
+  },
+  {
+   "rec": {
+    "in": 19.91,
+    "out": 20.69
+   },
+   "text": "AI也一样"
+  },
+  {
+   "rec": {
+    "in": 20.69,
+    "out": 21.47
+   },
+   "text": "塞进旧流程"
+  },
+  {
+   "rec": {
+    "in": 21.47,
+    "out": 23.03
+   },
+   "text": "它只是台更快的打字机"
+  },
+  {
+   "rec": {
+    "in": 23.28,
+    "out": 24.404
+   },
+   "text": "围着AI重新设计流程"
+  },
+  {
+   "rec": {
+    "in": 24.404,
+    "out": 25.64
+   },
+   "text": "才叫AI Native"
+  },
+  {
+   "rec": {
+    "in": 26.16,
+    "out": 27.227
+   },
+   "text": "你的AI能写代码"
+  },
+  {
+   "rec": {
+    "in": 27.227,
+    "out": 28.56
+   },
+   "text": "却连你的日历都打不开"
+  },
+  {
+   "rec": {
+    "in": 28.79,
+    "out": 30.41
+   },
+   "text": "因为每个工具都要单独对接"
+  },
+  {
+   "rec": {
+    "in": 30.63,
+    "out": 32.002
+   },
+   "text": "10个AI配10个工具"
+  },
+  {
+   "rec": {
+    "in": 32.002,
+    "out": 32.75
+   },
+   "text": "就是100套"
+  },
+  {
+   "rec": {
+    "in": 33.03,
+    "out": 34.13
+   },
+   "text": "换个平台还得重写"
+  },
+  {
+   "rec": {
+    "in": 34.47,
+    "out": 36.27
+   },
+   "text": "MCP就是AI的USB-C"
+  },
+  {
+   "rec": {
+    "in": 36.51,
+    "out": 38.062
+   },
+   "text": "工具做成MCP服务器"
+  },
+  {
+   "rec": {
+    "in": 38.062,
+    "out": 39.304
+   },
+   "text": "AI应用当客户端"
+  },
+  {
+   "rec": {
+    "in": 39.304,
+    "out": 40.08
+   },
+   "text": "插上就能用"
+  },
+  {
+   "rec": {
+    "in": 40.27,
+    "out": 41.43
+   },
+   "text": "100套变10加10"
+  },
+  {
+   "rec": {
+    "in": 41.81,
+    "out": 42.371
+   },
+   "text": "接上之后"
+  },
+  {
+   "rec": {
+    "in": 42.371,
+    "out": 44.055
+   },
+   "text": "Agent能拿到三样东西"
+  },
+  {
+   "rec": {
+    "in": 44.055,
+    "out": 44.896
+   },
+   "text": "能调用的工具"
+  },
+  {
+   "rec": {
+    "in": 44.896,
+    "out": 45.738
+   },
+   "text": "能读取的资料"
+  },
+  {
+   "rec": {
+    "in": 45.738,
+    "out": 46.72
+   },
+   "text": "现成的提示模板"
+  },
+  {
+   "rec": {
+    "in": 47.05,
+    "out": 48.73
+   },
+   "text": "比如接上GitHub和数据库"
+  },
+  {
+   "rec": {
+    "in": 48.73,
+    "out": 50.77
+   },
+   "text": "它就能自己查bug、读代码、提修复"
+  },
+  {
+   "rec": {
+    "in": 50.95,
+    "out": 51.456
+   },
+   "text": "一句话"
+  },
+  {
+   "rec": {
+    "in": 51.456,
+    "out": 53.48
+   },
+   "text": "接工具从焊死变成即插即用"
+  },
+  {
+   "rec": {
+    "in": 53.75,
+    "out": 54.122
+   },
+   "text": "关注我"
+  },
+  {
+   "rec": {
+    "in": 54.122,
+    "out": 55.98
+   },
+   "text": "明天讲Agent到底怎么用工具"
+  }
+ ]
+}

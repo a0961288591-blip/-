@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>華鳳口播 MG 卡</title>
+<!-- 7 張 1080×1920 透明 PNG 卡的原始檔。改字後執行：node mg/build.mjs -->
+<style>
+  :root { --navy:#0b1a2e; --navy2:#13263f; --gold:#e8b64c; --cream:#fff8ec; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { width:1080px; height:1920px; background:transparent; overflow:hidden;
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei","WenQuanYi Zen Hei",sans-serif; color:var(--cream); }
+  .card { position:absolute; inset:0; display:none; }
+  .card.on { display:block; }
+  /* 主播圓窗（pip bl 0.34）位置：x48 y785 直徑367，這裡挖空讓主播露出 */
+  .hole { -webkit-mask:radial-gradient(circle at 231px 968px, transparent 196px, #000 198px); mask:radial-gradient(circle at 231px 968px, transparent 196px, #000 198px); }
+  .ring { position:absolute; left:29px; top:766px; width:404px; height:404px; border-radius:50%; border:5px solid var(--gold); }
+  .full { background:radial-gradient(120% 80% at 50% 30%, #17304f 0%, var(--navy) 70%); }
+  .grid { position:absolute; inset:0; opacity:.18;
+    background-image:linear-gradient(#e8b64c33 1px,transparent 1px),linear-gradient(90deg,#e8b64c33 1px,transparent 1px);
+    background-size:60px 60px; }
+  .band { position:absolute; left:48px; right:48px; top:110px; padding:30px 40px 34px; border-radius:26px;
+    background:rgba(11,26,46,.86); border:3px solid var(--gold); box-shadow:0 18px 50px rgba(0,0,0,.45); }
+  .kick { font-size:40px; font-weight:700; color:var(--gold); letter-spacing:.12em; }
+  .big { font-size:104px; font-weight:900; line-height:1.12; letter-spacing:.02em; }
+  .mid { font-size:60px; font-weight:800; }
+  .gold { color:var(--gold); }
+  .src { position:absolute; right:40px; bottom:300px; font-size:24px; color:#fff8ecaa; }
+  .chip { display:inline-block; padding:10px 26px; border-radius:999px; background:var(--gold); color:var(--navy);
+    font-size:40px; font-weight:900; }
+  .title { position:absolute; left:60px; right:60px; top:90px; }
+  .stamp { position:absolute; padding:14px 28px; border:7px solid #e04a3a; color:#e04a3a; font-size:62px; font-weight:900;
+    border-radius:14px; transform:rotate(-9deg); background:#fff8ecee; letter-spacing:.06em; }
+  .spec { display:flex; flex-direction:column; gap:26px; position:absolute; left:60px; right:60px; top:330px; }
+  .spec .row { display:flex; align-items:baseline; justify-content:space-between; padding:18px 44px; border-radius:24px;
+    background:var(--navy2); border:2px solid #e8b64c88; }
+  .spec .k { font-size:46px; color:#fff8eccc; font-weight:700; }
+  .spec .v { font-size:96px; font-weight:900; color:var(--gold); }
+  .note { font-size:36px; color:#fff8ecbb; }
+  .photos { position:absolute; left:40px; right:40px; top:120px; display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .ph { position:relative; height:560px; border-radius:22px; overflow:hidden; border:4px solid var(--cream); }
+  .ph img { width:100%; height:100%; object-fit:cover; }
+  .ph .chip { position:absolute; left:16px; bottom:16px; font-size:34px; }
+  .ph.wide { grid-column:span 2; height:520px; }
+  .map { position:absolute; left:40px; right:40px; top:300px; height:860px; border-radius:26px; overflow:hidden; border:4px solid var(--gold); }
+  .map img { width:100%; height:100%; object-fit:cover; object-position:60% 40%; }
+  .pin { position:absolute; width:46px; height:46px; border-radius:50%; background:#e04a3a; border:6px solid var(--cream);
+    box-shadow:0 0 0 22px #e04a3a55, 0 0 0 48px #e04a3a22; }
+</style>
+</head>
+<body>
+
+<!-- 開場：主播全畫面，上方標題帶 -->
+<section class="card" id="hf_hook">
+  <div class="band">
+    <div class="kick">鳳山 · 華鳳特區</div>
+    <div class="big">難得釋出<span class="gold">美建地</span></div>
+    <div style="margin-top:14px"><span class="chip">295 坪 · 雙面臨路</span></div>
+  </div>
+</section>
+
+<!-- 基地：主播隱藏，地界套衛星圖 -->
+<section class="card full" id="hf_lot">
+  <div class="grid"></div>
+  <div class="title"><div class="kick">基地規模</div><div class="big">295<span class="mid"> 坪</span></div></div>
+  <svg viewBox="0 0 1080 1920" width="1080" height="1920" style="position:absolute;inset:0" font-family="inherit">
+    <defs><clipPath id="lotClip"><polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8"/></clipPath></defs>
+    <rect x="0" y="404" width="1080" height="66" fill="#22384f"/>
+    <line x1="0" y1="437" x2="1080" y2="437" stroke="#fff8ec55" stroke-width="4" stroke-dasharray="26 22"/>
+    <rect x="24" y="410" width="210" height="54" rx="8" fill="#0b1a2e"/><text x="129" y="450" text-anchor="middle" fill="#fff8ec" font-size="38" font-weight="800">鎮北北巷</text>
+    <rect x="0" y="1386" width="1080" height="66" fill="#22384f"/>
+    <line x1="0" y1="1419" x2="1080" y2="1419" stroke="#fff8ec55" stroke-width="4" stroke-dasharray="26 22"/>
+    <rect x="24" y="1392" width="210" height="54" rx="8" fill="#0b1a2e"/><text x="129" y="1432" text-anchor="middle" fill="#fff8ec" font-size="38" font-weight="800">文龍東路</text>
+    <g transform="translate(207 500) scale(1.25)">
+      <g clip-path="url(#lotClip)">
+        <g transform="translate(-232.66 -360.95) rotate(8.419)">
+          <image href="../../huafeng-land-vo/assets/img/sat.jpg" x="-663.0" y="-682.7" width="2057.2" height="1997.5"/>
+        </g>
+        <rect x="-20" y="-20" width="600" height="760" fill="#e8b64c" fill-opacity=".12"/>
+      </g>
+      <polygon points="0,0 532.7,0 528.7,696.9 397.9,692.7 395.1,335.5 1.4,331.8" fill="none" stroke="#e8b64c" stroke-width="7" stroke-linejoin="round"/>
+    </g>
+    <!-- 北側面寬 -->
+    <line x1="207" y1="482" x2="873" y2="482" stroke="#e8b64c" stroke-width="4"/>
+    <rect x="420" y="452" width="240" height="60" rx="30" fill="#e8b64c"/>
+    <text x="540" y="496" text-anchor="middle" fill="#0b1a2e" font-size="38" font-weight="900">面寬 34.7m</text>
+  </svg>
+  <div class="stamp" style="left:610px;top:1000px">雙面臨路</div>
+  <div class="src" style="bottom:160px">© Google ・ 地界依地籍圖套繪</div>
+</section>
+
+<!-- 規格：內容全畫面，主播在左下圓窗 -->
+<section class="card full hole" id="hf_spec">
+  <div class="grid"></div>
+  <div class="title"><div class="kick">使用分區與強度</div><div class="mid">好排<span class="gold">電梯店住</span></div></div>
+  <div class="spec" style="top:245px;gap:14px">
+    <div class="row"><span class="k">使用分區</span><span class="v">住三之一</span></div>
+    <div class="row"><span class="k">建蔽率</span><span class="v">60%</span></div>
+    <div class="row"><span class="k">容積率</span><span class="v">240%</span></div>
+  </div>
+  <div class="ring"></div>
+  <div class="spec" style="top:820px;left:470px">
+    <div class="row" style="flex-direction:column;align-items:flex-start;gap:8px;padding:26px 34px">
+      <span class="k" style="font-size:38px">基準容積樓地板<br>≈ 295 坪 × 240%</span>
+      <span class="v" style="font-size:84px">約 708 坪</span>
+      <span class="note">實際依建管規定</span>
+    </div>
+  </div>
+</section>
+
+<!-- 街景：主播隱藏 -->
+<section class="card full" id="hf_street">
+  <div class="photos">
+    <div class="ph wide"><img src="../../huafeng-land-vo/assets/img/sv-wenlong.jpg"><span class="chip">文龍東路</span></div>
+    <div class="ph"><img src="../../huafeng-land-vo/assets/img/sv-lane1.jpg"><span class="chip">基地現況</span></div>
+    <div class="ph"><img src="../../huafeng-land-vo/assets/img/sv-entry.jpg"><span class="chip">鎮北北巷</span></div>
+  </div>
+  <div class="src" style="bottom:300px">街景 © Google</div>
+</section>
+
+<!-- 區位：內容全畫面，主播在左下圓窗 -->
+<section class="card full hole" id="hf_area">
+  <div class="grid"></div>
+  <div class="title"><div class="kick">區位</div><div class="mid">文山 × 華鳳 <span class="gold">雙特區交界</span></div></div>
+  <div class="map" style="height:450px;top:290px"><img src="../../huafeng-land-vo/assets/img/map.jpg"></div>
+  <div class="ring"></div>
+  <div style="position:absolute;left:470px;right:40px;top:820px;text-align:left">
+    <div class="mid" style="font-size:52px;line-height:1.3;margin-bottom:22px">生活機能成熟<br><span class="gold">雙特區</span>交界</div>
+    <span class="chip">捷運黃線延伸題材</span>
+    <div class="note" style="margin-top:12px">路線以主管機關公告為準</div>
+  </div>
+  <div class="src" style="bottom:300px">地圖 © Google</div>
+</section>
+
+<!-- 價格：主播推近，上方價格帶 -->
+<section class="card" id="hf_price">
+  <div class="band">
+    <div class="kick">單價</div>
+    <div class="big"><span class="gold">50</span> 萬<span class="mid">/坪</span></div>
+    <div class="mid" style="margin-top:6px">總價約 <span class="gold">1.48 億</span></div>
+  </div>
+</section>
+
+<!-- 片尾 -->
+<section class="card" id="hf_cta">
+  <div class="band">
+    <div class="kick">歡迎來電洽詢</div>
+    <div class="mid">永慶不動產 大順鴻麗店</div>
+    <div class="big" style="font-size:80px;white-space:nowrap">陳庭妍 <span class="gold">0961-288-591</span></div>
+  </div>
+</section>
+
+<script>
+  const id = new URLSearchParams(location.search).get('card');
+  document.getElementById(id)?.classList.add('on');
+</script>
+</body>
+</html>

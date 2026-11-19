@@ -1,0 +1,51 @@
+planned 50 clips, 25 MG, 140 captions · 231.61s · profile long · 9:16 · VO delayed 1.4s for the opening
+  c01   0.00-  4.08  full   O01_s1      2.20-  6.28  cut        
+  c02   4.08-  8.15  full   L01_s4     21.50- 25.57  zoomcut    
+  c03   8.15- 10.45  punch  K01H_s2     7.50-  9.80  zoomcut    crop9:16@0.315,scale1.12
+  c04  10.45- 17.65  pip    K03_s4     21.50- 28.70  zoomcut    pip:bl0.34
+  c05  17.65- 22.40  full   L02_s1      0.50-  5.25  cut        
+  c06  22.40- 27.20  split  L01_s6     37.50- 42.30  cut        
+  c07  27.20- 33.05  pip    K02_s1      0.50-  6.35  cut        pip:bl0.34
+  c08  33.05- 35.90  punch  K01_s2      8.00- 10.85  mgwipe     scale1.12
+  c09  35.90- 40.90  full   K02_s3     14.50- 19.50  cut        
+  c10  40.90- 46.70  split  L02_s7     44.50- 50.30  zoomcut    
+  c11  46.70- 52.65  hidden —               —        broll_fade hide:broll:报销单据堆成山的桌面
+  c12  52.65- 58.80  full   K03_s1      0.50-  6.65  broll_fade 
+  c13  58.80- 66.15  pip    L02_s4     21.50- 28.85  cut        pip:bl0.34
+  c14  66.15- 68.95  punch  L01_s2     10.00- 12.80  cut        scale1.12
+  c15  68.95- 75.85  full   K01H_s1     0.50-  7.40  zoomcut    crop9:16@0.315
+  c16  75.85- 78.15  punch  L01_s3     18.25- 20.55  zoomcut    scale1.12
+  c17  78.15- 84.35  pip    L01_s1      0.50-  6.70  zoomcut    pip:bl0.34
+  c18  84.35- 87.80  full   L01_s7     44.50- 47.95  zoomcut    
+  c19  87.80- 89.85  full   O01_s4     21.50- 23.55  mgwipe     
+  c20  89.85- 95.35  full   K03_s3     14.50- 20.00  zoomcut    
+  c21  95.35-100.50  punch  K02_s4     23.25- 28.40  cut        scale1.12
+  c22 100.50-109.35  hidden —               —        broll_fade hide:broll:审核员在两个系统之间来回切换的屏幕录制
+  c23 109.35-115.55  full   L02_s2      7.50- 13.70  broll_fade 
+  c24 115.55-119.00  full   L02_s6     39.25- 42.70  zoomcut    scale1.08
+  c25 119.00-123.25  full   L01_s4     21.50- 25.75  cut        scale1.08
+  c26 123.25-128.05  split  L02_s5     30.50- 35.30  cut        
+  c27 128.05-133.87  full   K01_s1      0.50-  6.32  cut        
+  c28 133.87-140.01  split  K02_s2      8.36- 14.50  cut        
+  c29 140.01-141.51  punch  L01_s6     42.50- 44.00  cut        scale1.12
+  c30 141.51-146.16  full   L02_s1      0.50-  5.15  cut        scale1.08
+  c31 146.16-150.46  full   O01_s4     23.75- 28.05  mgwipe     
+  c32 150.46-151.36  punch  K01H_s2    10.00- 10.90  zoomcut    crop9:16@0.315,scale1.12
+  c33 151.36-155.33  full   L01_s1      0.50-  4.47  zoomcut    
+  c34 155.33-160.48  split  L02_s7     46.35- 51.50  cut        scale1.08
+  c35 160.48-164.88  hidden —               —        broll_fade hide:broll:秒表和手写记录表
+  c36 164.88-168.13  full   K02_s1      0.50-  3.75  broll_fade 
+  c37 168.13-175.53  split  L01_s5     29.50- 36.90  cut        
+  c38 175.53-181.88  pip    K02_s2      7.50- 13.85  cut        pip:bl0.34
+  c39 181.88-184.53  punch  K03_s2     10.50- 13.15  cut        scale1.12
+  c40 184.53-186.63  split  L01_s2      7.50-  9.60  mgwipe     
+  c41 186.63-191.93  full   L02_s3     14.50- 19.80  cut        
+  c42 191.93-198.38  full   K01_s1      0.50-  6.95  cut        scale1.08
+  c43 198.38-202.43  full   K03_s1      0.50-  4.55  zoomcut    scale1.08
+  c44 202.43-206.66  pip    L02_s8     51.50- 55.73  cut        pip:bl0.34
+  c45 206.66-210.88  pip    K02_s3     15.50- 19.73  zoomcut    pip:bl0.34
+  c46 210.88-216.08  full   L02_s4     21.50- 26.70  mgwipe     
+  c47 216.08-220.73  punch  L02_s2      8.00- 12.65  zoomcut    scale1.12
+  c48 220.73-223.83  punch  L01_s3     14.50- 17.60  cut        scale1.12
+  c49 223.83-229.30  full   K03_s4     21.50- 26.97  zoomcut    
+  c50 229.30-231.61  full   K01_s3     14.50- 16.81  zoomcut    

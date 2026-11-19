@@ -1,0 +1,1517 @@
+{
+ "id": "gesture_expression",
+ "version": "1.0",
+ "title_zh": "手势与表情（P0 叠加层）",
+ "title_en": "Gesture & expression overlay (P0)",
+ "status": "待验证 — not yet tested on a real video model; gesture/expression patches and K04/K05 are speculative until the Phase 0 A/B in docs/GESTURE_EXPRESSION.md §I",
+ "status_zh": "待验证：还没有在真实视频模型上跑过；手势 / 表情补丁和 K04 / K05 都按推测方案处理，跑完 docs/GESTURE_EXPRESSION.md §I 的 Phase 0 A/B 之前不要当成已验证",
+ "note": "Copy-time overlay like human_premium: never edits library.json, so `prompts verify` stays byte-identical for K01–K03. Stack with human_premium via `--gesture`. K04/K05 live here (not in library.json) so the shipped spec catalog and demo plans stay unchanged; build their catalog with `catalog build-spec --overlay gesture_expression --only-overlay`.",
+ "mcu_rule": {
+  "zh": "近景（MCU：K01 / K03 / K05 / O01 / K01H）双手永远不入画——只靠表情、眼神、呼吸和肩膀；手势只属于腰部以上的中景（MS：K02 / K04 / L02）。近景里一旦手进画面，这一段只能裁掉或淘汰。",
+  "en": "Close-ups (MCU: K01 / K03 / K05 / O01 / K01H) keep the hands out of frame for good — life comes from expression, eyes, breath and shoulders only. Hand gestures belong to waist-up medium shots (MS: K02 / K04 / L02). If a hand enters an MCU take, crop that span or reject it."
+ },
+ "expressions": [
+  {
+   "id": "E01",
+   "key": "soft_smile",
+   "name_zh": "浅笑承接",
+   "name_en": "Soft smile",
+   "intents": [
+    "open",
+    "cta",
+    "story",
+    "agree"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "low",
+   "when_zh": "开场、话题落地后、亲和的过渡句",
+   "cue": {
+    "en": "A soft smile rises in her eyes first while her lips stay relaxed or just part, then it fades back to neutral within about a second.",
+    "zh": "笑意先出现在眼睛里，嘴唇放松或只微微分开，大约一秒内自然退回中性。"
+   },
+   "dont_zh": "一直挂着的笑、露出一整排牙、左右完全对称的“面具笑”",
+   "cut_zh": "等笑意退了再回位；不要在笑的峰值上切"
+  },
+  {
+   "id": "E02",
+   "key": "nod",
+   "name_zh": "认同点头",
+   "name_en": "Agreeing nod",
+   "intents": [
+    "agree",
+    "summary"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "low",
+   "when_zh": "“对 / 没错 / 确实”、反问之后、肯定自己的观点",
+   "cue": {
+    "en": "One or two small nods at uneven moments with a slight lift of the brows, as if agreeing with what she just said.",
+    "zh": "在不规律的时刻小幅点头一两次，眉毛微抬，像在认同自己刚说的话。"
+   },
+   "dont_zh": "等间隔三连点、像摇头娃娃一样连续点",
+   "cut_zh": "点头之间可以切；不要切在头最低点"
+  },
+  {
+   "id": "E03",
+   "key": "think_glance",
+   "name_zh": "思考一瞥",
+   "name_en": "Thinking glance",
+   "intents": [
+    "think",
+    "question"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "mid",
+   "when_zh": "“其实……”、设问之前、要说出一个洞察之前",
+   "cue": {
+    "en": "Before the key phrase her eyes drift briefly up and to the side as if finding the right word, then come back to the lens with a small nod.",
+    "zh": "说到关键句之前，目光短暂地向斜上方飘一下，像在找合适的词，然后回到镜头，轻轻一点头。"
+   },
+   "dont_zh": "翻白眼、视线离开镜头超过 1 秒、思考时嘴张着不动",
+   "cut_zh": "切点前视线至少回到镜头 0.5 秒；适合放在句首或停顿里，口型更安全"
+  },
+  {
+   "id": "E04",
+   "key": "brow_raise",
+   "name_zh": "扬眉点题",
+   "name_en": "Brow lift on the key word",
+   "intents": [
+    "emphasis",
+    "data",
+    "list",
+    "contrast",
+    "question"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "low",
+   "when_zh": "重音词、意外的数据、列点里的每一项",
+   "cue": {
+    "en": "Her brows lift briefly on the stressed word and her eyes open a touch, then everything relaxes again.",
+    "zh": "在重音词上眉毛短暂上扬，眼睛略微睁大一点，然后整张脸放松下来。"
+   },
+   "dont_zh": "眉毛一直扬着、卡通式惊讶",
+   "cut_zh": "峰值 ≤ 0.5 秒；可以和推近一起用"
+  },
+  {
+   "id": "E05",
+   "key": "brow_furrow",
+   "name_zh": "轻皱眉（难点 / 提醒）",
+   "name_en": "Concerned furrow",
+   "intents": [
+    "caveat",
+    "empathy"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "mid",
+   "when_zh": "“但是 / 注意 / 坑 / 风险”、说到难点",
+   "cue": {
+    "en": "On the hard word her brows draw slightly together with a small concerned head tilt and a softer voice, then they release.",
+    "zh": "说到难点时眉头轻轻收拢，头微微一侧，语气放软，随即舒展开。"
+   },
+   "dont_zh": "生气地怒视、深深的皱眉纹一直不散、嘴角往下撇",
+   "cut_zh": "回位前眉头必须完全舒展"
+  },
+  {
+   "id": "E06",
+   "key": "soft_laugh",
+   "name_zh": "轻笑后收",
+   "name_en": "Soft laugh, then settle",
+   "intents": [
+    "story",
+    "agree"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "mid",
+   "when_zh": "轻松自嘲、“我们都这样”、俏皮的插话",
+   "cue": {
+    "en": "A short soft laugh through the nose with a small lift of the shoulders, then she settles straight back into calm speaking.",
+    "zh": "从鼻子里出来的一声短促轻笑，肩膀微微一抬，然后立刻回到平静的说话状态。"
+   },
+   "dont_zh": "张大嘴笑、头往后仰、长时间闭眼大笑",
+   "cut_zh": "不放在切点；回位前嘴已闭合（大笑会让口型替换失效）"
+  },
+  {
+   "id": "E07",
+   "key": "head_tilt",
+   "name_zh": "倾听脸",
+   "name_en": "Listening face",
+   "intents": [
+    "pause",
+    "listen"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "low",
+   "when_zh": "停顿、抛出问题之后、“你可能会问”的反应镜头",
+   "cue": {
+    "en": "Lips closed, a slight head tilt and engaged eyes, two small nods at uneven moments and a brief quiet half smile.",
+    "zh": "嘴唇闭合，头微微一侧，眼神投入，在不规律的时刻小幅点头两次，偶尔浮现一个安静的浅笑。"
+   },
+   "dont_zh": "眼神发直、嘴在动",
+   "cut_zh": "闭嘴段不送口型；可以整段用作停顿 / 反应镜头"
+  },
+  {
+   "id": "E08",
+   "key": "nod",
+   "name_zh": "笃定收句",
+   "name_en": "Confident close",
+   "intents": [
+    "summary",
+    "cta",
+    "close"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "low",
+   "when_zh": "总结、结论、行动号召的最后一个字",
+   "cue": {
+    "en": "Her chin stays level, she gives one small downward nod on the last word and her lips close into a calm, settled half smile.",
+    "zh": "下巴保持水平，在最后一个字上轻轻向下点头一次，双唇合上，落成一个平静笃定的浅笑。"
+   },
+   "dont_zh": "得意的坏笑、用力点头",
+   "cut_zh": "很适合直接接回位；是最安全的段尾"
+  },
+  {
+   "id": "E09",
+   "key": "soft_eyes",
+   "name_zh": "共情柔和",
+   "name_en": "Empathetic softening",
+   "intents": [
+    "empathy",
+    "caveat"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "low",
+   "when_zh": "“我知道这很难”、说到观众的痛点",
+   "cue": {
+    "en": "Her eyes soften, the inner corners of her brows lift slightly, her head tilts a little and a gentle half smile appears.",
+    "zh": "眼神变得柔和，眉头内侧微微上抬，头轻轻一侧，嘴角浮现一个温和的浅笑。"
+   },
+   "dont_zh": "可怜兮兮的表情、夸张的难过",
+   "cut_zh": "适合配慢一点的语速"
+  },
+  {
+   "id": "E10",
+   "key": "knowing_look",
+   "name_zh": "会心一笑（“你懂的”）",
+   "name_en": "Knowing look",
+   "intents": [
+    "agree",
+    "question"
+   ],
+   "plates": [
+    "mcu",
+    "ms"
+   ],
+   "risk": "mid",
+   "when_zh": "“对吧？”、“你懂的”、分享一个内行人的小观察",
+   "cue": {
+    "en": "A slightly one-sided half smile with a tiny brow lift and a small nod toward the lens, like sharing an insider point.",
+    "zh": "略偏一侧的浅笑，配一点点扬眉，朝镜头轻轻一点头，像在分享一个内行人才懂的点。"
+   },
+   "dont_zh": "眨单眼、坏笑、挑眉过头",
+   "cut_zh": "峰值短；不要接在严肃句后面"
+  }
+ ],
+ "gestures": [
+  {
+   "id": "G01",
+   "key": "palms_open",
+   "name_zh": "摊手讲解",
+   "name_en": "Open-palm explain",
+   "intents": [
+    "explain"
+   ],
+   "risk": "low",
+   "duration": "1.5–2 s",
+   "path_zh": "腰前轻握 → 双手在胸口略低处向外摊开（一只手略早、略高）→ 回到腰前合拢",
+   "limit_zh": "手不高过胸口；左右各不超过身体外侧一拳",
+   "cue": {
+    "en": "Both palms open outward at lower-chest height in a relaxed explaining gesture, one hand slightly ahead of the other, then come back together at the waist.",
+    "zh": "双手在胸口略低处向外摊开，做一个放松的讲解手势，一只手略早于另一只，然后回到腰前合拢。"
+   },
+   "dont_zh": "两手完全对称同步、摊得太宽像拥抱"
+  },
+  {
+   "id": "G02",
+   "key": "palm_single",
+   "name_zh": "单手递出（“就是这个”）",
+   "name_en": "Palm-up offer",
+   "intents": [
+    "explain",
+    "emphasis",
+    "question",
+    "open",
+    "cta"
+   ],
+   "risk": "low",
+   "duration": "1–1.5 s",
+   "path_zh": "腰前 → 一只手掌心向上，向镜头方向前送约 10 厘米 → 停半拍 → 回到腰前",
+   "limit_zh": "腰到胸口之间；不伸直手臂，不伸到镜头前",
+   "cue": {
+    "en": "One hand turns palm-up and offers the idea a little forward toward the lens at waist height, holds for half a beat, then returns to the waist.",
+    "zh": "一只手掌心向上，在腰部高度把观点轻轻向镜头方向“递”出去一点，停半拍，再回到腰前。"
+   },
+   "dont_zh": "用食指指镜头、手伸到镜头前挡脸"
+  },
+  {
+   "id": "G03",
+   "key": "contrast_hands",
+   "name_zh": "两手对比（“一方面……另一方面”）",
+   "name_en": "Contrast hands",
+   "intents": [
+    "contrast"
+   ],
+   "risk": "mid",
+   "duration": "2–2.5 s",
+   "path_zh": "腰前 → 左手掌心向上移到身体左侧 → 右手移到身体右侧（略晚半拍）→ 两手回到腰前",
+   "limit_zh": "腰部高度；每只手离身体不超过一个前臂",
+   "cue": {
+    "en": "As she compares two options, one hand opens palm-up to one side at waist height, then the other hand to the other side half a beat later, and both return to the waist.",
+    "zh": "比较两个选项时，一只手在腰部高度掌心向上移到一侧，另一只手晚半拍移到另一侧，然后两手回到腰前。"
+   },
+   "dont_zh": "两手同时镜像、像在称重一样上下晃"
+  },
+  {
+   "id": "G04",
+   "key": "count",
+   "name_zh": "计数 1-2-3（高风险）",
+   "name_en": "Counting 1-2-3 (high risk)",
+   "intents": [
+    "list"
+   ],
+   "risk": "high",
+   "duration": "2–3 s",
+   "path_zh": "腰前 → 一只手抬到胸口略低处，掌心略朝向自己，依次伸出食指、中指、无名指 → 回到腰前",
+   "limit_zh": "只用一只手；手指放松微弯；不高过胸口",
+   "cue": {
+    "en": "One hand rises to lower-chest height, palm turned slightly toward her, and counts one, two, three by raising the index, middle and ring fingers in turn, relaxed and natural, then returns to the waist.",
+    "zh": "一只手抬到胸口略低处，掌心略朝向自己，依次伸出食指、中指、无名指数一、二、三，手指放松自然，然后回到腰前。"
+   },
+   "dont_zh": "两只手一起数、手指僵直张开、比出 OK；数到“二”时掌心必须朝向自己、两指并拢微弯，掌心朝外分开就是比耶（GE7 一票否决）。AI 生成手指出错率最高：至少抽 6 次，过不了就改用 G05 + 字幕 ①②③"
+  },
+  {
+   "id": "G05",
+   "key": "hand_beat",
+   "name_zh": "节拍点（安全版列点）",
+   "name_en": "Beat marks",
+   "intents": [
+    "list",
+    "emphasis"
+   ],
+   "risk": "low",
+   "duration": "1.5–2.5 s",
+   "path_zh": "腰前 → 一只手侧掌（掌心朝侧面）在腰部高度做两三下轻微的向下点 → 回到腰前",
+   "limit_zh": "幅度一拳以内；点与点间隔不均匀",
+   "cue": {
+    "en": "Listing short points, one relaxed hand makes two or three small downward beats at waist height, palm turned sideways, each landing on a stressed word at uneven intervals, then it returns to the waist.",
+    "zh": "列举几个短点时，一只放松的手侧掌在腰部高度轻轻向下点两三下，每一下落在一个重音词上，间隔不均匀，然后回到腰前。"
+   },
+   "dont_zh": "节拍器式均匀敲击、像在切菜"
+  },
+  {
+   "id": "G06",
+   "key": "hands_together",
+   "name_zh": "合手收束",
+   "name_en": "Hands together to sum up",
+   "intents": [
+    "summary",
+    "agree"
+   ],
+   "risk": "low",
+   "duration": "1.5–2 s",
+   "path_zh": "腰前 → 双手在胸口略低处轻轻合拢（一只手搭在另一只上）→ 放回腰前",
+   "limit_zh": "不高过胸口；不握拳",
+   "cue": {
+    "en": "To sum up, both hands come loosely together in front of her lower chest, one resting on the other, then lower back to the waist with one firm nod.",
+    "zh": "总结时双手在胸前略低处轻轻合拢，一只手搭在另一只上，然后放回腰前，有力地点头一次。"
+   },
+   "dont_zh": "十指紧扣用力、搓手"
+  },
+  {
+   "id": "G07",
+   "key": "shrug",
+   "name_zh": "轻耸肩",
+   "name_en": "Small shrug",
+   "intents": [
+    "caveat",
+    "story"
+   ],
+   "risk": "low",
+   "duration": "1–1.5 s",
+   "path_zh": "腰前 → 双肩轻抬约 2 厘米，掌心在腰前微微翻向上，眉毛一抬 → 落回回位",
+   "limit_zh": "肩膀小幅；手不离开腰部高度",
+   "cue": {
+    "en": "With an easy tone she gives a small shrug, her shoulders lifting slightly and her palms turning a little upward at the waist, brows up and a light smile, then everything drops back to the home pose.",
+    "zh": "用轻松的语气小小地耸一下肩，双肩微微抬起，掌心在腰前略微翻向上，眉毛一抬，带点笑，然后一切落回回位。"
+   },
+   "dont_zh": "夸张的“我不知道”大耸肩、摊手到肩膀高度"
+  },
+  {
+   "id": "G08",
+   "key": "size_frame",
+   "name_zh": "比划大小",
+   "name_en": "Size frame",
+   "intents": [
+    "data",
+    "emphasis"
+   ],
+   "risk": "mid",
+   "duration": "1–1.5 s",
+   "path_zh": "腰前 → 两只平展的手掌在胸口略低处相对，间距约 30 厘米，表示“这么大一块”→ 回到腰前",
+   "limit_zh": "用平展手掌，不用拇指食指捏出“一点点”；不高过胸口",
+   "cue": {
+    "en": "Two flat palms face each other about thirty centimetres apart at lower-chest height to show the size of something, then return to the waist.",
+    "zh": "两只平展的手掌在胸口略低处相对，相距约 30 厘米，比划出一个大小，然后回到腰前。"
+   },
+   "dont_zh": "拇指食指捏小距离（手指细节易出错）、比划到脸前"
+  },
+  {
+   "id": "G09",
+   "key": "hand_on_chest",
+   "name_zh": "手按胸口（真诚）",
+   "name_en": "Hand on chest",
+   "intents": [
+    "empathy",
+    "caveat"
+   ],
+   "risk": "low",
+   "duration": "1–1.5 s",
+   "path_zh": "腰前 → 一只手平放在锁骨以下的胸口中间 → 轻轻一点头 → 回到腰前",
+   "limit_zh": "手必须在锁骨以下，远离下巴和脸",
+   "cue": {
+    "en": "For a sincere personal point, one open hand rests flat on the centre of her chest well below the collarbones for a moment with a small nod, then returns to the waist.",
+    "zh": "说一句真心话时，一只张开的手平放在胸口中间、锁骨以下，停一会儿，轻轻一点头，然后回到腰前。"
+   },
+   "dont_zh": "手放到锁骨或脖子、拍胸口"
+  },
+  {
+   "id": "G10",
+   "key": "palm_present",
+   "name_zh": "侧向引导（给图形让位）",
+   "name_en": "Open-palm guide to the side",
+   "intents": [
+    "data",
+    "explain"
+   ],
+   "risk": "low",
+   "duration": "1.5–2 s",
+   "path_zh": "腰前 → 画面一侧的那只手掌心向上，朝画面空的一侧轻轻打开（像在介绍旁边的图）→ 停一拍 → 回到腰前",
+   "limit_zh": "胸口略低处；用整只手掌引导，不用食指指",
+   "cue": {
+    "en": "Her hand on one side turns palm-up at lower-chest height and opens gently toward the empty side of the frame, as if presenting a graphic beside her, holds for a beat, then returns.",
+    "zh": "靠画面一侧的那只手在胸口略低处掌心向上，朝画面空着的一侧轻轻打开，像在介绍她身边的图表，停一拍，然后收回。"
+   },
+   "dont_zh": "用食指指、转身背对镜头"
+  },
+  {
+   "id": "G11",
+   "key": "steeple",
+   "name_zh": "指尖相触（思考 / 笃定）",
+   "name_en": "Steepled fingertips",
+   "intents": [
+    "think",
+    "summary"
+   ],
+   "risk": "mid",
+   "duration": "1.5–2.5 s",
+   "path_zh": "腰前 → 两手指尖在腰到胸口之间轻轻相触成“尖塔” → 散开回到腰前",
+   "limit_zh": "腰到胸口之间；不抵下巴",
+   "cue": {
+    "en": "While she thinks a point through, her fingertips meet lightly in front of her lower chest in a relaxed steeple, then the hands part and return to the waist.",
+    "zh": "想清楚一个观点时，两手指尖在胸口略低处轻轻相触成一个放松的“尖塔”，然后分开回到腰前。"
+   },
+   "dont_zh": "把尖塔手抵在下巴或嘴前、手指僵直"
+  }
+ ],
+ "replace": [
+  {
+   "plates": [
+    "K02"
+   ],
+   "en": [
+    "Natural conversational talking with her hands loosely clasped at the waist and small nods.",
+    "Natural conversational talking with her hands loosely clasped at the waist; once, her fingers loosen and re-clasp as she speaks, with a soft smile and one small agreeing nod."
+   ],
+   "zh": [
+    "自然的对话式说话，双手在腰前轻握，小幅点头。",
+    "自然的对话式说话，双手在腰前轻握；说话间手指自然松开又重新握一次，带着浅笑，认同地小幅点头一次。"
+   ],
+   "why_zh": "回位手不是“焊死”的：手指一次松开再握，加 E01 浅笑和 E02 认同点头",
+   "why": "home-pose hands that are not welded shut, plus E01 + E02"
+  },
+  {
+   "plates": [
+    "K02"
+   ],
+   "en": [
+    "Both palms open outward at chest height in a relaxed explaining gesture, then come back together at the waist.",
+    "Both palms open outward at lower-chest height in a relaxed explaining gesture, one hand slightly ahead of the other, her eyebrows lifting a little on the key word, then the hands come back together at the waist."
+   ],
+   "zh": [
+    "双手在胸口高度向外摊开，做一个放松的讲解手势，然后回到腰前合拢。",
+    "双手在胸口略低处向外摊开，做一个放松的讲解手势，一只手略早于另一只，关键词上眉毛微微上扬，然后双手回到腰前合拢。"
+   ],
+   "why_zh": "G01 两手错开（去镜像）+ E04 扬眉",
+   "why": "G01 with de-mirrored hands + E04"
+  },
+  {
+   "plates": [
+    "K02"
+   ],
+   "en": [
+    "She keeps talking with a light smile while her right hand makes one small, relaxed open-palm movement at waist height, then rejoins the other hand.",
+    "She keeps talking with a light smile while her right hand turns palm-up and offers the point a little forward at waist height, her shoulders lifting in a tiny easy shrug, then the hand rejoins the other."
+   ],
+   "zh": [
+    "带着浅笑继续说话，右手在腰部高度做一个小幅、放松的摊掌动作，然后与另一只手重新合拢。",
+    "带着浅笑继续说话，右手在腰部高度掌心向上、把观点轻轻往前“递”一下，双肩随之轻松地微微一耸，然后与另一只手重新合拢。"
+   ],
+   "why_zh": "G02 单手递出 + G07 轻耸肩",
+   "why": "G02 offer + G07 shrug"
+  },
+  {
+   "plates": [
+    "K02"
+   ],
+   "en": [
+    "To sum up, both hands come loosely together in front of her chest, then lower back to the waist as she gives one firm, confident nod.",
+    "To sum up, both hands come loosely together in front of her lower chest as her expression settles into a calm, confident half smile, then they lower back to the waist with one firm nod."
+   ],
+   "zh": [
+    "总结时双手在胸前轻轻合拢，再放回腰前，同时自信有力地点头一次。",
+    "总结时双手在胸前略低处轻轻合拢，表情落定为平静笃定的浅笑，然后双手放回腰前，有力地点头一次。"
+   ],
+   "why_zh": "G06 合手 + E08 笃定收句",
+   "why": "G06 + E08"
+  },
+  {
+   "plates": [
+    "K01",
+    "K01H"
+   ],
+   "en": [
+    "She keeps speaking with a very slight head tilt to the left and one small eyebrow raise on a key word, then straightens.",
+    "She keeps speaking with a very slight head tilt to the left; before the key word her eyes flick briefly up and to the side as if finding the right word, then come back to the lens with one small eyebrow raise, and she straightens."
+   ],
+   "zh": [
+    "继续说话，头部极轻微地向左倾斜，在关键词处轻扬一次眉毛，然后回正。",
+    "继续说话，头部极轻微地向左倾斜；说到关键词前，目光短暂地向斜上方一瞥，像在找合适的词，随即回到镜头，轻扬一次眉毛，然后回正。"
+   ],
+   "why_zh": "近景只加表情：E03 思考一瞥 + E04 扬眉",
+   "why": "MCU: expressions only — E03 + E04"
+  },
+  {
+   "plates": [
+    "K01",
+    "K01H"
+   ],
+   "en": [
+    "gives two small slow nods with a soft closed-lip smile, and blinks once naturally.",
+    "gives two small nods at uneven moments with a soft closed-lip smile, her face quietly responsive as if hearing a good point, and blinks naturally."
+   ],
+   "zh": [
+    "带着闭唇浅笑缓慢地小幅点头两次，自然眨眼一次。",
+    "带着闭唇浅笑，在不规律的时刻小幅点头两次，脸上有安静的回应，像听到了一个好观点，自然眨眼。"
+   ],
+   "why_zh": "E07 倾听脸：不规律点头 + 有回应",
+   "why": "E07 listening face: uneven nods, responsive"
+  },
+  {
+   "plates": [
+    "K03"
+   ],
+   "en": [
+    "Three quick small nods in a row as if agreeing with her own point.",
+    "Two or three small agreeing nods at uneven moments, with a slight brow lift and a knowing half smile, as if agreeing with her own point."
+   ],
+   "zh": [
+    "连续三个快速的小点头，像在肯定自己的观点。",
+    "两三个时机不均的小幅认同点头，眉毛微抬，带一点会心的浅笑，像在肯定自己的观点。"
+   ],
+   "why_zh": "E02 + E10：去掉等间隔三连点",
+   "why": "E02 + E10, no metronome triple nod"
+  },
+  {
+   "plates": [
+    "K03"
+   ],
+   "en": [
+    "eyebrows drawn very slightly together in concentration (not frowning), and one slow nod",
+    "eyebrows drawn slightly together on the hard word with a small concerned head tilt (not angry, not frowning), then they release, and one slow nod"
+   ],
+   "zh": [
+    "眉头因专注而极轻微地收拢（不是皱眉），缓慢点头一次",
+    "说到难点时眉头轻轻收拢、头微微一侧，带一点关切（不是生气、不是皱眉），随即舒展，缓慢点头一次"
+   ],
+   "why_zh": "E05 轻皱眉：有起有落",
+   "why": "E05 concerned furrow that releases"
+  },
+  {
+   "plates": [
+    "K03"
+   ],
+   "en": [
+    "A brief warm smile while speaking, then a slight lean back, relaxed and confident, as she finishes the thought.",
+    "A brief warm smile that rises in her eyes first and fades naturally while she speaks, then a slight lean back, relaxed and confident, as she finishes the thought."
+   ],
+   "zh": [
+    "说话时短暂地温暖一笑，然后身体略微后靠，放松而自信地把话说完。",
+    "说话时短暂地温暖一笑，笑意先从眼睛里升起、又自然退去，然后身体略微后靠，放松而自信地把话说完。"
+   ],
+   "why_zh": "E01 浅笑承接：笑意由眼睛带出、有起有落（K03 的避免词禁止大笑，所以这里不用 E06）",
+   "why": "E01 eye-led smile that fades (K03 forbids laughing, so no E06 here)"
+  }
+ ],
+ "tag_patches": {
+  "_note": "Expected extra tags when K01/K01H/K02/K03 are generated WITH this overlay (section number → additions). Used only by `catalog build-spec --overlay gesture_expression`; catalog/spec stays untouched.",
+  "K01": {
+   "2": {
+    "roles": [
+     "think"
+    ],
+    "gestures": [
+     {
+      "g": "think_glance",
+      "t": 1.5
+     }
+    ]
+   }
+  },
+  "K01H": {
+   "2": {
+    "roles": [
+     "think"
+    ],
+    "gestures": [
+     {
+      "g": "think_glance",
+      "t": 1.5
+     }
+    ]
+   }
+  },
+  "K02": {
+   "1": {
+    "roles": [
+     "agree"
+    ],
+    "gestures": [
+     {
+      "g": "soft_smile",
+      "t": 2.0
+     }
+    ]
+   },
+   "2": {
+    "gestures": [
+     {
+      "g": "brow_raise",
+      "t": 2.6
+     }
+    ]
+   },
+   "3": {
+    "roles": [
+     "caveat"
+    ],
+    "gestures": [
+     {
+      "g": "shrug",
+      "t": 3.2
+     }
+    ]
+   }
+  },
+  "K03": {
+   "2": {
+    "roles": [
+     "agree"
+    ],
+    "gestures": [
+     {
+      "g": "knowing_look",
+      "t": 3.5
+     }
+    ]
+   },
+   "3": {
+    "roles": [
+     "caveat"
+    ],
+    "gestures": [
+     {
+      "g": "brow_furrow",
+      "t": 2.0
+     }
+    ]
+   },
+   "4": {
+    "gestures": [
+     {
+      "g": "soft_smile",
+      "t": 1.5
+     }
+    ]
+   }
+  }
+ },
+ "performance_append_by_framing": {
+  "ms": {
+   "en": "Gesture grammar: like a real interview host, her hands help her think — every gesture starts from the home pose, lands on a stressed word and settles back to the waist within about two seconds. Gestures stay between the waist and the lower chest, never above the chest and never near the face, chin or hair. Mostly one hand at a time; when both hands move they are slightly out of sync, never mirrored. Fingers stay relaxed and natural, with no posed hand signs. Small and conversational, never stage acting.",
+   "zh": "手势语法：像真实的访谈主持人，手是在帮她思考——每个手势都从回位姿势出发，落在重音词上，约两秒内回到腰前。手势只在腰部到胸口略低处之间，绝不高过胸口，绝不靠近脸、下巴和头发。大多一次只动一只手；两只手同时动时前后略有错开，绝不镜像同步。手指放松自然，不摆任何手势符号。幅度小、像聊天，绝不是舞台表演。"
+  },
+  "mcu": {
+   "en": "Expression grammar: her hands never enter the frame — all the life comes from her face, eyes, breath and shoulders. Expressions are small, brief and slightly asymmetric: a soft smile that rises in the eyes and fades, a quick brow lift on a key word, a short thinking glance away and back, a slight concerned furrow on a hard word. Each expression peaks with the words and returns to a relaxed neutral before the next home pose; nothing is held like a mask.",
+   "zh": "表情语法：双手绝不入画——所有生气都来自脸、眼睛、呼吸和肩膀。表情小、短、略带不对称：从眼睛里升起又退去的浅笑，关键词上快速一扬眉，短暂地移开视线思考再回来，说到难点时眉头轻轻一收。每个表情都随着话语到达峰值，在下一个回位前回到放松的中性脸；没有任何表情像面具一样挂着。"
+  }
+ },
+ "performance_compact_by_framing": {
+  "ms": {
+   "en": "Gesture grammar: each gesture starts from and returns to the home pose within about two seconds, lands on a stressed word, stays between waist and lower chest, never near the face; mostly one hand, never mirrored; relaxed fingers, no hand signs, no stage acting.",
+   "zh": "手势语法：每个手势从回位出发、约两秒内回到回位，落在重音词上，只在腰到胸口略低处，绝不靠近脸；多为单手，不镜像；手指放松，不比手势符号，不演。"
+  },
+  "mcu": {
+   "en": "Expression grammar: hands never in frame; small, brief, asymmetric expressions — eye-led smile, brow lift on key words, short thinking glance, light concerned furrow — each returning to neutral before the home pose.",
+   "zh": "表情语法：手不入画；表情小、短、不对称——眼睛先笑、关键词扬眉、短暂思考一瞥、轻皱眉——每个都在回位前回到中性。"
+  }
+ },
+ "avoid_append_by_framing": {
+  "ms": {
+   "en": "hands coming near the face, chin or hair, hand signs such as OK, peace or thumbs-up, perfectly mirrored two-hand movements, the same gesture repeated in a rhythm, exaggerated stage acting",
+   "zh": "手靠近脸、下巴或头发，比 OK、比耶、点赞等手势符号，两手完全镜像同步，同一个手势按节拍重复，夸张的舞台表演"
+  },
+  "mcu": {
+   "en": "exaggerated or held expressions, cartoon surprise, winking or smirking, eyebrows stuck raised",
+   "zh": "夸张或一直挂着的表情，卡通式惊讶，眨单眼或坏笑，眉毛一直扬着"
+  }
+ },
+ "negative_extra": {
+  "en": [
+   "touching face",
+   "hand on chin",
+   "touching hair",
+   "overacting",
+   "theatrical expression",
+   "exaggerated surprise",
+   "cartoon expression",
+   "wink",
+   "smirk",
+   "frozen grin",
+   "eyebrows stuck raised",
+   "tongue out",
+   "pout"
+  ],
+  "zh": [
+   "摸脸",
+   "手托下巴",
+   "摸头发",
+   "过度表演",
+   "舞台腔表情",
+   "夸张惊讶",
+   "卡通表情",
+   "眨单眼",
+   "坏笑",
+   "僵住的笑",
+   "眉毛一直扬着",
+   "吐舌头",
+   "嘟嘴"
+  ],
+  "short_en": [
+   "touching face",
+   "overacting",
+   "exaggerated surprise",
+   "frozen grin"
+  ],
+  "short_zh": [
+   "摸脸",
+   "过度表演",
+   "夸张惊讶",
+   "僵住的笑"
+  ]
+ },
+ "negative_extra_ms": {
+  "en": [
+   "pointing at camera",
+   "index finger pointing",
+   "finger guns",
+   "OK sign",
+   "peace sign",
+   "thumbs up",
+   "finger heart",
+   "jazz hands",
+   "waving",
+   "clapping",
+   "fist pump",
+   "crossed arms",
+   "hands in pockets",
+   "hands behind back",
+   "hands above shoulders",
+   "mirrored symmetric gestures",
+   "synchronized hands",
+   "repetitive gestures",
+   "metronomic hand beats",
+   "robotic gestures",
+   "frozen hands",
+   "floating hands",
+   "extra fingers",
+   "missing fingers",
+   "fused fingers",
+   "twisted wrist",
+   "props in hands",
+   "exaggerated gestures"
+  ],
+  "zh": [
+   "指向镜头",
+   "食指指人",
+   "手枪手势",
+   "OK 手势",
+   "比耶",
+   "点赞",
+   "比心",
+   "爵士手",
+   "挥手",
+   "鼓掌",
+   "握拳庆祝",
+   "抱臂",
+   "手插兜",
+   "手背在身后",
+   "手高过肩膀",
+   "两手镜像对称",
+   "两手同步",
+   "重复的手势",
+   "节拍器式点手",
+   "机械手势",
+   "僵住的手",
+   "悬空不自然的手",
+   "多手指",
+   "少手指",
+   "手指粘连",
+   "手腕扭曲",
+   "手里拿道具",
+   "夸张手势"
+  ],
+  "short_en": [
+   "pointing at camera",
+   "OK sign",
+   "peace sign",
+   "thumbs up",
+   "crossed arms",
+   "mirrored symmetric gestures",
+   "repetitive gestures",
+   "extra fingers",
+   "fused fingers"
+  ],
+  "short_zh": [
+   "指向镜头",
+   "OK 手势",
+   "比耶",
+   "点赞",
+   "抱臂",
+   "两手镜像对称",
+   "重复的手势",
+   "多手指",
+   "手指粘连"
+  ]
+ },
+ "negative_drop": [
+  {
+   "plates": [
+    "K01",
+    "K01H"
+   ],
+   "drop": [
+    "looking away"
+   ],
+   "why_zh": "K01 第 2 段加入了 E03 思考一瞥（≤1 秒、回到镜头）；负面词里的 looking away 会把它压掉。“head turned away / profile view” 仍保留",
+   "why": "K01 s2 now has an E03 thinking glance (≤1 s, back to lens); 'looking away' would suppress it. 'head turned away' / 'profile view' stay."
+  }
+ ],
+ "plates": {
+  "K04": {
+   "title_zh": "中景手势底板（手势密集）",
+   "title_en": "Medium-shot gesture plate (gesture-dense)",
+   "file": "liz01_o1_ms_916_koubo-gesture_mid_30s_v01.mov",
+   "framing": "ms",
+   "aspect": "9:16",
+   "duration": 30,
+   "lock": "lock.ms.916.30",
+   "first_frame": "IMG-B",
+   "status": "overlay-defined · 待验证",
+   "performance": {
+    "en": "Performance: She speaks to the camera calmly and naturally as if mid-conversation, with natural jaw and lip movement and a relaxed rhythm. Her eyes stay on the lens, she blinks naturally, head turns stay within 20 degrees, and her hands stay between waist and chest height and never touch or cover the face or mouth. Home pose: head centered and facing the lens, shoulders relaxed and level, hands loosely clasped in front of the waist, lips relaxed. Energy: medium — this plate carries the conversational gestures of a real interview host; every gesture is small, lands on a stressed word, starts from the home pose and returns to it, and no two sections use the same gesture.",
+    "zh": "表演：她像正在对话一样，平静自然地对着镜头说话，下颌与嘴唇自然运动，节奏放松。视线始终看镜头，自然眨眼，头部转动不超过 20 度，双手始终在腰部到胸口之间活动，绝不触碰或遮挡脸部和嘴。回位姿势：头部居中面向镜头，双肩放松、水平，双手在腰前轻握，嘴唇放松。能量：中——这条底板承载真实访谈主持人的对话手势；每个手势都很小、落在重音词上、从回位姿势出发并回到回位姿势，任意两段不用同一个手势。"
+   },
+   "avoid_from": "K02",
+   "negative_from": "K02",
+   "cut_points": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.0
+   ],
+   "timeline": [
+    {
+     "t": [
+      0,
+      1
+     ],
+     "en": "She holds the home pose, then begins speaking.",
+     "zh": "保持回位姿势，然后开始说话。",
+     "kind": "start"
+    },
+    {
+     "t": [
+      1,
+      7
+     ],
+     "en": "Talking naturally, she turns her right hand palm-up and offers the idea a little forward at waist height, with a soft smile that rises in her eyes, then the hand returns to the waist.",
+     "zh": "自然地说着话，右手在腰部高度掌心向上，把想法轻轻往前“递”一下，笑意先从眼睛里升起，然后手回到腰前。",
+     "kind": "section",
+     "tags": {
+      "roles": [
+       "explain",
+       "open",
+       "narrate"
+      ],
+      "energy": 3,
+      "emotion": "warm",
+      "gestures": [
+       {
+        "g": "palm_single",
+        "t": 2.5
+       },
+       {
+        "g": "soft_smile",
+        "t": 1.5
+       }
+      ],
+      "mouth": "talking",
+      "hands": "chest",
+      "reversible": "no",
+      "keep_out": [
+       [
+        1.8,
+        4.2
+       ]
+      ]
+     }
+    },
+    {
+     "t": [
+      7,
+      8
+     ],
+     "en": "She returns to the home pose and holds it still for one second.",
+     "zh": "回到回位姿势，静止保持一秒。",
+     "kind": "home"
+    },
+    {
+     "t": [
+      8,
+      14
+     ],
+     "en": "Comparing two options, one hand opens palm-up to one side at waist height and the other hand to the other side half a beat later, her brows lifting a little on the second option; both hands return to the waist.",
+     "zh": "比较两个选项时，一只手在腰部高度掌心向上移到一侧，另一只手晚半拍移到另一侧，说到第二个选项时眉毛微微上扬；然后两手回到腰前。",
+     "kind": "section",
+     "tags": {
+      "roles": [
+       "contrast",
+       "explain"
+      ],
+      "energy": 3,
+      "emotion": "curious",
+      "gestures": [
+       {
+        "g": "contrast_hands",
+        "t": 1.5
+       },
+       {
+        "g": "brow_raise",
+        "t": 3.5
+       }
+      ],
+      "mouth": "talking",
+      "hands": "chest",
+      "reversible": "no",
+      "keep_out": [
+       [
+        1.0,
+        4.8
+       ]
+      ]
+     }
+    },
+    {
+     "t": [
+      14,
+      15
+     ],
+     "en": "She returns to the home pose and holds it still for one second.",
+     "zh": "回到回位姿势，静止保持一秒。",
+     "kind": "home"
+    },
+    {
+     "t": [
+      15,
+      21
+     ],
+     "en": "Listing three short points, her right hand makes three small downward beats at waist height, palm turned sideways, each landing on a stressed word at uneven intervals, with a small nod on the last one; then the hand returns.",
+     "zh": "列举三个短点时，右手侧掌在腰部高度轻轻向下点三下，每一下落在一个重音词上，间隔不均匀，最后一下配一个小点头；然后手回到腰前。",
+     "kind": "section",
+     "tags": {
+      "roles": [
+       "list",
+       "data",
+       "emphasis"
+      ],
+      "energy": 3,
+      "emotion": "confident",
+      "gestures": [
+       {
+        "g": "hand_beat",
+        "t": 1.5
+       },
+       {
+        "g": "nod",
+        "t": 4.5
+       }
+      ],
+      "mouth": "talking",
+      "hands": "low",
+      "reversible": "no",
+      "keep_out": [
+       [
+        1.0,
+        4.8
+       ]
+      ]
+     }
+    },
+    {
+     "t": [
+      21,
+      22
+     ],
+     "en": "She returns to the home pose and holds it still for one second.",
+     "zh": "回到回位姿势，静止保持一秒。",
+     "kind": "home"
+    },
+    {
+     "t": [
+      22,
+      28
+     ],
+     "en": "With a light, easy tone she gives a small shrug, palms turning slightly up at the waist, and a soft half-laugh through the nose, then settles into a calm, confident look as the hands return to the waist.",
+     "zh": "用轻松的语气小小地耸一下肩，掌心在腰前微微翻向上，从鼻子里轻笑一声，然后落定为平静笃定的神情，双手回到腰前。",
+     "kind": "section",
+     "tags": {
+      "roles": [
+       "caveat",
+       "story",
+       "agree"
+      ],
+      "energy": 3,
+      "emotion": "playful",
+      "gestures": [
+       {
+        "g": "shrug",
+        "t": 1.5
+       },
+       {
+        "g": "soft_laugh",
+        "t": 2.0
+       }
+      ],
+      "mouth": "talking",
+      "hands": "low",
+      "reversible": "no",
+      "keep_out": [
+       [
+        1.0,
+        3.2
+       ]
+      ]
+     }
+    },
+    {
+     "t": [
+      28,
+      30
+     ],
+     "en": "She finishes her sentence, returns to the home pose and holds it still until the end, the final frame matching the first frame as closely as possible.",
+     "zh": "说完这句话，回到回位姿势，静止保持到结束，最后一帧尽量与第一帧一致。",
+     "kind": "end"
+    }
+   ]
+  },
+  "K05": {
+   "title_zh": "近景表情底板（表情密集）",
+   "title_en": "Close-up expression plate (expression-dense)",
+   "file": "liz01_o1_mcu_916_koubo-expression_mid_30s_v01.mov",
+   "framing": "mcu",
+   "aspect": "9:16",
+   "duration": 30,
+   "lock": "lock.mcu.916.30",
+   "first_frame": "IMG-A",
+   "status": "overlay-defined · 待验证",
+   "performance": {
+    "en": "Performance: In the first three sections she speaks to the camera calmly and naturally as if mid-conversation, with natural jaw and lip movement and a relaxed rhythm; in the last section she stops speaking and listens with her lips gently closed. Her eyes stay on the lens apart from one brief thinking glance, she blinks naturally, head turns stay within 20 degrees, and her hands stay out of view below the frame the whole time. Home pose: head centered and facing the lens, shoulders relaxed and level, hands resting together low and out of view below the bottom edge of the frame, lips relaxed. Energy: low to medium — this plate carries the small facial expressions of a real host; each expression is brief, slightly asymmetric, peaks with the words and returns to a relaxed neutral before the home pose.",
+    "zh": "表演：前三段她像正在对话一样，平静自然地对着镜头说话，下颌与嘴唇自然运动，节奏放松；最后一段她停止说话，双唇轻轻闭合地倾听。除了一次短暂的思考式目光，视线始终看镜头，自然眨眼，头部转动不超过 20 度，双手全程在画面底边以下不入画。回位姿势：头部居中面向镜头，双肩放松、水平，双手放低并拢在画面底边以下（不入画），嘴唇放松。能量：低到中——这条底板承载真实主持人的细微表情；每个表情都短、略带不对称，随话语到达峰值，在回位前回到放松的中性脸。"
+   },
+   "avoid": {
+    "en": "Avoid: hands touching or covering the face or mouth, head turned more than 20 degrees, hair crossing the face, jewelry, glasses, patterned clothing, logos, text, subtitles, camera movement, zoom, cuts, lighting changes, extra people, objects in the background, hands entering the frame, open-mouthed laughing, looking away from the lens for more than a second, opening the mouth in the last section.",
+    "zh": "避免：手触碰或遮挡脸和嘴，头部转动超过 20 度，头发遮挡脸部，首饰，眼镜，有图案的服装，logo，文字，字幕，镜头运动，变焦，剪辑，光线变化，其他人物，背景杂物，手进入画面，张嘴大笑，视线离开镜头超过一秒，最后一段张嘴。"
+   },
+   "negative": "hands touching face, hand covering mouth, profile view, head turned away, hair over face, jewelry, earrings, glasses, patterned clothing, logo, text, subtitles, watermark, camera movement, zoom, cut, jump cut, flicker, lighting change, extra people, extra fingers, deformed hands, distorted face, plastic skin, hands in frame, open-mouth laughter, wide open mouth, talking in the last section",
+   "cut_points": [
+    0.5,
+    7.5,
+    14.5,
+    21.5,
+    29.0
+   ],
+   "timeline": [
+    {
+     "t": [
+      0,
+      1
+     ],
+     "en": "She holds the home pose, then begins speaking.",
+     "zh": "保持回位姿势，然后开始说话。",
+     "kind": "start"
+    },
+    {
+     "t": [
+      1,
+      7
+     ],
+     "en": "She begins a thought, her eyes drift briefly up and to the side as if finding the right word, then come back to the lens and her brows lift on the key word.",
+     "zh": "她开始讲一个想法，目光短暂地向斜上方飘一下，像在找合适的词，随即回到镜头，在关键词上扬起眉毛。",
+     "kind": "section",
+     "tags": {
+      "roles": [
+       "think",
+       "question",
+       "emphasis"
+      ],
+      "energy": 3,
+      "emotion": "curious",
+      "gestures": [
+       {
+        "g": "think_glance",
+        "t": 0.8
+       },
+       {
+        "g": "brow_raise",
+        "t": 3.0
+       }
+      ],
+      "mouth": "talking",
+      "hands": "out_of_frame",
+      "reversible": "no",
+      "keep_out": [
+       [
+        0.5,
+        1.9
+       ]
+      ]
+     }
+    },
+    {
+     "t": [
+      7,
+      8
+     ],
+     "en": "She returns to the home pose and holds it still for one second.",
+     "zh": "回到回位姿势，静止保持一秒。",
+     "kind": "home"
+    },
+    {
+     "t": [
+      8,
+      14
+     ],
+     "en": "On a cautionary point her brows draw slightly together with a small head tilt and a softer voice, then her eyes soften with empathy as she finishes the sentence.",
+     "zh": "说到需要提醒的地方，眉头轻轻收拢，头微微一侧，语气放软，然后在说完这句话时眼神柔和下来，带着共情。",
+     "kind": "section",
+     "tags": {
+      "roles": [
+       "caveat",
+       "empathy",
+       "explain"
+      ],
+      "energy": 2,
+      "emotion": "empathetic",
+      "gestures": [
+       {
+        "g": "brow_furrow",
+        "t": 1.5
+       },
+       {
+        "g": "soft_eyes",
+        "t": 4.0
+       }
+      ],
+      "mouth": "talking",
+      "hands": "out_of_frame",
+      "reversible": "no"
+     }
+    },
+    {
+     "t": [
+      14,
+      15
+     ],
+     "en": "She returns to the home pose and holds it still for one second.",
+     "zh": "回到回位姿势，静止保持一秒。",
+     "kind": "home"
+    },
+    {
+     "t": [
+      15,
+      21
+     ],
+     "en": "A light, relatable aside: a short soft laugh through the nose with a small lift of the shoulders, then she settles straight back into calm speaking with a lingering soft smile.",
+     "zh": "一句轻松、让人有共鸣的插话：从鼻子里短促地轻笑一声，肩膀微微一抬，然后立刻回到平静的说话状态，嘴角留着一点浅笑。",
+     "kind": "section",
+     "tags": {
+      "roles": [
+       "story",
+       "agree"
+      ],
+      "energy": 3,
+      "emotion": "playful",
+      "gestures": [
+       {
+        "g": "soft_laugh",
+        "t": 1.2
+       },
+       {
+        "g": "soft_smile",
+        "t": 3.0
+       }
+      ],
+      "mouth": "talking",
+      "hands": "out_of_frame",
+      "reversible": "no",
+      "keep_out": [
+       [
+        0.8,
+        2.2
+       ]
+      ]
+     }
+    },
+    {
+     "t": [
+      21,
+      22
+     ],
+     "en": "She returns to the home pose and holds it still for one second.",
+     "zh": "回到回位姿势，静止保持一秒。",
+     "kind": "home"
+    },
+    {
+     "t": [
+      22,
+      28
+     ],
+     "en": "She stops speaking and listens with her lips closed, a slight head tilt, two small nods at uneven moments and a brief knowing half smile.",
+     "zh": "她停止说话，双唇闭合地倾听，头微微一侧，在不规律的时刻小幅点头两次，浮现一个短暂的会心浅笑。",
+     "kind": "section",
+     "tags": {
+      "roles": [
+       "listen",
+       "pause"
+      ],
+      "energy": 1,
+      "emotion": "warm",
+      "gestures": [
+       {
+        "g": "head_tilt",
+        "t": 0.8
+       },
+       {
+        "g": "nod",
+        "t": 2.0
+       },
+       {
+        "g": "knowing_look",
+        "t": 4.5
+       }
+      ],
+      "mouth": "smile_closed",
+      "hands": "out_of_frame",
+      "reversible": "ok"
+     }
+    },
+    {
+     "t": [
+      28,
+      30
+     ],
+     "en": "She relaxes back into the home pose with a calm, faint closed-lip smile and holds it still until the end, the final frame matching the first frame as closely as possible.",
+     "zh": "放松回到回位姿势，只留一丝平静的闭唇笑意，静止保持到结束，最后一帧尽量与第一帧一致。",
+     "kind": "end"
+    }
+   ]
+  }
+ },
+ "intents": [
+  {
+   "role": "open",
+   "markup_zh": "[开场]",
+   "triggers_zh": "大家好、今天聊",
+   "expressions": [
+    "E01"
+   ],
+   "gestures": [
+    "G02"
+   ],
+   "mcu_alt_zh": "E01；开场优先用 O01 的开场专用镜头"
+  },
+  {
+   "role": "agree",
+   "new": true,
+   "markup_zh": "[认同] / [肯定]",
+   "triggers_zh": "对、没错、确实、是的",
+   "expressions": [
+    "E02",
+    "E10"
+   ],
+   "gestures": [
+    "G06"
+   ],
+   "mcu_alt_zh": "E02 / E10"
+  },
+  {
+   "role": "list",
+   "markup_zh": "[列点] / ①②③",
+   "triggers_zh": "第一、第二、三个",
+   "expressions": [
+    "E04"
+   ],
+   "gestures": [
+    "G05",
+    "G04"
+   ],
+   "mcu_alt_zh": "E02 小点头 + 字幕 ①②③",
+   "note_zh": "默认 G05 节拍点；G04 计数是高风险，需要额外抽卡"
+  },
+  {
+   "role": "contrast",
+   "new": true,
+   "markup_zh": "[对比]",
+   "triggers_zh": "一方面……另一方面、不是……而是、A 还是 B",
+   "expressions": [
+    "E04"
+   ],
+   "gestures": [
+    "G03"
+   ],
+   "mcu_alt_zh": "头部轻轻左右一侧 + E04"
+  },
+  {
+   "role": "caveat",
+   "new": true,
+   "markup_zh": "[提醒] / [转折] / [注意]",
+   "triggers_zh": "但是、不过、注意、坑、风险",
+   "expressions": [
+    "E05",
+    "E09"
+   ],
+   "gestures": [
+    "G07",
+    "G09"
+   ],
+   "mcu_alt_zh": "E05"
+  },
+  {
+   "role": "think",
+   "new": true,
+   "markup_zh": "[思考]",
+   "triggers_zh": "其实、你有没有想过、我想了很久",
+   "expressions": [
+    "E03"
+   ],
+   "gestures": [
+    "G11"
+   ],
+   "mcu_alt_zh": "E03"
+  },
+  {
+   "role": "question",
+   "markup_zh": "[提问]",
+   "triggers_zh": "？、为什么、怎么办",
+   "expressions": [
+    "E03",
+    "E04"
+   ],
+   "gestures": [
+    "G02"
+   ],
+   "mcu_alt_zh": "E04 + 推近"
+  },
+  {
+   "role": "emphasis",
+   "markup_zh": "[强调] / [重音: 词]",
+   "triggers_zh": "才叫、记住、关键",
+   "expressions": [
+    "E04"
+   ],
+   "gestures": [
+    "G02",
+    "G05"
+   ],
+   "mcu_alt_zh": "E04 + 推近"
+  },
+  {
+   "role": "data",
+   "markup_zh": "[数据]",
+   "triggers_zh": "数字、倍、百分之",
+   "expressions": [
+    "E04"
+   ],
+   "gestures": [
+    "G08",
+    "G10"
+   ],
+   "mcu_alt_zh": "E04"
+  },
+  {
+   "role": "empathy",
+   "new": true,
+   "markup_zh": "[共情]",
+   "triggers_zh": "我知道、很多人都、别担心",
+   "expressions": [
+    "E09"
+   ],
+   "gestures": [
+    "G09"
+   ],
+   "mcu_alt_zh": "E09"
+  },
+  {
+   "role": "story",
+   "markup_zh": "[故事]（轻松时加 [表情: 轻笑后收]）",
+   "triggers_zh": "比如、有一次、我们都",
+   "expressions": [
+    "E06",
+    "E01"
+   ],
+   "gestures": [
+    "G07",
+    "G02"
+   ],
+   "mcu_alt_zh": "E06"
+  },
+  {
+   "role": "summary",
+   "markup_zh": "[总结]",
+   "triggers_zh": "总之、一句话、所以说",
+   "expressions": [
+    "E08"
+   ],
+   "gestures": [
+    "G06"
+   ],
+   "mcu_alt_zh": "E08"
+  },
+  {
+   "role": "pause",
+   "markup_zh": "[停顿] / 倾听",
+   "triggers_zh": "（静场、抛出问题后）",
+   "expressions": [
+    "E07"
+   ],
+   "gestures": [],
+   "mcu_alt_zh": "E07（闭嘴段，不送口型）"
+  },
+  {
+   "role": "cta",
+   "markup_zh": "[关注]",
+   "triggers_zh": "关注、下期",
+   "expressions": [
+    "E01",
+    "E08"
+   ],
+   "gestures": [
+    "G02"
+   ],
+   "mcu_alt_zh": "E01 → E08"
+  }
+ ],
+ "scorecard": [
+  {
+   "id": "GE1",
+   "zh": "回位：每个手势都从腰前回位出发，约 2.5 秒内回到回位；每个切点处双手都在回位",
+   "en": "Return: every gesture starts from the home pose and is back within ~2.5 s; hands are at home at every cut point"
+  },
+  {
+   "id": "GE2",
+   "zh": "高度（一票否决）：没有任何一帧手高过胸口或靠近脸、下巴、头发、嘴",
+   "en": "Height (veto): no frame has a hand above the chest or near the face, chin, hair or mouth"
+  },
+  {
+   "id": "GE3",
+   "zh": "手指：手势峰值帧 100% 放大，五指数量和形状正常，无粘连、无多指、无扭腕（G04 计数至少抽 6 次）",
+   "en": "Fingers: at 100% on gesture peaks, five normal fingers, no fusion, extras or twisted wrists (G04 needs ≥ 6 draws)"
+  },
+  {
+   "id": "GE4",
+   "zh": "不像节拍器：2 倍速看，手势和点头不是等间隔重复，两手没有镜像同步",
+   "en": "Not metronomic: at 2×, gestures and nods do not repeat at even intervals and the hands are never mirrored"
+  },
+  {
+   "id": "GE5",
+   "zh": "词势对齐：手势和表情的峰值落在重音附近（约 ±0.3 秒），不是乱挥",
+   "en": "Word-gesture sync: gesture/expression peaks land near the stressed word (≈ ±0.3 s), not random waving"
+  },
+  {
+   "id": "GE6",
+   "zh": "表情有起有落：笑、扬眉、皱眉都会退回中性，峰值 ≤ 1.5 秒，左右脸有细微不对称",
+   "en": "Expressions rise and fall: smiles, brow lifts and furrows return to neutral, peaks ≤ 1.5 s, slight left-right asymmetry"
+  },
+  {
+   "id": "GE7",
+   "zh": "没有手势梗（一票否决）：没有 OK、比耶、点赞、比心、指镜头、挥手、抱臂、插兜、道具",
+   "en": "No meme gestures (veto): no OK, peace, thumbs-up, finger heart, pointing at camera, waving, crossed arms, pockets or props"
+  },
+  {
+   "id": "GE8",
+   "zh": "近景纪律：近景底板手完全不入画；表情不夸张，不像舞台表演；倾听段嘴始终闭合",
+   "en": "MCU discipline: hands never enter close-ups; expressions are not theatrical; the mouth stays closed in listening spans"
+  }
+ ],
+ "scorecard_rule": {
+  "zh": "和 HUMAN_PREMIUM 的 10 项一起用。8 项全部为“是”，这一段才打手势 / 表情标签；有“否”但 GE2、GE7 通过时，这一段仍可入库，但只打基础标签。GE2 或 GE7 任何一个“否”，整段不可用（手挡脸或手势梗）。",
+  "en": "Use together with the HUMAN_PREMIUM 10. Tag a span with gesture/expression tags only if all 8 are YES; with a NO elsewhere but GE2 and GE7 passing, keep the span with basic tags only. A NO on GE2 or GE7 makes the span unusable."
+ }
+}

@@ -1,0 +1,11 @@
+lip-sync: 3 jobs, 50.75s sent, 5.32s skipped (host hidden)
+  j01   0.00-  8.87 ( 8.87s) tier=hero     engine=sync-2-pro  face≈504px zh-risk=high (6.26 字/s, b/p/m×6, AI)
+       · 语速 6.3 字/s 偏快：TTS 放慢 5–10% 或拆句
+       · 夹杂英文 / 缩写（AI）：字母口型和中文不同，单独看一遍
+  j02   8.87- 14.53 ( 5.66s) tier=small    engine=musetalk    face≈167px zh-risk=mid (6.07 字/s, b/p/m×4)
+       · 语速 6.1 字/s 偏快：TTS 放慢 5–10% 或拆句
+       · 唇齿音 f ×1：看上齿是否压下唇
+  j03  19.85- 56.07 (36.22s) tier=hero     engine=sync-2-pro  face≈580px zh-risk=mid (5.33 字/s, b/p/m×20, AI/Agent/GitHub/MCP/Native/USB-C/bug)
+       · 唇齿音 f ×2：看上齿是否压下唇
+       · 夹杂英文 / 缩写（AI、Agent、GitHub、MCP、Native、USB-C、bug）：字母口型和中文不同，单独看一遍
+       · 数字读法要和 TTS 一致（十 / 一百 / 10）

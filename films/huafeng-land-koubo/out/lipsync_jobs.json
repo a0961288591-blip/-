@@ -1,0 +1,143 @@
+{
+ "version": "istream.lipsync/1",
+ "policy": {
+  "hero": "sync-2-pro",
+  "standard": "latentsync",
+  "small": "musetalk",
+  "hero_roles": [
+   "open",
+   "hook",
+   "emphasis",
+   "cta"
+  ],
+  "small_face_px": 160,
+  "hero_face_px": 300,
+  "min_job_s": 2.0
+ },
+ "duration": 39.901,
+ "seconds_sent": 26.37,
+ "seconds_skipped_hidden": 13.53,
+ "jobs": [
+  {
+   "id": "j01",
+   "rec": {
+    "in": 0.0,
+    "out": 5.473
+   },
+   "seconds": 5.473,
+   "clips": [
+    "c01",
+    "c02"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 360,
+   "zh_risk": {
+    "rate_cps": 3.91,
+    "bilabial": 1,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "鳳山華鳳特區，難得釋出的美建地！",
+   "inputs": {
+    "video": "lipsync/in/01_video.mp4",
+    "audio": "lipsync/in/01_audio.wav"
+   },
+   "output": "lipsync/out/01_synced.mp4"
+  },
+  {
+   "id": "j02",
+   "rec": {
+    "in": 14.518,
+    "out": 21.392
+   },
+   "seconds": 6.874,
+   "clips": [
+    "c04"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 78,
+   "zh_risk": {
+    "rate_cps": 3.5,
+    "bilabial": 3,
+    "labiodental": 1,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": [
+     "唇齿音 f ×1：看上齿是否压下唇"
+    ]
+   },
+   "text": "住三之一，建蔽六成，容積百分之兩百四十，好排電梯店住。",
+   "inputs": {
+    "video": "lipsync/in/02_video.mp4",
+    "audio": "lipsync/in/02_audio.wav"
+   },
+   "output": "lipsync/out/02_synced.mp4"
+  },
+  {
+   "id": "j03",
+   "rec": {
+    "in": 25.874,
+    "out": 31.103
+   },
+   "seconds": 5.229,
+   "clips": [
+    "c06"
+   ],
+   "tier": "small",
+   "engine": "musetalk",
+   "face_px_out": 78,
+   "zh_risk": {
+    "rate_cps": 3.88,
+    "bilabial": 0,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "文山華鳳雙特區交界，還有捷運黃線延伸題材。",
+   "inputs": {
+    "video": "lipsync/in/03_video.mp4",
+    "audio": "lipsync/in/03_audio.wav"
+   },
+   "output": "lipsync/out/03_synced.mp4"
+  },
+  {
+   "id": "j04",
+   "rec": {
+    "in": 31.103,
+    "out": 39.901
+   },
+   "seconds": 8.798,
+   "clips": [
+    "c07",
+    "c08",
+    "c09"
+   ],
+   "tier": "hero",
+   "engine": "sync-2-pro",
+   "face_px_out": 414,
+   "zh_risk": {
+    "rate_cps": 3.8,
+    "bilabial": 3,
+    "labiodental": 0,
+    "latin": [],
+    "level": "low",
+    "exact_pinyin": false,
+    "tips": []
+   },
+   "text": "單價每坪五十萬，總價約一點四八億。永慶不動產大順鴻麗店，陳庭妍，歡迎來電。",
+   "inputs": {
+    "video": "lipsync/in/04_video.mp4",
+    "audio": "lipsync/in/04_audio.wav"
+   },
+   "output": "lipsync/out/04_synced.mp4"
+  }
+ ]
+}

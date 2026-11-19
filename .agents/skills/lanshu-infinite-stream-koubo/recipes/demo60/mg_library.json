@@ -1,0 +1,217 @@
+{
+ "an_hook": {
+  "asset": "mg/an_hook.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:N01a_hook_seats",
+   "packs:N01b_hook_flat_productivity"
+  ],
+  "text": "全员开通 AI · 效率≈0"
+ },
+ "an_history": {
+  "asset": "mg/an_history.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:N02a_time_dial_1900s",
+   "packs:N02c_blueprint_motor",
+   "packs:N02d_output_flat"
+  ],
+  "text": "1900s · 蒸汽机 → 电动机"
+ },
+ "an_floor": {
+  "asset": "mg/an_floor.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:N03a_floor_outline",
+   "packs:N03b_line_shaft_belts",
+   "packs:N03c_machines_rigid_grid",
+   "packs:N03d_motor_old_position"
+  ],
+  "text": "只换引擎 · 布局没变"
+ },
+ "an_flow": {
+  "asset": "mg/an_flow.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:N04b_flow_rearranged",
+   "packs:N04c_output_takeoff"
+  ],
+  "text": "按流程重排 → 起飞"
+ },
+ "an_typewriter": {
+  "asset": "mg/an_typewriter.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:N05a_old_process_chain",
+   "packs:N05b_ai_chip_inserted",
+   "packs:N05c_faster_typewriter"
+  ],
+  "text": "更快的打字机"
+ },
+ "an_native": {
+  "asset": "mg/an_native.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:N05d_redesign_ring",
+   "packs:N05e_ai_core",
+   "packs:N05f_slam_ai_native"
+  ],
+  "text": "AI Native"
+ },
+ "mcp_hook": {
+  "asset": "mg/mcp_hook.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M01a_hook_code_card",
+   "packs:M01b_hook_calendar_card"
+  ],
+  "text": "会写代码 · 打不开日历"
+ },
+ "mcp_100": {
+  "asset": "mg/mcp_100.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M02a_matrix_nodes",
+   "packs:M02b_matrix_lines_100",
+   "packs:M02d_counter_100"
+  ],
+  "text": "10 × 10 = 100 套"
+ },
+ "mcp_usbc": {
+  "asset": "mg/mcp_usbc.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M03a_usbc_port_glyph",
+   "packs:M03b_usbc_wordmark"
+  ],
+  "text": "MCP = AI 的 USB-C"
+ },
+ "mcp_palm": {
+  "asset": "mg/mcp_palm.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M03c_palm_beam"
+  ],
+  "at_keyword": true,
+  "text": ""
+ },
+ "mcp_arch": {
+  "asset": "mg/mcp_arch.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M04a_arch_hub",
+   "packs:M04b_arch_servers_right",
+   "packs:M04c_arch_clients_left",
+   "packs:M04d_arch_pulses"
+  ],
+  "text": "服务器 ↔ MCP ↔ 客户端"
+ },
+ "mcp_1010": {
+  "asset": "mg/mcp_1010.png",
+  "zone": {
+   "16:9": "right_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M04a_arch_hub",
+   "packs:M04b_arch_servers_right",
+   "packs:M04c_arch_clients_left",
+   "packs:M04e_counter_100_to_10plus10"
+  ],
+  "text": "100 → 10 + 10"
+ },
+ "mcp_three": {
+  "asset": "mg/mcp_three.png",
+  "zone": {
+   "16:9": "left_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M06a_agent_node",
+   "packs:M06b_agent_bus",
+   "packs:M06c_panel_tools",
+   "packs:M06d_panel_resources",
+   "packs:M06e_panel_prompts"
+  ],
+  "text": "工具 · 资料 · 提示模板"
+ },
+ "mcp_flow": {
+  "asset": "mg/mcp_flow.png",
+  "zone": {
+   "16:9": "left_half",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M07a_capability_bar",
+   "packs:M07b_agent_core",
+   "packs:M07c_source_github",
+   "packs:M07d_source_database",
+   "packs:M07e_flow_step01",
+   "packs:M07f_flow_step02",
+   "packs:M07g_flow_step03",
+   "packs:M07h_fix_card"
+  ],
+  "text": "查 bug → 读代码 → 提修复"
+ },
+ "mcp_slam": {
+  "asset": "mg/mcp_slam.png",
+  "zone": {
+   "16:9": "right_strip",
+   "9:16": "upper_band"
+  },
+  "source": [
+   "packs:M08a_eyebrow_yijuhua",
+   "packs:M08b_slam_plug_and_play"
+  ],
+  "text": "即插即用"
+ },
+ "mcp_cta": {
+  "asset": "mg/mcp_cta.png",
+  "zone": {
+   "16:9": "right_strip",
+   "9:16": "lower_third"
+  },
+  "source": [
+   "packs:M09a_cta_next_card",
+   "packs:M09b_cta_follow_pill"
+  ],
+  "text": "关注 · 明天讲 Agent"
+ },
+ "_note": {
+  "zone": {},
+  "text": "16:9 uses the Glass Protocol PNG; other aspects fall back to a flat preview card with `text` (production: render 9:16 MG with the compositor)"
+ }
+}

@@ -1,0 +1,23 @@
+planned 21 clips, 16 MG, 40 captions · 56.07s · profile short · 16:9
+  c01   0.00-  3.37  full   P02_s1      0.05-  3.42  cut        
+  c02   3.37-  6.12  full   P01_s1      1.05-  3.80  zoomcut    
+  c03   6.12-  8.87  full   P02_s6     26.98- 29.73  zoomcut    
+  c04   8.87- 11.70  pip    P01_s5     20.48- 23.31  zoomcut    pip:bl0.3
+  c05  11.70- 14.53  pip    P02_s3     11.22- 14.05  zoomcut    pip:bl0.3
+  c06  14.53- 19.85  hidden —               —        broll_fade hide:broll:车间按流程重排的俯拍
+  c07  19.85- 22.53  full   P01_s3     11.57- 14.25  broll_fade 
+  c08  22.53- 23.22  punch  P01_s2      5.75-  6.44  zoomcut    scale1.15
+  c09  23.22- 26.10  full   P01_s1      1.05-  3.93  zoomcut    scale1.1
+  c10  26.10- 28.73  full   P02_s1      0.05-  2.68  zoomcut    scale1.1
+  c11  28.73- 30.57  full   P01_s5     20.48- 22.32  zoomcut    
+  c12  30.57- 32.97  split  P02_s2      5.82-  8.22  zoomcut    
+  c13  32.97- 34.41  full   P01_s4     18.63- 20.07  zoomcut    
+  c14  34.41- 36.45  full   P01_s2      6.75-  8.79  zoomcut    scale1.1
+  c15  36.45- 40.21  full   P01_s1      0.05-  3.81  zoomcut    scale1.15
+  c16  40.21- 41.75  split  P02_s3     11.47- 13.01  zoomcut    
+  c17  41.75- 44.37  split  P01_s4     15.88- 18.50  zoomcut    
+  c18  44.37- 46.99  split  P01_s5     20.48- 23.10  zoomcut    scale1.1
+  c19  46.99- 50.89  pip    P02_s2      5.82-  9.72  zoomcut    pip:br0.3
+  c20  50.89- 53.69  full   P01_s6     27.17- 29.97  zoomcut    
+  c21  53.69- 56.07  full   P02_s6     26.98- 29.36  zoomcut    scale1.1
+planner warning: slot 46.99-50.89: relaxed to PiP (zone supply exhausted) — add plates with that side free

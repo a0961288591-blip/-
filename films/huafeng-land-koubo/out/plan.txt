@@ -1,0 +1,10 @@
+planned 9 clips, 7 MG, 20 captions · 39.901s · profile short · 9:16 · VO delayed 1.4s for the opening
+  c01   0.00-  2.74  full   O01_s1      2.20-  4.94  cut        
+  c02   2.74-  5.47  full   L01_s4     21.50- 24.24  zoomcut    
+  c03   5.47- 14.52  hidden —               —        broll_fade hide:card
+  c04  14.52- 21.39  pip    L02_s7     44.50- 51.37  broll_fade pip:bl0.34
+  c05  21.39- 25.87  hidden —               —        broll_fade hide:broll:文龍東路街景
+  c06  25.87- 31.10  pip    L02_s3     14.50- 19.73  broll_fade pip:bl0.34
+  c07  31.10- 35.12  punch  L01_s2      9.75- 13.77  cut        scale1.15
+  c08  35.12- 37.51  full   K03_s4     21.50- 23.89  zoomcut    
+  c09  37.51- 39.90  full   L02_s8     51.50- 53.89  cut        

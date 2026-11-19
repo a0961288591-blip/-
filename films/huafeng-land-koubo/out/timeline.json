@@ -1,0 +1,613 @@
+{
+ "version": "istream.timeline/1",
+ "meta": {
+  "title": "鳳山華鳳特區美建地（數位人口播 · 38 秒 · 9:16）",
+  "fps": 30,
+  "aspect": "9:16",
+  "size": [
+   1080,
+   1920
+  ],
+  "duration": 39.901,
+  "profile": "short",
+  "seed": 7,
+  "vo": "../vo.wav",
+  "vo_offset": 1.4,
+  "coverage_planned": 0.611,
+  "generator": "istream 1.0",
+  "warnings": []
+ },
+ "beats": [
+  {
+   "id": "b01",
+   "text": "鳳山華鳳特區，難得釋出的美建地！",
+   "chapter": null,
+   "roles": [
+    "open",
+    "hook"
+   ],
+   "start": 1.65,
+   "end": 5.229,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "hf_hook"
+   ],
+   "timing": "aligned",
+   "rate_cps": 3.91
+  },
+  {
+   "id": "b02",
+   "text": "基地兩百九十五坪，北臨鎮北北巷，面寬三十四點七米，南接文龍東路，雙面臨路。",
+   "chapter": null,
+   "roles": [
+    "data"
+   ],
+   "start": 5.533,
+   "end": 14.278,
+   "pause_after": 0.0,
+   "kw_times": {
+    "雙面臨路": [
+     13.214,
+     14.278
+    ]
+   },
+   "broll": null,
+   "mg": [
+    "hf_lot"
+   ],
+   "timing": "aligned",
+   "rate_cps": 3.66
+  },
+  {
+   "id": "b03",
+   "text": "住三之一，建蔽六成，容積百分之兩百四十，好排電梯店住。",
+   "chapter": null,
+   "roles": [
+    "list"
+   ],
+   "start": 14.578,
+   "end": 21.15,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "hf_spec"
+   ],
+   "timing": "aligned",
+   "rate_cps": 3.5
+  },
+  {
+   "id": "b04",
+   "text": "文龍東路餐飲咖啡林立，生活機能成熟。",
+   "chapter": null,
+   "roles": [
+    "story"
+   ],
+   "start": 21.452,
+   "end": 25.632,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": "文龍東路街景",
+   "mg": [
+    "hf_street"
+   ],
+   "timing": "aligned",
+   "rate_cps": 3.83
+  },
+  {
+   "id": "b05",
+   "text": "文山華鳳雙特區交界，還有捷運黃線延伸題材。",
+   "chapter": null,
+   "roles": [
+    "explain"
+   ],
+   "start": 25.934,
+   "end": 30.835,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "hf_area"
+   ],
+   "timing": "aligned",
+   "rate_cps": 3.88
+  },
+  {
+   "id": "b06",
+   "text": "單價每坪五十萬，總價約一點四八億。",
+   "chapter": null,
+   "roles": [
+    "emphasis"
+   ],
+   "start": 31.163,
+   "end": 34.879,
+   "pause_after": 0.0,
+   "kw_times": {
+    "五十萬": [
+     32.01,
+     32.646
+    ]
+   },
+   "broll": null,
+   "mg": [
+    "hf_price"
+   ],
+   "timing": "aligned",
+   "rate_cps": 4.04
+  },
+  {
+   "id": "b07",
+   "text": "永慶不動產大順鴻麗店，陳庭妍，歡迎來電。",
+   "chapter": null,
+   "roles": [
+    "cta"
+   ],
+   "start": 35.185,
+   "end": 39.901,
+   "pause_after": 0.0,
+   "kw_times": {},
+   "broll": null,
+   "mg": [
+    "hf_cta"
+   ],
+   "timing": "aligned",
+   "rate_cps": 3.6
+  }
+ ],
+ "host": [
+  {
+   "id": "c01",
+   "rec": {
+    "in": 0.0,
+    "out": 2.736
+   },
+   "layout": "full",
+   "beats": [
+    "b01"
+   ],
+   "why": "opening: the host must appear naturally in the first frames | pick O01_s1 score 4.71: role open, emotion warm",
+   "role": "open",
+   "shot": "O01_s1",
+   "plate": "O01",
+   "src": {
+    "in": 2.2,
+    "out": 4.936
+   },
+   "ops": [],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c02",
+   "rec": {
+    "in": 2.736,
+    "out": 5.473
+   },
+   "layout": "full",
+   "beats": [
+    "b01"
+   ],
+   "why": "opening: the host must appear naturally in the first frames · jump-cut part 2/2 | pick L01_s4 score 5.11: role open, emotion warm",
+   "role": "open",
+   "shot": "L01_s4",
+   "plate": "L01",
+   "src": {
+    "in": 21.5,
+    "out": 24.237
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c03",
+   "rec": {
+    "in": 5.473,
+    "out": 14.518
+   },
+   "layout": "hidden",
+   "beats": [
+    "b02"
+   ],
+   "why": "script hint",
+   "role": "data",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "card"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c04",
+   "rec": {
+    "in": 14.518,
+    "out": 21.392
+   },
+   "layout": "pip",
+   "beats": [
+    "b03"
+   ],
+   "why": "script hint | pick L02_s7 score 4.79: role list, emotion neutral",
+   "role": "list",
+   "shot": "L02_s7",
+   "plate": "L02",
+   "src": {
+    "in": 44.5,
+    "out": 51.374
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c05",
+   "rec": {
+    "in": 21.392,
+    "out": 25.874
+   },
+   "layout": "hidden",
+   "beats": [
+    "b04"
+   ],
+   "why": "B-roll '文龍東路街景' covers the sentence",
+   "role": "story",
+   "shot": null,
+   "plate": null,
+   "src": null,
+   "ops": [
+    {
+     "op": "hide",
+     "by": "broll:文龍東路街景"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c06",
+   "rec": {
+    "in": 25.874,
+    "out": 31.103
+   },
+   "layout": "pip",
+   "beats": [
+    "b05"
+   ],
+   "why": "script hint | pick L02_s3 score 5.43: role explain, emotion neutral",
+   "role": "explain",
+   "shot": "L02_s3",
+   "plate": "L02",
+   "src": {
+    "in": 14.5,
+    "out": 19.729
+   },
+   "ops": [
+    {
+     "op": "pip",
+     "corner": "bl",
+     "size": 0.34,
+     "shape": "round"
+    }
+   ],
+   "transition_in": "broll_fade"
+  },
+  {
+   "id": "c07",
+   "rec": {
+    "in": 31.103,
+    "out": 35.125
+   },
+   "layout": "punch",
+   "beats": [
+    "b06"
+   ],
+   "why": "emphasis: punch-in lands on the line | pick L01_s2 score 4.95: role emphasis, emotion confident",
+   "role": "emphasis",
+   "shot": "L01_s2",
+   "plate": "L01",
+   "src": {
+    "in": 9.75,
+    "out": 13.772
+   },
+   "ops": [
+    {
+     "op": "scale",
+     "s": 1.15,
+     "anchor": "face"
+    }
+   ],
+   "transition_in": "cut"
+  },
+  {
+   "id": "c08",
+   "rec": {
+    "in": 35.125,
+    "out": 37.513
+   },
+   "layout": "full",
+   "beats": [
+    "b07"
+   ],
+   "why": "cta | pick K03_s4 score 4.52: role cta, emotion warm",
+   "role": "cta",
+   "shot": "K03_s4",
+   "plate": "K03",
+   "src": {
+    "in": 21.5,
+    "out": 23.888
+   },
+   "ops": [],
+   "transition_in": "zoomcut"
+  },
+  {
+   "id": "c09",
+   "rec": {
+    "in": 37.513,
+    "out": 39.901
+   },
+   "layout": "full",
+   "beats": [
+    "b07"
+   ],
+   "why": "cta · jump-cut part 2/2 | pick L02_s8 score 4.71: role cta, emotion warm",
+   "role": "cta",
+   "shot": "L02_s8",
+   "plate": "L02",
+   "src": {
+    "in": 51.5,
+    "out": 53.888
+   },
+   "ops": [],
+   "transition_in": "cut"
+  }
+ ],
+ "mg": [
+  {
+   "id": "m01",
+   "template": "hf_hook",
+   "asset": "../mg/hf_hook.png",
+   "rec": {
+    "in": 1.6,
+    "out": 5.433
+   },
+   "zone": "upper_band",
+   "beat": "b01",
+   "text": ""
+  },
+  {
+   "id": "m02",
+   "template": "hf_lot",
+   "asset": "../mg/hf_lot.png",
+   "rec": {
+    "in": 5.483,
+    "out": 14.478
+   },
+   "zone": "full",
+   "beat": "b02",
+   "text": ""
+  },
+  {
+   "id": "m03",
+   "template": "hf_spec",
+   "asset": "../mg/hf_spec.png",
+   "rec": {
+    "in": 14.528,
+    "out": 21.352
+   },
+   "zone": "full",
+   "beat": "b03",
+   "text": ""
+  },
+  {
+   "id": "m04",
+   "template": "hf_street",
+   "asset": "../mg/hf_street.png",
+   "rec": {
+    "in": 21.402,
+    "out": 25.834
+   },
+   "zone": "full",
+   "beat": "b04",
+   "text": ""
+  },
+  {
+   "id": "m05",
+   "template": "hf_area",
+   "asset": "../mg/hf_area.png",
+   "rec": {
+    "in": 25.884,
+    "out": 31.063
+   },
+   "zone": "full",
+   "beat": "b05",
+   "text": ""
+  },
+  {
+   "id": "m06",
+   "template": "hf_price",
+   "asset": "../mg/hf_price.png",
+   "rec": {
+    "in": 31.113,
+    "out": 35.085
+   },
+   "zone": "upper_band",
+   "beat": "b06",
+   "text": ""
+  },
+  {
+   "id": "m07",
+   "template": "hf_cta",
+   "asset": "../mg/hf_cta.png",
+   "rec": {
+    "in": 35.135,
+    "out": 40.201
+   },
+   "zone": "upper_band",
+   "beat": "b07",
+   "text": ""
+  }
+ ],
+ "broll": [
+  {
+   "id": "r01",
+   "query": "文龍東路街景",
+   "rec": {
+    "in": 21.392,
+    "out": 25.874
+   },
+   "status": "to_source"
+  }
+ ],
+ "captions": [
+  {
+   "rec": {
+    "in": 1.65,
+    "out": 3.184
+   },
+   "text": "鳳山華鳳特區"
+  },
+  {
+   "rec": {
+    "in": 3.184,
+    "out": 5.229
+   },
+   "text": "難得釋出的美建地"
+  },
+  {
+   "rec": {
+    "in": 5.533,
+    "out": 7.719
+   },
+   "text": "基地兩百九十五坪"
+  },
+  {
+   "rec": {
+    "in": 7.719,
+    "out": 9.359
+   },
+   "text": "北臨鎮北北巷"
+  },
+  {
+   "rec": {
+    "in": 9.359,
+    "out": 11.545
+   },
+   "text": "面寬三十四點七米"
+  },
+  {
+   "rec": {
+    "in": 11.545,
+    "out": 13.185
+   },
+   "text": "南接文龍東路"
+  },
+  {
+   "rec": {
+    "in": 13.185,
+    "out": 14.278
+   },
+   "text": "雙面臨路"
+  },
+  {
+   "rec": {
+    "in": 14.578,
+    "out": 15.721
+   },
+   "text": "住三之一"
+  },
+  {
+   "rec": {
+    "in": 15.721,
+    "out": 16.864
+   },
+   "text": "建蔽六成"
+  },
+  {
+   "rec": {
+    "in": 16.864,
+    "out": 19.436
+   },
+   "text": "容積百分之兩百四十"
+  },
+  {
+   "rec": {
+    "in": 19.436,
+    "out": 21.15
+   },
+   "text": "好排電梯店住"
+  },
+  {
+   "rec": {
+    "in": 21.452,
+    "out": 24.065
+   },
+   "text": "文龍東路餐飲咖啡林立"
+  },
+  {
+   "rec": {
+    "in": 24.065,
+    "out": 25.632
+   },
+   "text": "生活機能成熟"
+  },
+  {
+   "rec": {
+    "in": 25.934,
+    "out": 28.256
+   },
+   "text": "文山華鳳雙特區交界"
+  },
+  {
+   "rec": {
+    "in": 28.256,
+    "out": 30.835
+   },
+   "text": "還有捷運黃線延伸題材"
+  },
+  {
+   "rec": {
+    "in": 31.163,
+    "out": 32.897
+   },
+   "text": "單價每坪五十萬"
+  },
+  {
+   "rec": {
+    "in": 32.897,
+    "out": 34.879
+   },
+   "text": "總價約一點四八億"
+  },
+  {
+   "rec": {
+    "in": 35.185,
+    "out": 37.959
+   },
+   "text": "永慶不動產大順鴻麗店"
+  },
+  {
+   "rec": {
+    "in": 37.959,
+    "out": 38.791
+   },
+   "text": "陳庭妍"
+  },
+  {
+   "rec": {
+    "in": 38.791,
+    "out": 39.901
+   },
+   "text": "歡迎來電"
+  }
+ ]
+}
